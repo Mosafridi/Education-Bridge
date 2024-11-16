@@ -61,10 +61,15 @@ public class Main extends javax.swing.JFrame {
         infrastructurePNL = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(153, 255, 255));
 
+        jTabbedPane1.setBackground(new java.awt.Color(51, 204, 255));
         jTabbedPane1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
 
+        studentPNL.setBackground(new java.awt.Color(51, 204, 255));
         studentPNL.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+
+        jPanel1.setBackground(new java.awt.Color(51, 204, 255));
 
         studentLBL.setText("Student ID");
 
@@ -144,6 +149,8 @@ public class Main extends javax.swing.JFrame {
             }
         ));
         jScrollPane1.setViewportView(studentTBL);
+
+        jPanel2.setBackground(new java.awt.Color(51, 204, 255));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -229,7 +236,7 @@ public class Main extends javax.swing.JFrame {
         );
         coursePNLLayout.setVerticalGroup(
             coursePNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 627, Short.MAX_VALUE)
+            .addGap(0, 591, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("Courses", coursePNL);
@@ -242,7 +249,7 @@ public class Main extends javax.swing.JFrame {
         );
         financialPNLLayout.setVerticalGroup(
             financialPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 627, Short.MAX_VALUE)
+            .addGap(0, 591, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("Financial Aid", financialPNL);
@@ -255,7 +262,7 @@ public class Main extends javax.swing.JFrame {
         );
         adminPNLLayout.setVerticalGroup(
             adminPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 627, Short.MAX_VALUE)
+            .addGap(0, 591, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("Administration", adminPNL);
@@ -268,7 +275,7 @@ public class Main extends javax.swing.JFrame {
         );
         infrastructurePNLLayout.setVerticalGroup(
             infrastructurePNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 627, Short.MAX_VALUE)
+            .addGap(0, 591, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("Infrastructure", infrastructurePNL);
