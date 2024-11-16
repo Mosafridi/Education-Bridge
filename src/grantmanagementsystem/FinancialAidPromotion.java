@@ -8,6 +8,6 @@ package grantmanagementsystem;
  *
  * @author DEll
  */
-public class FinancialAid {
+public class FinancialAidPromotion {
     
 }
