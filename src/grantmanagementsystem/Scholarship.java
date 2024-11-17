@@ -8,6 +8,6 @@ package grantmanagementsystem;
  *
  * @author Shoaib Mohammad
  */
-public class Grant {
+public class Scholarship {
     
 }

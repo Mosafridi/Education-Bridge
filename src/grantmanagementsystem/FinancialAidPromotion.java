@@ -6,7 +6,7 @@ package grantmanagementsystem;
 
 /**
  *
- * @author DEll
+ * @author Shoaib Mohammad
  */
 public class FinancialAidPromotion {
     
