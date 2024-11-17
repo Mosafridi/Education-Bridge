@@ -51,14 +51,11 @@ public class StudentInformationGUIKarawan extends javax.swing.JFrame {
         contactTF1 = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         studentTBL = new javax.swing.JTable();
-        jPanel4 = new javax.swing.JPanel();
         enrollBTN = new javax.swing.JButton();
         viewBTN = new javax.swing.JButton();
         applyBTN = new javax.swing.JButton();
         exitBTN = new javax.swing.JButton();
         deleteBTN = new javax.swing.JButton();
-        jPanel5 = new javax.swing.JPanel();
-        jPanel6 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -150,9 +147,6 @@ public class StudentInformationGUIKarawan extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(studentTBL);
 
-        jPanel4.setBackground(new java.awt.Color(51, 204, 255));
-        jPanel4.setLayout(null);
-
         enrollBTN.setText("Enroll Student");
         enrollBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -197,7 +191,6 @@ public class StudentInformationGUIKarawan extends javax.swing.JFrame {
                 .addGroup(studentPNL1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jScrollPane1)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(studentPNL1Layout.createSequentialGroup()
                         .addComponent(enrollBTN)
                         .addGap(18, 18, 18)
@@ -206,7 +199,7 @@ public class StudentInformationGUIKarawan extends javax.swing.JFrame {
                         .addComponent(applyBTN)
                         .addGap(18, 18, 18)
                         .addComponent(deleteBTN)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 200, Short.MAX_VALUE)
                         .addComponent(exitBTN)
                         .addGap(9, 9, 9)))
                 .addContainerGap())
@@ -226,42 +219,10 @@ public class StudentInformationGUIKarawan extends javax.swing.JFrame {
                         .addComponent(applyBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(deleteBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(exitBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(9, 9, 9)
-                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Students", studentPNL1);
-
-        jPanel5.setBackground(new java.awt.Color(51, 204, 255));
-
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 810, Short.MAX_VALUE)
-        );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 492, Short.MAX_VALUE)
-        );
-
-        jTabbedPane1.addTab("Students Information", jPanel5);
-
-        jPanel6.setBackground(new java.awt.Color(51, 204, 255));
-
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 810, Short.MAX_VALUE)
-        );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 492, Short.MAX_VALUE)
-        );
-
-        jTabbedPane1.addTab("Courses", jPanel6);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -417,9 +378,6 @@ public class StudentInformationGUIKarawan extends javax.swing.JFrame {
     private javax.swing.JButton exitBTN;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JLabel levelLBL1;

@@ -58,7 +58,7 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
         RecourceFirstNameLabel = new javax.swing.JLabel();
         RecourseFirstNameField = new javax.swing.JTextField();
         RecourseSurnameField = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
+        RecourcesSurnameLabel = new javax.swing.JLabel();
         RecourseTypeLabel = new javax.swing.JLabel();
         RecourseDateField = new javax.swing.JTextField();
         RecourseDateLabel = new javax.swing.JLabel();
@@ -143,11 +143,9 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
         ContactUsTitleLabel = new javax.swing.JLabel();
         ContactUsFirstNameField = new javax.swing.JTextField();
         ContactUsFirstNameLabel = new javax.swing.JLabel();
-        ContactUsRatingLabel = new javax.swing.JLabel();
-        ContactUsRatingSpinner = new javax.swing.JSpinner();
         FeedbackLabel = new javax.swing.JLabel();
         FeedbackTextAreaScrollPane = new javax.swing.JScrollPane();
-        ReviewTextArea = new javax.swing.JTextArea();
+        FeedbackTextArea = new javax.swing.JTextArea();
         TermsAndConditionsLabel = new javax.swing.JLabel();
         TermsAndConditionsCheckBox = new javax.swing.JCheckBox();
         ReviewDateLabel = new javax.swing.JLabel();
@@ -324,10 +322,10 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
         ManageRecourcesPNL.add(RecourseSurnameField);
         RecourseSurnameField.setBounds(445, 6, 101, 22);
 
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Surname");
-        ManageRecourcesPNL.add(jLabel2);
-        jLabel2.setBounds(369, 9, 50, 16);
+        RecourcesSurnameLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        RecourcesSurnameLabel.setText("Surname");
+        ManageRecourcesPNL.add(RecourcesSurnameLabel);
+        RecourcesSurnameLabel.setBounds(369, 9, 50, 16);
 
         RecourseTypeLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         RecourseTypeLabel.setText("RecourceType");
@@ -458,21 +456,22 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
                         .addComponent(TutorialNameLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(120, 120, 120))
                     .addGroup(TutorialsPNLLayout.createSequentialGroup()
-                        .addGap(27, 27, 27)
-                        .addComponent(TutorialNameLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(143, 143, 143)
-                        .addComponent(TutorialNameLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(TutorialsPNLLayout.createSequentialGroup()
-                        .addGroup(TutorialsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(Tutorial1Label, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(TutorialLabel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(97, 97, 97)
-                        .addGroup(TutorialsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(TutorialLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(TutorialLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(86, 86, 86)
-                        .addComponent(TutorialLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(TutorialsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(TutorialsPNLLayout.createSequentialGroup()
+                                .addGap(27, 27, 27)
+                                .addComponent(TutorialNameLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(143, 143, 143)
+                                .addComponent(TutorialNameLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(TutorialsPNLLayout.createSequentialGroup()
+                                .addGroup(TutorialsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(Tutorial1Label, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(TutorialLabel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(97, 97, 97)
+                                .addGroup(TutorialsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(TutorialLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(TutorialLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(86, 86, 86)
+                                .addComponent(TutorialLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         TutorialsPNLLayout.setVerticalGroup(
@@ -480,9 +479,8 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
             .addGroup(TutorialsPNLLayout.createSequentialGroup()
                 .addGap(26, 26, 26)
                 .addGroup(TutorialsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(TutorialsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(TutorialLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(TutorialLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(TutorialLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(TutorialLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Tutorial1Label, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(TutorialsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -860,15 +858,13 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
                             .addComponent(DateFormattedField, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(ReportGeneratorPNLLayout.createSequentialGroup()
                                 .addGap(29, 29, 29)
-                                .addComponent(DateLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(29, 29, 29)))
+                                .addComponent(DateLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(217, 217, 217)
                         .addGroup(ReportGeneratorPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(ReportGeneratorPNLLayout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
                                 .addComponent(EmailField, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(ReportGeneratorPNLLayout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(EmailLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(30, 30, 30))))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, ReportGeneratorPNLLayout.createSequentialGroup()
@@ -960,28 +956,21 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
         ContactUsFirstNameLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ContactUsFirstNameLabel.setText("FirstName");
 
-        ContactUsRatingLabel.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
-        ContactUsRatingLabel.setForeground(new java.awt.Color(255, 255, 255));
-        ContactUsRatingLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ContactUsRatingLabel.setText("Rating");
-
-        ContactUsRatingSpinner.setToolTipText("Please enter your rating of your experience with said component, rate 1-10");
-
         FeedbackLabel.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         FeedbackLabel.setForeground(new java.awt.Color(255, 255, 255));
         FeedbackLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         FeedbackLabel.setText("Feedback");
 
-        ReviewTextArea.setColumns(20);
-        ReviewTextArea.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
-        ReviewTextArea.setRows(5);
-        ReviewTextArea.setToolTipText("Please enter your review into this text area on your experience with said component.");
-        ReviewTextArea.addKeyListener(new java.awt.event.KeyAdapter() {
+        FeedbackTextArea.setColumns(20);
+        FeedbackTextArea.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        FeedbackTextArea.setRows(5);
+        FeedbackTextArea.setToolTipText("Please enter your review into this text area on your experience with said component.");
+        FeedbackTextArea.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
-                ReviewTextAreaKeyPressed(evt);
+                FeedbackTextAreaKeyPressed(evt);
             }
         });
-        FeedbackTextAreaScrollPane.setViewportView(ReviewTextArea);
+        FeedbackTextAreaScrollPane.setViewportView(FeedbackTextArea);
 
         TermsAndConditionsLabel.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         TermsAndConditionsLabel.setForeground(new java.awt.Color(255, 255, 255));
@@ -1048,11 +1037,14 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
             ContactUsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ContactUsPNLLayout.createSequentialGroup()
                 .addGap(17, 17, 17)
-                .addGroup(ContactUsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(ContactUsRatingLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(FeedbackLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(FeedbackLabel)
                 .addGap(18, 18, 18)
                 .addGroup(ContactUsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(ContactUsPNLLayout.createSequentialGroup()
+                        .addComponent(TermsAndConditionsLabel)
+                        .addGap(18, 18, 18)
+                        .addComponent(TermsAndConditionsCheckBox)
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(ContactUsPNLLayout.createSequentialGroup()
                         .addGroup(ContactUsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(ContactUsEmailField, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1070,31 +1062,22 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
                                 .addComponent(ReviewDateFormattedField, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(38, 38, 38))
                     .addGroup(ContactUsPNLLayout.createSequentialGroup()
-                        .addGroup(ContactUsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(ContactUsRatingSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(FeedbackTextAreaScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 555, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(FeedbackTextAreaScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 555, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ContactUsPNLLayout.createSequentialGroup()
+            .addGroup(ContactUsPNLLayout.createSequentialGroup()
                 .addGroup(ContactUsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(ContactUsPNLLayout.createSequentialGroup()
                         .addGap(28, 28, 28)
-                        .addComponent(ContactUsEmailLabel)
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addComponent(ContactUsEmailLabel))
                     .addGroup(ContactUsPNLLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(ContactUsFirstNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addComponent(TermsAndConditionsLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(TermsAndConditionsCheckBox)
-                .addGap(98, 98, 98))
-            .addGroup(ContactUsPNLLayout.createSequentialGroup()
-                .addGap(283, 283, 283)
-                .addComponent(SendFeedbackBTN)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(ContactUsPNLLayout.createSequentialGroup()
-                .addGap(192, 192, 192)
-                .addComponent(ContactUsTitleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(ContactUsFirstNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(ContactUsPNLLayout.createSequentialGroup()
+                        .addGap(283, 283, 283)
+                        .addComponent(SendFeedbackBTN))
+                    .addGroup(ContactUsPNLLayout.createSequentialGroup()
+                        .addGap(192, 192, 192)
+                        .addComponent(ContactUsTitleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         ContactUsPNLLayout.setVerticalGroup(
@@ -1114,19 +1097,17 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
                     .addComponent(ReviewDateFormattedField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ContactUsEmailLabel)
                     .addComponent(ContactUsEmailField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(39, 39, 39)
-                .addGroup(ContactUsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ContactUsRatingSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(TermsAndConditionsLabel)
-                    .addComponent(TermsAndConditionsCheckBox)
-                    .addComponent(ContactUsRatingLabel))
-                .addGap(35, 35, 35)
+                .addGap(96, 96, 96)
                 .addGroup(ContactUsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(FeedbackLabel)
                     .addComponent(FeedbackTextAreaScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(38, 38, 38)
+                .addGap(18, 18, 18)
+                .addGroup(ContactUsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(TermsAndConditionsLabel)
+                    .addComponent(TermsAndConditionsCheckBox))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
                 .addComponent(SendFeedbackBTN)
-                .addContainerGap(50, Short.MAX_VALUE))
+                .addGap(23, 23, 23))
         );
 
         Parent.add(ContactUsPNL, "card4");
@@ -1150,41 +1131,12 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void ContactUsFirstNameFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ContactUsFirstNameFieldKeyPressed
-        int keyCode = evt.getKeyCode();
-        int maxUserFirstNameSize = 30;//Assigning the mac length for the user first name field, this will not be passed
 
-        if ((keyCode >= KeyEvent.VK_A && keyCode <= KeyEvent.VK_Z) || keyCode == KeyEvent.VK_BACK_SPACE || keyCode == KeyEvent.VK_CAPS_LOCK) {// if the key pressed between a and z, and caps lock, and back space
-            ContactUsFirstNameField.setEditable(true);//allow the user to continue//by setting the editable of the review first name field to true
-            if (ContactUsFirstNameField.getText().length() < maxUserFirstNameSize || keyCode == KeyEvent.VK_BACK_SPACE) {//if the length of user input is less than the set maximum//allow backspace evel when the max is hit
-                ContactUsFirstNameField.setEditable(true);//allow the user to input// to edit the field//seeting the review first name field editable to true
-            } else {//else if it becomes more than the mac variable set for this.
-                ContactUsFirstNameField.setEditable(false);//stop the user from inputting//set the review forst name field editable to false so it cannot surpass the length
-                JOptionPane.showMessageDialog(null, "Maximum 30 digits for Firstname!");//notify the user the maximum number of characters allowed
-            }//end else if statement
-        } else {//else if the user inputs something other than a-z, backspace, or Caps-lock
-            ContactUsFirstNameField.setEditable(false);//stop the user from inputting
-            JOptionPane.showMessageDialog(null, "Please use alphabetical characters only A - Z ");   //notify the THAT only alphabetical characters are accepted.
-        }//end else if
     }//GEN-LAST:event_ContactUsFirstNameFieldKeyPressed
 
-    private void ReviewTextAreaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ReviewTextAreaKeyPressed
-        int keyCode = evt.getKeyCode();
-        int maxUserReviewSize = 50;//assiging the max surname length
+    private void FeedbackTextAreaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_FeedbackTextAreaKeyPressed
 
-        if ((keyCode >= KeyEvent.VK_A && keyCode <= KeyEvent.VK_Z) || keyCode == KeyEvent.VK_BACK_SPACE || keyCode == KeyEvent.VK_CAPS_LOCK) {//if user inputis a-z, backspace, or capslock
-            ReviewTextArea.setEditable(true);//allow the user to input
-            if (ReviewTextArea.getText().length() < maxUserReviewSize || keyCode == KeyEvent.VK_BACK_SPACE) {//if the length of user input is less than the set maximum
-                ReviewTextArea.setEditable(true);//allow the user to input
-            } else {//else if it exceeds the set maximum
-                ReviewTextArea.setEditable(false);//dont allow the user to input any further
-                JOptionPane.showMessageDialog(null, "Maximum 50 digits for feedback!");//notify the user
-            }//end else if statement
-        } else {//else if the user inputs something other than a-z, backspace, or Caps-lock
-            ReviewTextArea.setEditable(false);//Stop the user from inputting
-
-            JOptionPane.showMessageDialog(null, "Please use alphabetical characters A-Z only");//notify the user
-        }//end else if statement:
-    }//GEN-LAST:event_ReviewTextAreaKeyPressed
+    }//GEN-LAST:event_FeedbackTextAreaKeyPressed
 
     private void ReviewDateFormattedFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReviewDateFormattedFieldActionPerformed
         // TODO add your handling code here:
@@ -1195,34 +1147,11 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
     }//GEN-LAST:event_ReviewDateFormattedFieldKeyPressed
 
     private void ContactUsSurnameFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ContactUsSurnameFieldKeyPressed
-        int keyCode = evt.getKeyCode();
-        int maxUserSurnameSize = 30;//assiging the max surname length, this will not be passed
 
-        if ((keyCode >= KeyEvent.VK_A && keyCode <= KeyEvent.VK_Z) || keyCode == KeyEvent.VK_BACK_SPACE || keyCode == KeyEvent.VK_CAPS_LOCK) {//if user inputis a-z, backspace, or capslock
-            ContactUsSurnameField.setEditable(true);//allow the user to input
-            if (ContactUsSurnameField.getText().length() < maxUserSurnameSize || keyCode == KeyEvent.VK_BACK_SPACE) {//if the length of user input is less than the set maximum
-                ContactUsSurnameField.setEditable(true);//allow the user to input
-            } else {//else if it exceeds the set maximum
-                ContactUsSurnameField.setEditable(false);//dont allow the user to input any further
-                JOptionPane.showMessageDialog(null, "Maximum 30 digits for Surname!");//notify the user
-            }//end else if statement
-        } else {//else if the user inputs something other than a-z, backspace, or Caps-lock
-            ContactUsSurnameField.setEditable(false);//Stop the user from inputting
-
-            JOptionPane.showMessageDialog(null, "Please use alphabetical characters only A-Z");//notify the user
-        }//end else if statement
     }//GEN-LAST:event_ContactUsSurnameFieldKeyPressed
 
     private void ContactUsEmailFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ContactUsEmailFieldKeyPressed
-        int keyCode = evt.getKeyCode();
-        int maxReviewEmailSize = 40;
 
-        ContactUsEmailField.setEditable(true); // allow the user to enter into the email field
-
-        if (ContactUsEmailField.getText().length() >= maxReviewEmailSize && keyCode != KeyEvent.VK_BACK_SPACE) {
-            ContactUsEmailField.setEditable(false);
-            JOptionPane.showMessageDialog(null, "Maximum of 40 characters A-Z, 1-9");
-        }
     }//GEN-LAST:event_ContactUsEmailFieldKeyPressed
 
     private void SendFeedbackBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SendFeedbackBTNActionPerformed
@@ -1293,17 +1222,17 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
         FileWriter fw;
         BufferedWriter bw;
 
-        String FirstName = FirstNameField.getText();
+        String FirstName = FirstNameField.getText();//getting the text from the fields listed
         String Surname = SurnameField.getText();
         String Course = RecourseCourseField.getText();
         String Date = RecourseDateField.getText();
         String Type = (String) RecourceTypeComboBox.getSelectedItem();
         String url = RecourseURLField.getText();
 
-        try {
-            outFile = new File("Recources.txt");
-            fw = new FileWriter(outFile, true);
-            bw = new BufferedWriter(fw);
+        try {//try catch to catch any issues
+            outFile = new File("Recources.txt");//txt file called Recources
+            fw = new FileWriter(outFile, true);//fw is my filewriter
+            bw = new BufferedWriter(fw);//fw is my BufferedWriterS
 
             bw.write(FirstName + "," + Surname + "," + Course + "," + Date + "," + Type + "," + url);
             bw.newLine();
@@ -1325,10 +1254,10 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
 
             String ln;
             while ((ln = br.readLine()) != null) {
-                String[] rowData = ln.split(",");
+                String[] row = ln.split(",");
 
-                if (rowData.length == tableModel.getColumnCount()) {
-                    tableModel.addRow(rowData);
+                if (row.length == tableModel.getColumnCount()) {
+                    tableModel.addRow(row);
                 } else {
                     JOptionPane.showMessageDialog(null,
                             "Unallignment between file rows and table rowa.\nCheck the file format.",
@@ -1407,8 +1336,6 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
     private javax.swing.JLabel ContactUsLabel;
     private javax.swing.JLabel ContactUsLogoLabel;
     private javax.swing.JPanel ContactUsPNL;
-    private javax.swing.JLabel ContactUsRatingLabel;
-    public static javax.swing.JSpinner ContactUsRatingSpinner;
     public static javax.swing.JTextField ContactUsSurnameField;
     private javax.swing.JLabel ContactUsSurnameLabel;
     private javax.swing.JLabel ContactUsTitleLabel;
@@ -1421,6 +1348,7 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
     private javax.swing.JTextField EmailField;
     private javax.swing.JLabel EmailLabel;
     private javax.swing.JLabel FeedbackLabel;
+    public static javax.swing.JTextArea FeedbackTextArea;
     private javax.swing.JScrollPane FeedbackTextAreaScrollPane;
     private javax.swing.JTextField FirstNameField;
     private javax.swing.JLabel FirstNameLabel;
@@ -1462,6 +1390,7 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
     private javax.swing.JPanel RecourceHubNavPNL;
     private javax.swing.JPanel RecourceHubPNL;
     private javax.swing.JComboBox<String> RecourceTypeComboBox;
+    private javax.swing.JLabel RecourcesSurnameLabel;
     private javax.swing.JTextField RecourseCourseField;
     private javax.swing.JTextField RecourseDateField;
     private javax.swing.JLabel RecourseDateLabel;
@@ -1479,7 +1408,6 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
     private javax.swing.JLabel ReportGeneratorTitleLabel;
     private javax.swing.JFormattedTextField ReviewDateFormattedField;
     private javax.swing.JLabel ReviewDateLabel;
-    public static javax.swing.JTextArea ReviewTextArea;
     private javax.swing.JButton SaveBTN;
     private javax.swing.JButton SaveRecourseBTN;
     private javax.swing.JPanel SecondParent;
@@ -1503,7 +1431,6 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
     private javax.swing.JLabel URLLabel;
     private javax.swing.JButton ViewBTN;
     private javax.swing.JButton ViewRecourceBTN;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTabbedPane jTabbedPane3;
