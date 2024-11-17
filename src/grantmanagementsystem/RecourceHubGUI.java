@@ -4,6 +4,11 @@
  */
 package grantmanagementsystem;
 
+import java.awt.event.KeyEvent;
+import javax.swing.JOptionPane;
+import javax.swing.JTable;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author gregm
@@ -31,9 +36,44 @@ public class RecourceHubGUI extends javax.swing.JFrame {
         ReportGeneratorLabel = new javax.swing.JLabel();
         RecourceHubLogoLabel = new javax.swing.JLabel();
         RecourceHubLabel = new javax.swing.JLabel();
+        ContactUsLogoLabel = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         Parent = new javax.swing.JPanel();
-        ReportGenerator = new javax.swing.JPanel();
         RecourceHub = new javax.swing.JPanel();
+        ReportGenerator = new javax.swing.JPanel();
+        FirstNameLabel = new javax.swing.JLabel();
+        SurnameLabel = new javax.swing.JLabel();
+        DateLabel = new javax.swing.JLabel();
+        EmailLabel = new javax.swing.JLabel();
+        FirstNameField = new javax.swing.JTextField();
+        SurnameField = new javax.swing.JTextField();
+        EmailField = new javax.swing.JTextField();
+        ContentLabel = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        ContentTextArea = new javax.swing.JTextArea();
+        SaveBTN = new javax.swing.JButton();
+        ViewBTN = new javax.swing.JButton();
+        DeleteBTN = new javax.swing.JButton();
+        DateFormattedField = new javax.swing.JFormattedTextField();
+        jLabel3 = new javax.swing.JLabel();
+        ContactUsPNL = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        ContactUsFirstNameField = new javax.swing.JTextField();
+        ContactUsFirstNameLabel = new javax.swing.JLabel();
+        ContactUsRatingLabel = new javax.swing.JLabel();
+        ContactUsRatingSpinner = new javax.swing.JSpinner();
+        FeedbackLabel = new javax.swing.JLabel();
+        FeedbackTextAreaScrollPane = new javax.swing.JScrollPane();
+        ReviewTextArea = new javax.swing.JTextArea();
+        TermsAndConditionsLabel = new javax.swing.JLabel();
+        TermsAndConditionsCheckBox = new javax.swing.JCheckBox();
+        ReviewDateLabel = new javax.swing.JLabel();
+        ReviewDateFormattedField = new javax.swing.JFormattedTextField();
+        ContactUsSurnameLabel = new javax.swing.JLabel();
+        ContactUsSurnameField = new javax.swing.JTextField();
+        ContactUsEmailLabel = new javax.swing.JLabel();
+        ContactUsEmailField = new javax.swing.JTextField();
+        SendFeedbackBTN = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -41,48 +81,45 @@ public class RecourceHubGUI extends javax.swing.JFrame {
         HomePagePanel.setLayout(null);
 
         ReportGeneratorLogoLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ReportGeneratorLogoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/6771589_book_education_idea_learning_school_icon.png"))); // NOI18N
+        ReportGeneratorLogoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/document.png"))); // NOI18N
         HomePagePanel.add(ReportGeneratorLogoLabel);
-        ReportGeneratorLogoLabel.setBounds(10, 120, 100, 70);
+        ReportGeneratorLogoLabel.setBounds(10, 30, 70, 70);
 
         ReportGeneratorLabel.setFont(new java.awt.Font("Bauhaus 93", 1, 12)); // NOI18N
         ReportGeneratorLabel.setForeground(new java.awt.Color(255, 255, 255));
         ReportGeneratorLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ReportGeneratorLabel.setText("Report Generator");
         HomePagePanel.add(ReportGeneratorLabel);
-        ReportGeneratorLabel.setBounds(10, 190, 100, 24);
+        ReportGeneratorLabel.setBounds(10, 100, 100, 24);
 
         RecourceHubLogoLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        RecourceHubLogoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/7007507_analytics_chart_graph_pie_business_icon.png"))); // NOI18N
+        RecourceHubLogoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/book.png"))); // NOI18N
         HomePagePanel.add(RecourceHubLogoLabel);
-        RecourceHubLogoLabel.setBounds(20, 290, 80, 70);
+        RecourceHubLogoLabel.setBounds(20, 210, 80, 70);
 
         RecourceHubLabel.setFont(new java.awt.Font("Bauhaus 93", 1, 12)); // NOI18N
         RecourceHubLabel.setForeground(new java.awt.Color(255, 255, 255));
         RecourceHubLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         RecourceHubLabel.setText("Recource hub");
         HomePagePanel.add(RecourceHubLabel);
-        RecourceHubLabel.setBounds(10, 370, 100, 18);
+        RecourceHubLabel.setBounds(10, 280, 100, 18);
+
+        ContactUsLogoLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ContactUsLogoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/communicate.png"))); // NOI18N
+        HomePagePanel.add(ContactUsLogoLabel);
+        ContactUsLogoLabel.setBounds(20, 370, 80, 70);
+
+        jLabel2.setFont(new java.awt.Font("Bauhaus 93", 1, 12)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("Contact us");
+        HomePagePanel.add(jLabel2);
+        jLabel2.setBounds(20, 440, 70, 18);
 
         Parent.setBackground(new java.awt.Color(255, 255, 255));
         Parent.setLayout(new java.awt.CardLayout());
 
-        ReportGenerator.setBackground(new java.awt.Color(204, 255, 255));
-
-        javax.swing.GroupLayout ReportGeneratorLayout = new javax.swing.GroupLayout(ReportGenerator);
-        ReportGenerator.setLayout(ReportGeneratorLayout);
-        ReportGeneratorLayout.setHorizontalGroup(
-            ReportGeneratorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 651, Short.MAX_VALUE)
-        );
-        ReportGeneratorLayout.setVerticalGroup(
-            ReportGeneratorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 506, Short.MAX_VALUE)
-        );
-
-        Parent.add(ReportGenerator, "card2");
-
-        RecourceHub.setBackground(new java.awt.Color(51, 153, 255));
+        RecourceHub.setBackground(new java.awt.Color(51, 204, 255));
 
         javax.swing.GroupLayout RecourceHubLayout = new javax.swing.GroupLayout(RecourceHub);
         RecourceHub.setLayout(RecourceHubLayout);
@@ -96,6 +133,328 @@ public class RecourceHubGUI extends javax.swing.JFrame {
         );
 
         Parent.add(RecourceHub, "card3");
+
+        ReportGenerator.setBackground(new java.awt.Color(51, 204, 255));
+
+        FirstNameLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        FirstNameLabel.setText("First name");
+
+        SurnameLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        SurnameLabel.setText("Surname");
+
+        DateLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        DateLabel.setText("Date");
+
+        EmailLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        EmailLabel.setText("Email");
+
+        FirstNameField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+
+        SurnameField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        SurnameField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SurnameFieldActionPerformed(evt);
+            }
+        });
+
+        EmailField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        EmailField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EmailFieldActionPerformed(evt);
+            }
+        });
+
+        ContentLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ContentLabel.setText("Content");
+
+        ContentTextArea.setColumns(20);
+        ContentTextArea.setRows(5);
+        jScrollPane1.setViewportView(ContentTextArea);
+
+        SaveBTN.setText("save");
+
+        ViewBTN.setText("view");
+
+        DeleteBTN.setText("delete");
+
+        jLabel3.setFont(new java.awt.Font("Bauhaus 93", 1, 36)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("Report Generator");
+
+        javax.swing.GroupLayout ReportGeneratorLayout = new javax.swing.GroupLayout(ReportGenerator);
+        ReportGenerator.setLayout(ReportGeneratorLayout);
+        ReportGeneratorLayout.setHorizontalGroup(
+            ReportGeneratorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ReportGeneratorLayout.createSequentialGroup()
+                .addGap(80, 80, 80)
+                .addGroup(ReportGeneratorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(ReportGeneratorLayout.createSequentialGroup()
+                        .addGroup(ReportGeneratorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(DateFormattedField, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(ReportGeneratorLayout.createSequentialGroup()
+                                .addGap(29, 29, 29)
+                                .addComponent(DateLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(29, 29, 29)))
+                        .addGap(217, 217, 217)
+                        .addGroup(ReportGeneratorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(ReportGeneratorLayout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(EmailField, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(ReportGeneratorLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(EmailLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(30, 30, 30))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, ReportGeneratorLayout.createSequentialGroup()
+                        .addComponent(SaveBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(ViewBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(114, 114, 114)
+                        .addComponent(DeleteBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, ReportGeneratorLayout.createSequentialGroup()
+                        .addGap(29, 29, 29)
+                        .addComponent(FirstNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(SurnameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(30, 30, 30))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, ReportGeneratorLayout.createSequentialGroup()
+                        .addGap(197, 197, 197)
+                        .addComponent(ContentLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, ReportGeneratorLayout.createSequentialGroup()
+                        .addComponent(FirstNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(SurnameField, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(113, 113, 113))
+            .addGroup(ReportGeneratorLayout.createSequentialGroup()
+                .addGap(168, 168, 168)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        ReportGeneratorLayout.setVerticalGroup(
+            ReportGeneratorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ReportGeneratorLayout.createSequentialGroup()
+                .addGap(31, 31, 31)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(ReportGeneratorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(FirstNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(SurnameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(ReportGeneratorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(FirstNameLabel)
+                    .addComponent(SurnameLabel))
+                .addGap(34, 34, 34)
+                .addGroup(ReportGeneratorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(ReportGeneratorLayout.createSequentialGroup()
+                        .addComponent(EmailField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(EmailLabel))
+                    .addGroup(ReportGeneratorLayout.createSequentialGroup()
+                        .addComponent(DateFormattedField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(DateLabel)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(ContentLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
+                .addGroup(ReportGeneratorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(SaveBTN)
+                    .addComponent(ViewBTN)
+                    .addComponent(DeleteBTN))
+                .addGap(36, 36, 36))
+        );
+
+        Parent.add(ReportGenerator, "card4");
+
+        ContactUsPNL.setBackground(new java.awt.Color(51, 204, 255));
+
+        jLabel1.setFont(new java.awt.Font("Bauhaus 93", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Contact Us");
+
+        ContactUsFirstNameField.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        ContactUsFirstNameField.setToolTipText("Please enter your first name into this field.\n");
+        ContactUsFirstNameField.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                ContactUsFirstNameFieldKeyPressed(evt);
+            }
+        });
+
+        ContactUsFirstNameLabel.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        ContactUsFirstNameLabel.setForeground(new java.awt.Color(255, 255, 255));
+        ContactUsFirstNameLabel.setText("FirstName");
+
+        ContactUsRatingLabel.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        ContactUsRatingLabel.setForeground(new java.awt.Color(255, 255, 255));
+        ContactUsRatingLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ContactUsRatingLabel.setText("Rating");
+
+        ContactUsRatingSpinner.setToolTipText("Please enter your rating of your experience with said component, rate 1-10");
+
+        FeedbackLabel.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        FeedbackLabel.setForeground(new java.awt.Color(255, 255, 255));
+        FeedbackLabel.setText("Review");
+
+        ReviewTextArea.setColumns(20);
+        ReviewTextArea.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        ReviewTextArea.setRows(5);
+        ReviewTextArea.setToolTipText("Please enter your review into this text area on your experience with said component.");
+        ReviewTextArea.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                ReviewTextAreaKeyPressed(evt);
+            }
+        });
+        FeedbackTextAreaScrollPane.setViewportView(ReviewTextArea);
+
+        TermsAndConditionsLabel.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        TermsAndConditionsLabel.setForeground(new java.awt.Color(255, 255, 255));
+        TermsAndConditionsLabel.setText("Terms and conditions");
+
+        TermsAndConditionsCheckBox.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        TermsAndConditionsCheckBox.setForeground(new java.awt.Color(255, 255, 255));
+        TermsAndConditionsCheckBox.setText("I Accept");
+        TermsAndConditionsCheckBox.setToolTipText("Please accept the terms and conditions in order to submit a review.");
+
+        ReviewDateLabel.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        ReviewDateLabel.setForeground(new java.awt.Color(255, 255, 255));
+        ReviewDateLabel.setText("ReviewDate");
+
+        ReviewDateFormattedField.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(java.text.DateFormat.getDateInstance(java.text.DateFormat.SHORT))));
+        ReviewDateFormattedField.setToolTipText("Please enter the date that the review is being submitted.");
+        ReviewDateFormattedField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ReviewDateFormattedFieldActionPerformed(evt);
+            }
+        });
+        ReviewDateFormattedField.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                ReviewDateFormattedFieldKeyPressed(evt);
+            }
+        });
+
+        ContactUsSurnameLabel.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        ContactUsSurnameLabel.setForeground(new java.awt.Color(255, 255, 255));
+        ContactUsSurnameLabel.setText("Surname");
+
+        ContactUsSurnameField.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        ContactUsSurnameField.setToolTipText("Please enter your surname into this field.");
+        ContactUsSurnameField.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                ContactUsSurnameFieldKeyPressed(evt);
+            }
+        });
+
+        ContactUsEmailLabel.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        ContactUsEmailLabel.setForeground(new java.awt.Color(255, 255, 255));
+        ContactUsEmailLabel.setText("Email");
+
+        ContactUsEmailField.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        ContactUsEmailField.setToolTipText("Please enter your email into this field, for e.g. 'michael.moore@example.com'");
+        ContactUsEmailField.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                ContactUsEmailFieldKeyPressed(evt);
+            }
+        });
+
+        SendFeedbackBTN.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        SendFeedbackBTN.setText("Send Review");
+        SendFeedbackBTN.setToolTipText("After you've filled out all of the fields above and want to submit your review, please press this 'send' button.\n");
+        SendFeedbackBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SendFeedbackBTNActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout ContactUsPNLLayout = new javax.swing.GroupLayout(ContactUsPNL);
+        ContactUsPNL.setLayout(ContactUsPNLLayout);
+        ContactUsPNLLayout.setHorizontalGroup(
+            ContactUsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ContactUsPNLLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(ContactUsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(ContactUsPNLLayout.createSequentialGroup()
+                        .addComponent(FeedbackLabel)
+                        .addGap(42, 42, 42)
+                        .addGroup(ContactUsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(ContactUsPNLLayout.createSequentialGroup()
+                                .addGroup(ContactUsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(ContactUsEmailField, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(ContactUsFirstNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(ContactUsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(ContactUsPNLLayout.createSequentialGroup()
+                                        .addComponent(ContactUsSurnameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(ContactUsSurnameField, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(ContactUsPNLLayout.createSequentialGroup()
+                                        .addComponent(ReviewDateLabel)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(ReviewDateFormattedField, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(38, 38, 38))
+                            .addGroup(ContactUsPNLLayout.createSequentialGroup()
+                                .addGroup(ContactUsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(ContactUsRatingSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(FeedbackTextAreaScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 555, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addContainerGap(43, Short.MAX_VALUE))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ContactUsPNLLayout.createSequentialGroup()
+                        .addGroup(ContactUsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(ContactUsPNLLayout.createSequentialGroup()
+                                .addComponent(ContactUsRatingLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(27, 27, 27))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ContactUsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(ContactUsEmailLabel)
+                                .addComponent(ContactUsFirstNameLabel)))
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(TermsAndConditionsLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(TermsAndConditionsCheckBox)
+                        .addGap(98, 98, 98))))
+            .addGroup(ContactUsPNLLayout.createSequentialGroup()
+                .addGap(283, 283, 283)
+                .addComponent(SendFeedbackBTN)
+                .addContainerGap(300, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ContactUsPNLLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(194, 194, 194))
+        );
+        ContactUsPNLLayout.setVerticalGroup(
+            ContactUsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ContactUsPNLLayout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(38, 38, 38)
+                .addGroup(ContactUsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ContactUsFirstNameLabel)
+                    .addComponent(ContactUsFirstNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ContactUsSurnameLabel)
+                    .addComponent(ContactUsSurnameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(45, 45, 45)
+                .addGroup(ContactUsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ReviewDateLabel)
+                    .addComponent(ReviewDateFormattedField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ContactUsEmailLabel)
+                    .addComponent(ContactUsEmailField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(39, 39, 39)
+                .addGroup(ContactUsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ContactUsRatingSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(TermsAndConditionsLabel)
+                    .addComponent(TermsAndConditionsCheckBox)
+                    .addComponent(ContactUsRatingLabel))
+                .addGap(35, 35, 35)
+                .addGroup(ContactUsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(FeedbackLabel)
+                    .addComponent(FeedbackTextAreaScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(38, 38, 38)
+                .addComponent(SendFeedbackBTN)
+                .addContainerGap(50, Short.MAX_VALUE))
+        );
+
+        Parent.add(ContactUsPNL, "card4");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -114,6 +473,125 @@ public class RecourceHubGUI extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void EmailFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmailFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_EmailFieldActionPerformed
+
+    private void SurnameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SurnameFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_SurnameFieldActionPerformed
+
+    private void ContactUsFirstNameFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ContactUsFirstNameFieldKeyPressed
+        int keyCode = evt.getKeyCode();
+        int maxUserFirstNameSize = 30;//Assigning the mac length for the user first name field, this will not be passed
+
+        if ((keyCode >= KeyEvent.VK_A && keyCode <= KeyEvent.VK_Z) || keyCode == KeyEvent.VK_BACK_SPACE || keyCode == KeyEvent.VK_CAPS_LOCK) {// if the key pressed between a and z, and caps lock, and back space
+            ContactUsFirstNameField.setEditable(true);//allow the user to continue//by setting the editable of the review first name field to true
+            if (ContactUsFirstNameField.getText().length() < maxUserFirstNameSize || keyCode == KeyEvent.VK_BACK_SPACE) {//if the length of user input is less than the set maximum//allow backspace evel when the max is hit
+                ContactUsFirstNameField.setEditable(true);//allow the user to input// to edit the field//seeting the review first name field editable to true
+            } else {//else if it becomes more than the mac variable set for this.
+                ContactUsFirstNameField.setEditable(false);//stop the user from inputting//set the review forst name field editable to false so it cannot surpass the length
+                JOptionPane.showMessageDialog(null, "Maximum 30 digits for Firstname!");//notify the user the maximum number of characters allowed
+            }//end else if statement
+        } else {//else if the user inputs something other than a-z, backspace, or Caps-lock
+            ContactUsFirstNameField.setEditable(false);//stop the user from inputting
+            JOptionPane.showMessageDialog(null, "Please use alphabetical characters only A - Z ");   //notify the THAT only alphabetical characters are accepted.
+        }//end else if
+    }//GEN-LAST:event_ContactUsFirstNameFieldKeyPressed
+
+    private void ReviewTextAreaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ReviewTextAreaKeyPressed
+        int keyCode = evt.getKeyCode();
+        int maxUserReviewSize = 50;//assiging the max surname length
+
+        if ((keyCode >= KeyEvent.VK_A && keyCode <= KeyEvent.VK_Z) || keyCode == KeyEvent.VK_BACK_SPACE || keyCode == KeyEvent.VK_CAPS_LOCK) {//if user inputis a-z, backspace, or capslock
+            ReviewTextArea.setEditable(true);//allow the user to input
+            if (ReviewTextArea.getText().length() < maxUserReviewSize || keyCode == KeyEvent.VK_BACK_SPACE) {//if the length of user input is less than the set maximum
+                ReviewTextArea.setEditable(true);//allow the user to input
+            } else {//else if it exceeds the set maximum
+                ReviewTextArea.setEditable(false);//dont allow the user to input any further
+                JOptionPane.showMessageDialog(null, "Maximum 50 digits for feedback!");//notify the user
+            }//end else if statement
+        } else {//else if the user inputs something other than a-z, backspace, or Caps-lock
+            ReviewTextArea.setEditable(false);//Stop the user from inputting
+
+            JOptionPane.showMessageDialog(null, "Please use alphabetical characters A-Z only");//notify the user
+        }//end else if statement:
+    }//GEN-LAST:event_ReviewTextAreaKeyPressed
+
+    private void ReviewDateFormattedFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReviewDateFormattedFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ReviewDateFormattedFieldActionPerformed
+
+    private void ReviewDateFormattedFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ReviewDateFormattedFieldKeyPressed
+        String input = ReviewDateFormattedField.getText(); // Assuming ReviewDateFormattedField is the name of your formatted date field
+        int keyCode = evt.getKeyCode();
+        int maxUserDateSize = 10; // Maximum length of the date field (##/##/####)
+
+        // Allow input if it's a digit, '/', or backspace
+        if (Character.isDigit(keyCode) || keyCode == KeyEvent.VK_SLASH || keyCode == KeyEvent.VK_BACK_SPACE) {
+            // Allow input initially for the first two digits
+            if (input.length() < 2 || (input.length() == 2 && keyCode == KeyEvent.VK_SLASH)) {
+                ReviewDateFormattedField.setEditable(true);
+            } else if (input.length() == 2 && keyCode != KeyEvent.VK_SLASH && keyCode != KeyEvent.VK_BACK_SPACE) {
+                // Add '/' after the first two digits if a non-backspace key is pressed
+                ReviewDateFormattedField.setText(input + "/");
+                ReviewDateFormattedField.setEditable(true);
+            } else if (input.length() < 5 || (input.length() == 5 && keyCode == KeyEvent.VK_SLASH)) {
+                // Allow input for the next two digits after '/'
+                ReviewDateFormattedField.setEditable(true);
+            } else if (input.length() == 5 && keyCode != KeyEvent.VK_SLASH && keyCode != KeyEvent.VK_BACK_SPACE) {
+                // Add '/' after the next two digits if a non-backspace key is pressed
+                ReviewDateFormattedField.setText(input + "/");
+                ReviewDateFormattedField.setEditable(true);
+            } else if (input.length() < maxUserDateSize || keyCode == KeyEvent.VK_BACK_SPACE) {
+                // Allow input for the last four digits after the second '/', or allow backspace
+                ReviewDateFormattedField.setEditable(true);
+            } else {
+                ReviewDateFormattedField.setEditable(false);
+                JOptionPane.showMessageDialog(null, "Maximum length reached for the date field.");
+            }
+        } else {
+            ReviewDateFormattedField.setEditable(false);
+            JOptionPane.showMessageDialog(null, "Please use only digits and '/' for the date format.");
+        }
+
+    }//GEN-LAST:event_ReviewDateFormattedFieldKeyPressed
+
+    private void ContactUsSurnameFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ContactUsSurnameFieldKeyPressed
+        int keyCode = evt.getKeyCode();
+        int maxUserSurnameSize = 30;//assiging the max surname length, this will not be passed
+
+        if ((keyCode >= KeyEvent.VK_A && keyCode <= KeyEvent.VK_Z) || keyCode == KeyEvent.VK_BACK_SPACE || keyCode == KeyEvent.VK_CAPS_LOCK) {//if user inputis a-z, backspace, or capslock
+            ContactUsSurnameField.setEditable(true);//allow the user to input
+            if (ContactUsSurnameField.getText().length() < maxUserSurnameSize || keyCode == KeyEvent.VK_BACK_SPACE) {//if the length of user input is less than the set maximum
+                ContactUsSurnameField.setEditable(true);//allow the user to input
+            } else {//else if it exceeds the set maximum
+                ContactUsSurnameField.setEditable(false);//dont allow the user to input any further
+                JOptionPane.showMessageDialog(null, "Maximum 30 digits for Surname!");//notify the user
+            }//end else if statement
+        } else {//else if the user inputs something other than a-z, backspace, or Caps-lock
+            ContactUsSurnameField.setEditable(false);//Stop the user from inputting
+
+            JOptionPane.showMessageDialog(null, "Please use alphabetical characters only A-Z");//notify the user
+        }//end else if statement
+    }//GEN-LAST:event_ContactUsSurnameFieldKeyPressed
+
+    private void ContactUsEmailFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ContactUsEmailFieldKeyPressed
+        int keyCode = evt.getKeyCode();
+        int maxReviewEmailSize = 40;
+
+        ContactUsEmailField.setEditable(true); // allow the user to enter into the email field
+
+        if (ContactUsEmailField.getText().length() >= maxReviewEmailSize && keyCode != KeyEvent.VK_BACK_SPACE) {
+            ContactUsEmailField.setEditable(false);
+            JOptionPane.showMessageDialog(null, "Maximum of 40 characters A-Z, 1-9");
+        }
+    }//GEN-LAST:event_ContactUsEmailFieldKeyPressed
+
+    private void SendFeedbackBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SendFeedbackBTNActionPerformed
+       
+    }//GEN-LAST:event_SendFeedbackBTNActionPerformed
 
     /**
      * @param args the command line arguments
@@ -151,6 +629,27 @@ public class RecourceHubGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public static javax.swing.JTextField ContactUsEmailField;
+    private javax.swing.JLabel ContactUsEmailLabel;
+    public static javax.swing.JTextField ContactUsFirstNameField;
+    private javax.swing.JLabel ContactUsFirstNameLabel;
+    private javax.swing.JLabel ContactUsLogoLabel;
+    private javax.swing.JPanel ContactUsPNL;
+    private javax.swing.JLabel ContactUsRatingLabel;
+    public static javax.swing.JSpinner ContactUsRatingSpinner;
+    public static javax.swing.JTextField ContactUsSurnameField;
+    private javax.swing.JLabel ContactUsSurnameLabel;
+    private javax.swing.JLabel ContentLabel;
+    private javax.swing.JTextArea ContentTextArea;
+    private javax.swing.JFormattedTextField DateFormattedField;
+    private javax.swing.JLabel DateLabel;
+    private javax.swing.JButton DeleteBTN;
+    private javax.swing.JTextField EmailField;
+    private javax.swing.JLabel EmailLabel;
+    private javax.swing.JLabel FeedbackLabel;
+    private javax.swing.JScrollPane FeedbackTextAreaScrollPane;
+    private javax.swing.JTextField FirstNameField;
+    private javax.swing.JLabel FirstNameLabel;
     private javax.swing.JPanel HomePagePanel;
     private javax.swing.JPanel Parent;
     private javax.swing.JPanel RecourceHub;
@@ -159,5 +658,19 @@ public class RecourceHubGUI extends javax.swing.JFrame {
     private javax.swing.JPanel ReportGenerator;
     private javax.swing.JLabel ReportGeneratorLabel;
     private javax.swing.JLabel ReportGeneratorLogoLabel;
+    private javax.swing.JFormattedTextField ReviewDateFormattedField;
+    private javax.swing.JLabel ReviewDateLabel;
+    public static javax.swing.JTextArea ReviewTextArea;
+    private javax.swing.JButton SaveBTN;
+    public static javax.swing.JButton SendFeedbackBTN;
+    private javax.swing.JTextField SurnameField;
+    private javax.swing.JLabel SurnameLabel;
+    private javax.swing.JCheckBox TermsAndConditionsCheckBox;
+    private javax.swing.JLabel TermsAndConditionsLabel;
+    private javax.swing.JButton ViewBTN;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }
