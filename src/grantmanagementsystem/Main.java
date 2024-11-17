@@ -602,8 +602,12 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_viewBTNActionPerformed
 
     private void exitBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBTNActionPerformed
-        // TODO add your handling code here:
-        System.exit(0);
+                setVisible(false);
+
+                // Open the HomePage
+                HomePage homePage = new HomePage();
+                homePage.setVisible(true);
+        
     }//GEN-LAST:event_exitBTNActionPerformed
 
     private void deleteBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteBTNActionPerformed
@@ -611,8 +615,7 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_deleteBTNActionPerformed
 
     private void exitBTnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBTnActionPerformed
-        // TODO add your handling code here:
-        System.exit(0);
+       
     }//GEN-LAST:event_exitBTnActionPerformed
 
     /**
