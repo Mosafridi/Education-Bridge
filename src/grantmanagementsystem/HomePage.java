@@ -8,12 +8,12 @@ package grantmanagementsystem;
  *
  * @author gregm
  */
-public class Home extends javax.swing.JFrame {
+public class HomePage extends javax.swing.JFrame {
 
     /**
      * Creates new form Home
      */
-    public Home() {
+    public HomePage() {
         initComponents();
     }
 
@@ -51,12 +51,27 @@ public class Home extends javax.swing.JFrame {
 
         ShoaibLogoLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ShoaibLogoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/salary.png"))); // NOI18N
+        ShoaibLogoLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ShoaibLogoLabelMouseClicked(evt);
+            }
+        });
 
         KarawanLogoLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         KarawanLogoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/graduate.png"))); // NOI18N
+        KarawanLogoLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                KarawanLogoLabelMouseClicked(evt);
+            }
+        });
 
         GregLogoLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         GregLogoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/school-bag.png"))); // NOI18N
+        GregLogoLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                GregLogoLabelMouseClicked(evt);
+            }
+        });
 
         KarawanNameLabel.setFont(new java.awt.Font("Bauhaus 93", 1, 18)); // NOI18N
         KarawanNameLabel.setForeground(new java.awt.Color(255, 255, 255));
@@ -165,7 +180,7 @@ public class Home extends javax.swing.JFrame {
                         .addGroup(HomePagePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(GregSectionLabel3)
                             .addComponent(GregSectionLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(28, Short.MAX_VALUE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(HomePagePanelLayout.createSequentialGroup()
                         .addGap(89, 89, 89)
                         .addComponent(GregLogoLabel)
@@ -182,7 +197,7 @@ public class Home extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HomePagePanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(WelcomeIconLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(HomePagePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(HomePagePanelLayout.createSequentialGroup()
                         .addComponent(KarawanLogoLabel)
@@ -222,15 +237,30 @@ public class Home extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(HomePagePanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(HomePagePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(HomePagePanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(HomePagePanel, javax.swing.GroupLayout.PREFERRED_SIZE, 524, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void KarawanLogoLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_KarawanLogoLabelMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_KarawanLogoLabelMouseClicked
+
+    private void GregLogoLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_GregLogoLabelMouseClicked
+                // Open the Student JFrame
+                new RecourceHubGUI().setVisible(true);
+                dispose(); // Close current frame
+    }//GEN-LAST:event_GregLogoLabelMouseClicked
+
+    private void ShoaibLogoLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ShoaibLogoLabelMouseClicked
+             new Main().setVisible(true);
+                dispose(); // Close current frame
+    }//GEN-LAST:event_ShoaibLogoLabelMouseClicked
 
     /**
      * @param args the command line arguments
@@ -249,20 +279,21 @@ public class Home extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Home.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(HomePage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Home.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(HomePage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Home.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(HomePage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Home.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(HomePage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Home().setVisible(true);
+                new HomePage().setVisible(true);
             }
         });
     }

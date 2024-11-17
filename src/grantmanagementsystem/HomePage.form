@@ -26,12 +26,12 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="HomePagePanel" alignment="1" max="32767" attributes="0"/>
+          <Component id="HomePagePanel" min="-2" max="-2" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="HomePagePanel" alignment="1" max="32767" attributes="0"/>
+          <Component id="HomePagePanel" min="-2" pref="524" max="-2" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -98,7 +98,7 @@
                               <Component id="GregSectionLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="GregSectionLabel4" alignment="0" min="-2" pref="261" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="28" max="32767" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="89" max="-2" attributes="0"/>
@@ -122,7 +122,7 @@
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="WelcomeIconLabel" min="-2" pref="199" max="-2" attributes="0"/>
-                  <EmptySpace pref="24" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <Component id="KarawanLogoLabel" min="-2" max="-2" attributes="0"/>
@@ -177,6 +177,9 @@
               <Image iconType="3" name="/img/salary.png"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="ShoaibLogoLabelMouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="KarawanLogoLabel">
           <Properties>
@@ -185,6 +188,9 @@
               <Image iconType="3" name="/img/graduate.png"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="KarawanLogoLabelMouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="GregLogoLabel">
           <Properties>
@@ -193,6 +199,9 @@
               <Image iconType="3" name="/img/school-bag.png"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="GregLogoLabelMouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="KarawanNameLabel">
           <Properties>

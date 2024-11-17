@@ -11,6 +11,6 @@ package grantmanagementsystem;
 public class MainApp {
     
     public static void main(String[] args) {
-         new Main().setVisible(true);
+         new LoginPage().setVisible(true);
     }
 }
