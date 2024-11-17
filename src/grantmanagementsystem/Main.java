@@ -80,6 +80,11 @@ public class Main extends javax.swing.JFrame {
         cancelBTN = new javax.swing.JButton();
         exitBTn = new javax.swing.JButton();
         adminPNL = new javax.swing.JPanel();
+        grant = new javax.swing.JScrollPane();
+        grantTBL = new javax.swing.JTable();
+        grantH1 = new javax.swing.JLabel();
+        jPanel4 = new javax.swing.JPanel();
+        viewAppBTN = new javax.swing.JButton();
         scholarshipPNL = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -268,14 +273,14 @@ public class Main extends javax.swing.JFrame {
         );
         coursePNLLayout.setVerticalGroup(
             coursePNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 591, Short.MAX_VALUE)
+            .addGap(0, 594, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("Courses", coursePNL);
 
         sidLBL.setText("Student ID");
 
-        snameLBL.setText("Name");
+        snameLBL.setText("Student Name");
 
         jLabel3.setText("Course Name");
 
@@ -423,25 +428,76 @@ public class Main extends javax.swing.JFrame {
                 .addComponent(headerLBL, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 230, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 233, Short.MAX_VALUE)
                 .addComponent(BTNpanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
         jTabbedPane1.addTab("Financial Aid", financialPNL);
 
+        grantTBL.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
+            },
+            new String [] {
+                "Application ID", "Student Name", "Course Name", "Requested Amount", "Reason for Aid", "Status"
+            }
+        ));
+        grant.setViewportView(grantTBL);
+
+        grantH1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        grantH1.setText("Grant Requests");
+
+        viewAppBTN.setText("View All Application");
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(viewAppBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addComponent(viewAppBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(14, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout adminPNLLayout = new javax.swing.GroupLayout(adminPNL);
         adminPNL.setLayout(adminPNLLayout);
         adminPNLLayout.setHorizontalGroup(
             adminPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 826, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, adminPNLLayout.createSequentialGroup()
+                .addContainerGap(316, Short.MAX_VALUE)
+                .addComponent(grantH1, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(305, 305, 305))
+            .addGroup(adminPNLLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(adminPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(grant)
+                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         adminPNLLayout.setVerticalGroup(
             adminPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 591, Short.MAX_VALUE)
+            .addGroup(adminPNLLayout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addComponent(grantH1)
+                .addGap(26, 26, 26)
+                .addComponent(grant, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("Administration", adminPNL);
+        jTabbedPane1.addTab("Grant Requests", adminPNL);
 
         javax.swing.GroupLayout scholarshipPNLLayout = new javax.swing.GroupLayout(scholarshipPNL);
         scholarshipPNL.setLayout(scholarshipPNLLayout);
@@ -451,7 +507,7 @@ public class Main extends javax.swing.JFrame {
         );
         scholarshipPNLLayout.setVerticalGroup(
             scholarshipPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 591, Short.MAX_VALUE)
+            .addGap(0, 594, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("Scholarship ", scholarshipPNL);
@@ -612,6 +668,9 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton exitBTN;
     private javax.swing.JButton exitBTn;
     private javax.swing.JPanel financialPNL;
+    private javax.swing.JScrollPane grant;
+    private javax.swing.JLabel grantH1;
+    private javax.swing.JTable grantTBL;
     private javax.swing.JLabel headerLBL;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
@@ -620,6 +679,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTabbedPane jTabbedPane1;
@@ -640,6 +700,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JTable studentTBL;
     private javax.swing.JTextField studentTF;
     private javax.swing.JButton submitBTN;
+    private javax.swing.JButton viewAppBTN;
     private javax.swing.JButton viewBTN;
     // End of variables declaration//GEN-END:variables
 }
