@@ -6,9 +6,16 @@ package grantmanagementsystem;
 
 import java.awt.CardLayout;
 import java.awt.event.KeyEvent;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -102,22 +109,22 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
         ProgrammingComboBox4 = new javax.swing.JComboBox<>();
         ProgrammingComboBox5 = new javax.swing.JComboBox<>();
         ManageRecourcesPNL = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
+        RecourceFirstNameLabel = new javax.swing.JLabel();
+        RecourseFirstNameField = new javax.swing.JTextField();
+        RecourseSurnameField = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
+        RecourseTypeLabel = new javax.swing.JLabel();
+        RecourseDateField = new javax.swing.JTextField();
+        RecourseDateLabel = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        jLabel5 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
+        RecourseTBL = new javax.swing.JTable();
+        URLLabel = new javax.swing.JLabel();
+        RecourseURLField = new javax.swing.JTextField();
+        CourseLabel = new javax.swing.JLabel();
+        RecourseCourseField = new javax.swing.JTextField();
         SaveRecourseBTN = new javax.swing.JButton();
         ViewRecourceBTN = new javax.swing.JButton();
+        RecourceTypeComboBox = new javax.swing.JComboBox<>();
         ReportGeneratorPNL = new javax.swing.JPanel();
         FirstNameLabel = new javax.swing.JLabel();
         SurnameLabel = new javax.swing.JLabel();
@@ -688,69 +695,77 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
         ManageRecourcesPNL.setBackground(new java.awt.Color(51, 204, 255));
         ManageRecourcesPNL.setLayout(null);
 
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("FirstName");
-        ManageRecourcesPNL.add(jLabel1);
-        jLabel1.setBounds(61, 9, 56, 16);
-        ManageRecourcesPNL.add(jTextField1);
-        jTextField1.setBounds(135, 6, 101, 22);
+        RecourceFirstNameLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        RecourceFirstNameLabel.setText("FirstName");
+        ManageRecourcesPNL.add(RecourceFirstNameLabel);
+        RecourceFirstNameLabel.setBounds(61, 9, 56, 16);
+        ManageRecourcesPNL.add(RecourseFirstNameField);
+        RecourseFirstNameField.setBounds(135, 6, 101, 22);
 
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        RecourseSurnameField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                RecourseSurnameFieldActionPerformed(evt);
             }
         });
-        ManageRecourcesPNL.add(jTextField2);
-        jTextField2.setBounds(445, 6, 101, 22);
+        ManageRecourcesPNL.add(RecourseSurnameField);
+        RecourseSurnameField.setBounds(445, 6, 101, 22);
 
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Surname");
         ManageRecourcesPNL.add(jLabel2);
         jLabel2.setBounds(369, 9, 50, 16);
-        ManageRecourcesPNL.add(jTextField3);
-        jTextField3.setBounds(445, 46, 101, 22);
 
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("RecourceType");
-        ManageRecourcesPNL.add(jLabel3);
-        jLabel3.setBounds(358, 49, 75, 16);
-        ManageRecourcesPNL.add(jTextField4);
-        jTextField4.setBounds(135, 46, 101, 22);
+        RecourseTypeLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        RecourseTypeLabel.setText("RecourceType");
+        ManageRecourcesPNL.add(RecourseTypeLabel);
+        RecourseTypeLabel.setBounds(358, 49, 75, 16);
+        ManageRecourcesPNL.add(RecourseDateField);
+        RecourseDateField.setBounds(135, 46, 101, 22);
 
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("Date");
-        ManageRecourcesPNL.add(jLabel4);
-        jLabel4.setBounds(60, 50, 50, 16);
+        RecourseDateLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        RecourseDateLabel.setText("Date");
+        ManageRecourcesPNL.add(RecourseDateLabel);
+        RecourseDateLabel.setBounds(60, 50, 50, 16);
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        RecourseTBL.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "FirstName", "Surname", "Date", "Type", "URL", "Course"
             }
-        ));
-        jScrollPane2.setViewportView(jTable1);
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        jScrollPane2.setViewportView(RecourseTBL);
 
         ManageRecourcesPNL.add(jScrollPane2);
         jScrollPane2.setBounds(19, 167, 636, 166);
 
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setText("URL");
-        ManageRecourcesPNL.add(jLabel5);
-        jLabel5.setBounds(60, 90, 50, 16);
-        ManageRecourcesPNL.add(jTextField5);
-        jTextField5.setBounds(135, 86, 101, 22);
+        URLLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        URLLabel.setText("URL");
+        ManageRecourcesPNL.add(URLLabel);
+        URLLabel.setBounds(60, 90, 50, 16);
+        ManageRecourcesPNL.add(RecourseURLField);
+        RecourseURLField.setBounds(135, 86, 101, 22);
 
-        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel6.setText("Course");
-        ManageRecourcesPNL.add(jLabel6);
-        jLabel6.setBounds(369, 89, 50, 16);
-        ManageRecourcesPNL.add(jTextField6);
-        jTextField6.setBounds(445, 86, 101, 22);
+        CourseLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        CourseLabel.setText("Course");
+        ManageRecourcesPNL.add(CourseLabel);
+        CourseLabel.setBounds(369, 89, 50, 16);
+        ManageRecourcesPNL.add(RecourseCourseField);
+        RecourseCourseField.setBounds(445, 86, 101, 22);
 
         SaveRecourseBTN.setText("Save");
         SaveRecourseBTN.addActionListener(new java.awt.event.ActionListener() {
@@ -762,8 +777,17 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
         SaveRecourseBTN.setBounds(145, 345, 75, 23);
 
         ViewRecourceBTN.setText("View");
+        ViewRecourceBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ViewRecourceBTNActionPerformed(evt);
+            }
+        });
         ManageRecourcesPNL.add(ViewRecourceBTN);
         ViewRecourceBTN.setBounds(461, 345, 75, 23);
+
+        RecourceTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Website", "Video", "Tutorial", "Book", " " }));
+        ManageRecourcesPNL.add(RecourceTypeComboBox);
+        RecourceTypeComboBox.setBounds(440, 50, 110, 20);
 
         SecondParent.add(ManageRecourcesPNL, "card4");
 
@@ -1287,13 +1311,73 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
               SecondParent.revalidate();
     }//GEN-LAST:event_ManageRecourceLabelMouseClicked
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void RecourseSurnameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RecourseSurnameFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_RecourseSurnameFieldActionPerformed
 
     private void SaveRecourseBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaveRecourseBTNActionPerformed
-        // TODO add your handling code here:
+        File outFile;
+        FileWriter fw;
+        BufferedWriter bw;
+
+        String FirstName = FirstNameField.getText();
+        String Surname = SurnameField.getText();
+        String Course = RecourseCourseField.getText();
+        String Date = RecourseDateField.getText();
+        String Type = (String) RecourceTypeComboBox.getSelectedItem();
+        String url = RecourseURLField.getText();
+        
+
+
+        try{
+            outFile = new File("Recources.txt");
+            fw = new FileWriter(outFile, true);// true appends new data to the end , false will add to the begining
+            bw = new BufferedWriter(fw);
+
+            bw.write(FirstName+","+Surname+"," +Course+","+Date+","+Type+","+url);
+            bw.newLine();
+            bw.close();// Important to close File
+
+            JOptionPane.showMessageDialog(null, "Written to File");
+
+        }catch(IOException e){
+            System.out.println("Exception e: "+e.getMessage());
+        }
     }//GEN-LAST:event_SaveRecourseBTNActionPerformed
+
+    private void ViewRecourceBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ViewRecourceBTNActionPerformed
+             File inFile = new File("Recources.txt");
+
+        try (BufferedReader br = new BufferedReader(new FileReader(inFile))) {
+            DefaultTableModel tableModel = (DefaultTableModel) RecourseTBL.getModel();
+
+            // Clear existing rows in case of reload
+            tableModel.setRowCount(0);
+
+            String line;
+            while ((line = br.readLine()) != null) {
+                // Split the line into columns using the comma delimiter
+                String[] rowData = line.split(",");
+
+                // Ensure the number of columns in the file matches the table's structure
+                if (rowData.length == tableModel.getColumnCount()) {
+                    tableModel.addRow(rowData);
+                } else {
+                    JOptionPane.showMessageDialog(null,
+                        "Mismatch between file columns and table columns.\nCheck the file format.",
+                        "Data Error",
+                        JOptionPane.WARNING_MESSAGE);
+                    break;
+                }
+            }
+        } catch (IOException ex) {
+            // Show an error dialog if there's an issue reading the file
+            JOptionPane.showMessageDialog(null,
+                "Error reading file: " + ex.getMessage(),
+                "File Error",
+                JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_ViewRecourceBTNActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1359,6 +1443,7 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
     private javax.swing.JLabel ContactUsTitleLabel;
     private javax.swing.JLabel ContentLabel;
     private javax.swing.JTextArea ContentTextArea;
+    private javax.swing.JLabel CourseLabel;
     private javax.swing.JFormattedTextField DateFormattedField;
     private javax.swing.JLabel DateLabel;
     private javax.swing.JButton DeleteBTN;
@@ -1400,10 +1485,20 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
     private javax.swing.JPanel ProgrammingQuizPNL;
     private javax.swing.JLabel QuizLabel;
     private javax.swing.JPanel QuizPNL;
+    private javax.swing.JLabel RecourceFirstNameLabel;
     private javax.swing.JLabel RecourceHubLabel;
     private javax.swing.JLabel RecourceHubLogoLabel;
     private javax.swing.JPanel RecourceHubNavPNL;
     private javax.swing.JPanel RecourceHubPNL;
+    private javax.swing.JComboBox<String> RecourceTypeComboBox;
+    private javax.swing.JTextField RecourseCourseField;
+    private javax.swing.JTextField RecourseDateField;
+    private javax.swing.JLabel RecourseDateLabel;
+    private javax.swing.JTextField RecourseFirstNameField;
+    private javax.swing.JTextField RecourseSurnameField;
+    private javax.swing.JTable RecourseTBL;
+    private javax.swing.JLabel RecourseTypeLabel;
+    private javax.swing.JTextField RecourseURLField;
     private javax.swing.JLabel ReportGeneratorLabel;
     private javax.swing.JLabel ReportGeneratorLabel1;
     private javax.swing.JLabel ReportGeneratorLabel2;
@@ -1434,23 +1529,12 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
     private javax.swing.JLabel TutorialNameLabel4;
     private javax.swing.JLabel TutorialNameLabel5;
     private javax.swing.JPanel TutorialsPNL;
+    private javax.swing.JLabel URLLabel;
     private javax.swing.JButton ViewBTN;
     private javax.swing.JButton ViewRecourceBTN;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTabbedPane jTabbedPane3;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
     // End of variables declaration//GEN-END:variables
 }
