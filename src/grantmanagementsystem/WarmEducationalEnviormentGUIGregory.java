@@ -837,6 +837,12 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
 
         DeleteBTN.setText("delete");
 
+        DateFormattedField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DateFormattedFieldActionPerformed(evt);
+            }
+        });
+
         ReportGeneratorTitleLabel.setFont(new java.awt.Font("Bauhaus 93", 1, 36)); // NOI18N
         ReportGeneratorTitleLabel.setForeground(new java.awt.Color(255, 255, 255));
         ReportGeneratorTitleLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1185,38 +1191,7 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
     }//GEN-LAST:event_ReviewDateFormattedFieldActionPerformed
 
     private void ReviewDateFormattedFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ReviewDateFormattedFieldKeyPressed
-        String input = ReviewDateFormattedField.getText(); // Assuming ReviewDateFormattedField is the name of your formatted date field
-        int keyCode = evt.getKeyCode();
-        int maxUserDateSize = 10; // Maximum length of the date field (##/##/####)
-
-        // Allow input if it's a digit, '/', or backspace
-        if (Character.isDigit(keyCode) || keyCode == KeyEvent.VK_SLASH || keyCode == KeyEvent.VK_BACK_SPACE) {
-            // Allow input initially for the first two digits
-            if (input.length() < 2 || (input.length() == 2 && keyCode == KeyEvent.VK_SLASH)) {
-                ReviewDateFormattedField.setEditable(true);
-            } else if (input.length() == 2 && keyCode != KeyEvent.VK_SLASH && keyCode != KeyEvent.VK_BACK_SPACE) {
-                // Add '/' after the first two digits if a non-backspace key is pressed
-                ReviewDateFormattedField.setText(input + "/");
-                ReviewDateFormattedField.setEditable(true);
-            } else if (input.length() < 5 || (input.length() == 5 && keyCode == KeyEvent.VK_SLASH)) {
-                // Allow input for the next two digits after '/'
-                ReviewDateFormattedField.setEditable(true);
-            } else if (input.length() == 5 && keyCode != KeyEvent.VK_SLASH && keyCode != KeyEvent.VK_BACK_SPACE) {
-                // Add '/' after the next two digits if a non-backspace key is pressed
-                ReviewDateFormattedField.setText(input + "/");
-                ReviewDateFormattedField.setEditable(true);
-            } else if (input.length() < maxUserDateSize || keyCode == KeyEvent.VK_BACK_SPACE) {
-                // Allow input for the last four digits after the second '/', or allow backspace
-                ReviewDateFormattedField.setEditable(true);
-            } else {
-                ReviewDateFormattedField.setEditable(false);
-                JOptionPane.showMessageDialog(null, "Maximum length reached for the date field.");
-            }
-        } else {
-            ReviewDateFormattedField.setEditable(false);
-            JOptionPane.showMessageDialog(null, "Please use only digits and '/' for the date format.");
-        }
-
+     
     }//GEN-LAST:event_ReviewDateFormattedFieldKeyPressed
 
     private void ContactUsSurnameFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ContactUsSurnameFieldKeyPressed
@@ -1370,6 +1345,10 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
                     JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_ViewRecourceBTNActionPerformed
+
+    private void DateFormattedFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DateFormattedFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DateFormattedFieldActionPerformed
 
     /**
      * @param args the command line arguments

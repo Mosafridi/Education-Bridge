@@ -1594,6 +1594,9 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JFormattedTextField" name="DateFormattedField">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="DateFormattedFieldActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="ReportGeneratorTitleLabel">
               <Properties>
