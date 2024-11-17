@@ -74,10 +74,10 @@ public class FinancialAidGUIShoaib extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        viewAllBTN = new javax.swing.JButton();
+        approveBTN = new javax.swing.JButton();
+        rejectBTN = new javax.swing.JButton();
+        exitsponsorBTN = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(153, 255, 255));
@@ -390,17 +390,22 @@ public class FinancialAidGUIShoaib extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        jButton2.setBackground(new java.awt.Color(51, 153, 255));
-        jButton2.setText("View All");
+        viewAllBTN.setBackground(new java.awt.Color(51, 153, 255));
+        viewAllBTN.setText("View All");
 
-        jButton3.setBackground(new java.awt.Color(102, 255, 102));
-        jButton3.setText("Approve");
+        approveBTN.setBackground(new java.awt.Color(102, 255, 102));
+        approveBTN.setText("Approve");
 
-        jButton4.setBackground(new java.awt.Color(255, 51, 51));
-        jButton4.setText("Reject");
+        rejectBTN.setBackground(new java.awt.Color(255, 51, 51));
+        rejectBTN.setText("Reject");
 
-        jButton5.setBackground(new java.awt.Color(255, 51, 51));
-        jButton5.setText("EXIT");
+        exitsponsorBTN.setBackground(new java.awt.Color(255, 51, 51));
+        exitsponsorBTN.setText("EXIT");
+        exitsponsorBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exitsponsorBTNActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout scholarshipPNLLayout = new javax.swing.GroupLayout(scholarshipPNL);
         scholarshipPNL.setLayout(scholarshipPNLLayout);
@@ -413,13 +418,13 @@ public class FinancialAidGUIShoaib extends javax.swing.JFrame {
                         .addComponent(registeration, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(jScrollPane1)
                     .addGroup(scholarshipPNLLayout.createSequentialGroup()
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(viewAllBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(26, 26, 26)
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(approveBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(rejectBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(exitsponsorBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         scholarshipPNLLayout.setVerticalGroup(
@@ -431,10 +436,10 @@ public class FinancialAidGUIShoaib extends javax.swing.JFrame {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(scholarshipPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(viewAllBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(approveBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rejectBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(exitsponsorBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(21, Short.MAX_VALUE))
         );
 
@@ -484,6 +489,12 @@ public class FinancialAidGUIShoaib extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_pendingBTNActionPerformed
 
+    private void exitsponsorBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitsponsorBTNActionPerformed
+        // TODO add your handling code here:
+        
+        System.exit(0);
+    }//GEN-LAST:event_exitsponsorBTNActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -524,20 +535,18 @@ public class FinancialAidGUIShoaib extends javax.swing.JFrame {
     private javax.swing.JPanel BTNpanel;
     private javax.swing.JPanel adminPNL;
     private javax.swing.JButton allGrantBTN;
+    private javax.swing.JButton approveBTN;
     private javax.swing.JButton approvegrantBTN;
     private javax.swing.JButton cancelBTN;
     private javax.swing.JTextField courseTF5;
     private javax.swing.JLabel emailLBL5;
     private javax.swing.JTextField emailTF5;
     private javax.swing.JButton exitBTn;
+    private javax.swing.JButton exitsponsorBTN;
     private javax.swing.JPanel financialPNL5;
     private javax.swing.JScrollPane grant;
     private javax.swing.JTable grantTBL;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
     private javax.swing.JComboBox<String> jComboBox6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel16;
@@ -556,6 +565,7 @@ public class FinancialAidGUIShoaib extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField3;
     private javax.swing.JButton pendingBTN;
     private javax.swing.JPanel registeration;
+    private javax.swing.JButton rejectBTN;
     private javax.swing.JLabel requestAmountLBL5;
     private javax.swing.JTextField requestAmountTF5;
     private javax.swing.JPanel scholarshipPNL;
@@ -564,5 +574,6 @@ public class FinancialAidGUIShoaib extends javax.swing.JFrame {
     private javax.swing.JLabel snameLBL5;
     private javax.swing.JTextField snameTF5;
     private javax.swing.JButton submitBTN;
+    private javax.swing.JButton viewAllBTN;
     // End of variables declaration//GEN-END:variables
 }
