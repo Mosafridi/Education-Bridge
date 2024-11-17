@@ -6,7 +6,7 @@ package grantmanagementsystem;
 
 /**
  *
- * @author gregm
+ * @author Gregory Mitchell Completed the home page on 16/11/2024
  */
 public class HomePage extends javax.swing.JFrame {
 
@@ -248,17 +248,18 @@ public class HomePage extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void KarawanLogoLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_KarawanLogoLabelMouseClicked
-        // TODO add your handling code here:
+            new StudentInformationGUIKarawan().setVisible(true);
+                dispose(); // Close current frame
     }//GEN-LAST:event_KarawanLogoLabelMouseClicked
 
     private void GregLogoLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_GregLogoLabelMouseClicked
                 // Open the Student JFrame
-                new RecourceHubGUI().setVisible(true);
+                new WarmEducationalEnviormentGUIGregory().setVisible(true);
                 dispose(); // Close current frame
     }//GEN-LAST:event_GregLogoLabelMouseClicked
 
     private void ShoaibLogoLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ShoaibLogoLabelMouseClicked
-             new Main().setVisible(true);
+             new FinancialAidGUIShoaib().setVisible(true);
                 dispose(); // Close current frame
     }//GEN-LAST:event_ShoaibLogoLabelMouseClicked
 
