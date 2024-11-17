@@ -28,121 +28,88 @@ public class RecourceHubGUI extends javax.swing.JFrame {
 
         HomePagePanel = new javax.swing.JPanel();
         ReportGeneratorLogoLabel = new javax.swing.JLabel();
-        RecourceHubLogoLabel = new javax.swing.JLabel();
         ReportGeneratorLabel = new javax.swing.JLabel();
+        RecourceHubLogoLabel = new javax.swing.JLabel();
         RecourceHubLabel = new javax.swing.JLabel();
-        ReportGeneratorExplanationLabel = new javax.swing.JLabel();
-        RecourceHubExplanationLabel1 = new javax.swing.JLabel();
-        ReportGeneratorExplanationLabel1 = new javax.swing.JLabel();
-        RecourceHubExplanationLabel = new javax.swing.JLabel();
+        Parent = new javax.swing.JPanel();
+        ReportGenerator = new javax.swing.JPanel();
+        RecourceHub = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         HomePagePanel.setBackground(new java.awt.Color(51, 204, 255));
+        HomePagePanel.setLayout(null);
 
         ReportGeneratorLogoLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ReportGeneratorLogoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/analytics.png"))); // NOI18N
+        ReportGeneratorLogoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/6771589_book_education_idea_learning_school_icon.png"))); // NOI18N
+        HomePagePanel.add(ReportGeneratorLogoLabel);
+        ReportGeneratorLogoLabel.setBounds(10, 120, 100, 70);
 
-        RecourceHubLogoLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        RecourceHubLogoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/concept.png"))); // NOI18N
-
-        ReportGeneratorLabel.setFont(new java.awt.Font("Bauhaus 93", 1, 24)); // NOI18N
+        ReportGeneratorLabel.setFont(new java.awt.Font("Bauhaus 93", 1, 12)); // NOI18N
         ReportGeneratorLabel.setForeground(new java.awt.Color(255, 255, 255));
         ReportGeneratorLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ReportGeneratorLabel.setText("Report Generator:");
+        ReportGeneratorLabel.setText("Report Generator");
+        HomePagePanel.add(ReportGeneratorLabel);
+        ReportGeneratorLabel.setBounds(10, 190, 100, 24);
 
-        RecourceHubLabel.setFont(new java.awt.Font("Bauhaus 93", 1, 24)); // NOI18N
+        RecourceHubLogoLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        RecourceHubLogoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/7007507_analytics_chart_graph_pie_business_icon.png"))); // NOI18N
+        HomePagePanel.add(RecourceHubLogoLabel);
+        RecourceHubLogoLabel.setBounds(20, 290, 80, 70);
+
+        RecourceHubLabel.setFont(new java.awt.Font("Bauhaus 93", 1, 12)); // NOI18N
         RecourceHubLabel.setForeground(new java.awt.Color(255, 255, 255));
         RecourceHubLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        RecourceHubLabel.setText("Recource hub:");
+        RecourceHubLabel.setText("Recource hub");
+        HomePagePanel.add(RecourceHubLabel);
+        RecourceHubLabel.setBounds(10, 370, 100, 18);
 
-        ReportGeneratorExplanationLabel.setFont(new java.awt.Font("Bauhaus 93", 1, 14)); // NOI18N
-        ReportGeneratorExplanationLabel.setForeground(new java.awt.Color(255, 255, 255));
-        ReportGeneratorExplanationLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ReportGeneratorExplanationLabel.setText("A report generator tool to provide insightful reports based ");
+        Parent.setBackground(new java.awt.Color(255, 255, 255));
+        Parent.setLayout(new java.awt.CardLayout());
 
-        RecourceHubExplanationLabel1.setFont(new java.awt.Font("Bauhaus 93", 1, 14)); // NOI18N
-        RecourceHubExplanationLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        RecourceHubExplanationLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        RecourceHubExplanationLabel1.setText("upload, organize and access educational recources");
+        ReportGenerator.setBackground(new java.awt.Color(204, 255, 255));
 
-        ReportGeneratorExplanationLabel1.setFont(new java.awt.Font("Bauhaus 93", 1, 14)); // NOI18N
-        ReportGeneratorExplanationLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        ReportGeneratorExplanationLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ReportGeneratorExplanationLabel1.setText("on users activity, user growth, and recource usage");
-
-        RecourceHubExplanationLabel.setFont(new java.awt.Font("Bauhaus 93", 1, 14)); // NOI18N
-        RecourceHubExplanationLabel.setForeground(new java.awt.Color(255, 255, 255));
-        RecourceHubExplanationLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        RecourceHubExplanationLabel.setText("A hub were users can upload, organize");
-
-        javax.swing.GroupLayout HomePagePanelLayout = new javax.swing.GroupLayout(HomePagePanel);
-        HomePagePanel.setLayout(HomePagePanelLayout);
-        HomePagePanelLayout.setHorizontalGroup(
-            HomePagePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(HomePagePanelLayout.createSequentialGroup()
-                .addGroup(HomePagePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(HomePagePanelLayout.createSequentialGroup()
-                        .addGap(79, 79, 79)
-                        .addComponent(ReportGeneratorLogoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 324, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(RecourceHubLogoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 314, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(HomePagePanelLayout.createSequentialGroup()
-                        .addGroup(HomePagePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(HomePagePanelLayout.createSequentialGroup()
-                                .addGap(123, 123, 123)
-                                .addComponent(ReportGeneratorLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(HomePagePanelLayout.createSequentialGroup()
-                                .addGap(45, 45, 45)
-                                .addComponent(ReportGeneratorExplanationLabel)))
-                        .addGroup(HomePagePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(HomePagePanelLayout.createSequentialGroup()
-                                .addGap(74, 74, 74)
-                                .addComponent(RecourceHubLabel))
-                            .addGroup(HomePagePanelLayout.createSequentialGroup()
-                                .addGap(18, 18, 18)
-                                .addComponent(RecourceHubExplanationLabel))))
-                    .addGroup(HomePagePanelLayout.createSequentialGroup()
-                        .addGap(67, 67, 67)
-                        .addComponent(ReportGeneratorExplanationLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(RecourceHubExplanationLabel1)))
-                .addContainerGap(74, Short.MAX_VALUE))
+        javax.swing.GroupLayout ReportGeneratorLayout = new javax.swing.GroupLayout(ReportGenerator);
+        ReportGenerator.setLayout(ReportGeneratorLayout);
+        ReportGeneratorLayout.setHorizontalGroup(
+            ReportGeneratorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 651, Short.MAX_VALUE)
         );
-        HomePagePanelLayout.setVerticalGroup(
-            HomePagePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(HomePagePanelLayout.createSequentialGroup()
-                .addGap(0, 71, Short.MAX_VALUE)
-                .addGroup(HomePagePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(HomePagePanelLayout.createSequentialGroup()
-                        .addComponent(ReportGeneratorLogoLabel)
-                        .addGap(22, 22, 22)
-                        .addGroup(HomePagePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(ReportGeneratorLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(RecourceHubLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(HomePagePanelLayout.createSequentialGroup()
-                        .addComponent(RecourceHubLogoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(36, 36, 36)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(HomePagePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ReportGeneratorExplanationLabel)
-                    .addComponent(RecourceHubExplanationLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(HomePagePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ReportGeneratorExplanationLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(RecourceHubExplanationLabel1))
-                .addGap(146, 146, 146))
+        ReportGeneratorLayout.setVerticalGroup(
+            ReportGeneratorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 506, Short.MAX_VALUE)
         );
+
+        Parent.add(ReportGenerator, "card2");
+
+        RecourceHub.setBackground(new java.awt.Color(51, 153, 255));
+
+        javax.swing.GroupLayout RecourceHubLayout = new javax.swing.GroupLayout(RecourceHub);
+        RecourceHub.setLayout(RecourceHubLayout);
+        RecourceHubLayout.setHorizontalGroup(
+            RecourceHubLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 651, Short.MAX_VALUE)
+        );
+        RecourceHubLayout.setVerticalGroup(
+            RecourceHubLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 506, Short.MAX_VALUE)
+        );
+
+        Parent.add(RecourceHub, "card3");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(HomePagePanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(HomePagePanel, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Parent, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(HomePagePanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(HomePagePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(Parent, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -185,12 +152,11 @@ public class RecourceHubGUI extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel HomePagePanel;
-    private javax.swing.JLabel RecourceHubExplanationLabel;
-    private javax.swing.JLabel RecourceHubExplanationLabel1;
+    private javax.swing.JPanel Parent;
+    private javax.swing.JPanel RecourceHub;
     private javax.swing.JLabel RecourceHubLabel;
     private javax.swing.JLabel RecourceHubLogoLabel;
-    private javax.swing.JLabel ReportGeneratorExplanationLabel;
-    private javax.swing.JLabel ReportGeneratorExplanationLabel1;
+    private javax.swing.JPanel ReportGenerator;
     private javax.swing.JLabel ReportGeneratorLabel;
     private javax.swing.JLabel ReportGeneratorLogoLabel;
     // End of variables declaration//GEN-END:variables
