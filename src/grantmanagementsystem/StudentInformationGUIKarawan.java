@@ -168,6 +168,11 @@ public class StudentInformationGUIKarawan extends javax.swing.JFrame {
         });
 
         applyBTN.setText("Apply for Aid");
+        applyBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                applyBTNActionPerformed(evt);
+            }
+        });
 
         exitBTN.setText("EXIT");
         exitBTN.addActionListener(new java.awt.event.ActionListener() {
@@ -290,11 +295,11 @@ public class StudentInformationGUIKarawan extends javax.swing.JFrame {
         FileWriter fw;
         BufferedWriter bw;
 
-        String id = studentTF.getText();
-        String name = nameTF.getText();
-        String courseName = coursenameTF.getText();
-        String level = levelTF.getText();
-        String contact = contactTF.getText();
+        String id = studentTF1.getText();
+        String name = nameTF1.getText();
+        String courseName = coursenameTF1.getText();
+        String level = levelTF1.getText();
+        String contact = contactTF1.getText();
 
         try{
             outFile = new File("studentData.txt");
@@ -360,6 +365,12 @@ public class StudentInformationGUIKarawan extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_deleteBTNActionPerformed
 
+    private void applyBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_applyBTNActionPerformed
+        // TODO add your handling code here:
+          new FinancialAidGUIShoaib().setVisible(true);
+                dispose(); // Close current frame
+    }//GEN-LAST:event_applyBTNActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -397,39 +408,27 @@ public class StudentInformationGUIKarawan extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton applyBTN;
-    private javax.swing.JLabel contactLBL;
     private javax.swing.JLabel contactLBL1;
-    private javax.swing.JTextField contactTF;
     private javax.swing.JTextField contactTF1;
-    private javax.swing.JLabel coursenameLBL;
     private javax.swing.JLabel coursenameLBL1;
-    private javax.swing.JTextField coursenameTF;
     private javax.swing.JTextField coursenameTF1;
     private javax.swing.JButton deleteBTN;
     private javax.swing.JButton enrollBTN;
     private javax.swing.JButton exitBTN;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JLabel levelLBL;
     private javax.swing.JLabel levelLBL1;
-    private javax.swing.JTextField levelTF;
     private javax.swing.JTextField levelTF1;
-    private javax.swing.JLabel nameLBL;
     private javax.swing.JLabel nameLBL1;
-    private javax.swing.JTextField nameTF;
     private javax.swing.JTextField nameTF1;
-    private javax.swing.JLabel studentLBL;
     private javax.swing.JLabel studentLBL1;
-    private javax.swing.JPanel studentPNL;
     private javax.swing.JPanel studentPNL1;
     private javax.swing.JTable studentTBL;
-    private javax.swing.JTextField studentTF;
     private javax.swing.JTextField studentTF1;
     private javax.swing.JButton viewBTN;
     // End of variables declaration//GEN-END:variables
