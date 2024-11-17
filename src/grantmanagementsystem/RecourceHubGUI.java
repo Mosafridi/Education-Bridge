@@ -37,9 +37,20 @@ public class RecourceHubGUI extends javax.swing.JFrame {
         RecourceHubLogoLabel = new javax.swing.JLabel();
         RecourceHubLabel = new javax.swing.JLabel();
         ContactUsLogoLabel = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        ContactUsLabel = new javax.swing.JLabel();
         Parent = new javax.swing.JPanel();
         RecourceHub = new javax.swing.JPanel();
+        RecourceHubNavPNL = new javax.swing.JPanel();
+        ManageRecourceLabel = new javax.swing.JLabel();
+        QuizLabel = new javax.swing.JLabel();
+        TutorialLabel = new javax.swing.JLabel();
+        ReportGeneratorLabel1 = new javax.swing.JLabel();
+        ReportGeneratorLabel2 = new javax.swing.JLabel();
+        ReportGeneratorLabel3 = new javax.swing.JLabel();
+        SecondParent = new javax.swing.JPanel();
+        TutorialsPNL = new javax.swing.JPanel();
+        QuizPNL = new javax.swing.JPanel();
+        ManageRecourcesPNL = new javax.swing.JPanel();
         ReportGenerator = new javax.swing.JPanel();
         FirstNameLabel = new javax.swing.JLabel();
         SurnameLabel = new javax.swing.JLabel();
@@ -57,7 +68,7 @@ public class RecourceHubGUI extends javax.swing.JFrame {
         DateFormattedField = new javax.swing.JFormattedTextField();
         jLabel3 = new javax.swing.JLabel();
         ContactUsPNL = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        ContactUsTitleLabel = new javax.swing.JLabel();
         ContactUsFirstNameField = new javax.swing.JTextField();
         ContactUsFirstNameLabel = new javax.swing.JLabel();
         ContactUsRatingLabel = new javax.swing.JLabel();
@@ -83,7 +94,7 @@ public class RecourceHubGUI extends javax.swing.JFrame {
         ReportGeneratorLogoLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ReportGeneratorLogoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/document.png"))); // NOI18N
         HomePagePanel.add(ReportGeneratorLogoLabel);
-        ReportGeneratorLogoLabel.setBounds(10, 30, 70, 70);
+        ReportGeneratorLogoLabel.setBounds(30, 30, 70, 70);
 
         ReportGeneratorLabel.setFont(new java.awt.Font("Bauhaus 93", 1, 12)); // NOI18N
         ReportGeneratorLabel.setForeground(new java.awt.Color(255, 255, 255));
@@ -109,28 +120,132 @@ public class RecourceHubGUI extends javax.swing.JFrame {
         HomePagePanel.add(ContactUsLogoLabel);
         ContactUsLogoLabel.setBounds(20, 370, 80, 70);
 
-        jLabel2.setFont(new java.awt.Font("Bauhaus 93", 1, 12)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Contact us");
-        HomePagePanel.add(jLabel2);
-        jLabel2.setBounds(20, 440, 70, 18);
+        ContactUsLabel.setFont(new java.awt.Font("Bauhaus 93", 1, 12)); // NOI18N
+        ContactUsLabel.setForeground(new java.awt.Color(255, 255, 255));
+        ContactUsLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ContactUsLabel.setText("Contact us");
+        HomePagePanel.add(ContactUsLabel);
+        ContactUsLabel.setBounds(20, 440, 70, 18);
 
         Parent.setBackground(new java.awt.Color(255, 255, 255));
         Parent.setLayout(new java.awt.CardLayout());
 
         RecourceHub.setBackground(new java.awt.Color(51, 204, 255));
+        RecourceHub.setLayout(null);
 
-        javax.swing.GroupLayout RecourceHubLayout = new javax.swing.GroupLayout(RecourceHub);
-        RecourceHub.setLayout(RecourceHubLayout);
-        RecourceHubLayout.setHorizontalGroup(
-            RecourceHubLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 651, Short.MAX_VALUE)
+        RecourceHubNavPNL.setBackground(new java.awt.Color(51, 204, 255));
+
+        ManageRecourceLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/coordinator.png"))); // NOI18N
+
+        QuizLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/choose.png"))); // NOI18N
+
+        TutorialLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/educational-video.png"))); // NOI18N
+
+        ReportGeneratorLabel1.setFont(new java.awt.Font("Bauhaus 93", 1, 12)); // NOI18N
+        ReportGeneratorLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        ReportGeneratorLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ReportGeneratorLabel1.setText("Tutorials");
+
+        ReportGeneratorLabel2.setFont(new java.awt.Font("Bauhaus 93", 1, 12)); // NOI18N
+        ReportGeneratorLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        ReportGeneratorLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ReportGeneratorLabel2.setText("Manage recources");
+
+        ReportGeneratorLabel3.setFont(new java.awt.Font("Bauhaus 93", 1, 12)); // NOI18N
+        ReportGeneratorLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        ReportGeneratorLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ReportGeneratorLabel3.setText("Quiz");
+
+        javax.swing.GroupLayout RecourceHubNavPNLLayout = new javax.swing.GroupLayout(RecourceHubNavPNL);
+        RecourceHubNavPNL.setLayout(RecourceHubNavPNLLayout);
+        RecourceHubNavPNLLayout.setHorizontalGroup(
+            RecourceHubNavPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RecourceHubNavPNLLayout.createSequentialGroup()
+                .addGap(75, 75, 75)
+                .addComponent(TutorialLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(QuizLabel)
+                .addGap(149, 149, 149)
+                .addComponent(ManageRecourceLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(71, 71, 71))
+            .addGroup(RecourceHubNavPNLLayout.createSequentialGroup()
+                .addGap(54, 54, 54)
+                .addComponent(ReportGeneratorLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 117, Short.MAX_VALUE)
+                .addComponent(ReportGeneratorLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(116, 116, 116)
+                .addComponent(ReportGeneratorLabel2)
+                .addGap(99, 99, 99))
         );
-        RecourceHubLayout.setVerticalGroup(
-            RecourceHubLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 506, Short.MAX_VALUE)
+        RecourceHubNavPNLLayout.setVerticalGroup(
+            RecourceHubNavPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(RecourceHubNavPNLLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(RecourceHubNavPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(QuizLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(RecourceHubNavPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(TutorialLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(ManageRecourceLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(RecourceHubNavPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ReportGeneratorLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ReportGeneratorLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ReportGeneratorLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
+
+        RecourceHub.add(RecourceHubNavPNL);
+        RecourceHubNavPNL.setBounds(0, 0, 690, 130);
+
+        SecondParent.setLayout(new java.awt.CardLayout());
+
+        TutorialsPNL.setBackground(new java.awt.Color(51, 204, 255));
+
+        javax.swing.GroupLayout TutorialsPNLLayout = new javax.swing.GroupLayout(TutorialsPNL);
+        TutorialsPNL.setLayout(TutorialsPNLLayout);
+        TutorialsPNLLayout.setHorizontalGroup(
+            TutorialsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 690, Short.MAX_VALUE)
+        );
+        TutorialsPNLLayout.setVerticalGroup(
+            TutorialsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 380, Short.MAX_VALUE)
+        );
+
+        SecondParent.add(TutorialsPNL, "card2");
+
+        QuizPNL.setBackground(new java.awt.Color(51, 204, 255));
+
+        javax.swing.GroupLayout QuizPNLLayout = new javax.swing.GroupLayout(QuizPNL);
+        QuizPNL.setLayout(QuizPNLLayout);
+        QuizPNLLayout.setHorizontalGroup(
+            QuizPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 690, Short.MAX_VALUE)
+        );
+        QuizPNLLayout.setVerticalGroup(
+            QuizPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 380, Short.MAX_VALUE)
+        );
+
+        SecondParent.add(QuizPNL, "card3");
+
+        ManageRecourcesPNL.setBackground(new java.awt.Color(51, 204, 255));
+
+        javax.swing.GroupLayout ManageRecourcesPNLLayout = new javax.swing.GroupLayout(ManageRecourcesPNL);
+        ManageRecourcesPNL.setLayout(ManageRecourcesPNLLayout);
+        ManageRecourcesPNLLayout.setHorizontalGroup(
+            ManageRecourcesPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 690, Short.MAX_VALUE)
+        );
+        ManageRecourcesPNLLayout.setVerticalGroup(
+            ManageRecourcesPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 380, Short.MAX_VALUE)
+        );
+
+        SecondParent.add(ManageRecourcesPNL, "card4");
+
+        RecourceHub.add(SecondParent);
+        SecondParent.setBounds(0, 130, 690, 380);
 
         Parent.add(RecourceHub, "card3");
 
@@ -271,13 +386,18 @@ public class RecourceHubGUI extends javax.swing.JFrame {
 
         ContactUsPNL.setBackground(new java.awt.Color(51, 204, 255));
 
-        jLabel1.setFont(new java.awt.Font("Bauhaus 93", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Contact Us");
+        ContactUsTitleLabel.setFont(new java.awt.Font("Bauhaus 93", 1, 36)); // NOI18N
+        ContactUsTitleLabel.setForeground(new java.awt.Color(255, 255, 255));
+        ContactUsTitleLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ContactUsTitleLabel.setText("Contact Us");
 
         ContactUsFirstNameField.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         ContactUsFirstNameField.setToolTipText("Please enter your first name into this field.\n");
+        ContactUsFirstNameField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ContactUsFirstNameFieldActionPerformed(evt);
+            }
+        });
         ContactUsFirstNameField.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 ContactUsFirstNameFieldKeyPressed(evt);
@@ -286,6 +406,7 @@ public class RecourceHubGUI extends javax.swing.JFrame {
 
         ContactUsFirstNameLabel.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         ContactUsFirstNameLabel.setForeground(new java.awt.Color(255, 255, 255));
+        ContactUsFirstNameLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ContactUsFirstNameLabel.setText("FirstName");
 
         ContactUsRatingLabel.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
@@ -297,7 +418,8 @@ public class RecourceHubGUI extends javax.swing.JFrame {
 
         FeedbackLabel.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         FeedbackLabel.setForeground(new java.awt.Color(255, 255, 255));
-        FeedbackLabel.setText("Review");
+        FeedbackLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        FeedbackLabel.setText("Feedback");
 
         ReviewTextArea.setColumns(20);
         ReviewTextArea.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
@@ -361,7 +483,7 @@ public class RecourceHubGUI extends javax.swing.JFrame {
         });
 
         SendFeedbackBTN.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
-        SendFeedbackBTN.setText("Send Review");
+        SendFeedbackBTN.setText("Send Feedback");
         SendFeedbackBTN.setToolTipText("After you've filled out all of the fields above and want to submit your review, please press this 'send' button.\n");
         SendFeedbackBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -374,59 +496,61 @@ public class RecourceHubGUI extends javax.swing.JFrame {
         ContactUsPNLLayout.setHorizontalGroup(
             ContactUsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ContactUsPNLLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(17, 17, 17)
+                .addGroup(ContactUsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(ContactUsRatingLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(FeedbackLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
                 .addGroup(ContactUsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(ContactUsPNLLayout.createSequentialGroup()
-                        .addComponent(FeedbackLabel)
-                        .addGap(42, 42, 42)
+                        .addGroup(ContactUsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(ContactUsEmailField, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ContactUsFirstNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(ContactUsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(ContactUsPNLLayout.createSequentialGroup()
-                                .addGroup(ContactUsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(ContactUsEmailField, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(ContactUsFirstNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(ContactUsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(ContactUsPNLLayout.createSequentialGroup()
-                                        .addComponent(ContactUsSurnameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(ContactUsSurnameField, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(ContactUsPNLLayout.createSequentialGroup()
-                                        .addComponent(ReviewDateLabel)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(ReviewDateFormattedField, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(38, 38, 38))
+                                .addComponent(ContactUsSurnameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(ContactUsSurnameField, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(ContactUsPNLLayout.createSequentialGroup()
-                                .addGroup(ContactUsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(ContactUsRatingSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(FeedbackTextAreaScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 555, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addContainerGap(43, Short.MAX_VALUE))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ContactUsPNLLayout.createSequentialGroup()
+                                .addGap(154, 154, 154)
+                                .addComponent(ReviewDateLabel)
+                                .addGap(18, 18, 18)
+                                .addComponent(ReviewDateFormattedField, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(38, 38, 38))
+                    .addGroup(ContactUsPNLLayout.createSequentialGroup()
                         .addGroup(ContactUsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(ContactUsPNLLayout.createSequentialGroup()
-                                .addComponent(ContactUsRatingLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(27, 27, 27))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ContactUsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(ContactUsEmailLabel)
-                                .addComponent(ContactUsFirstNameLabel)))
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(TermsAndConditionsLabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(TermsAndConditionsCheckBox)
-                        .addGap(98, 98, 98))))
+                            .addComponent(ContactUsRatingSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(FeedbackTextAreaScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 555, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ContactUsPNLLayout.createSequentialGroup()
+                .addGroup(ContactUsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(ContactUsPNLLayout.createSequentialGroup()
+                        .addGap(28, 28, 28)
+                        .addComponent(ContactUsEmailLabel)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(ContactUsPNLLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(ContactUsFirstNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addComponent(TermsAndConditionsLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(TermsAndConditionsCheckBox)
+                .addGap(98, 98, 98))
             .addGroup(ContactUsPNLLayout.createSequentialGroup()
                 .addGap(283, 283, 283)
                 .addComponent(SendFeedbackBTN)
-                .addContainerGap(300, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ContactUsPNLLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ContactUsTitleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(194, 194, 194))
         );
         ContactUsPNLLayout.setVerticalGroup(
             ContactUsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ContactUsPNLLayout.createSequentialGroup()
                 .addGap(50, 50, 50)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ContactUsTitleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(38, 38, 38)
                 .addGroup(ContactUsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ContactUsFirstNameLabel)
@@ -593,6 +717,10 @@ public class RecourceHubGUI extends javax.swing.JFrame {
        
     }//GEN-LAST:event_SendFeedbackBTNActionPerformed
 
+    private void ContactUsFirstNameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ContactUsFirstNameFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ContactUsFirstNameFieldActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -633,12 +761,14 @@ public class RecourceHubGUI extends javax.swing.JFrame {
     private javax.swing.JLabel ContactUsEmailLabel;
     public static javax.swing.JTextField ContactUsFirstNameField;
     private javax.swing.JLabel ContactUsFirstNameLabel;
+    private javax.swing.JLabel ContactUsLabel;
     private javax.swing.JLabel ContactUsLogoLabel;
     private javax.swing.JPanel ContactUsPNL;
     private javax.swing.JLabel ContactUsRatingLabel;
     public static javax.swing.JSpinner ContactUsRatingSpinner;
     public static javax.swing.JTextField ContactUsSurnameField;
     private javax.swing.JLabel ContactUsSurnameLabel;
+    private javax.swing.JLabel ContactUsTitleLabel;
     private javax.swing.JLabel ContentLabel;
     private javax.swing.JTextArea ContentTextArea;
     private javax.swing.JFormattedTextField DateFormattedField;
@@ -651,25 +781,34 @@ public class RecourceHubGUI extends javax.swing.JFrame {
     private javax.swing.JTextField FirstNameField;
     private javax.swing.JLabel FirstNameLabel;
     private javax.swing.JPanel HomePagePanel;
+    private javax.swing.JLabel ManageRecourceLabel;
+    private javax.swing.JPanel ManageRecourcesPNL;
     private javax.swing.JPanel Parent;
+    private javax.swing.JLabel QuizLabel;
+    private javax.swing.JPanel QuizPNL;
     private javax.swing.JPanel RecourceHub;
     private javax.swing.JLabel RecourceHubLabel;
     private javax.swing.JLabel RecourceHubLogoLabel;
+    private javax.swing.JPanel RecourceHubNavPNL;
     private javax.swing.JPanel ReportGenerator;
     private javax.swing.JLabel ReportGeneratorLabel;
+    private javax.swing.JLabel ReportGeneratorLabel1;
+    private javax.swing.JLabel ReportGeneratorLabel2;
+    private javax.swing.JLabel ReportGeneratorLabel3;
     private javax.swing.JLabel ReportGeneratorLogoLabel;
     private javax.swing.JFormattedTextField ReviewDateFormattedField;
     private javax.swing.JLabel ReviewDateLabel;
     public static javax.swing.JTextArea ReviewTextArea;
     private javax.swing.JButton SaveBTN;
+    private javax.swing.JPanel SecondParent;
     public static javax.swing.JButton SendFeedbackBTN;
     private javax.swing.JTextField SurnameField;
     private javax.swing.JLabel SurnameLabel;
     private javax.swing.JCheckBox TermsAndConditionsCheckBox;
     private javax.swing.JLabel TermsAndConditionsLabel;
+    private javax.swing.JLabel TutorialLabel;
+    private javax.swing.JPanel TutorialsPNL;
     private javax.swing.JButton ViewBTN;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
