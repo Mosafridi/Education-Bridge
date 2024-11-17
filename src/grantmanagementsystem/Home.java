@@ -36,7 +36,6 @@ public class Home extends javax.swing.JFrame {
         ShoaibNameLabel = new javax.swing.JLabel();
         ShoaibSectionLabel1 = new javax.swing.JLabel();
         KarawanSectionLabel1 = new javax.swing.JLabel();
-        GregSectionLabel1 = new javax.swing.JLabel();
         KarawanSectionLabel2 = new javax.swing.JLabel();
         ShoaibSectionLabel2 = new javax.swing.JLabel();
         ShoaibSectionLabel3 = new javax.swing.JLabel();
@@ -86,11 +85,6 @@ public class Home extends javax.swing.JFrame {
         KarawanSectionLabel1.setForeground(new java.awt.Color(255, 255, 255));
         KarawanSectionLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         KarawanSectionLabel1.setText("Manage and stay on top of your student information!");
-
-        GregSectionLabel1.setFont(new java.awt.Font("Bauhaus 93", 1, 10)); // NOI18N
-        GregSectionLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        GregSectionLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        GregSectionLabel1.setText("Rcecouce hub: ");
 
         KarawanSectionLabel2.setFont(new java.awt.Font("Bauhaus 93", 1, 10)); // NOI18N
         KarawanSectionLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -167,33 +161,28 @@ public class Home extends javax.swing.JFrame {
                             .addComponent(ShoaibSectionLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGroup(HomePagePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(HomePagePanelLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(HomePagePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(GregSectionLabel3)
+                            .addComponent(GregSectionLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(28, Short.MAX_VALUE))
+                    .addGroup(HomePagePanelLayout.createSequentialGroup()
                         .addGap(89, 89, 89)
                         .addComponent(GregLogoLabel)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HomePagePanelLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(HomePagePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(GregSectionLabel2)
-                            .addGroup(HomePagePanelLayout.createSequentialGroup()
-                                .addComponent(GregNameLabel)
-                                .addGap(67, 67, 67))))
-                    .addGroup(HomePagePanelLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
-                        .addGroup(HomePagePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(GregSectionLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(GregSectionLabel3))
-                        .addGap(0, 7, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HomePagePanelLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(GregSectionLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(86, 86, 86))))
+                        .addGroup(HomePagePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(GregNameLabel)
+                            .addComponent(GregSectionLabel2))
+                        .addGap(85, 85, 85))))
         );
         HomePagePanelLayout.setVerticalGroup(
             HomePagePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HomePagePanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(WelcomeIconLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
                 .addGroup(HomePagePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(HomePagePanelLayout.createSequentialGroup()
                         .addComponent(KarawanLogoLabel)
@@ -216,36 +205,28 @@ public class Home extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(HomePagePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(ShoaibSectionLabel1)
-                            .addComponent(GregSectionLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(HomePagePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(ShoaibSectionLabel2)
                             .addComponent(GregSectionLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(HomePagePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(ShoaibSectionLabel2)
+                            .addComponent(GregSectionLabel3))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(HomePagePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(ShoaibSectionLabel3)
-                            .addComponent(GregSectionLabel3)
-                            .addComponent(KarawanSectionLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(GregSectionLabel4)
-                .addGap(141, 141, 141))
+                            .addComponent(KarawanSectionLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(GregSectionLabel4))))
+                .addGap(156, 156, 156))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(HomePagePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(14, 14, 14))
+            .addComponent(HomePagePanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(HomePagePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(HomePagePanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -289,7 +270,6 @@ public class Home extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel GregLogoLabel;
     private javax.swing.JLabel GregNameLabel;
-    private javax.swing.JLabel GregSectionLabel1;
     private javax.swing.JLabel GregSectionLabel2;
     private javax.swing.JLabel GregSectionLabel3;
     private javax.swing.JLabel GregSectionLabel4;
