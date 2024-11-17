@@ -4,7 +4,6 @@
  */
 package grantmanagementsystem;
 
-import java.awt.CardLayout;
 import java.awt.event.KeyEvent;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -13,7 +12,6 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import javax.swing.JOptionPane;
-import javax.swing.JTable;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -56,6 +54,23 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
         ReportGeneratorLabel2 = new javax.swing.JLabel();
         ReportGeneratorLabel3 = new javax.swing.JLabel();
         SecondParent = new javax.swing.JPanel();
+        ManageRecourcesPNL = new javax.swing.JPanel();
+        RecourceFirstNameLabel = new javax.swing.JLabel();
+        RecourseFirstNameField = new javax.swing.JTextField();
+        RecourseSurnameField = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        RecourseTypeLabel = new javax.swing.JLabel();
+        RecourseDateField = new javax.swing.JTextField();
+        RecourseDateLabel = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        RecourseTBL = new javax.swing.JTable();
+        URLLabel = new javax.swing.JLabel();
+        RecourseURLField = new javax.swing.JTextField();
+        CourseLabel = new javax.swing.JLabel();
+        RecourseCourseField = new javax.swing.JTextField();
+        SaveRecourseBTN = new javax.swing.JButton();
+        ViewRecourceBTN = new javax.swing.JButton();
+        RecourceTypeComboBox = new javax.swing.JComboBox<>();
         TutorialsPNL = new javax.swing.JPanel();
         TutorialLabel2 = new javax.swing.JLabel();
         TutorialLabel3 = new javax.swing.JLabel();
@@ -108,23 +123,6 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
         ProgrammingComboBox3 = new javax.swing.JComboBox<>();
         ProgrammingComboBox4 = new javax.swing.JComboBox<>();
         ProgrammingComboBox5 = new javax.swing.JComboBox<>();
-        ManageRecourcesPNL = new javax.swing.JPanel();
-        RecourceFirstNameLabel = new javax.swing.JLabel();
-        RecourseFirstNameField = new javax.swing.JTextField();
-        RecourseSurnameField = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        RecourseTypeLabel = new javax.swing.JLabel();
-        RecourseDateField = new javax.swing.JTextField();
-        RecourseDateLabel = new javax.swing.JLabel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        RecourseTBL = new javax.swing.JTable();
-        URLLabel = new javax.swing.JLabel();
-        RecourseURLField = new javax.swing.JTextField();
-        CourseLabel = new javax.swing.JLabel();
-        RecourseCourseField = new javax.swing.JTextField();
-        SaveRecourseBTN = new javax.swing.JButton();
-        ViewRecourceBTN = new javax.swing.JButton();
-        RecourceTypeComboBox = new javax.swing.JComboBox<>();
         ReportGeneratorPNL = new javax.swing.JPanel();
         FirstNameLabel = new javax.swing.JLabel();
         SurnameLabel = new javax.swing.JLabel();
@@ -307,6 +305,105 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
         RecourceHubNavPNL.setBounds(0, 0, 690, 130);
 
         SecondParent.setLayout(new java.awt.CardLayout());
+
+        ManageRecourcesPNL.setBackground(new java.awt.Color(51, 204, 255));
+        ManageRecourcesPNL.setLayout(null);
+
+        RecourceFirstNameLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        RecourceFirstNameLabel.setText("FirstName");
+        ManageRecourcesPNL.add(RecourceFirstNameLabel);
+        RecourceFirstNameLabel.setBounds(61, 9, 56, 16);
+        ManageRecourcesPNL.add(RecourseFirstNameField);
+        RecourseFirstNameField.setBounds(135, 6, 101, 22);
+
+        RecourseSurnameField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RecourseSurnameFieldActionPerformed(evt);
+            }
+        });
+        ManageRecourcesPNL.add(RecourseSurnameField);
+        RecourseSurnameField.setBounds(445, 6, 101, 22);
+
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("Surname");
+        ManageRecourcesPNL.add(jLabel2);
+        jLabel2.setBounds(369, 9, 50, 16);
+
+        RecourseTypeLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        RecourseTypeLabel.setText("RecourceType");
+        ManageRecourcesPNL.add(RecourseTypeLabel);
+        RecourseTypeLabel.setBounds(358, 49, 75, 16);
+        ManageRecourcesPNL.add(RecourseDateField);
+        RecourseDateField.setBounds(135, 46, 101, 22);
+
+        RecourseDateLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        RecourseDateLabel.setText("Date");
+        ManageRecourcesPNL.add(RecourseDateLabel);
+        RecourseDateLabel.setBounds(60, 50, 50, 16);
+
+        RecourseTBL.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
+            },
+            new String [] {
+                "FirstName", "Surname", "Date", "Type", "URL", "Course"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        jScrollPane2.setViewportView(RecourseTBL);
+
+        ManageRecourcesPNL.add(jScrollPane2);
+        jScrollPane2.setBounds(19, 167, 636, 166);
+
+        URLLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        URLLabel.setText("URL");
+        ManageRecourcesPNL.add(URLLabel);
+        URLLabel.setBounds(60, 90, 50, 16);
+        ManageRecourcesPNL.add(RecourseURLField);
+        RecourseURLField.setBounds(135, 86, 101, 22);
+
+        CourseLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        CourseLabel.setText("Course");
+        ManageRecourcesPNL.add(CourseLabel);
+        CourseLabel.setBounds(369, 89, 50, 16);
+        ManageRecourcesPNL.add(RecourseCourseField);
+        RecourseCourseField.setBounds(445, 86, 101, 22);
+
+        SaveRecourseBTN.setText("Save");
+        SaveRecourseBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SaveRecourseBTNActionPerformed(evt);
+            }
+        });
+        ManageRecourcesPNL.add(SaveRecourseBTN);
+        SaveRecourseBTN.setBounds(145, 345, 75, 23);
+
+        ViewRecourceBTN.setText("View");
+        ViewRecourceBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ViewRecourceBTNActionPerformed(evt);
+            }
+        });
+        ManageRecourcesPNL.add(ViewRecourceBTN);
+        ViewRecourceBTN.setBounds(461, 345, 75, 23);
+
+        RecourceTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Website", "Video", "Tutorial", "Book", " " }));
+        ManageRecourcesPNL.add(RecourceTypeComboBox);
+        RecourceTypeComboBox.setBounds(440, 50, 110, 20);
+
+        SecondParent.add(ManageRecourcesPNL, "card4");
 
         TutorialsPNL.setBackground(new java.awt.Color(51, 204, 255));
 
@@ -691,105 +788,6 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
         );
 
         SecondParent.add(QuizPNL, "card3");
-
-        ManageRecourcesPNL.setBackground(new java.awt.Color(51, 204, 255));
-        ManageRecourcesPNL.setLayout(null);
-
-        RecourceFirstNameLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        RecourceFirstNameLabel.setText("FirstName");
-        ManageRecourcesPNL.add(RecourceFirstNameLabel);
-        RecourceFirstNameLabel.setBounds(61, 9, 56, 16);
-        ManageRecourcesPNL.add(RecourseFirstNameField);
-        RecourseFirstNameField.setBounds(135, 6, 101, 22);
-
-        RecourseSurnameField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RecourseSurnameFieldActionPerformed(evt);
-            }
-        });
-        ManageRecourcesPNL.add(RecourseSurnameField);
-        RecourseSurnameField.setBounds(445, 6, 101, 22);
-
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Surname");
-        ManageRecourcesPNL.add(jLabel2);
-        jLabel2.setBounds(369, 9, 50, 16);
-
-        RecourseTypeLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        RecourseTypeLabel.setText("RecourceType");
-        ManageRecourcesPNL.add(RecourseTypeLabel);
-        RecourseTypeLabel.setBounds(358, 49, 75, 16);
-        ManageRecourcesPNL.add(RecourseDateField);
-        RecourseDateField.setBounds(135, 46, 101, 22);
-
-        RecourseDateLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        RecourseDateLabel.setText("Date");
-        ManageRecourcesPNL.add(RecourseDateLabel);
-        RecourseDateLabel.setBounds(60, 50, 50, 16);
-
-        RecourseTBL.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
-            },
-            new String [] {
-                "FirstName", "Surname", "Date", "Type", "URL", "Course"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-        });
-        jScrollPane2.setViewportView(RecourseTBL);
-
-        ManageRecourcesPNL.add(jScrollPane2);
-        jScrollPane2.setBounds(19, 167, 636, 166);
-
-        URLLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        URLLabel.setText("URL");
-        ManageRecourcesPNL.add(URLLabel);
-        URLLabel.setBounds(60, 90, 50, 16);
-        ManageRecourcesPNL.add(RecourseURLField);
-        RecourseURLField.setBounds(135, 86, 101, 22);
-
-        CourseLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        CourseLabel.setText("Course");
-        ManageRecourcesPNL.add(CourseLabel);
-        CourseLabel.setBounds(369, 89, 50, 16);
-        ManageRecourcesPNL.add(RecourseCourseField);
-        RecourseCourseField.setBounds(445, 86, 101, 22);
-
-        SaveRecourseBTN.setText("Save");
-        SaveRecourseBTN.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SaveRecourseBTNActionPerformed(evt);
-            }
-        });
-        ManageRecourcesPNL.add(SaveRecourseBTN);
-        SaveRecourseBTN.setBounds(145, 345, 75, 23);
-
-        ViewRecourceBTN.setText("View");
-        ViewRecourceBTN.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ViewRecourceBTNActionPerformed(evt);
-            }
-        });
-        ManageRecourcesPNL.add(ViewRecourceBTN);
-        ViewRecourceBTN.setBounds(461, 345, 75, 23);
-
-        RecourceTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Website", "Video", "Tutorial", "Book", " " }));
-        ManageRecourcesPNL.add(RecourceTypeComboBox);
-        RecourceTypeComboBox.setBounds(440, 50, 110, 20);
-
-        SecondParent.add(ManageRecourcesPNL, "card4");
 
         RecourceHubPNL.add(SecondParent);
         SecondParent.setBounds(0, 130, 690, 380);
@@ -1253,7 +1251,7 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
     }//GEN-LAST:event_ContactUsEmailFieldKeyPressed
 
     private void SendFeedbackBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SendFeedbackBTNActionPerformed
-       
+
     }//GEN-LAST:event_SendFeedbackBTNActionPerformed
 
     private void ContactUsFirstNameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ContactUsFirstNameFieldActionPerformed
@@ -1269,46 +1267,46 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
     }//GEN-LAST:event_SurnameFieldActionPerformed
 
     private void ReportGeneratorLogoLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ReportGeneratorLogoLabelMouseClicked
-              Parent.removeAll();
-              Parent.add(ReportGeneratorPNL);
-              Parent.repaint();
-              Parent.revalidate();
-              
+        Parent.removeAll();
+        Parent.add(ReportGeneratorPNL);
+        Parent.repaint();
+        Parent.revalidate();
+
     }//GEN-LAST:event_ReportGeneratorLogoLabelMouseClicked
 
     private void RecourceHubLogoLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RecourceHubLogoLabelMouseClicked
-              Parent.removeAll();
-              Parent.add(RecourceHubPNL);
-              Parent.repaint();
-              Parent.revalidate();
+        Parent.removeAll();
+        Parent.add(RecourceHubPNL);
+        Parent.repaint();
+        Parent.revalidate();
     }//GEN-LAST:event_RecourceHubLogoLabelMouseClicked
 
     private void ContactUsLogoLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ContactUsLogoLabelMouseClicked
-             Parent.removeAll();
-              Parent.add(ContactUsPNL);
-              Parent.repaint();
-              Parent.revalidate();
+        Parent.removeAll();
+        Parent.add(ContactUsPNL);
+        Parent.repaint();
+        Parent.revalidate();
     }//GEN-LAST:event_ContactUsLogoLabelMouseClicked
 
     private void TutorialLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TutorialLabelMouseClicked
-           SecondParent.removeAll();
-              SecondParent.add(TutorialsPNL);
-              SecondParent.repaint();
-              SecondParent.revalidate();
+        SecondParent.removeAll();
+        SecondParent.add(TutorialsPNL);
+        SecondParent.repaint();
+        SecondParent.revalidate();
     }//GEN-LAST:event_TutorialLabelMouseClicked
 
     private void QuizLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_QuizLabelMouseClicked
-            SecondParent.removeAll();
-              SecondParent.add(QuizPNL);
-              SecondParent.repaint();
-              SecondParent.revalidate();
+        SecondParent.removeAll();
+        SecondParent.add(QuizPNL);
+        SecondParent.repaint();
+        SecondParent.revalidate();
     }//GEN-LAST:event_QuizLabelMouseClicked
 
     private void ManageRecourceLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ManageRecourceLabelMouseClicked
-             SecondParent.removeAll();
-              SecondParent.add(ManageRecourcesPNL);
-              SecondParent.repaint();
-              SecondParent.revalidate();
+        SecondParent.removeAll();
+        SecondParent.add(ManageRecourcesPNL);
+        SecondParent.repaint();
+        SecondParent.revalidate();
     }//GEN-LAST:event_ManageRecourceLabelMouseClicked
 
     private void RecourseSurnameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RecourseSurnameFieldActionPerformed
@@ -1326,56 +1324,50 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
         String Date = RecourseDateField.getText();
         String Type = (String) RecourceTypeComboBox.getSelectedItem();
         String url = RecourseURLField.getText();
-        
 
-
-        try{
+        try {
             outFile = new File("Recources.txt");
-            fw = new FileWriter(outFile, true);// true appends new data to the end , false will add to the begining
+            fw = new FileWriter(outFile, true);
             bw = new BufferedWriter(fw);
 
-            bw.write(FirstName+","+Surname+"," +Course+","+Date+","+Type+","+url);
+            bw.write(FirstName + "," + Surname + "," + Course + "," + Date + "," + Type + "," + url);
             bw.newLine();
-            bw.close();// Important to close File
+            bw.close();
 
-            JOptionPane.showMessageDialog(null, "Written to File");
+            JOptionPane.showMessageDialog(null, "Succesfully added to the file");
 
-        }catch(IOException e){
-            System.out.println("Exception e: "+e.getMessage());
+        } catch (IOException e) {
+            System.out.println("Exception e: " + e.getMessage());
         }
     }//GEN-LAST:event_SaveRecourseBTNActionPerformed
 
     private void ViewRecourceBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ViewRecourceBTNActionPerformed
-             File inFile = new File("Recources.txt");
+        File inFile = new File("Recources.txt");
 
         try (BufferedReader br = new BufferedReader(new FileReader(inFile))) {
             DefaultTableModel tableModel = (DefaultTableModel) RecourseTBL.getModel();
-
-            // Clear existing rows in case of reload
             tableModel.setRowCount(0);
 
-            String line;
-            while ((line = br.readLine()) != null) {
-                // Split the line into columns using the comma delimiter
-                String[] rowData = line.split(",");
+            String ln;
+            while ((ln = br.readLine()) != null) {
+                String[] rowData = ln.split(",");
 
-                // Ensure the number of columns in the file matches the table's structure
                 if (rowData.length == tableModel.getColumnCount()) {
                     tableModel.addRow(rowData);
                 } else {
                     JOptionPane.showMessageDialog(null,
-                        "Mismatch between file columns and table columns.\nCheck the file format.",
-                        "Data Error",
-                        JOptionPane.WARNING_MESSAGE);
+                            "Unallignment between file rows and table rowa.\nCheck the file format.",
+                            "Data Error",
+                            JOptionPane.WARNING_MESSAGE);
                     break;
                 }
             }
         } catch (IOException ex) {
             // Show an error dialog if there's an issue reading the file
             JOptionPane.showMessageDialog(null,
-                "Error reading file: " + ex.getMessage(),
-                "File Error",
-                JOptionPane.ERROR_MESSAGE);
+                    "Error reading file: " + ex.getMessage(),
+                    "File Error",
+                    JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_ViewRecourceBTNActionPerformed
 
