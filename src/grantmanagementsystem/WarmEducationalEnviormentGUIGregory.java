@@ -375,32 +375,41 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
         ManageRecourcesPNL.add(RecourseCourseField, new org.netbeans.lib.awtextra.AbsoluteConstraints(445, 86, 101, -1));
 
         SaveRecourseBTN.setText("Save");
+        SaveRecourseBTN.setMaximumSize(new java.awt.Dimension(72, 22));
+        SaveRecourseBTN.setMinimumSize(new java.awt.Dimension(72, 22));
+        SaveRecourseBTN.setPreferredSize(new java.awt.Dimension(72, 22));
         SaveRecourseBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SaveRecourseBTNActionPerformed(evt);
             }
         });
-        ManageRecourcesPNL.add(SaveRecourseBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 340, 75, -1));
+        ManageRecourcesPNL.add(SaveRecourseBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 340, 75, -1));
 
         ViewRecourceBTN.setText("View");
+        ViewRecourceBTN.setMaximumSize(new java.awt.Dimension(72, 22));
+        ViewRecourceBTN.setMinimumSize(new java.awt.Dimension(72, 22));
+        ViewRecourceBTN.setPreferredSize(new java.awt.Dimension(72, 22));
         ViewRecourceBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ViewRecourceBTNActionPerformed(evt);
             }
         });
-        ManageRecourcesPNL.add(ViewRecourceBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 340, 75, -1));
+        ManageRecourcesPNL.add(ViewRecourceBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 340, 80, -1));
 
         RecourceTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Website", "Video", "Tutorial", "Book", " " }));
         ManageRecourcesPNL.add(RecourceTypeComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 50, 110, 20));
 
         exitBTn.setBackground(new java.awt.Color(255, 51, 51));
         exitBTn.setText("EXIT");
+        exitBTn.setMaximumSize(new java.awt.Dimension(72, 22));
+        exitBTn.setMinimumSize(new java.awt.Dimension(72, 22));
+        exitBTn.setPreferredSize(new java.awt.Dimension(72, 22));
         exitBTn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 exitBTnActionPerformed(evt);
             }
         });
-        ManageRecourcesPNL.add(exitBTn, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 340, -1, -1));
+        ManageRecourcesPNL.add(exitBTn, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 340, 70, -1));
 
         SecondParent.add(ManageRecourcesPNL, "card4");
 
@@ -443,6 +452,9 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
 
         exitBTn1.setBackground(new java.awt.Color(255, 51, 51));
         exitBTn1.setText("EXIT");
+        exitBTn1.setMaximumSize(new java.awt.Dimension(72, 22));
+        exitBTn1.setMinimumSize(new java.awt.Dimension(72, 22));
+        exitBTn1.setPreferredSize(new java.awt.Dimension(72, 22));
         exitBTn1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 exitBTn1ActionPerformed(evt);
@@ -465,24 +477,25 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
                         .addComponent(TutorialNameLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(120, 120, 120))
                     .addGroup(TutorialsPNLLayout.createSequentialGroup()
-                        .addGroup(TutorialsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(exitBTn1)
-                            .addGroup(TutorialsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(TutorialsPNLLayout.createSequentialGroup()
-                                    .addGap(27, 27, 27)
-                                    .addComponent(TutorialNameLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(143, 143, 143)
-                                    .addComponent(TutorialNameLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(TutorialsPNLLayout.createSequentialGroup()
-                                    .addGroup(TutorialsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(Tutorial1Label, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(TutorialLabel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGap(97, 97, 97)
-                                    .addGroup(TutorialsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(TutorialLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(TutorialLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGap(86, 86, 86)
-                                    .addComponent(TutorialLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGroup(TutorialsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(TutorialsPNLLayout.createSequentialGroup()
+                                .addGroup(TutorialsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(Tutorial1Label, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(TutorialLabel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(97, 97, 97)
+                                .addGroup(TutorialsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(TutorialLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(TutorialLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(86, 86, 86)
+                                .addComponent(TutorialLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(TutorialsPNLLayout.createSequentialGroup()
+                                .addGap(27, 27, 27)
+                                .addGroup(TutorialsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(exitBTn1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(TutorialsPNLLayout.createSequentialGroup()
+                                        .addComponent(TutorialNameLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(143, 143, 143)
+                                        .addComponent(TutorialNameLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                         .addContainerGap(100, Short.MAX_VALUE))))
         );
         TutorialsPNLLayout.setVerticalGroup(
@@ -499,7 +512,7 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
                         .addComponent(TutorialNameLabel)
                         .addComponent(TutorialNameLabel2))
                     .addComponent(TutorialNameLabel3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
                 .addGroup(TutorialsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(TutorialLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(TutorialLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -508,7 +521,7 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
                     .addComponent(TutorialNameLabel4)
                     .addComponent(TutorialNameLabel5))
                 .addGap(18, 18, 18)
-                .addComponent(exitBTn1)
+                .addComponent(exitBTn1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(29, 29, 29))
         );
 
@@ -540,12 +553,26 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
 
         ComputerQuizComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        ComputersClearBTN.setText("Clear fields");
+        ComputersClearBTN.setText("Clear ");
+        ComputersClearBTN.setMaximumSize(new java.awt.Dimension(72, 22));
+        ComputersClearBTN.setMinimumSize(new java.awt.Dimension(72, 22));
+        ComputersClearBTN.setPreferredSize(new java.awt.Dimension(72, 22));
 
-        ComputersQuizCheckBTN.setText("Check quiz");
+        ComputersQuizCheckBTN.setText("Check");
+        ComputersQuizCheckBTN.setMaximumSize(new java.awt.Dimension(72, 22));
+        ComputersQuizCheckBTN.setMinimumSize(new java.awt.Dimension(72, 22));
+        ComputersQuizCheckBTN.setPreferredSize(new java.awt.Dimension(72, 22));
+        ComputersQuizCheckBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ComputersQuizCheckBTNActionPerformed(evt);
+            }
+        });
 
         exitBTn2.setBackground(new java.awt.Color(255, 51, 51));
         exitBTn2.setText("EXIT");
+        exitBTn2.setMaximumSize(new java.awt.Dimension(72, 22));
+        exitBTn2.setMinimumSize(new java.awt.Dimension(72, 22));
+        exitBTn2.setPreferredSize(new java.awt.Dimension(72, 22));
         exitBTn2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 exitBTn2ActionPerformed(evt);
@@ -560,35 +587,38 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
                 .addGap(21, 21, 21)
                 .addGroup(ComputersQuizPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(ComputersQuizPNLLayout.createSequentialGroup()
-                        .addGroup(ComputersQuizPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(ComputersQuestionLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(ComputersQuestionLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(ComputersQuestionLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(ComputersQuestionLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(ComputersQuizPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(ComputerQuizComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(ComputerQuizComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(ComputerQuizComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(ComputerQuizComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(ComputersQuizPNLLayout.createSequentialGroup()
                         .addComponent(ComputersQuestionLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(ComputerQuizComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(403, 403, 403))))
-            .addGroup(ComputersQuizPNLLayout.createSequentialGroup()
-                .addGap(116, 116, 116)
-                .addComponent(ComputersClearBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(141, 141, 141)
-                .addComponent(ComputersQuizCheckBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(88, 88, 88)
-                .addComponent(exitBTn2))
+                        .addGap(403, 403, 403))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, ComputersQuizPNLLayout.createSequentialGroup()
+                        .addGroup(ComputersQuizPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(ComputersQuizPNLLayout.createSequentialGroup()
+                                .addGroup(ComputersQuizPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(ComputersQuestionLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(ComputersQuestionLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(ComputersQuestionLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(ComputersQuestionLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ComputersQuizPNLLayout.createSequentialGroup()
+                                .addComponent(ComputersClearBTN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(39, 39, 39)))
+                        .addGroup(ComputersQuizPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, ComputersQuizPNLLayout.createSequentialGroup()
+                                .addComponent(ComputersQuizCheckBTN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(40, 40, 40)
+                                .addComponent(exitBTn2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(ComputersQuizPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(ComputerQuizComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(ComputerQuizComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(ComputerQuizComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(ComputerQuizComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         ComputersQuizPNLLayout.setVerticalGroup(
             ComputersQuizPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ComputersQuizPNLLayout.createSequentialGroup()
-                .addContainerGap(64, Short.MAX_VALUE)
+                .addContainerGap(65, Short.MAX_VALUE)
                 .addGroup(ComputersQuizPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ComputersQuestionLabel1)
                     .addComponent(ComputerQuizComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -610,9 +640,9 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
                     .addComponent(ComputerQuizComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(52, 52, 52)
                 .addGroup(ComputersQuizPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ComputersClearBTN)
-                    .addComponent(ComputersQuizCheckBTN)
-                    .addComponent(exitBTn2))
+                    .addComponent(ComputersClearBTN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ComputersQuizCheckBTN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(exitBTn2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(30, 30, 30))
         );
 
@@ -620,7 +650,10 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
 
         GeographyQuizPNL.setBackground(new java.awt.Color(51, 204, 255));
 
-        GeographyQuizCheckBTN.setText("Check quiz");
+        GeographyQuizCheckBTN.setText("Check");
+        GeographyQuizCheckBTN.setMaximumSize(new java.awt.Dimension(72, 22));
+        GeographyQuizCheckBTN.setMinimumSize(new java.awt.Dimension(72, 22));
+        GeographyQuizCheckBTN.setPreferredSize(new java.awt.Dimension(72, 22));
 
         GeographyQuestionLabel1.setText("What is the capital of China?");
 
@@ -632,7 +665,10 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
 
         GeographyQuestionLabel5.setText("Which one of these is not a continent?");
 
-        GeographyClearBTN1.setText("Clear fields");
+        GeographyClearBTN1.setText("Clear");
+        GeographyClearBTN1.setMaximumSize(new java.awt.Dimension(72, 22));
+        GeographyClearBTN1.setMinimumSize(new java.awt.Dimension(72, 22));
+        GeographyClearBTN1.setPreferredSize(new java.awt.Dimension(72, 22));
 
         GeographyQuizComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
@@ -646,6 +682,9 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
 
         exitBTn3.setBackground(new java.awt.Color(255, 51, 51));
         exitBTn3.setText("EXIT");
+        exitBTn3.setMaximumSize(new java.awt.Dimension(72, 22));
+        exitBTn3.setMinimumSize(new java.awt.Dimension(72, 22));
+        exitBTn3.setPreferredSize(new java.awt.Dimension(72, 22));
         exitBTn3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 exitBTn3ActionPerformed(evt);
@@ -678,17 +717,17 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
                         .addComponent(GeographyQuizComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(403, 403, 403))))
             .addGroup(GeographyQuizPNLLayout.createSequentialGroup()
-                .addGap(116, 116, 116)
-                .addComponent(GeographyClearBTN1, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(141, 141, 141)
-                .addComponent(GeographyQuizCheckBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(98, 98, 98)
-                .addComponent(exitBTn3))
+                .addGap(190, 190, 190)
+                .addComponent(GeographyClearBTN1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(34, 34, 34)
+                .addComponent(GeographyQuizCheckBTN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(38, 38, 38)
+                .addComponent(exitBTn3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         GeographyQuizPNLLayout.setVerticalGroup(
             GeographyQuizPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(GeographyQuizPNLLayout.createSequentialGroup()
-                .addContainerGap(64, Short.MAX_VALUE)
+                .addContainerGap(65, Short.MAX_VALUE)
                 .addGroup(GeographyQuizPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(GeographyQuestionLabel1)
                     .addComponent(GeographyQuizComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -710,111 +749,83 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
                     .addComponent(GeographyQuizComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(52, 52, 52)
                 .addGroup(GeographyQuizPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(GeographyClearBTN1)
-                    .addComponent(GeographyQuizCheckBTN)
-                    .addComponent(exitBTn3))
+                    .addComponent(GeographyClearBTN1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(GeographyQuizCheckBTN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(exitBTn3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(30, 30, 30))
         );
 
         jTabbedPane3.addTab("Geography quiz", GeographyQuizPNL);
 
         ProgrammingQuizPNL.setBackground(new java.awt.Color(51, 204, 255));
+        ProgrammingQuizPNL.setLayout(null);
 
-        ProgrammingQuizCheckBTN.setText("Check quiz");
+        ProgrammingQuizCheckBTN.setText("Check");
+        ProgrammingQuizCheckBTN.setMaximumSize(new java.awt.Dimension(72, 22));
+        ProgrammingQuizCheckBTN.setMinimumSize(new java.awt.Dimension(72, 22));
+        ProgrammingQuizCheckBTN.setPreferredSize(new java.awt.Dimension(72, 22));
+        ProgrammingQuizPNL.add(ProgrammingQuizCheckBTN);
+        ProgrammingQuizCheckBTN.setBounds(260, 310, 72, 22);
 
-        ProgrammingClearBTN.setText("Clear fields");
+        ProgrammingClearBTN.setText("Clear ");
+        ProgrammingClearBTN.setMaximumSize(new java.awt.Dimension(72, 22));
+        ProgrammingClearBTN.setMinimumSize(new java.awt.Dimension(72, 22));
+        ProgrammingClearBTN.setPreferredSize(new java.awt.Dimension(72, 22));
+        ProgrammingQuizPNL.add(ProgrammingClearBTN);
+        ProgrammingClearBTN.setBounds(170, 310, 72, 22);
 
         ProgrammingQuestionLabel5.setText("Which one of these is not a continent?");
+        ProgrammingQuizPNL.add(ProgrammingQuestionLabel5);
+        ProgrammingQuestionLabel5.setBounds(21, 222, 275, 16);
 
         ProgrammingQuestionLabel4.setText("Which continent is the largest?");
+        ProgrammingQuizPNL.add(ProgrammingQuestionLabel4);
+        ProgrammingQuestionLabel4.setBounds(21, 182, 275, 16);
 
         ProgrammingQuestionLabel3.setText("What is the capital of Ireland?");
+        ProgrammingQuizPNL.add(ProgrammingQuestionLabel3);
+        ProgrammingQuestionLabel3.setBounds(21, 148, 275, 16);
 
         ProgrammingQuestionLabel2.setText("What is the capital of Turkey?");
+        ProgrammingQuizPNL.add(ProgrammingQuestionLabel2);
+        ProgrammingQuestionLabel2.setBounds(21, 108, 275, 16);
 
         ProgrammingQuestionLabel1.setText("What is the capital of China?");
+        ProgrammingQuizPNL.add(ProgrammingQuestionLabel1);
+        ProgrammingQuestionLabel1.setBounds(21, 68, 275, 16);
 
         ProgrammingComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        ProgrammingQuizPNL.add(ProgrammingComboBox);
+        ProgrammingComboBox.setBounds(302, 65, 228, 22);
 
         ProgrammingComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        ProgrammingQuizPNL.add(ProgrammingComboBox2);
+        ProgrammingComboBox2.setBounds(302, 105, 228, 22);
 
         ProgrammingComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        ProgrammingQuizPNL.add(ProgrammingComboBox3);
+        ProgrammingComboBox3.setBounds(302, 145, 228, 22);
 
         ProgrammingComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        ProgrammingQuizPNL.add(ProgrammingComboBox4);
+        ProgrammingComboBox4.setBounds(302, 179, 228, 22);
 
         ProgrammingComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        ProgrammingQuizPNL.add(ProgrammingComboBox5);
+        ProgrammingComboBox5.setBounds(302, 219, 228, 22);
 
         exitBTn4.setBackground(new java.awt.Color(255, 51, 51));
         exitBTn4.setText("EXIT");
+        exitBTn4.setMaximumSize(new java.awt.Dimension(72, 22));
+        exitBTn4.setMinimumSize(new java.awt.Dimension(72, 22));
+        exitBTn4.setPreferredSize(new java.awt.Dimension(72, 22));
         exitBTn4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 exitBTn4ActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout ProgrammingQuizPNLLayout = new javax.swing.GroupLayout(ProgrammingQuizPNL);
-        ProgrammingQuizPNL.setLayout(ProgrammingQuizPNLLayout);
-        ProgrammingQuizPNLLayout.setHorizontalGroup(
-            ProgrammingQuizPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ProgrammingQuizPNLLayout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addGroup(ProgrammingQuizPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addGroup(ProgrammingQuizPNLLayout.createSequentialGroup()
-                        .addGroup(ProgrammingQuizPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(ProgrammingQuestionLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(ProgrammingQuestionLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(ProgrammingQuestionLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(ProgrammingQuestionLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(ProgrammingQuizPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(ProgrammingComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(ProgrammingComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(ProgrammingComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(ProgrammingComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(ProgrammingQuizPNLLayout.createSequentialGroup()
-                        .addComponent(ProgrammingQuestionLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(ProgrammingComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(403, 403, 403))))
-            .addGroup(ProgrammingQuizPNLLayout.createSequentialGroup()
-                .addGap(116, 116, 116)
-                .addComponent(ProgrammingClearBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(141, 141, 141)
-                .addComponent(ProgrammingQuizCheckBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(100, 100, 100)
-                .addComponent(exitBTn4))
-        );
-        ProgrammingQuizPNLLayout.setVerticalGroup(
-            ProgrammingQuizPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ProgrammingQuizPNLLayout.createSequentialGroup()
-                .addContainerGap(64, Short.MAX_VALUE)
-                .addGroup(ProgrammingQuizPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ProgrammingQuestionLabel1)
-                    .addComponent(ProgrammingComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(ProgrammingQuizPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ProgrammingQuestionLabel2)
-                    .addComponent(ProgrammingComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(ProgrammingQuizPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ProgrammingQuestionLabel3)
-                    .addComponent(ProgrammingComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(12, 12, 12)
-                .addGroup(ProgrammingQuizPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ProgrammingQuestionLabel4)
-                    .addComponent(ProgrammingComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(ProgrammingQuizPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ProgrammingQuestionLabel5)
-                    .addComponent(ProgrammingComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(52, 52, 52)
-                .addGroup(ProgrammingQuizPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ProgrammingClearBTN)
-                    .addComponent(ProgrammingQuizCheckBTN)
-                    .addComponent(exitBTn4))
-                .addGap(30, 30, 30))
-        );
+        ProgrammingQuizPNL.add(exitBTn4);
+        exitBTn4.setBounds(350, 310, 72, 22);
 
         jTabbedPane3.addTab("Programming quiz", ProgrammingQuizPNL);
 
@@ -894,6 +905,9 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
 
         exitBTn6.setBackground(new java.awt.Color(255, 51, 51));
         exitBTn6.setText("EXIT");
+        exitBTn6.setMaximumSize(new java.awt.Dimension(72, 22));
+        exitBTn6.setMinimumSize(new java.awt.Dimension(72, 22));
+        exitBTn6.setPreferredSize(new java.awt.Dimension(72, 22));
         exitBTn6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 exitBTn6ActionPerformed(evt);
@@ -944,7 +958,7 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
                                 .addGap(50, 50, 50)
                                 .addComponent(DeleteBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(46, 46, 46)
-                                .addComponent(exitBTn6)))
+                                .addComponent(exitBTn6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addGap(113, 113, 113))
             .addGroup(ReportGeneratorPNLLayout.createSequentialGroup()
@@ -984,7 +998,7 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
                     .addComponent(SaveBTN)
                     .addComponent(ViewBTN)
                     .addComponent(DeleteBTN)
-                    .addComponent(exitBTn6))
+                    .addComponent(exitBTn6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(36, 36, 36))
         );
 
@@ -1082,8 +1096,10 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
         });
 
         SendFeedbackBTN.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
-        SendFeedbackBTN.setText("Send Feedback");
+        SendFeedbackBTN.setText("Send");
         SendFeedbackBTN.setToolTipText("After you've filled out all of the fields above and want to submit your review, please press this 'send' button.\n");
+        SendFeedbackBTN.setMaximumSize(new java.awt.Dimension(72, 22));
+        SendFeedbackBTN.setMinimumSize(new java.awt.Dimension(72, 22));
         SendFeedbackBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SendFeedbackBTNActionPerformed(evt);
@@ -1092,6 +1108,9 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
 
         exitBTn5.setBackground(new java.awt.Color(255, 51, 51));
         exitBTn5.setText("EXIT");
+        exitBTn5.setMaximumSize(new java.awt.Dimension(72, 22));
+        exitBTn5.setMinimumSize(new java.awt.Dimension(72, 22));
+        exitBTn5.setPreferredSize(new java.awt.Dimension(72, 22));
         exitBTn5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 exitBTn5ActionPerformed(evt);
@@ -1140,10 +1159,10 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(ContactUsFirstNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(ContactUsPNLLayout.createSequentialGroup()
-                        .addGap(283, 283, 283)
-                        .addComponent(SendFeedbackBTN)
-                        .addGap(60, 60, 60)
-                        .addComponent(exitBTn5))
+                        .addGap(246, 246, 246)
+                        .addComponent(SendFeedbackBTN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(46, 46, 46)
+                        .addComponent(exitBTn5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(ContactUsPNLLayout.createSequentialGroup()
                         .addGap(192, 192, 192)
                         .addComponent(ContactUsTitleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -1176,8 +1195,8 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
                     .addComponent(TermsAndConditionsCheckBox))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
                 .addGroup(ContactUsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(SendFeedbackBTN)
-                    .addComponent(exitBTn5))
+                    .addComponent(SendFeedbackBTN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(exitBTn5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(23, 23, 23))
         );
 
@@ -1406,6 +1425,10 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
         HomePage homePage = new HomePage();
         homePage.setVisible(true);
     }//GEN-LAST:event_exitBTn6ActionPerformed
+
+    private void ComputersQuizCheckBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComputersQuizCheckBTNActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ComputersQuizCheckBTNActionPerformed
 
     /**
      * @param args the command line arguments
