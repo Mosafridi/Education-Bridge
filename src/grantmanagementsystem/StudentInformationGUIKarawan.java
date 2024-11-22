@@ -57,7 +57,9 @@ public class StudentInformationGUIKarawan extends javax.swing.JFrame {
         exitBTN = new javax.swing.JButton();
         deleteBTN = new javax.swing.JButton();
         CoursesPNL = new javax.swing.JPanel();
+        CoursePanel = new javax.swing.JPanel();
         StudentGrowth = new javax.swing.JPanel();
+        StudentGrowthPanel = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -106,7 +108,7 @@ public class StudentInformationGUIKarawan extends javax.swing.JFrame {
                         .addGroup(StudentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(levelTF1)
                             .addComponent(contactTF1, javax.swing.GroupLayout.DEFAULT_SIZE, 142, Short.MAX_VALUE))))
-                .addContainerGap(209, Short.MAX_VALUE))
+                .addContainerGap(162, Short.MAX_VALUE))
         );
         StudentPanelLayout.setVerticalGroup(
             StudentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -201,7 +203,7 @@ public class StudentInformationGUIKarawan extends javax.swing.JFrame {
                         .addComponent(applyBTN)
                         .addGap(18, 18, 18)
                         .addComponent(deleteBTN)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 200, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 157, Short.MAX_VALUE)
                         .addComponent(exitBTN)
                         .addGap(9, 9, 9)))
                 .addContainerGap())
@@ -221,33 +223,65 @@ public class StudentInformationGUIKarawan extends javax.swing.JFrame {
                         .addComponent(applyBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(deleteBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(exitBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Students", studentPNL1);
+
+        CoursePanel.setBackground(new java.awt.Color(0, 204, 255));
+
+        javax.swing.GroupLayout CoursePanelLayout = new javax.swing.GroupLayout(CoursePanel);
+        CoursePanel.setLayout(CoursePanelLayout);
+        CoursePanelLayout.setHorizontalGroup(
+            CoursePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 763, Short.MAX_VALUE)
+        );
+        CoursePanelLayout.setVerticalGroup(
+            CoursePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 476, Short.MAX_VALUE)
+        );
 
         javax.swing.GroupLayout CoursesPNLLayout = new javax.swing.GroupLayout(CoursesPNL);
         CoursesPNL.setLayout(CoursesPNLLayout);
         CoursesPNLLayout.setHorizontalGroup(
             CoursesPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 810, Short.MAX_VALUE)
+            .addComponent(CoursePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         CoursesPNLLayout.setVerticalGroup(
             CoursesPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 492, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CoursesPNLLayout.createSequentialGroup()
+                .addComponent(CoursePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         jTabbedPane1.addTab("Courses", CoursesPNL);
+
+        StudentGrowthPanel.setBackground(new java.awt.Color(0, 204, 255));
+
+        javax.swing.GroupLayout StudentGrowthPanelLayout = new javax.swing.GroupLayout(StudentGrowthPanel);
+        StudentGrowthPanel.setLayout(StudentGrowthPanelLayout);
+        StudentGrowthPanelLayout.setHorizontalGroup(
+            StudentGrowthPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 757, Short.MAX_VALUE)
+        );
+        StudentGrowthPanelLayout.setVerticalGroup(
+            StudentGrowthPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 476, Short.MAX_VALUE)
+        );
 
         javax.swing.GroupLayout StudentGrowthLayout = new javax.swing.GroupLayout(StudentGrowth);
         StudentGrowth.setLayout(StudentGrowthLayout);
         StudentGrowthLayout.setHorizontalGroup(
             StudentGrowthLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 810, Short.MAX_VALUE)
+            .addGroup(StudentGrowthLayout.createSequentialGroup()
+                .addComponent(StudentGrowthPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         StudentGrowthLayout.setVerticalGroup(
             StudentGrowthLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 492, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, StudentGrowthLayout.createSequentialGroup()
+                .addComponent(StudentGrowthPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         jTabbedPane1.addTab("Student growth", StudentGrowth);
@@ -396,8 +430,10 @@ public class StudentInformationGUIKarawan extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel CoursePanel;
     private javax.swing.JPanel CoursesPNL;
     private javax.swing.JPanel StudentGrowth;
+    private javax.swing.JPanel StudentGrowthPanel;
     private javax.swing.JPanel StudentPanel;
     private javax.swing.JButton applyBTN;
     private javax.swing.JLabel contactLBL1;
