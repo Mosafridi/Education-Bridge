@@ -71,6 +71,7 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
         SaveRecourseBTN = new javax.swing.JButton();
         ViewRecourceBTN = new javax.swing.JButton();
         RecourceTypeComboBox = new javax.swing.JComboBox<>();
+        exitBTn = new javax.swing.JButton();
         TutorialsPNL = new javax.swing.JPanel();
         TutorialLabel2 = new javax.swing.JLabel();
         TutorialLabel3 = new javax.swing.JLabel();
@@ -82,6 +83,7 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
         TutorialNameLabel3 = new javax.swing.JLabel();
         TutorialNameLabel4 = new javax.swing.JLabel();
         TutorialNameLabel5 = new javax.swing.JLabel();
+        exitBTn1 = new javax.swing.JButton();
         QuizPNL = new javax.swing.JPanel();
         jTabbedPane3 = new javax.swing.JTabbedPane();
         ComputersQuizPNL = new javax.swing.JPanel();
@@ -97,6 +99,7 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
         ComputerQuizComboBox5 = new javax.swing.JComboBox<>();
         ComputersClearBTN = new javax.swing.JButton();
         ComputersQuizCheckBTN = new javax.swing.JButton();
+        exitBTn2 = new javax.swing.JButton();
         GeographyQuizPNL = new javax.swing.JPanel();
         GeographyQuizCheckBTN = new javax.swing.JButton();
         GeographyQuestionLabel1 = new javax.swing.JLabel();
@@ -110,6 +113,7 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
         GeographyQuizComboBox3 = new javax.swing.JComboBox<>();
         GeographyQuizComboBox2 = new javax.swing.JComboBox<>();
         GeographyQuizComboBox = new javax.swing.JComboBox<>();
+        exitBTn3 = new javax.swing.JButton();
         ProgrammingQuizPNL = new javax.swing.JPanel();
         ProgrammingQuizCheckBTN = new javax.swing.JButton();
         ProgrammingClearBTN = new javax.swing.JButton();
@@ -123,6 +127,7 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
         ProgrammingComboBox3 = new javax.swing.JComboBox<>();
         ProgrammingComboBox4 = new javax.swing.JComboBox<>();
         ProgrammingComboBox5 = new javax.swing.JComboBox<>();
+        exitBTn4 = new javax.swing.JButton();
         ReportGeneratorPNL = new javax.swing.JPanel();
         FirstNameLabel = new javax.swing.JLabel();
         SurnameLabel = new javax.swing.JLabel();
@@ -139,6 +144,7 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
         DeleteBTN = new javax.swing.JButton();
         DateFormattedField = new javax.swing.JFormattedTextField();
         ReportGeneratorTitleLabel = new javax.swing.JLabel();
+        exitBTn6 = new javax.swing.JButton();
         ContactUsPNL = new javax.swing.JPanel();
         ContactUsTitleLabel = new javax.swing.JLabel();
         ContactUsFirstNameField = new javax.swing.JTextField();
@@ -155,6 +161,7 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
         ContactUsEmailLabel = new javax.swing.JLabel();
         ContactUsEmailField = new javax.swing.JTextField();
         SendFeedbackBTN = new javax.swing.JButton();
+        exitBTn5 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(51, 204, 255));
@@ -305,39 +312,32 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
         SecondParent.setLayout(new java.awt.CardLayout());
 
         ManageRecourcesPNL.setBackground(new java.awt.Color(51, 204, 255));
-        ManageRecourcesPNL.setLayout(null);
+        ManageRecourcesPNL.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         RecourceFirstNameLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         RecourceFirstNameLabel.setText("FirstName");
-        ManageRecourcesPNL.add(RecourceFirstNameLabel);
-        RecourceFirstNameLabel.setBounds(61, 9, 56, 16);
-        ManageRecourcesPNL.add(RecourseFirstNameField);
-        RecourseFirstNameField.setBounds(135, 6, 101, 22);
+        ManageRecourcesPNL.add(RecourceFirstNameLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(61, 9, 56, -1));
+        ManageRecourcesPNL.add(RecourseFirstNameField, new org.netbeans.lib.awtextra.AbsoluteConstraints(135, 6, 101, -1));
 
         RecourseSurnameField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 RecourseSurnameFieldActionPerformed(evt);
             }
         });
-        ManageRecourcesPNL.add(RecourseSurnameField);
-        RecourseSurnameField.setBounds(445, 6, 101, 22);
+        ManageRecourcesPNL.add(RecourseSurnameField, new org.netbeans.lib.awtextra.AbsoluteConstraints(445, 6, 101, -1));
 
         RecourcesSurnameLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         RecourcesSurnameLabel.setText("Surname");
-        ManageRecourcesPNL.add(RecourcesSurnameLabel);
-        RecourcesSurnameLabel.setBounds(369, 9, 50, 16);
+        ManageRecourcesPNL.add(RecourcesSurnameLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(369, 9, 50, -1));
 
         RecourseTypeLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         RecourseTypeLabel.setText("RecourceType");
-        ManageRecourcesPNL.add(RecourseTypeLabel);
-        RecourseTypeLabel.setBounds(358, 49, 75, 16);
-        ManageRecourcesPNL.add(RecourseDateField);
-        RecourseDateField.setBounds(135, 46, 101, 22);
+        ManageRecourcesPNL.add(RecourseTypeLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(358, 49, 75, -1));
+        ManageRecourcesPNL.add(RecourseDateField, new org.netbeans.lib.awtextra.AbsoluteConstraints(135, 46, 101, -1));
 
         RecourseDateLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         RecourseDateLabel.setText("Date");
-        ManageRecourcesPNL.add(RecourseDateLabel);
-        RecourseDateLabel.setBounds(60, 50, 50, 16);
+        ManageRecourcesPNL.add(RecourseDateLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 50, 50, -1));
 
         RecourseTBL.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -362,22 +362,17 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
         });
         jScrollPane2.setViewportView(RecourseTBL);
 
-        ManageRecourcesPNL.add(jScrollPane2);
-        jScrollPane2.setBounds(19, 167, 636, 166);
+        ManageRecourcesPNL.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(19, 167, 636, 166));
 
         URLLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         URLLabel.setText("URL");
-        ManageRecourcesPNL.add(URLLabel);
-        URLLabel.setBounds(60, 90, 50, 16);
-        ManageRecourcesPNL.add(RecourseURLField);
-        RecourseURLField.setBounds(135, 86, 101, 22);
+        ManageRecourcesPNL.add(URLLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 90, 50, -1));
+        ManageRecourcesPNL.add(RecourseURLField, new org.netbeans.lib.awtextra.AbsoluteConstraints(135, 86, 101, -1));
 
         CourseLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         CourseLabel.setText("Course");
-        ManageRecourcesPNL.add(CourseLabel);
-        CourseLabel.setBounds(369, 89, 50, 16);
-        ManageRecourcesPNL.add(RecourseCourseField);
-        RecourseCourseField.setBounds(445, 86, 101, 22);
+        ManageRecourcesPNL.add(CourseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(369, 89, 50, -1));
+        ManageRecourcesPNL.add(RecourseCourseField, new org.netbeans.lib.awtextra.AbsoluteConstraints(445, 86, 101, -1));
 
         SaveRecourseBTN.setText("Save");
         SaveRecourseBTN.addActionListener(new java.awt.event.ActionListener() {
@@ -385,8 +380,7 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
                 SaveRecourseBTNActionPerformed(evt);
             }
         });
-        ManageRecourcesPNL.add(SaveRecourseBTN);
-        SaveRecourseBTN.setBounds(145, 345, 75, 23);
+        ManageRecourcesPNL.add(SaveRecourseBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 340, 75, -1));
 
         ViewRecourceBTN.setText("View");
         ViewRecourceBTN.addActionListener(new java.awt.event.ActionListener() {
@@ -394,12 +388,19 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
                 ViewRecourceBTNActionPerformed(evt);
             }
         });
-        ManageRecourcesPNL.add(ViewRecourceBTN);
-        ViewRecourceBTN.setBounds(461, 345, 75, 23);
+        ManageRecourcesPNL.add(ViewRecourceBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 340, 75, -1));
 
         RecourceTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Website", "Video", "Tutorial", "Book", " " }));
-        ManageRecourcesPNL.add(RecourceTypeComboBox);
-        RecourceTypeComboBox.setBounds(440, 50, 110, 20);
+        ManageRecourcesPNL.add(RecourceTypeComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 50, 110, 20));
+
+        exitBTn.setBackground(new java.awt.Color(255, 51, 51));
+        exitBTn.setText("EXIT");
+        exitBTn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exitBTnActionPerformed(evt);
+            }
+        });
+        ManageRecourcesPNL.add(exitBTn, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 340, -1, -1));
 
         SecondParent.add(ManageRecourcesPNL, "card4");
 
@@ -440,6 +441,14 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
         TutorialNameLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TutorialNameLabel5.setText("Tutorial 5");
 
+        exitBTn1.setBackground(new java.awt.Color(255, 51, 51));
+        exitBTn1.setText("EXIT");
+        exitBTn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exitBTn1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout TutorialsPNLLayout = new javax.swing.GroupLayout(TutorialsPNL);
         TutorialsPNL.setLayout(TutorialsPNLLayout);
         TutorialsPNLLayout.setHorizontalGroup(
@@ -456,23 +465,25 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
                         .addComponent(TutorialNameLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(120, 120, 120))
                     .addGroup(TutorialsPNLLayout.createSequentialGroup()
-                        .addGroup(TutorialsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(TutorialsPNLLayout.createSequentialGroup()
-                                .addGap(27, 27, 27)
-                                .addComponent(TutorialNameLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(143, 143, 143)
-                                .addComponent(TutorialNameLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(TutorialsPNLLayout.createSequentialGroup()
-                                .addGroup(TutorialsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(Tutorial1Label, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(TutorialLabel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(97, 97, 97)
-                                .addGroup(TutorialsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(TutorialLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(TutorialLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(86, 86, 86)
-                                .addComponent(TutorialLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGroup(TutorialsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(exitBTn1)
+                            .addGroup(TutorialsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(TutorialsPNLLayout.createSequentialGroup()
+                                    .addGap(27, 27, 27)
+                                    .addComponent(TutorialNameLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(143, 143, 143)
+                                    .addComponent(TutorialNameLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(TutorialsPNLLayout.createSequentialGroup()
+                                    .addGroup(TutorialsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(Tutorial1Label, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(TutorialLabel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGap(97, 97, 97)
+                                    .addGroup(TutorialsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(TutorialLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(TutorialLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGap(86, 86, 86)
+                                    .addComponent(TutorialLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addContainerGap(100, Short.MAX_VALUE))))
         );
         TutorialsPNLLayout.setVerticalGroup(
             TutorialsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -496,7 +507,9 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
                 .addGroup(TutorialsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(TutorialNameLabel4)
                     .addComponent(TutorialNameLabel5))
-                .addGap(70, 70, 70))
+                .addGap(18, 18, 18)
+                .addComponent(exitBTn1)
+                .addGap(29, 29, 29))
         );
 
         SecondParent.add(TutorialsPNL, "card2");
@@ -517,11 +530,11 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
 
         ComputersQuestionLabel5.setText("What does \"GPU\" stand for?");
 
-        ComputerQuizComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        ComputerQuizComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Central processing unit", "Cornered processing union", "Centrelised Power unit", "Cell processing unit", " ", " " }));
 
-        ComputerQuizComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        ComputerQuizComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Storing data", "Loading graphics", "Executing instructions", "Supply power", " " }));
 
-        ComputerQuizComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        ComputerQuizComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Power Shell Unit", "Power supply unit", "Primary suppy unit", "Perfect supply unit" }));
 
         ComputerQuizComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
@@ -530,6 +543,14 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
         ComputersClearBTN.setText("Clear fields");
 
         ComputersQuizCheckBTN.setText("Check quiz");
+
+        exitBTn2.setBackground(new java.awt.Color(255, 51, 51));
+        exitBTn2.setText("EXIT");
+        exitBTn2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exitBTn2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout ComputersQuizPNLLayout = new javax.swing.GroupLayout(ComputersQuizPNL);
         ComputersQuizPNL.setLayout(ComputersQuizPNLLayout);
@@ -560,12 +581,14 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
                 .addGap(116, 116, 116)
                 .addComponent(ComputersClearBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(141, 141, 141)
-                .addComponent(ComputersQuizCheckBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(ComputersQuizCheckBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(88, 88, 88)
+                .addComponent(exitBTn2))
         );
         ComputersQuizPNLLayout.setVerticalGroup(
             ComputersQuizPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ComputersQuizPNLLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(64, Short.MAX_VALUE)
                 .addGroup(ComputersQuizPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ComputersQuestionLabel1)
                     .addComponent(ComputerQuizComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -588,7 +611,8 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
                 .addGap(52, 52, 52)
                 .addGroup(ComputersQuizPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ComputersClearBTN)
-                    .addComponent(ComputersQuizCheckBTN))
+                    .addComponent(ComputersQuizCheckBTN)
+                    .addComponent(exitBTn2))
                 .addGap(30, 30, 30))
         );
 
@@ -620,6 +644,14 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
 
         GeographyQuizComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
+        exitBTn3.setBackground(new java.awt.Color(255, 51, 51));
+        exitBTn3.setText("EXIT");
+        exitBTn3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exitBTn3ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout GeographyQuizPNLLayout = new javax.swing.GroupLayout(GeographyQuizPNL);
         GeographyQuizPNL.setLayout(GeographyQuizPNLLayout);
         GeographyQuizPNLLayout.setHorizontalGroup(
@@ -649,12 +681,14 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
                 .addGap(116, 116, 116)
                 .addComponent(GeographyClearBTN1, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(141, 141, 141)
-                .addComponent(GeographyQuizCheckBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(GeographyQuizCheckBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(98, 98, 98)
+                .addComponent(exitBTn3))
         );
         GeographyQuizPNLLayout.setVerticalGroup(
             GeographyQuizPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(GeographyQuizPNLLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(64, Short.MAX_VALUE)
                 .addGroup(GeographyQuizPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(GeographyQuestionLabel1)
                     .addComponent(GeographyQuizComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -677,7 +711,8 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
                 .addGap(52, 52, 52)
                 .addGroup(GeographyQuizPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(GeographyClearBTN1)
-                    .addComponent(GeographyQuizCheckBTN))
+                    .addComponent(GeographyQuizCheckBTN)
+                    .addComponent(exitBTn3))
                 .addGap(30, 30, 30))
         );
 
@@ -709,6 +744,14 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
 
         ProgrammingComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
+        exitBTn4.setBackground(new java.awt.Color(255, 51, 51));
+        exitBTn4.setText("EXIT");
+        exitBTn4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exitBTn4ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout ProgrammingQuizPNLLayout = new javax.swing.GroupLayout(ProgrammingQuizPNL);
         ProgrammingQuizPNL.setLayout(ProgrammingQuizPNLLayout);
         ProgrammingQuizPNLLayout.setHorizontalGroup(
@@ -738,12 +781,14 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
                 .addGap(116, 116, 116)
                 .addComponent(ProgrammingClearBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(141, 141, 141)
-                .addComponent(ProgrammingQuizCheckBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(ProgrammingQuizCheckBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(100, 100, 100)
+                .addComponent(exitBTn4))
         );
         ProgrammingQuizPNLLayout.setVerticalGroup(
             ProgrammingQuizPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ProgrammingQuizPNLLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(64, Short.MAX_VALUE)
                 .addGroup(ProgrammingQuizPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ProgrammingQuestionLabel1)
                     .addComponent(ProgrammingComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -766,7 +811,8 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
                 .addGap(52, 52, 52)
                 .addGroup(ProgrammingQuizPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ProgrammingClearBTN)
-                    .addComponent(ProgrammingQuizCheckBTN))
+                    .addComponent(ProgrammingQuizCheckBTN)
+                    .addComponent(exitBTn4))
                 .addGap(30, 30, 30))
         );
 
@@ -846,6 +892,14 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
         ReportGeneratorTitleLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ReportGeneratorTitleLabel.setText("Report Generator");
 
+        exitBTn6.setBackground(new java.awt.Color(255, 51, 51));
+        exitBTn6.setText("EXIT");
+        exitBTn6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exitBTn6ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout ReportGeneratorPNLLayout = new javax.swing.GroupLayout(ReportGeneratorPNL);
         ReportGeneratorPNL.setLayout(ReportGeneratorPNLLayout);
         ReportGeneratorPNLLayout.setHorizontalGroup(
@@ -868,26 +922,30 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
                                 .addComponent(EmailLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(30, 30, 30))))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, ReportGeneratorPNLLayout.createSequentialGroup()
-                        .addComponent(SaveBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(ViewBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(114, 114, 114)
-                        .addComponent(DeleteBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, ReportGeneratorPNLLayout.createSequentialGroup()
                         .addGap(29, 29, 29)
                         .addComponent(FirstNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(SurnameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(30, 30, 30))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, ReportGeneratorPNLLayout.createSequentialGroup()
-                        .addGap(197, 197, 197)
-                        .addComponent(ContentLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, ReportGeneratorPNLLayout.createSequentialGroup()
                         .addComponent(FirstNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(SurnameField, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(SurnameField, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, ReportGeneratorPNLLayout.createSequentialGroup()
+                        .addGroup(ReportGeneratorPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, ReportGeneratorPNLLayout.createSequentialGroup()
+                                .addGap(197, 197, 197)
+                                .addComponent(ContentLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, ReportGeneratorPNLLayout.createSequentialGroup()
+                                .addComponent(SaveBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(52, 52, 52)
+                                .addComponent(ViewBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(50, 50, 50)
+                                .addComponent(DeleteBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(46, 46, 46)
+                                .addComponent(exitBTn6)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addGap(113, 113, 113))
             .addGroup(ReportGeneratorPNLLayout.createSequentialGroup()
                 .addGap(168, 168, 168)
@@ -925,7 +983,8 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
                 .addGroup(ReportGeneratorPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(SaveBTN)
                     .addComponent(ViewBTN)
-                    .addComponent(DeleteBTN))
+                    .addComponent(DeleteBTN)
+                    .addComponent(exitBTn6))
                 .addGap(36, 36, 36))
         );
 
@@ -1031,6 +1090,14 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
             }
         });
 
+        exitBTn5.setBackground(new java.awt.Color(255, 51, 51));
+        exitBTn5.setText("EXIT");
+        exitBTn5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exitBTn5ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout ContactUsPNLLayout = new javax.swing.GroupLayout(ContactUsPNL);
         ContactUsPNL.setLayout(ContactUsPNLLayout);
         ContactUsPNLLayout.setHorizontalGroup(
@@ -1074,7 +1141,9 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
                         .addComponent(ContactUsFirstNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(ContactUsPNLLayout.createSequentialGroup()
                         .addGap(283, 283, 283)
-                        .addComponent(SendFeedbackBTN))
+                        .addComponent(SendFeedbackBTN)
+                        .addGap(60, 60, 60)
+                        .addComponent(exitBTn5))
                     .addGroup(ContactUsPNLLayout.createSequentialGroup()
                         .addGap(192, 192, 192)
                         .addComponent(ContactUsTitleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -1106,7 +1175,9 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
                     .addComponent(TermsAndConditionsLabel)
                     .addComponent(TermsAndConditionsCheckBox))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
-                .addComponent(SendFeedbackBTN)
+                .addGroup(ContactUsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(SendFeedbackBTN)
+                    .addComponent(exitBTn5))
                 .addGap(23, 23, 23))
         );
 
@@ -1279,6 +1350,63 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_DateFormattedFieldActionPerformed
 
+    private void exitBTnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBTnActionPerformed
+        setVisible(false);
+
+        // Open the HomePage
+        HomePage homePage = new HomePage();
+        homePage.setVisible(true);
+    }//GEN-LAST:event_exitBTnActionPerformed
+
+    private void exitBTn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBTn1ActionPerformed
+                setVisible(false);
+
+        // Open the HomePage
+        HomePage homePage = new HomePage();
+        homePage.setVisible(true);
+    }//GEN-LAST:event_exitBTn1ActionPerformed
+
+    private void exitBTn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBTn2ActionPerformed
+         setVisible(false);
+
+        // Open the HomePage
+        HomePage homePage = new HomePage();
+        homePage.setVisible(true);
+    }//GEN-LAST:event_exitBTn2ActionPerformed
+
+    private void exitBTn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBTn3ActionPerformed
+                setVisible(false);
+
+        // Open the HomePage
+        HomePage homePage = new HomePage();
+        homePage.setVisible(true);
+    }//GEN-LAST:event_exitBTn3ActionPerformed
+
+    private void exitBTn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBTn4ActionPerformed
+                setVisible(false);
+
+        // Open the HomePage
+        HomePage homePage = new HomePage();
+        homePage.setVisible(true);
+    }//GEN-LAST:event_exitBTn4ActionPerformed
+
+    private void exitBTn5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBTn5ActionPerformed
+                setVisible(false);
+
+        // Open the HomePage
+        HomePage homePage = new HomePage();
+        homePage.setVisible(true);
+    }//GEN-LAST:event_exitBTn5ActionPerformed
+
+    private void exitBTn6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBTn6ActionPerformed
+        // TODO add your handling code here:
+                setVisible(false);
+
+        // Open the HomePage
+        HomePage homePage = new HomePage();
+        homePage.setVisible(true);
+    }//GEN-LAST:event_exitBTn6ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1431,6 +1559,13 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
     private javax.swing.JLabel URLLabel;
     private javax.swing.JButton ViewBTN;
     private javax.swing.JButton ViewRecourceBTN;
+    private javax.swing.JButton exitBTn;
+    private javax.swing.JButton exitBTn1;
+    private javax.swing.JButton exitBTn2;
+    private javax.swing.JButton exitBTn3;
+    private javax.swing.JButton exitBTn4;
+    private javax.swing.JButton exitBTn5;
+    private javax.swing.JButton exitBTn6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTabbedPane jTabbedPane3;
