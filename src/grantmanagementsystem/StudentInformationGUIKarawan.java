@@ -56,6 +56,8 @@ public class StudentInformationGUIKarawan extends javax.swing.JFrame {
         applyBTN = new javax.swing.JButton();
         exitBTN = new javax.swing.JButton();
         deleteBTN = new javax.swing.JButton();
+        CoursesPNL = new javax.swing.JPanel();
+        StudentGrowth = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -224,6 +226,32 @@ public class StudentInformationGUIKarawan extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Students", studentPNL1);
 
+        javax.swing.GroupLayout CoursesPNLLayout = new javax.swing.GroupLayout(CoursesPNL);
+        CoursesPNL.setLayout(CoursesPNLLayout);
+        CoursesPNLLayout.setHorizontalGroup(
+            CoursesPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 810, Short.MAX_VALUE)
+        );
+        CoursesPNLLayout.setVerticalGroup(
+            CoursesPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 492, Short.MAX_VALUE)
+        );
+
+        jTabbedPane1.addTab("Courses", CoursesPNL);
+
+        javax.swing.GroupLayout StudentGrowthLayout = new javax.swing.GroupLayout(StudentGrowth);
+        StudentGrowth.setLayout(StudentGrowthLayout);
+        StudentGrowthLayout.setHorizontalGroup(
+            StudentGrowthLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 810, Short.MAX_VALUE)
+        );
+        StudentGrowthLayout.setVerticalGroup(
+            StudentGrowthLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 492, Short.MAX_VALUE)
+        );
+
+        jTabbedPane1.addTab("Student growth", StudentGrowth);
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -368,6 +396,8 @@ public class StudentInformationGUIKarawan extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel CoursesPNL;
+    private javax.swing.JPanel StudentGrowth;
     private javax.swing.JButton applyBTN;
     private javax.swing.JLabel contactLBL1;
     private javax.swing.JTextField contactTF1;
