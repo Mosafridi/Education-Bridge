@@ -1,0 +1,20 @@
+12345,John Doe,Computer Science,johndoe@example.com,500,S101,2024-11-20
+12346,Jane Smith,Mathematics,janesmith@example.com,300,S102,2024-11-20
+12347,Emma Brown,Physics,emabrown@example.com,400,S103,2024-11-19
+12348,Michael Green,Chemistry,michaelgreen@example.com,450,S104,2024-11-18
+12349,Olivia White,Biology,oliviawhite@example.com,350,S105,2024-11-17
+12350,Lucas Gray,Engineering,lucasgray@example.com,600,S106,2024-11-16
+12351,Emily Black,Literature,emilyblack@example.com,250,S107,2024-11-15
+12352,Alexander Blue,History,alexblue@example.com,700,S108,2024-11-14
+12353,Sophia Pink,Philosophy,sophiapink@example.com,200,S109,2024-11-13
+12354,Daniel Red,Astronomy,danielred@example.com,550,S110,2024-11-12
+12355,Mia Violet,Architecture,miaviolet@example.com,300,S111,2024-11-11
+12356,Ethan Orange,Music,ethanorange@example.com,480,S112,2024-11-10
+12357,Ava Yellow,Art,avayellow@example.com,360,S113,2024-11-09
+12358,Henry Teal,Robotics,henryteal@example.com,450,S114,2024-11-08
+12359,Isabella Purple,Dance,isabellapurple@example.com,310,S115,2024-11-07
+12360,James Gold,Economics,jamesgold@example.com,500,S116,2024-11-06
+12361,Charlotte Silver,Psychology,charlottesilver@example.com,370,S117,2024-11-05
+12362,William Brown,Medicine,williambr@example.com,800,S118,2024-11-04
+12363,Amelia Green,Nursing,ameliagreen@example.com,420,S119,2024-11-03
+12364,Benjamin Indigo,Law,benjaminindigo@example.com,520,S120,2024-11-02

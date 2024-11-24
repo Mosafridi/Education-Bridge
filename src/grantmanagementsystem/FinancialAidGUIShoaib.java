@@ -4,15 +4,12 @@
  */
 package grantmanagementsystem;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.time.LocalDate;
-import javax.swing.JOptionPane;
+import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
+import java.io.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 
 /**
  *
@@ -49,22 +46,12 @@ public class FinancialAidGUIShoaib extends javax.swing.JFrame {
         requestAmountTF5 = new javax.swing.JTextField();
         emailLBL5 = new javax.swing.JLabel();
         emailTF5 = new javax.swing.JTextField();
-        jLabel17 = new javax.swing.JLabel();
-        requestCB = new javax.swing.JComboBox<>();
         jLabel18 = new javax.swing.JLabel();
         jScrollPane7 = new javax.swing.JScrollPane();
         reasonTA = new javax.swing.JTextArea();
         BTNpanel = new javax.swing.JPanel();
-        exitBTn = new javax.swing.JButton();
-        FinancialTBL = new javax.swing.JScrollPane();
-        FinancialTBL1 = new javax.swing.JTable();
-        viewAllApplicationsBTN = new javax.swing.JButton();
         submitBTN = new javax.swing.JButton();
-        adminPNL = new javax.swing.JPanel();
-        grant = new javax.swing.JScrollPane();
-        grantTBL = new javax.swing.JTable();
-        allGrantBTN = new javax.swing.JButton();
-        approvegrantBTN = new javax.swing.JButton();
+        exitBTn = new javax.swing.JButton();
         scholarshipPNL = new javax.swing.JPanel();
         registeration = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -75,14 +62,17 @@ public class FinancialAidGUIShoaib extends javax.swing.JFrame {
         sponsornameTF = new javax.swing.JTextField();
         registerBTN = new javax.swing.JButton();
         viewAllBTN = new javax.swing.JButton();
-        approveBTN = new javax.swing.JButton();
-        rejectBTN = new javax.swing.JButton();
         exitsponsorBTN = new javax.swing.JButton();
+        sponsorLP = new javax.swing.JLayeredPane();
         jScrollPane2 = new javax.swing.JScrollPane();
         sponsorTBL = new javax.swing.JTable();
-        viewRequestBTN = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        grantSponsorTBL = new javax.swing.JTable();
+        adminPNL = new javax.swing.JPanel();
+        grant = new javax.swing.JScrollPane();
+        grantTBL = new javax.swing.JTable();
+        allGrantBTN = new javax.swing.JButton();
+        approveBTN1 = new javax.swing.JButton();
+        rejectBTN1 = new javax.swing.JButton();
+        exitBTN2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(153, 255, 255));
@@ -105,10 +95,6 @@ public class FinancialAidGUIShoaib extends javax.swing.JFrame {
 
         emailLBL5.setText("Email");
 
-        jLabel17.setText("Previsous Request");
-
-        requestCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "50%", "30%", "20%", "N/A ", " " }));
-
         jLabel18.setText("Reason For Request");
 
         reasonTA.setColumns(20);
@@ -126,7 +112,7 @@ public class FinancialAidGUIShoaib extends javax.swing.JFrame {
                     .addComponent(emailLBL5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(sidLBL5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(snameLBL5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel16, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 102, Short.MAX_VALUE))
+                    .addComponent(jLabel16, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel9Layout.createSequentialGroup()
@@ -136,18 +122,15 @@ public class FinancialAidGUIShoaib extends javax.swing.JFrame {
                             .addComponent(courseTF5, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(59, 59, 59)
                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(requestAmountLBL5, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
-                            .addComponent(jLabel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(requestAmountLBL5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addComponent(emailTF5, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(requestAmountTF5, javax.swing.GroupLayout.DEFAULT_SIZE, 156, Short.MAX_VALUE)
-                            .addComponent(requestCB, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(requestAmountTF5, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jScrollPane7, javax.swing.GroupLayout.DEFAULT_SIZE, 331, Short.MAX_VALUE))
+                    .addComponent(jScrollPane7, javax.swing.GroupLayout.DEFAULT_SIZE, 369, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel9Layout.setVerticalGroup(
@@ -162,84 +145,37 @@ public class FinancialAidGUIShoaib extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(snameLBL5)
-                    .addComponent(snameTF5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel17)
-                    .addComponent(requestCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(snameTF5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel9Layout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel16)
-                            .addComponent(courseTF5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel18))
+                            .addComponent(courseTF5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(emailLBL5)
                             .addComponent(emailTF5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
-                        .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel18)
+                            .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(15, 15, 15))))
         );
 
         BTNpanel.setBackground(new java.awt.Color(102, 204, 255));
 
-        exitBTn.setBackground(new java.awt.Color(255, 51, 51));
-        exitBTn.setText("EXIT");
-        exitBTn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                exitBTnActionPerformed(evt);
-            }
-        });
-
-        FinancialTBL1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null}
-            },
-            new String [] {
-                "Student ID", "Student Name", "Course ", "Email", "Request Amount", "Previsous Request", "Reason", "Status", "Date"
-            }
-        ));
-        FinancialTBL.setViewportView(FinancialTBL1);
-
-        viewAllApplicationsBTN.setBackground(new java.awt.Color(204, 255, 204));
-        viewAllApplicationsBTN.setText("View Application");
-        viewAllApplicationsBTN.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                viewAllApplicationsBTNActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout BTNpanelLayout = new javax.swing.GroupLayout(BTNpanel);
         BTNpanel.setLayout(BTNpanelLayout);
         BTNpanelLayout.setHorizontalGroup(
             BTNpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(BTNpanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(BTNpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(BTNpanelLayout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(viewAllApplicationsBTN)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(exitBTn))
-                    .addComponent(FinancialTBL))
-                .addContainerGap())
+            .addGap(0, 0, Short.MAX_VALUE)
         );
         BTNpanelLayout.setVerticalGroup(
             BTNpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BTNpanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(FinancialTBL, javax.swing.GroupLayout.PREFERRED_SIZE, 288, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(BTNpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(BTNpanelLayout.createSequentialGroup()
-                        .addComponent(exitBTn, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())
-                    .addComponent(viewAllApplicationsBTN, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
+            .addGap(0, 0, Short.MAX_VALUE)
         );
 
         submitBTN.setBackground(new java.awt.Color(153, 255, 153));
@@ -250,94 +186,38 @@ public class FinancialAidGUIShoaib extends javax.swing.JFrame {
             }
         });
 
+        exitBTn.setBackground(new java.awt.Color(255, 51, 51));
+        exitBTn.setText("EXIT");
+        exitBTn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exitBTnActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout financialPNL5Layout = new javax.swing.GroupLayout(financialPNL5);
         financialPNL5.setLayout(financialPNL5Layout);
         financialPNL5Layout.setHorizontalGroup(
             financialPNL5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel9, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(financialPNL5Layout.createSequentialGroup()
-                .addGroup(financialPNL5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(BTNpanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel9, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(financialPNL5Layout.createSequentialGroup()
-                        .addGap(314, 314, 314)
-                        .addComponent(submitBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                .addGap(314, 314, 314)
+                .addComponent(submitBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(financialPNL5Layout.createSequentialGroup()
+                .addGap(750, 750, 750)
+                .addComponent(exitBTn))
         );
         financialPNL5Layout.setVerticalGroup(
             financialPNL5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(financialPNL5Layout.createSequentialGroup()
                 .addGap(14, 14, 14)
                 .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(12, 12, 12)
                 .addComponent(submitBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 187, Short.MAX_VALUE)
-                .addComponent(BTNpanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(322, 322, 322)
+                .addComponent(exitBTn, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         jTabbedPane6.addTab("Financial Aid", financialPNL5);
-
-        adminPNL.setBackground(new java.awt.Color(51, 204, 255));
-
-        grant.setBackground(new java.awt.Color(153, 204, 255));
-        grant.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Grant Reequests"));
-        grant.setOpaque(false);
-
-        grantTBL.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null}
-            },
-            new String [] {
-                "Application ID", "Student Name", "Course Name", "Email", "Requested Amount", "Reason for Aid", "Status", "Date"
-            }
-        ));
-        grant.setViewportView(grantTBL);
-
-        allGrantBTN.setBackground(new java.awt.Color(51, 102, 255));
-        allGrantBTN.setText("All Grants");
-        allGrantBTN.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                allGrantBTNActionPerformed(evt);
-            }
-        });
-
-        approvegrantBTN.setBackground(new java.awt.Color(102, 255, 102));
-        approvegrantBTN.setText("Approve");
-        approvegrantBTN.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                approvegrantBTNActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout adminPNLLayout = new javax.swing.GroupLayout(adminPNL);
-        adminPNL.setLayout(adminPNLLayout);
-        adminPNLLayout.setHorizontalGroup(
-            adminPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(grant, javax.swing.GroupLayout.DEFAULT_SIZE, 826, Short.MAX_VALUE)
-            .addGroup(adminPNLLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(allGrantBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(approvegrantBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        adminPNLLayout.setVerticalGroup(
-            adminPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(adminPNLLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(grant, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(adminPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(allGrantBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(approvegrantBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(288, Short.MAX_VALUE))
-        );
-
-        jTabbedPane6.addTab("Grant Requests", adminPNL);
 
         registeration.setBackground(new java.awt.Color(51, 204, 255));
         registeration.setBorder(javax.swing.BorderFactory.createTitledBorder("Registeration"));
@@ -367,7 +247,7 @@ public class FinancialAidGUIShoaib extends javax.swing.JFrame {
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(sidTF, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 266, Short.MAX_VALUE)
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(41, 41, 41)
                         .addComponent(fundsTF, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -388,7 +268,7 @@ public class FinancialAidGUIShoaib extends javax.swing.JFrame {
                     .addComponent(sidTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2)
                     .addComponent(fundsTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(31, 31, 31)
+                .addGap(46, 46, 46)
                 .addGroup(registerationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(sponsornameTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -401,22 +281,6 @@ public class FinancialAidGUIShoaib extends javax.swing.JFrame {
         viewAllBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 viewAllBTNActionPerformed(evt);
-            }
-        });
-
-        approveBTN.setBackground(new java.awt.Color(102, 255, 102));
-        approveBTN.setText("Approve");
-        approveBTN.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                approveBTNActionPerformed(evt);
-            }
-        });
-
-        rejectBTN.setBackground(new java.awt.Color(255, 51, 51));
-        rejectBTN.setText("Reject");
-        rejectBTN.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rejectBTNActionPerformed(evt);
             }
         });
 
@@ -441,26 +305,21 @@ public class FinancialAidGUIShoaib extends javax.swing.JFrame {
         ));
         jScrollPane2.setViewportView(sponsorTBL);
 
-        viewRequestBTN.setBackground(new java.awt.Color(51, 153, 255));
-        viewRequestBTN.setText("View Requests");
-        viewRequestBTN.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                viewRequestBTNActionPerformed(evt);
-            }
-        });
+        sponsorLP.setLayer(jScrollPane2, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
-        grantSponsorTBL.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null}
-            },
-            new String [] {
-                "Application ID", "Student Name", "Course Name", "Email", "Request Amount", "Reason", "Status", "Date"
-            }
-        ));
-        jScrollPane1.setViewportView(grantSponsorTBL);
+        javax.swing.GroupLayout sponsorLPLayout = new javax.swing.GroupLayout(sponsorLP);
+        sponsorLP.setLayout(sponsorLPLayout);
+        sponsorLPLayout.setHorizontalGroup(
+            sponsorLPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 814, Short.MAX_VALUE)
+        );
+        sponsorLPLayout.setVerticalGroup(
+            sponsorLPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, sponsorLPLayout.createSequentialGroup()
+                .addContainerGap(13, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 455, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(14, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout scholarshipPNLLayout = new javax.swing.GroupLayout(scholarshipPNL);
         scholarshipPNL.setLayout(scholarshipPNLLayout);
@@ -469,25 +328,15 @@ public class FinancialAidGUIShoaib extends javax.swing.JFrame {
             .addGroup(scholarshipPNLLayout.createSequentialGroup()
                 .addGroup(scholarshipPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(scholarshipPNLLayout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 819, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 1, Short.MAX_VALUE))
-                    .addGroup(scholarshipPNLLayout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(scholarshipPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(registeration, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(scholarshipPNLLayout.createSequentialGroup()
-                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 813, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(scholarshipPNLLayout.createSequentialGroup()
-                                .addComponent(viewAllBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(viewRequestBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(approveBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(rejectBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(exitsponsorBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                            .addComponent(sponsorLP)))
+                    .addGroup(scholarshipPNLLayout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(viewAllBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(exitsponsorBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         scholarshipPNLLayout.setVerticalGroup(
@@ -495,124 +344,167 @@ public class FinancialAidGUIShoaib extends javax.swing.JFrame {
             .addGroup(scholarshipPNLLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(registeration, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 355, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(sponsorLP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(scholarshipPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(viewAllBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(approveBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(rejectBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(exitsponsorBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(viewRequestBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+                    .addComponent(exitsponsorBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jTabbedPane6.addTab("Scholarship ", scholarshipPNL);
+
+        adminPNL.setBackground(new java.awt.Color(51, 204, 255));
+
+        grant.setBackground(new java.awt.Color(153, 204, 255));
+        grant.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Grant Reequests"));
+        grant.setOpaque(false);
+
+        grantTBL.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "Application ID", "Student Name", "Course Name", "Email", "Requested Amount", "Reason for Aid", "Status", "Date"
+            }
+        ));
+        grant.setViewportView(grantTBL);
+
+        allGrantBTN.setBackground(new java.awt.Color(51, 102, 255));
+        allGrantBTN.setText("All Grants");
+        allGrantBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                allGrantBTNActionPerformed(evt);
+            }
+        });
+
+        approveBTN1.setBackground(new java.awt.Color(102, 255, 102));
+        approveBTN1.setText("Approve");
+        approveBTN1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                approveBTN1ActionPerformed(evt);
+            }
+        });
+
+        rejectBTN1.setBackground(new java.awt.Color(255, 51, 51));
+        rejectBTN1.setText("Reject");
+        rejectBTN1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rejectBTN1ActionPerformed(evt);
+            }
+        });
+
+        exitBTN2.setBackground(new java.awt.Color(255, 51, 51));
+        exitBTN2.setText("EXIT");
+        exitBTN2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exitBTN2ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout adminPNLLayout = new javax.swing.GroupLayout(adminPNL);
+        adminPNL.setLayout(adminPNLLayout);
+        adminPNLLayout.setHorizontalGroup(
+            adminPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(adminPNLLayout.createSequentialGroup()
+                .addComponent(grant, javax.swing.GroupLayout.PREFERRED_SIZE, 826, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(adminPNLLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(allGrantBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(94, 94, 94)
+                .addComponent(approveBTN1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(32, 32, 32)
+                .addComponent(rejectBTN1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(exitBTN2, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        adminPNLLayout.setVerticalGroup(
+            adminPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(adminPNLLayout.createSequentialGroup()
+                .addComponent(grant, javax.swing.GroupLayout.PREFERRED_SIZE, 650, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                .addGroup(adminPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(allGrantBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(approveBTN1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rejectBTN1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(exitBTN2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+        );
+
+        jTabbedPane6.addTab("Grant Requests", adminPNL);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(jTabbedPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 826, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane6)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jTabbedPane6)
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void exitBTnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBTnActionPerformed
-        setVisible(false);
-
-        // Open the HomePage
+         setVisible(false);
         HomePage homePage = new HomePage();
         homePage.setVisible(true);
     }//GEN-LAST:event_exitBTnActionPerformed
 
     private void submitBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitBTNActionPerformed
-   
-  String studentId = sidTF.getText();
+     String studentId = sidTF.getText();
     String name = snameTF5.getText();
     String course = courseTF5.getText();
     String email = emailTF5.getText();
     String amount = requestAmountTF5.getText();
     String reason = reasonTA.getText();
     
-    // Input validation
-    if (studentId.isEmpty() || name.isEmpty() || course.isEmpty() || 
-        email.isEmpty() || amount.isEmpty() || reason.isEmpty()) {
-        JOptionPane.showMessageDialog(this, "Please fill in all fields");
-        return;
-    }
+    FinancialAidApplication.submitApplication(studentId, name,course,email, amount, reason);
     
-    // Email validation
-    if (!email.contains("@") || !email.contains(".")) {
-        JOptionPane.showMessageDialog(this, "Please enter a valid email address");
-        return;
-    }
-    
-    // Amount validation
-    try {
-        double amountValue = Double.parseDouble(amount);
-        if (amountValue <= 0) {
-            JOptionPane.showMessageDialog(this, "Amount must be greater than 0");
-            return;
-        }
-    } catch (NumberFormatException e) {
-        JOptionPane.showMessageDialog(this, "Please enter a valid amount");
-        return;
-    }
-    
-    FinancialAidApplication.submitApplication(studentId, name, course, email, amount, reason);
-//    clearFields();
+}
 
-    
+private void viewMyApplicationsBTNActionPerformed(java.awt.event.ActionEvent evt) {
     }//GEN-LAST:event_submitBTNActionPerformed
-
-    private void viewAllApplicationsBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewAllApplicationsBTNActionPerformed
-   String studentId = sidTF.getText();
-    if (studentId.isEmpty()) {
-        JOptionPane.showMessageDialog(this, "Please enter a Student ID");
-        return;
-    }
-    FinancialAidApplication.loadMyApplications(FinancialTBL, studentId); // Pass the JScrollPane
-    }//GEN-LAST:event_viewAllApplicationsBTNActionPerformed
 
     private void allGrantBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_allGrantBTNActionPerformed
        Grant.loadApplicationsToTable(grantTBL);
     }//GEN-LAST:event_allGrantBTNActionPerformed
 
-    private void approvegrantBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_approvegrantBTNActionPerformed
-        Grant.loadGrantsToTable(grantTBL);
-        
-    }//GEN-LAST:event_approvegrantBTNActionPerformed
-
     private void exitsponsorBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitsponsorBTNActionPerformed
-        // TODO add your handling code here:
-        
-        System.exit(0);
+          setVisible(false);
+        HomePage homePage = new HomePage();
+        homePage.setVisible(true);
     }//GEN-LAST:event_exitsponsorBTNActionPerformed
 
     private void registerBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerBTNActionPerformed
-   String sponsorId = sidTF.getText();
-    String name = snameTF5.getText();
-    String funds = fundsTF.getText();
-    
+   // Trim inputs to remove leading/trailing spaces
+    String sponsorId = sidTF.getText().trim();
+    String name = snameTF5.getText().trim();
+    String funds = fundsTF.getText().trim();
+
     // Input validation
     if (sponsorId.isEmpty() || name.isEmpty() || funds.isEmpty()) {
         JOptionPane.showMessageDialog(this, "Please fill in all sponsor fields");
         return;
     }
-    
+
     // Funds validation
     try {
-        double fundsValue = Double.parseDouble(funds);
+        double fundsValue = Double.parseDouble(funds); // Convert funds to a number
         if (fundsValue <= 0) {
             JOptionPane.showMessageDialog(this, "Funds amount must be greater than 0");
             return;
@@ -621,75 +513,144 @@ public class FinancialAidGUIShoaib extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(this, "Please enter a valid funds amount");
         return;
     }
-    
+
+    // Save sponsor data using the Sponsorship class
     Sponsorship.saveSponsor(sponsorId, name, funds);
-        
+
+    // Clear the input fields after successful registration
+    sidTF.setText("");
+    snameTF5.setText("");
+    fundsTF.setText("");
     }//GEN-LAST:event_registerBTNActionPerformed
 
-    private void approveBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_approveBTNActionPerformed
-    int selectedRow = grantTBL.getSelectedRow();
-    if (selectedRow >= 0) {
-        String studentId = (String) grantTBL.getValueAt(selectedRow, 0);
-        Sponsorship.updateApplicationStatus(studentId, "APPROVED");
-        Grant.loadApplicationsToTable(grantTBL);
-    } else {
-        JOptionPane.showMessageDialog(this, "Please select an application to approve");
-    }
-    
-    }//GEN-LAST:event_approveBTNActionPerformed
-
-    private void rejectBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rejectBTNActionPerformed
-    int selectedRow = grantTBL.getSelectedRow();
-    if (selectedRow >= 0) {
-        String studentId = (String) grantTBL.getValueAt(selectedRow, 0);
-        Sponsorship.updateApplicationStatus(studentId, "REJECTED");
-        Grant.loadApplicationsToTable(grantTBL);
-    } else {
-        JOptionPane.showMessageDialog(this, "Please select an application to reject");
-    }
-        
-    }//GEN-LAST:event_rejectBTNActionPerformed
-
     private void viewAllBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewAllBTNActionPerformed
-        // TODO add your handling code here:
-         Sponsorship.loadSponsors(sponsorTBL);
+      
+            Sponsorship.loadSponsors(sponsorTBL);  
+        
     }//GEN-LAST:event_viewAllBTNActionPerformed
 
-    private void viewRequestBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewRequestBTNActionPerformed
-        // TODO add your handling code here:
+    private void approveBTN1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_approveBTN1ActionPerformed
+       int selectedRow = grantTBL.getSelectedRow(); // Get the selected row from the table
+        if (selectedRow == -1) {
+            JOptionPane.showMessageDialog(this, "Please select an application to approve.");
+            return;
+        }
+
+        String studentId = (String) grantTBL.getValueAt(selectedRow, 0);
+        String studentName = (String) grantTBL.getValueAt(selectedRow, 1);
+        String course = (String) grantTBL.getValueAt(selectedRow, 2);
+        String email = (String) grantTBL.getValueAt(selectedRow, 3);
+        String amount = (String) grantTBL.getValueAt(selectedRow, 4);
+
+        String sponsorId = JOptionPane.showInputDialog(this, 
+            "Enter Sponsor ID for this grant:", 
+            "Sponsor ID Required", 
+            JOptionPane.PLAIN_MESSAGE);
+
+        if (sponsorId == null || sponsorId.trim().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Approval requires a valid Sponsor ID.");
+            return;
+        }
+
+        int confirm = JOptionPane.showConfirmDialog(this, 
+            "Are you sure you want to approve the application for " + studentName + " (ID: " + studentId + ")?", 
+            "Approval Confirmation", 
+            JOptionPane.YES_NO_OPTION);
+
+        if (confirm == JOptionPane.YES_OPTION) {
+            try (BufferedReader reader = new BufferedReader(new FileReader("applications.txt"));
+                 BufferedWriter writer = new BufferedWriter(new FileWriter("applications_temp.txt"))) {
+
+                String line;
+                while ((line = reader.readLine()) != null) {
+                    String[] data = line.split(",");
+                    if (data[0].equals(studentId)) {
+                        data[6] = "APPROVED"; 
+                        writer.write(String.join(",", data));
+                    } else {
+                        writer.write(line);
+                    }
+                    writer.newLine();
+                }
+            } catch (IOException e) {
+                JOptionPane.showMessageDialog(this, "Error approving application: " + e.getMessage());
+                return;
+            }
+
+            File originalFile = new File("applications.txt");
+            File tempFile = new File("applications_temp.txt");
+            if (originalFile.delete()) {
+                tempFile.renameTo(originalFile);
+            }
+
+            Grant.saveGrant(studentId, studentName, course, email, amount, sponsorId);
+            Grant.loadApplicationsToTable(grantTBL);
+            JOptionPane.showMessageDialog(this, "Application for " + studentName + " has been approved.");
+        }
+    }//GEN-LAST:event_approveBTN1ActionPerformed
+
+    private void rejectBTN1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rejectBTN1ActionPerformed
+      
+        int selectedRow = grantTBL.getSelectedRow(); 
+        if (selectedRow == -1) {
+            JOptionPane.showMessageDialog(this, "Please select an application to reject.");
+            return;
+        }
+
+        String studentId = (String) grantTBL.getValueAt(selectedRow, 0);
+        String studentName = (String) grantTBL.getValueAt(selectedRow, 1);
+
+        int confirm = JOptionPane.showConfirmDialog(this, 
+            "Are you sure you want to reject the application for " + studentName + " (ID: " + studentId + ")?", 
+            "Reject Confirmation", 
+            JOptionPane.YES_NO_OPTION);
+
+        if (confirm == JOptionPane.YES_OPTION) {
+            try (BufferedReader reader = new BufferedReader(new FileReader("applications.txt"));
+                 BufferedWriter writer = new BufferedWriter(new FileWriter("applications_temp.txt"))) {
+                
+                String line;
+                while ((line = reader.readLine()) != null) {
+                    String[] data = line.split(",");
+                    if (data[0].equals(studentId)) {
+                        data[6] = "REJECTED"; 
+                        writer.write(String.join(",", data));
+                    } else {
+                        writer.write(line);
+                    }
+                    writer.newLine();
+                }
+            } catch (IOException e) {
+                JOptionPane.showMessageDialog(this, "Error rejecting application: " + e.getMessage());
+                return;
+            }
+
+            File originalFile = new File("applications.txt");
+            File tempFile = new File("applications_temp.txt");
+            if (originalFile.delete()) {
+                tempFile.renameTo(originalFile);
+            }
+
+            Grant.loadApplicationsToTable(grantTBL);
+            JOptionPane.showMessageDialog(this, "Application for " + studentName + " has been rejected.");
+        }
         
-         Grant.loadApplicationsToTable(grantSponsorTBL);
-         
-    }//GEN-LAST:event_viewRequestBTNActionPerformed
+    }//GEN-LAST:event_rejectBTN1ActionPerformed
+
+    private void exitBTN2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBTN2ActionPerformed
+         setVisible(false);
+        HomePage homePage = new HomePage();
+        homePage.setVisible(true);
+    }//GEN-LAST:event_exitBTN2ActionPerformed
 
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(FinancialAidGUIShoaib.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(FinancialAidGUIShoaib.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(FinancialAidGUIShoaib.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(FinancialAidGUIShoaib.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-
+       java.awt.EventQueue.invokeLater(() -> {
+            new FinancialAidGUIShoaib().setVisible(true);
+        });
+        
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -700,51 +661,44 @@ public class FinancialAidGUIShoaib extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel BTNpanel;
-    private javax.swing.JScrollPane FinancialTBL;
-    private javax.swing.JTable FinancialTBL1;
     private javax.swing.JPanel adminPNL;
     private javax.swing.JButton allGrantBTN;
-    private javax.swing.JButton approveBTN;
-    private javax.swing.JButton approvegrantBTN;
+    private javax.swing.JButton approveBTN1;
     private javax.swing.JTextField courseTF5;
     private javax.swing.JLabel emailLBL5;
     private javax.swing.JTextField emailTF5;
+    private javax.swing.JButton exitBTN2;
     private javax.swing.JButton exitBTn;
     private javax.swing.JButton exitsponsorBTN;
     private javax.swing.JPanel financialPNL5;
     private javax.swing.JTextField fundsTF;
     private javax.swing.JScrollPane grant;
-    private javax.swing.JTable grantSponsorTBL;
     private javax.swing.JTable grantTBL;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel9;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JTabbedPane jTabbedPane6;
     private javax.swing.JTextArea reasonTA;
     private javax.swing.JButton registerBTN;
     private javax.swing.JPanel registeration;
-    private javax.swing.JButton rejectBTN;
+    private javax.swing.JButton rejectBTN1;
     private javax.swing.JLabel requestAmountLBL5;
     private javax.swing.JTextField requestAmountTF5;
-    private javax.swing.JComboBox<String> requestCB;
     private javax.swing.JPanel scholarshipPNL;
     private javax.swing.JLabel sidLBL5;
     private javax.swing.JTextField sidTF;
     private javax.swing.JTextField sidTF5;
     private javax.swing.JLabel snameLBL5;
     private javax.swing.JTextField snameTF5;
+    private javax.swing.JLayeredPane sponsorLP;
     private javax.swing.JTable sponsorTBL;
     private javax.swing.JTextField sponsornameTF;
     private javax.swing.JButton submitBTN;
-    private javax.swing.JButton viewAllApplicationsBTN;
     private javax.swing.JButton viewAllBTN;
-    private javax.swing.JButton viewRequestBTN;
     // End of variables declaration//GEN-END:variables
 }
