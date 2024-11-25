@@ -52,6 +52,12 @@ public class FinancialAidGUIShoaib extends javax.swing.JFrame {
         BTNpanel = new javax.swing.JPanel();
         submitBTN = new javax.swing.JButton();
         exitBTn = new javax.swing.JButton();
+        QuotePNL = new javax.swing.JPanel();
+        schoolPNG = new javax.swing.JLabel();
+        quoteLBL = new javax.swing.JLabel();
+        keeplearningPNG = new javax.swing.JLabel();
+        quote2 = new javax.swing.JLabel();
+        makethingshappenPNG = new javax.swing.JLabel();
         scholarshipPNL = new javax.swing.JPanel();
         registeration = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -78,9 +84,11 @@ public class FinancialAidGUIShoaib extends javax.swing.JFrame {
         setBackground(new java.awt.Color(153, 255, 255));
 
         jTabbedPane6.setBackground(new java.awt.Color(51, 204, 255));
+        jTabbedPane6.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jTabbedPane6.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
 
         financialPNL5.setBackground(new java.awt.Color(102, 204, 255));
+        financialPNL5.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jPanel9.setBackground(new java.awt.Color(102, 204, 255));
         jPanel9.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3), "Financial Aid Registeration"));
@@ -130,7 +138,7 @@ public class FinancialAidGUIShoaib extends javax.swing.JFrame {
                     .addGroup(jPanel9Layout.createSequentialGroup()
                         .addComponent(requestAmountTF5, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jScrollPane7, javax.swing.GroupLayout.DEFAULT_SIZE, 369, Short.MAX_VALUE))
+                    .addComponent(jScrollPane7))
                 .addContainerGap())
         );
         jPanel9Layout.setVerticalGroup(
@@ -180,6 +188,7 @@ public class FinancialAidGUIShoaib extends javax.swing.JFrame {
 
         submitBTN.setBackground(new java.awt.Color(153, 255, 153));
         submitBTN.setText("Submit Application");
+        submitBTN.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         submitBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 submitBTNActionPerformed(evt);
@@ -188,11 +197,63 @@ public class FinancialAidGUIShoaib extends javax.swing.JFrame {
 
         exitBTn.setBackground(new java.awt.Color(255, 51, 51));
         exitBTn.setText("EXIT");
+        exitBTn.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         exitBTn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 exitBTnActionPerformed(evt);
             }
         });
+
+        QuotePNL.setBackground(new java.awt.Color(102, 204, 255));
+
+        schoolPNG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/school (1).png"))); // NOI18N
+
+        quoteLBL.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        quoteLBL.setText("\"Education is the most powerful weapon which you can use to change the world.\" – Nelson Mandela");
+
+        keeplearningPNG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/learning (2).png"))); // NOI18N
+
+        quote2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        quote2.setText("\"The beautiful thing about learning is that no one can take it away from you.\" – B.B. King");
+
+        makethingshappenPNG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/grantmanagementsystem/creativity.png"))); // NOI18N
+
+        javax.swing.GroupLayout QuotePNLLayout = new javax.swing.GroupLayout(QuotePNL);
+        QuotePNL.setLayout(QuotePNLLayout);
+        QuotePNLLayout.setHorizontalGroup(
+            QuotePNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(QuotePNLLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(QuotePNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(keeplearningPNG, javax.swing.GroupLayout.DEFAULT_SIZE, 147, Short.MAX_VALUE)
+                    .addComponent(schoolPNG, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(QuotePNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(quote2, javax.swing.GroupLayout.PREFERRED_SIZE, 474, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(quoteLBL, javax.swing.GroupLayout.PREFERRED_SIZE, 570, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(makethingshappenPNG, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        QuotePNLLayout.setVerticalGroup(
+            QuotePNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(QuotePNLLayout.createSequentialGroup()
+                .addGroup(QuotePNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(QuotePNLLayout.createSequentialGroup()
+                        .addGap(41, 41, 41)
+                        .addComponent(schoolPNG)
+                        .addGap(41, 41, 41)
+                        .addComponent(keeplearningPNG))
+                    .addGroup(QuotePNLLayout.createSequentialGroup()
+                        .addGap(118, 118, 118)
+                        .addGroup(QuotePNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(makethingshappenPNG)
+                            .addGroup(QuotePNLLayout.createSequentialGroup()
+                                .addComponent(quoteLBL)
+                                .addGap(18, 18, 18)
+                                .addComponent(quote2)))))
+                .addContainerGap(84, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout financialPNL5Layout = new javax.swing.GroupLayout(financialPNL5);
         financialPNL5.setLayout(financialPNL5Layout);
@@ -200,11 +261,16 @@ public class FinancialAidGUIShoaib extends javax.swing.JFrame {
             financialPNL5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel9, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(financialPNL5Layout.createSequentialGroup()
-                .addGap(314, 314, 314)
-                .addComponent(submitBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(financialPNL5Layout.createSequentialGroup()
-                .addGap(750, 750, 750)
-                .addComponent(exitBTn))
+                .addGroup(financialPNL5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(financialPNL5Layout.createSequentialGroup()
+                        .addGap(314, 314, 314)
+                        .addComponent(submitBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(QuotePNL, javax.swing.GroupLayout.PREFERRED_SIZE, 815, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 1, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, financialPNL5Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(exitBTn, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         financialPNL5Layout.setVerticalGroup(
             financialPNL5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -213,11 +279,16 @@ public class FinancialAidGUIShoaib extends javax.swing.JFrame {
                 .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(12, 12, 12)
                 .addComponent(submitBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(322, 322, 322)
-                .addComponent(exitBTn, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(QuotePNL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(exitBTn, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         jTabbedPane6.addTab("Financial Aid", financialPNL5);
+
+        scholarshipPNL.setBackground(new java.awt.Color(102, 204, 255));
 
         registeration.setBackground(new java.awt.Color(51, 204, 255));
         registeration.setBorder(javax.swing.BorderFactory.createTitledBorder("Registeration"));
@@ -230,6 +301,7 @@ public class FinancialAidGUIShoaib extends javax.swing.JFrame {
 
         registerBTN.setBackground(new java.awt.Color(102, 255, 102));
         registerBTN.setText("Register Sponsor");
+        registerBTN.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         registerBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 registerBTNActionPerformed(evt);
@@ -247,17 +319,18 @@ public class FinancialAidGUIShoaib extends javax.swing.JFrame {
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(sidTF, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 266, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 262, Short.MAX_VALUE)
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(41, 41, 41)
-                        .addComponent(fundsTF, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(fundsTF, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(44, 44, 44))
                     .addGroup(registerationLayout.createSequentialGroup()
                         .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(sponsornameTF, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(registerBTN)))
-                .addGap(44, 44, 44))
+                        .addComponent(registerBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(30, 30, 30))))
         );
         registerationLayout.setVerticalGroup(
             registerationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -278,6 +351,7 @@ public class FinancialAidGUIShoaib extends javax.swing.JFrame {
 
         viewAllBTN.setBackground(new java.awt.Color(51, 153, 255));
         viewAllBTN.setText("View Sponsors");
+        viewAllBTN.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         viewAllBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 viewAllBTNActionPerformed(evt);
@@ -286,12 +360,16 @@ public class FinancialAidGUIShoaib extends javax.swing.JFrame {
 
         exitsponsorBTN.setBackground(new java.awt.Color(255, 51, 51));
         exitsponsorBTN.setText("EXIT");
+        exitsponsorBTN.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         exitsponsorBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 exitsponsorBTNActionPerformed(evt);
             }
         });
 
+        jScrollPane2.setBackground(new java.awt.Color(102, 204, 255));
+
+        sponsorTBL.setBackground(new java.awt.Color(102, 204, 255));
         sponsorTBL.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
@@ -311,7 +389,7 @@ public class FinancialAidGUIShoaib extends javax.swing.JFrame {
         sponsorLP.setLayout(sponsorLPLayout);
         sponsorLPLayout.setHorizontalGroup(
             sponsorLPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 814, Short.MAX_VALUE)
+            .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 810, Short.MAX_VALUE)
         );
         sponsorLPLayout.setVerticalGroup(
             sponsorLPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -361,6 +439,7 @@ public class FinancialAidGUIShoaib extends javax.swing.JFrame {
         grant.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Grant Reequests"));
         grant.setOpaque(false);
 
+        grantTBL.setBackground(new java.awt.Color(102, 204, 255));
         grantTBL.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null},
@@ -376,6 +455,7 @@ public class FinancialAidGUIShoaib extends javax.swing.JFrame {
 
         allGrantBTN.setBackground(new java.awt.Color(51, 102, 255));
         allGrantBTN.setText("All Grants");
+        allGrantBTN.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         allGrantBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 allGrantBTNActionPerformed(evt);
@@ -384,6 +464,7 @@ public class FinancialAidGUIShoaib extends javax.swing.JFrame {
 
         approveBTN1.setBackground(new java.awt.Color(102, 255, 102));
         approveBTN1.setText("Approve");
+        approveBTN1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         approveBTN1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 approveBTN1ActionPerformed(evt);
@@ -392,6 +473,7 @@ public class FinancialAidGUIShoaib extends javax.swing.JFrame {
 
         rejectBTN1.setBackground(new java.awt.Color(255, 51, 51));
         rejectBTN1.setText("Reject");
+        rejectBTN1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         rejectBTN1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rejectBTN1ActionPerformed(evt);
@@ -400,6 +482,7 @@ public class FinancialAidGUIShoaib extends javax.swing.JFrame {
 
         exitBTN2.setBackground(new java.awt.Color(255, 51, 51));
         exitBTN2.setText("EXIT");
+        exitBTN2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         exitBTN2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 exitBTN2ActionPerformed(evt);
@@ -661,6 +744,7 @@ private void viewMyApplicationsBTNActionPerformed(java.awt.event.ActionEvent evt
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel BTNpanel;
+    private javax.swing.JPanel QuotePNL;
     private javax.swing.JPanel adminPNL;
     private javax.swing.JButton allGrantBTN;
     private javax.swing.JButton approveBTN1;
@@ -683,6 +767,10 @@ private void viewMyApplicationsBTNActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JTabbedPane jTabbedPane6;
+    private javax.swing.JLabel keeplearningPNG;
+    private javax.swing.JLabel makethingshappenPNG;
+    private javax.swing.JLabel quote2;
+    private javax.swing.JLabel quoteLBL;
     private javax.swing.JTextArea reasonTA;
     private javax.swing.JButton registerBTN;
     private javax.swing.JPanel registeration;
@@ -690,6 +778,7 @@ private void viewMyApplicationsBTNActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JLabel requestAmountLBL5;
     private javax.swing.JTextField requestAmountTF5;
     private javax.swing.JPanel scholarshipPNL;
+    private javax.swing.JLabel schoolPNG;
     private javax.swing.JLabel sidLBL5;
     private javax.swing.JTextField sidTF;
     private javax.swing.JTextField sidTF5;
