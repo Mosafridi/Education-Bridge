@@ -58,6 +58,18 @@ public class StudentInformationGUIKarawan extends javax.swing.JFrame {
         deleteBTN = new javax.swing.JButton();
         CoursesPNL = new javax.swing.JPanel();
         CoursePanel = new javax.swing.JPanel();
+        CourseLevel = new javax.swing.JLabel();
+        CourseID = new javax.swing.JLabel();
+        MaxCapicity = new javax.swing.JLabel();
+        CourseName2 = new javax.swing.JLabel();
+        NameField = new javax.swing.JTextField();
+        IDField = new javax.swing.JTextField();
+        MaxField = new javax.swing.JTextField();
+        LevelField1 = new javax.swing.JTextField();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        CourseTable = new javax.swing.JTable();
+        DeleteButton = new javax.swing.JButton();
+        AddButton1 = new javax.swing.JButton();
         StudentGrowth = new javax.swing.JPanel();
         StudentGrowthPanel = new javax.swing.JPanel();
 
@@ -108,7 +120,7 @@ public class StudentInformationGUIKarawan extends javax.swing.JFrame {
                         .addGroup(StudentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(levelTF1)
                             .addComponent(contactTF1, javax.swing.GroupLayout.DEFAULT_SIZE, 142, Short.MAX_VALUE))))
-                .addContainerGap(162, Short.MAX_VALUE))
+                .addContainerGap(191, Short.MAX_VALUE))
         );
         StudentPanelLayout.setVerticalGroup(
             StudentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -203,7 +215,7 @@ public class StudentInformationGUIKarawan extends javax.swing.JFrame {
                         .addComponent(applyBTN)
                         .addGap(18, 18, 18)
                         .addComponent(deleteBTN)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 157, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 186, Short.MAX_VALUE)
                         .addComponent(exitBTN)
                         .addGap(9, 9, 9)))
                 .addContainerGap())
@@ -230,15 +242,100 @@ public class StudentInformationGUIKarawan extends javax.swing.JFrame {
 
         CoursePanel.setBackground(new java.awt.Color(0, 204, 255));
 
+        CourseLevel.setText("CourseLevel");
+
+        CourseID.setText("CourseID");
+
+        MaxCapicity.setText("MaxCapicity");
+
+        CourseName2.setText("CourseName");
+
+        CourseTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "CourseID", "CourseName", "CourseLevel", "MaxCapicity"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        jScrollPane2.setViewportView(CourseTable);
+
+        DeleteButton.setText("Delete");
+
+        AddButton1.setText("ADD");
+
         javax.swing.GroupLayout CoursePanelLayout = new javax.swing.GroupLayout(CoursePanel);
         CoursePanel.setLayout(CoursePanelLayout);
         CoursePanelLayout.setHorizontalGroup(
             CoursePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 763, Short.MAX_VALUE)
+            .addGroup(CoursePanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(CoursePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(CoursePanelLayout.createSequentialGroup()
+                        .addComponent(CourseID, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(IDField, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(CourseLevel, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(CoursePanelLayout.createSequentialGroup()
+                        .addComponent(CourseName2, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(NameField, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(MaxCapicity, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(26, 26, 26)
+                .addGroup(CoursePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(MaxField, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(LevelField1, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(101, 101, 101))
+            .addGroup(CoursePanelLayout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addGroup(CoursePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 728, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(DeleteButton, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(39, Short.MAX_VALUE))
+            .addGroup(CoursePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CoursePanelLayout.createSequentialGroup()
+                    .addContainerGap(665, Short.MAX_VALUE)
+                    .addComponent(AddButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(29, 29, 29)))
         );
         CoursePanelLayout.setVerticalGroup(
             CoursePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 476, Short.MAX_VALUE)
+            .addGroup(CoursePanelLayout.createSequentialGroup()
+                .addGap(41, 41, 41)
+                .addGroup(CoursePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(CourseID, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(CourseLevel, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(LevelField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(IDField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(33, 33, 33)
+                .addGroup(CoursePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(MaxCapicity, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(CourseName2, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(NameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(MaxField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(78, 78, 78)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
+                .addComponent(DeleteButton)
+                .addGap(22, 22, 22))
+            .addGroup(CoursePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CoursePanelLayout.createSequentialGroup()
+                    .addContainerGap(435, Short.MAX_VALUE)
+                    .addComponent(AddButton1)
+                    .addGap(18, 18, 18)))
         );
 
         javax.swing.GroupLayout CoursesPNLLayout = new javax.swing.GroupLayout(CoursesPNL);
@@ -262,7 +359,7 @@ public class StudentInformationGUIKarawan extends javax.swing.JFrame {
         StudentGrowthPanel.setLayout(StudentGrowthPanelLayout);
         StudentGrowthPanelLayout.setHorizontalGroup(
             StudentGrowthPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 757, Short.MAX_VALUE)
+            .addGap(0, 786, Short.MAX_VALUE)
         );
         StudentGrowthPanelLayout.setVerticalGroup(
             StudentGrowthPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -430,8 +527,19 @@ public class StudentInformationGUIKarawan extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton AddButton1;
+    private javax.swing.JLabel CourseID;
+    private javax.swing.JLabel CourseLevel;
+    private javax.swing.JLabel CourseName2;
     private javax.swing.JPanel CoursePanel;
+    private javax.swing.JTable CourseTable;
     private javax.swing.JPanel CoursesPNL;
+    private javax.swing.JButton DeleteButton;
+    private javax.swing.JTextField IDField;
+    private javax.swing.JTextField LevelField1;
+    private javax.swing.JLabel MaxCapicity;
+    private javax.swing.JTextField MaxField;
+    private javax.swing.JTextField NameField;
     private javax.swing.JPanel StudentGrowth;
     private javax.swing.JPanel StudentGrowthPanel;
     private javax.swing.JPanel StudentPanel;
@@ -445,6 +553,7 @@ public class StudentInformationGUIKarawan extends javax.swing.JFrame {
     private javax.swing.JButton exitBTN;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JLabel levelLBL1;
     private javax.swing.JTextField levelTF1;
