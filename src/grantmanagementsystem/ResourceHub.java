@@ -14,7 +14,7 @@ public class ResourceHub {
             bw.flush();
             System.out.println("Successfully added to the file.");
         } catch (IOException e) {
-            System.out.println("Exception: " + e.getMessage());
+            System.out.println("Exception: " + e.getMessage());//Small change for commit
         }
     }
 
