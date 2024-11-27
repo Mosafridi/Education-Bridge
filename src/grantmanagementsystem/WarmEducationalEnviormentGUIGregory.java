@@ -64,7 +64,7 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
         ResourseDateField = new javax.swing.JTextField();
         ResourseDateLabel = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        ResourseTBL = new javax.swing.JTable();
+        ResourceTBL = new javax.swing.JTable();
         ResourceURLLabel = new javax.swing.JLabel();
         ResourseURLField = new javax.swing.JTextField();
         CourseLabel = new javax.swing.JLabel();
@@ -340,7 +340,7 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
         ResourseDateLabel.setText("Date");
         ManageResourcesPNL.add(ResourseDateLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 50, 50, -1));
 
-        ResourseTBL.setModel(new javax.swing.table.DefaultTableModel(
+        ResourceTBL.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
                 {null, null, null, null, null, null},
@@ -361,7 +361,7 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
-        jScrollPane2.setViewportView(ResourseTBL);
+        jScrollPane2.setViewportView(ResourceTBL);
 
         ManageResourcesPNL.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(19, 167, 636, 166));
 
@@ -1323,7 +1323,9 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
     }//GEN-LAST:event_SaveResourseBTNActionPerformed
 
     private void ViewResourceBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ViewResourceBTNActionPerformed
- 
+        ResourceHub resourceHub = new ResourceHub(); // creating instance
+
+        resourceHub.loadResources(ResourceTBL);//call upon method to load resources and senign the tbl as a arg so it has access, i didnt know how to do with without making the table static , and i wanted to try my best to encapsulate as much as possible so this seemed to be the best way to do it
     }//GEN-LAST:event_ViewResourceBTNActionPerformed
 
     private void ReportGeneratorDateFormattedFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReportGeneratorDateFormattedFieldActionPerformed
@@ -1514,6 +1516,7 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
     private javax.swing.JLabel ResourceFirstNameLabel;
     private javax.swing.JPanel ResourceHubNavPNL;
     private javax.swing.JPanel ResourceHubPNL;
+    private javax.swing.JTable ResourceTBL;
     private javax.swing.JComboBox<String> ResourceTypeComboBox;
     private javax.swing.JLabel ResourceURLLabel;
     private javax.swing.JLabel ResourcesSurnameLabel;
@@ -1522,7 +1525,6 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
     private javax.swing.JLabel ResourseDateLabel;
     private javax.swing.JTextField ResourseFirstNameField;
     private javax.swing.JTextField ResourseSurnameField;
-    private javax.swing.JTable ResourseTBL;
     private javax.swing.JLabel ResourseTypeLabel;
     private javax.swing.JTextField ResourseURLField;
     private javax.swing.JButton SaveBTN;
