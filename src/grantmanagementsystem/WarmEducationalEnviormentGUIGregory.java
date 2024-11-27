@@ -11,6 +11,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
@@ -45,8 +46,8 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
         ContactUsLogoLabel = new javax.swing.JLabel();
         ContactUsLabel = new javax.swing.JLabel();
         Parent = new javax.swing.JPanel();
-        RecourceHubPNL = new javax.swing.JPanel();
-        RecourceHubNavPNL = new javax.swing.JPanel();
+        ResourceHubPNL = new javax.swing.JPanel();
+        ResourceHubNavPNL = new javax.swing.JPanel();
         ManageRecourceLabel = new javax.swing.JLabel();
         QuizLabel = new javax.swing.JLabel();
         TutorialLabel = new javax.swing.JLabel();
@@ -54,23 +55,23 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
         ReportGeneratorLabel2 = new javax.swing.JLabel();
         ReportGeneratorLabel3 = new javax.swing.JLabel();
         SecondParent = new javax.swing.JPanel();
-        ManageRecourcesPNL = new javax.swing.JPanel();
-        RecourceFirstNameLabel = new javax.swing.JLabel();
-        RecourseFirstNameField = new javax.swing.JTextField();
-        RecourseSurnameField = new javax.swing.JTextField();
-        RecourcesSurnameLabel = new javax.swing.JLabel();
-        RecourseTypeLabel = new javax.swing.JLabel();
-        RecourseDateField = new javax.swing.JTextField();
-        RecourseDateLabel = new javax.swing.JLabel();
+        ManageResourcesPNL = new javax.swing.JPanel();
+        ResourceFirstNameLabel = new javax.swing.JLabel();
+        ResourseFirstNameField = new javax.swing.JTextField();
+        ResourseSurnameField = new javax.swing.JTextField();
+        ResourcesSurnameLabel = new javax.swing.JLabel();
+        ResourseTypeLabel = new javax.swing.JLabel();
+        ResourseDateField = new javax.swing.JTextField();
+        ResourseDateLabel = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         RecourseTBL = new javax.swing.JTable();
-        URLLabel = new javax.swing.JLabel();
-        RecourseURLField = new javax.swing.JTextField();
+        ResourceURLLabel = new javax.swing.JLabel();
+        ResourseURLField = new javax.swing.JTextField();
         CourseLabel = new javax.swing.JLabel();
-        RecourseCourseField = new javax.swing.JTextField();
-        SaveRecourseBTN = new javax.swing.JButton();
-        ViewRecourceBTN = new javax.swing.JButton();
-        RecourceTypeComboBox = new javax.swing.JComboBox<>();
+        ResourseCourseField = new javax.swing.JTextField();
+        SaveResourseBTN = new javax.swing.JButton();
+        ViewResourceBTN = new javax.swing.JButton();
+        ResourceTypeComboBox = new javax.swing.JComboBox<>();
         exitBTn = new javax.swing.JButton();
         TutorialsPNL = new javax.swing.JPanel();
         TutorialLabel2 = new javax.swing.JLabel();
@@ -129,33 +130,33 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
         ProgrammingComboBox5 = new javax.swing.JComboBox<>();
         exitBTn4 = new javax.swing.JButton();
         ReportGeneratorPNL = new javax.swing.JPanel();
-        FirstNameLabel = new javax.swing.JLabel();
-        SurnameLabel = new javax.swing.JLabel();
-        DateLabel = new javax.swing.JLabel();
-        EmailLabel = new javax.swing.JLabel();
-        FirstNameField = new javax.swing.JTextField();
-        SurnameField = new javax.swing.JTextField();
-        EmailField = new javax.swing.JTextField();
-        ContentLabel = new javax.swing.JLabel();
+        ReportGeneratorFirstNameLabel = new javax.swing.JLabel();
+        ReportGeneratorSurnameLabel = new javax.swing.JLabel();
+        ReportGeneratorDateLabel = new javax.swing.JLabel();
+        ReportGeneratorEmailLabel = new javax.swing.JLabel();
+        ReportGeneratorFirstNameField = new javax.swing.JTextField();
+        ReportGeneratorSurnameField = new javax.swing.JTextField();
+        ReportGeneratorEmailField = new javax.swing.JTextField();
+        ReportGeneratorContentLabel = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         ContentTextArea = new javax.swing.JTextArea();
         SaveBTN = new javax.swing.JButton();
         ViewBTN = new javax.swing.JButton();
         DeleteBTN = new javax.swing.JButton();
-        DateFormattedField = new javax.swing.JFormattedTextField();
+        ReportGeneratorDateFormattedField = new javax.swing.JFormattedTextField();
         ReportGeneratorTitleLabel = new javax.swing.JLabel();
         exitBTn6 = new javax.swing.JButton();
         ContactUsPNL = new javax.swing.JPanel();
         ContactUsTitleLabel = new javax.swing.JLabel();
         ContactUsFirstNameField = new javax.swing.JTextField();
         ContactUsFirstNameLabel = new javax.swing.JLabel();
-        FeedbackLabel = new javax.swing.JLabel();
+        ContactUsFeedbackLabel = new javax.swing.JLabel();
         FeedbackTextAreaScrollPane = new javax.swing.JScrollPane();
         FeedbackTextArea = new javax.swing.JTextArea();
-        TermsAndConditionsLabel = new javax.swing.JLabel();
-        TermsAndConditionsCheckBox = new javax.swing.JCheckBox();
-        ReviewDateLabel = new javax.swing.JLabel();
-        ReviewDateFormattedField = new javax.swing.JFormattedTextField();
+        ContactUsTermsAndConditionsLabel = new javax.swing.JLabel();
+        ContactUsTermsAndConditionsCheckBox = new javax.swing.JCheckBox();
+        ContactUsReviewDateLabel = new javax.swing.JLabel();
+        ContactUsReviewDateFormattedField = new javax.swing.JFormattedTextField();
         ContactUsSurnameLabel = new javax.swing.JLabel();
         ContactUsSurnameField = new javax.swing.JTextField();
         ContactUsEmailLabel = new javax.swing.JLabel();
@@ -224,11 +225,11 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
         Parent.setBackground(new java.awt.Color(255, 255, 255));
         Parent.setLayout(new java.awt.CardLayout());
 
-        RecourceHubPNL.setBackground(new java.awt.Color(51, 204, 255));
-        RecourceHubPNL.setLayout(null);
+        ResourceHubPNL.setBackground(new java.awt.Color(51, 204, 255));
+        ResourceHubPNL.setLayout(null);
 
-        RecourceHubNavPNL.setBackground(new java.awt.Color(51, 204, 255));
-        RecourceHubNavPNL.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 153, 255)));
+        ResourceHubNavPNL.setBackground(new java.awt.Color(51, 204, 255));
+        ResourceHubNavPNL.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 153, 255)));
 
         ManageRecourceLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/coordinator.png"))); // NOI18N
         ManageRecourceLabel.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -266,14 +267,14 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
         ReportGeneratorLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ReportGeneratorLabel3.setText("Quiz");
 
-        javax.swing.GroupLayout RecourceHubNavPNLLayout = new javax.swing.GroupLayout(RecourceHubNavPNL);
-        RecourceHubNavPNL.setLayout(RecourceHubNavPNLLayout);
-        RecourceHubNavPNLLayout.setHorizontalGroup(
-            RecourceHubNavPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(RecourceHubNavPNLLayout.createSequentialGroup()
+        javax.swing.GroupLayout ResourceHubNavPNLLayout = new javax.swing.GroupLayout(ResourceHubNavPNL);
+        ResourceHubNavPNL.setLayout(ResourceHubNavPNLLayout);
+        ResourceHubNavPNLLayout.setHorizontalGroup(
+            ResourceHubNavPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ResourceHubNavPNLLayout.createSequentialGroup()
                 .addGap(67, 67, 67)
-                .addGroup(RecourceHubNavPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(RecourceHubNavPNLLayout.createSequentialGroup()
+                .addGroup(ResourceHubNavPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(ResourceHubNavPNLLayout.createSequentialGroup()
                         .addGap(21, 21, 21)
                         .addComponent(TutorialLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -281,7 +282,7 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
                         .addGap(129, 129, 129)
                         .addComponent(ManageRecourceLabel)
                         .addGap(126, 126, 126))
-                    .addGroup(RecourceHubNavPNLLayout.createSequentialGroup()
+                    .addGroup(ResourceHubNavPNLLayout.createSequentialGroup()
                         .addComponent(ReportGeneratorLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 115, Short.MAX_VALUE)
                         .addComponent(ReportGeneratorLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -289,55 +290,55 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
                         .addComponent(ReportGeneratorLabel2)
                         .addGap(104, 104, 104))))
         );
-        RecourceHubNavPNLLayout.setVerticalGroup(
-            RecourceHubNavPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(RecourceHubNavPNLLayout.createSequentialGroup()
+        ResourceHubNavPNLLayout.setVerticalGroup(
+            ResourceHubNavPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ResourceHubNavPNLLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(RecourceHubNavPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(ResourceHubNavPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(QuizLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(RecourceHubNavPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(ResourceHubNavPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(TutorialLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(ManageRecourceLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(RecourceHubNavPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(ResourceHubNavPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ReportGeneratorLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ReportGeneratorLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ReportGeneratorLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(18, Short.MAX_VALUE))
         );
 
-        RecourceHubPNL.add(RecourceHubNavPNL);
-        RecourceHubNavPNL.setBounds(0, 0, 690, 130);
+        ResourceHubPNL.add(ResourceHubNavPNL);
+        ResourceHubNavPNL.setBounds(0, 0, 690, 130);
 
         SecondParent.setLayout(new java.awt.CardLayout());
 
-        ManageRecourcesPNL.setBackground(new java.awt.Color(51, 204, 255));
-        ManageRecourcesPNL.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        ManageResourcesPNL.setBackground(new java.awt.Color(51, 204, 255));
+        ManageResourcesPNL.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        RecourceFirstNameLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        RecourceFirstNameLabel.setText("FirstName");
-        ManageRecourcesPNL.add(RecourceFirstNameLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(61, 9, 56, -1));
-        ManageRecourcesPNL.add(RecourseFirstNameField, new org.netbeans.lib.awtextra.AbsoluteConstraints(135, 6, 101, -1));
+        ResourceFirstNameLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ResourceFirstNameLabel.setText("FirstName");
+        ManageResourcesPNL.add(ResourceFirstNameLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(61, 9, 56, -1));
+        ManageResourcesPNL.add(ResourseFirstNameField, new org.netbeans.lib.awtextra.AbsoluteConstraints(135, 6, 101, -1));
 
-        RecourseSurnameField.addActionListener(new java.awt.event.ActionListener() {
+        ResourseSurnameField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RecourseSurnameFieldActionPerformed(evt);
+                ResourseSurnameFieldActionPerformed(evt);
             }
         });
-        ManageRecourcesPNL.add(RecourseSurnameField, new org.netbeans.lib.awtextra.AbsoluteConstraints(445, 6, 101, -1));
+        ManageResourcesPNL.add(ResourseSurnameField, new org.netbeans.lib.awtextra.AbsoluteConstraints(445, 6, 101, -1));
 
-        RecourcesSurnameLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        RecourcesSurnameLabel.setText("Surname");
-        ManageRecourcesPNL.add(RecourcesSurnameLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(369, 9, 50, -1));
+        ResourcesSurnameLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ResourcesSurnameLabel.setText("Surname");
+        ManageResourcesPNL.add(ResourcesSurnameLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(369, 9, 50, -1));
 
-        RecourseTypeLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        RecourseTypeLabel.setText("RecourceType");
-        ManageRecourcesPNL.add(RecourseTypeLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(358, 49, 75, -1));
-        ManageRecourcesPNL.add(RecourseDateField, new org.netbeans.lib.awtextra.AbsoluteConstraints(135, 46, 101, -1));
+        ResourseTypeLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ResourseTypeLabel.setText("RecourceType");
+        ManageResourcesPNL.add(ResourseTypeLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(358, 49, 75, -1));
+        ManageResourcesPNL.add(ResourseDateField, new org.netbeans.lib.awtextra.AbsoluteConstraints(135, 46, 101, -1));
 
-        RecourseDateLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        RecourseDateLabel.setText("Date");
-        ManageRecourcesPNL.add(RecourseDateLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 50, 50, -1));
+        ResourseDateLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ResourseDateLabel.setText("Date");
+        ManageResourcesPNL.add(ResourseDateLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 50, 50, -1));
 
         RecourseTBL.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -362,42 +363,42 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
         });
         jScrollPane2.setViewportView(RecourseTBL);
 
-        ManageRecourcesPNL.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(19, 167, 636, 166));
+        ManageResourcesPNL.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(19, 167, 636, 166));
 
-        URLLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        URLLabel.setText("URL");
-        ManageRecourcesPNL.add(URLLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 90, 50, -1));
-        ManageRecourcesPNL.add(RecourseURLField, new org.netbeans.lib.awtextra.AbsoluteConstraints(135, 86, 101, -1));
+        ResourceURLLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ResourceURLLabel.setText("URL");
+        ManageResourcesPNL.add(ResourceURLLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 90, 50, -1));
+        ManageResourcesPNL.add(ResourseURLField, new org.netbeans.lib.awtextra.AbsoluteConstraints(135, 86, 101, -1));
 
         CourseLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         CourseLabel.setText("Course");
-        ManageRecourcesPNL.add(CourseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(369, 89, 50, -1));
-        ManageRecourcesPNL.add(RecourseCourseField, new org.netbeans.lib.awtextra.AbsoluteConstraints(445, 86, 101, -1));
+        ManageResourcesPNL.add(CourseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(369, 89, 50, -1));
+        ManageResourcesPNL.add(ResourseCourseField, new org.netbeans.lib.awtextra.AbsoluteConstraints(445, 86, 101, -1));
 
-        SaveRecourseBTN.setText("Save");
-        SaveRecourseBTN.setMaximumSize(new java.awt.Dimension(72, 22));
-        SaveRecourseBTN.setMinimumSize(new java.awt.Dimension(72, 22));
-        SaveRecourseBTN.setPreferredSize(new java.awt.Dimension(72, 22));
-        SaveRecourseBTN.addActionListener(new java.awt.event.ActionListener() {
+        SaveResourseBTN.setText("Save");
+        SaveResourseBTN.setMaximumSize(new java.awt.Dimension(72, 22));
+        SaveResourseBTN.setMinimumSize(new java.awt.Dimension(72, 22));
+        SaveResourseBTN.setPreferredSize(new java.awt.Dimension(72, 22));
+        SaveResourseBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SaveRecourseBTNActionPerformed(evt);
+                SaveResourseBTNActionPerformed(evt);
             }
         });
-        ManageRecourcesPNL.add(SaveRecourseBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 340, 75, -1));
+        ManageResourcesPNL.add(SaveResourseBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 340, 75, -1));
 
-        ViewRecourceBTN.setText("View");
-        ViewRecourceBTN.setMaximumSize(new java.awt.Dimension(72, 22));
-        ViewRecourceBTN.setMinimumSize(new java.awt.Dimension(72, 22));
-        ViewRecourceBTN.setPreferredSize(new java.awt.Dimension(72, 22));
-        ViewRecourceBTN.addActionListener(new java.awt.event.ActionListener() {
+        ViewResourceBTN.setText("View");
+        ViewResourceBTN.setMaximumSize(new java.awt.Dimension(72, 22));
+        ViewResourceBTN.setMinimumSize(new java.awt.Dimension(72, 22));
+        ViewResourceBTN.setPreferredSize(new java.awt.Dimension(72, 22));
+        ViewResourceBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ViewRecourceBTNActionPerformed(evt);
+                ViewResourceBTNActionPerformed(evt);
             }
         });
-        ManageRecourcesPNL.add(ViewRecourceBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 340, 80, -1));
+        ManageResourcesPNL.add(ViewResourceBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 340, 80, -1));
 
-        RecourceTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Website", "Video", "Tutorial", "Book", " " }));
-        ManageRecourcesPNL.add(RecourceTypeComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 50, 110, 20));
+        ResourceTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Website", "Video", "Tutorial", "Book", " " }));
+        ManageResourcesPNL.add(ResourceTypeComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 50, 110, 20));
 
         exitBTn.setBackground(new java.awt.Color(255, 51, 51));
         exitBTn.setText("EXIT");
@@ -409,9 +410,9 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
                 exitBTnActionPerformed(evt);
             }
         });
-        ManageRecourcesPNL.add(exitBTn, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 340, 70, -1));
+        ManageResourcesPNL.add(exitBTn, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 340, 70, -1));
 
-        SecondParent.add(ManageRecourcesPNL, "card4");
+        SecondParent.add(ManageResourcesPNL, "card4");
 
         TutorialsPNL.setBackground(new java.awt.Color(51, 204, 255));
 
@@ -844,43 +845,43 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
 
         SecondParent.add(QuizPNL, "card3");
 
-        RecourceHubPNL.add(SecondParent);
+        ResourceHubPNL.add(SecondParent);
         SecondParent.setBounds(0, 130, 690, 380);
 
-        Parent.add(RecourceHubPNL, "card3");
+        Parent.add(ResourceHubPNL, "card3");
 
         ReportGeneratorPNL.setBackground(new java.awt.Color(51, 204, 255));
 
-        FirstNameLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        FirstNameLabel.setText("First name");
+        ReportGeneratorFirstNameLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ReportGeneratorFirstNameLabel.setText("First name");
 
-        SurnameLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        SurnameLabel.setText("Surname");
+        ReportGeneratorSurnameLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ReportGeneratorSurnameLabel.setText("Surname");
 
-        DateLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        DateLabel.setText("Date");
+        ReportGeneratorDateLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ReportGeneratorDateLabel.setText("Date");
 
-        EmailLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        EmailLabel.setText("Email");
+        ReportGeneratorEmailLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ReportGeneratorEmailLabel.setText("Email");
 
-        FirstNameField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        ReportGeneratorFirstNameField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
-        SurnameField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        SurnameField.addActionListener(new java.awt.event.ActionListener() {
+        ReportGeneratorSurnameField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        ReportGeneratorSurnameField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SurnameFieldActionPerformed(evt);
+                ReportGeneratorReportGeneratorSurnameFieldActionPerformed(evt);
             }
         });
 
-        EmailField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        EmailField.addActionListener(new java.awt.event.ActionListener() {
+        ReportGeneratorEmailField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        ReportGeneratorEmailField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                EmailFieldActionPerformed(evt);
+                ReportGeneratorReportGeneratorEmailFieldActionPerformed(evt);
             }
         });
 
-        ContentLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ContentLabel.setText("Content");
+        ReportGeneratorContentLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ReportGeneratorContentLabel.setText("Content");
 
         ContentTextArea.setColumns(20);
         ContentTextArea.setRows(5);
@@ -892,9 +893,9 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
 
         DeleteBTN.setText("delete");
 
-        DateFormattedField.addActionListener(new java.awt.event.ActionListener() {
+        ReportGeneratorDateFormattedField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                DateFormattedFieldActionPerformed(evt);
+                ReportGeneratorDateFormattedFieldActionPerformed(evt);
             }
         });
 
@@ -923,30 +924,30 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
                 .addGroup(ReportGeneratorPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(ReportGeneratorPNLLayout.createSequentialGroup()
                         .addGroup(ReportGeneratorPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(DateFormattedField, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ReportGeneratorDateFormattedField, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(ReportGeneratorPNLLayout.createSequentialGroup()
                                 .addGap(29, 29, 29)
-                                .addComponent(DateLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(ReportGeneratorDateLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(ReportGeneratorPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(EmailField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ReportGeneratorEmailField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ReportGeneratorPNLLayout.createSequentialGroup()
-                                .addComponent(EmailLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(ReportGeneratorEmailLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(32, 32, 32))))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, ReportGeneratorPNLLayout.createSequentialGroup()
                         .addGap(29, 29, 29)
-                        .addComponent(FirstNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(ReportGeneratorFirstNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(SurnameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(ReportGeneratorSurnameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(30, 30, 30))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, ReportGeneratorPNLLayout.createSequentialGroup()
-                        .addComponent(FirstNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(ReportGeneratorFirstNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(SurnameField, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(ReportGeneratorSurnameField, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, ReportGeneratorPNLLayout.createSequentialGroup()
                         .addGap(197, 197, 197)
-                        .addComponent(ContentLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(ReportGeneratorContentLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 239, Short.MAX_VALUE)))
                 .addGap(113, 113, 113))
             .addGroup(ReportGeneratorPNLLayout.createSequentialGroup()
@@ -972,24 +973,24 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
                 .addComponent(ReportGeneratorTitleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(ReportGeneratorPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(FirstNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(SurnameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(ReportGeneratorFirstNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ReportGeneratorSurnameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(ReportGeneratorPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(FirstNameLabel)
-                    .addComponent(SurnameLabel))
+                    .addComponent(ReportGeneratorFirstNameLabel)
+                    .addComponent(ReportGeneratorSurnameLabel))
                 .addGap(34, 34, 34)
                 .addGroup(ReportGeneratorPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(ReportGeneratorPNLLayout.createSequentialGroup()
-                        .addComponent(EmailField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(ReportGeneratorEmailField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(EmailLabel))
+                        .addComponent(ReportGeneratorEmailLabel))
                     .addGroup(ReportGeneratorPNLLayout.createSequentialGroup()
-                        .addComponent(DateFormattedField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(ReportGeneratorDateFormattedField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(DateLabel)))
+                        .addComponent(ReportGeneratorDateLabel)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(ContentLabel)
+                .addComponent(ReportGeneratorContentLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
@@ -1028,10 +1029,10 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
         ContactUsFirstNameLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ContactUsFirstNameLabel.setText("FirstName");
 
-        FeedbackLabel.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
-        FeedbackLabel.setForeground(new java.awt.Color(255, 255, 255));
-        FeedbackLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        FeedbackLabel.setText("Feedback");
+        ContactUsFeedbackLabel.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        ContactUsFeedbackLabel.setForeground(new java.awt.Color(255, 255, 255));
+        ContactUsFeedbackLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ContactUsFeedbackLabel.setText("Feedback");
 
         FeedbackTextArea.setColumns(20);
         FeedbackTextArea.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
@@ -1044,29 +1045,29 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
         });
         FeedbackTextAreaScrollPane.setViewportView(FeedbackTextArea);
 
-        TermsAndConditionsLabel.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
-        TermsAndConditionsLabel.setForeground(new java.awt.Color(255, 255, 255));
-        TermsAndConditionsLabel.setText("Terms and conditions");
+        ContactUsTermsAndConditionsLabel.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        ContactUsTermsAndConditionsLabel.setForeground(new java.awt.Color(255, 255, 255));
+        ContactUsTermsAndConditionsLabel.setText("Terms and conditions");
 
-        TermsAndConditionsCheckBox.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        TermsAndConditionsCheckBox.setForeground(new java.awt.Color(255, 255, 255));
-        TermsAndConditionsCheckBox.setText("I Accept");
-        TermsAndConditionsCheckBox.setToolTipText("Please accept the terms and conditions in order to submit a review.");
+        ContactUsTermsAndConditionsCheckBox.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        ContactUsTermsAndConditionsCheckBox.setForeground(new java.awt.Color(255, 255, 255));
+        ContactUsTermsAndConditionsCheckBox.setText("I Accept");
+        ContactUsTermsAndConditionsCheckBox.setToolTipText("Please accept the terms and conditions in order to submit a review.");
 
-        ReviewDateLabel.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
-        ReviewDateLabel.setForeground(new java.awt.Color(255, 255, 255));
-        ReviewDateLabel.setText("ReviewDate");
+        ContactUsReviewDateLabel.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        ContactUsReviewDateLabel.setForeground(new java.awt.Color(255, 255, 255));
+        ContactUsReviewDateLabel.setText("ReviewDate");
 
-        ReviewDateFormattedField.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(java.text.DateFormat.getDateInstance(java.text.DateFormat.SHORT))));
-        ReviewDateFormattedField.setToolTipText("Please enter the date that the review is being submitted.");
-        ReviewDateFormattedField.addActionListener(new java.awt.event.ActionListener() {
+        ContactUsReviewDateFormattedField.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(java.text.DateFormat.getDateInstance(java.text.DateFormat.SHORT))));
+        ContactUsReviewDateFormattedField.setToolTipText("Please enter the date that the review is being submitted.");
+        ContactUsReviewDateFormattedField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ReviewDateFormattedFieldActionPerformed(evt);
+                ContactUsReviewDateFormattedFieldActionPerformed(evt);
             }
         });
-        ReviewDateFormattedField.addKeyListener(new java.awt.event.KeyAdapter() {
+        ContactUsReviewDateFormattedField.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
-                ReviewDateFormattedFieldKeyPressed(evt);
+                ContactUsReviewDateFormattedFieldKeyPressed(evt);
             }
         });
 
@@ -1122,13 +1123,13 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
             ContactUsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ContactUsPNLLayout.createSequentialGroup()
                 .addGap(17, 17, 17)
-                .addComponent(FeedbackLabel)
+                .addComponent(ContactUsFeedbackLabel)
                 .addGap(18, 18, 18)
                 .addGroup(ContactUsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(ContactUsPNLLayout.createSequentialGroup()
-                        .addComponent(TermsAndConditionsLabel)
+                        .addComponent(ContactUsTermsAndConditionsLabel)
                         .addGap(18, 18, 18)
-                        .addComponent(TermsAndConditionsCheckBox)
+                        .addComponent(ContactUsTermsAndConditionsCheckBox)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(ContactUsPNLLayout.createSequentialGroup()
                         .addGroup(ContactUsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1142,9 +1143,9 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
                                 .addComponent(ContactUsSurnameField, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(ContactUsPNLLayout.createSequentialGroup()
                                 .addGap(154, 154, 154)
-                                .addComponent(ReviewDateLabel)
+                                .addComponent(ContactUsReviewDateLabel)
                                 .addGap(18, 18, 18)
-                                .addComponent(ReviewDateFormattedField, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(ContactUsReviewDateFormattedField, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(38, 38, 38))
                     .addGroup(ContactUsPNLLayout.createSequentialGroup()
                         .addComponent(FeedbackTextAreaScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 555, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1180,18 +1181,18 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
                     .addComponent(ContactUsSurnameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(45, 45, 45)
                 .addGroup(ContactUsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ReviewDateLabel)
-                    .addComponent(ReviewDateFormattedField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ContactUsReviewDateLabel)
+                    .addComponent(ContactUsReviewDateFormattedField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ContactUsEmailLabel)
                     .addComponent(ContactUsEmailField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(96, 96, 96)
                 .addGroup(ContactUsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(FeedbackLabel)
+                    .addComponent(ContactUsFeedbackLabel)
                     .addComponent(FeedbackTextAreaScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(ContactUsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(TermsAndConditionsLabel)
-                    .addComponent(TermsAndConditionsCheckBox))
+                    .addComponent(ContactUsTermsAndConditionsLabel)
+                    .addComponent(ContactUsTermsAndConditionsCheckBox))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
                 .addGroup(ContactUsPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(SendFeedbackBTN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1227,13 +1228,13 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
 
     }//GEN-LAST:event_FeedbackTextAreaKeyPressed
 
-    private void ReviewDateFormattedFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReviewDateFormattedFieldActionPerformed
+    private void ContactUsReviewDateFormattedFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ContactUsReviewDateFormattedFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_ReviewDateFormattedFieldActionPerformed
+    }//GEN-LAST:event_ContactUsReviewDateFormattedFieldActionPerformed
 
-    private void ReviewDateFormattedFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ReviewDateFormattedFieldKeyPressed
-     
-    }//GEN-LAST:event_ReviewDateFormattedFieldKeyPressed
+    private void ContactUsReviewDateFormattedFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ContactUsReviewDateFormattedFieldKeyPressed
+
+    }//GEN-LAST:event_ContactUsReviewDateFormattedFieldKeyPressed
 
     private void ContactUsSurnameFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ContactUsSurnameFieldKeyPressed
 
@@ -1251,13 +1252,13 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_ContactUsFirstNameFieldActionPerformed
 
-    private void EmailFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmailFieldActionPerformed
+    private void ReportGeneratorReportGeneratorEmailFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReportGeneratorReportGeneratorEmailFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_EmailFieldActionPerformed
+    }//GEN-LAST:event_ReportGeneratorReportGeneratorEmailFieldActionPerformed
 
-    private void SurnameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SurnameFieldActionPerformed
+    private void ReportGeneratorReportGeneratorSurnameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReportGeneratorReportGeneratorSurnameFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_SurnameFieldActionPerformed
+    }//GEN-LAST:event_ReportGeneratorReportGeneratorSurnameFieldActionPerformed
 
     private void ReportGeneratorLogoLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ReportGeneratorLogoLabelMouseClicked
         Parent.removeAll();
@@ -1269,7 +1270,7 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
 
     private void RecourceHubLogoLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RecourceHubLogoLabelMouseClicked
         Parent.removeAll();
-        Parent.add(RecourceHubPNL);
+        Parent.add(ResourceHubPNL);
         Parent.repaint();
         Parent.revalidate();
     }//GEN-LAST:event_RecourceHubLogoLabelMouseClicked
@@ -1297,76 +1298,38 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
 
     private void ManageRecourceLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ManageRecourceLabelMouseClicked
         SecondParent.removeAll();
-        SecondParent.add(ManageRecourcesPNL);
+        SecondParent.add(ManageResourcesPNL);
         SecondParent.repaint();
         SecondParent.revalidate();
     }//GEN-LAST:event_ManageRecourceLabelMouseClicked
 
-    private void RecourseSurnameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RecourseSurnameFieldActionPerformed
+    private void ResourseSurnameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ResourseSurnameFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_RecourseSurnameFieldActionPerformed
+    }//GEN-LAST:event_ResourseSurnameFieldActionPerformed
 
-    private void SaveRecourseBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaveRecourseBTNActionPerformed
-        File outFile;
-        FileWriter fw;
-        BufferedWriter bw;
+    private void SaveResourseBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaveResourseBTNActionPerformed
+        String fName = ResourseFirstNameField.getText();
+        String sName = ResourseSurnameField.getText();
+        String resourceCourse = ResourseCourseField.getText();
+        String resourceDate = ResourseDateField.getText();
+        String resourceType = (String) ResourceTypeComboBox.getSelectedItem();
+        String resourceURL = ResourseURLField.getText();
 
-        String FirstName = FirstNameField.getText();//getting the text from the fields listed
-        String Surname = SurnameField.getText();
-        String Course = RecourseCourseField.getText();
-        String Date = RecourseDateField.getText();
-        String Type = (String) RecourceTypeComboBox.getSelectedItem();
-        String url = RecourseURLField.getText();
+        // Save resource using ResourceHub
+        ResourceHub resourceHub = new ResourceHub();
+        resourceHub.saveResource(fName, sName, resourceCourse, resourceDate, resourceType, resourceURL);
 
-        try {//try catch to catch any issues
-            outFile = new File("Recources.txt");//txt file called Recources
-            fw = new FileWriter(outFile, true);//fw is my filewriter
-            bw = new BufferedWriter(fw);//fw is my BufferedWriterS
+        JOptionPane.showMessageDialog(null, "Successfully added to the file");
+    }//GEN-LAST:event_SaveResourseBTNActionPerformed
 
-            bw.write(FirstName + "," + Surname + "," + Course + "," + Date + "," + Type + "," + url);
-            bw.newLine();
-            bw.close();
+    private void ViewResourceBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ViewResourceBTNActionPerformed
 
-            JOptionPane.showMessageDialog(null, "Succesfully added to the file");
 
-        } catch (IOException e) {
-            System.out.println("Exception e: " + e.getMessage());
-        }
-    }//GEN-LAST:event_SaveRecourseBTNActionPerformed
+    }//GEN-LAST:event_ViewResourceBTNActionPerformed
 
-    private void ViewRecourceBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ViewRecourceBTNActionPerformed
-        File inFile = new File("Recources.txt");
-
-        try (BufferedReader br = new BufferedReader(new FileReader(inFile))) {
-            DefaultTableModel tableModel = (DefaultTableModel) RecourseTBL.getModel();
-            tableModel.setRowCount(0);
-
-            String ln;
-            while ((ln = br.readLine()) != null) {
-                String[] row = ln.split(",");
-
-                if (row.length == tableModel.getColumnCount()) {
-                    tableModel.addRow(row);
-                } else {
-                    JOptionPane.showMessageDialog(null,
-                            "Unallignment between file rows and table rowa.\nCheck the file format.",
-                            "Data Error",
-                            JOptionPane.WARNING_MESSAGE);
-                    break;
-                }
-            }
-        } catch (IOException ex) {
-            // Show an error dialog if there's an issue reading the file
-            JOptionPane.showMessageDialog(null,
-                    "Error reading file: " + ex.getMessage(),
-                    "File Error",
-                    JOptionPane.ERROR_MESSAGE);
-        }
-    }//GEN-LAST:event_ViewRecourceBTNActionPerformed
-
-    private void DateFormattedFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DateFormattedFieldActionPerformed
+    private void ReportGeneratorDateFormattedFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReportGeneratorDateFormattedFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_DateFormattedFieldActionPerformed
+    }//GEN-LAST:event_ReportGeneratorDateFormattedFieldActionPerformed
 
     private void exitBTnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBTnActionPerformed
         setVisible(false);
@@ -1377,7 +1340,7 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
     }//GEN-LAST:event_exitBTnActionPerformed
 
     private void exitBTn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBTn1ActionPerformed
-                setVisible(false);
+        setVisible(false);
 
         // Open the HomePage
         HomePage homePage = new HomePage();
@@ -1385,7 +1348,7 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
     }//GEN-LAST:event_exitBTn1ActionPerformed
 
     private void exitBTn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBTn2ActionPerformed
-         setVisible(false);
+        setVisible(false);
 
         // Open the HomePage
         HomePage homePage = new HomePage();
@@ -1393,7 +1356,7 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
     }//GEN-LAST:event_exitBTn2ActionPerformed
 
     private void exitBTn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBTn3ActionPerformed
-                setVisible(false);
+        setVisible(false);
 
         // Open the HomePage
         HomePage homePage = new HomePage();
@@ -1401,7 +1364,7 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
     }//GEN-LAST:event_exitBTn3ActionPerformed
 
     private void exitBTn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBTn4ActionPerformed
-                setVisible(false);
+        setVisible(false);
 
         // Open the HomePage
         HomePage homePage = new HomePage();
@@ -1409,7 +1372,7 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
     }//GEN-LAST:event_exitBTn4ActionPerformed
 
     private void exitBTn5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBTn5ActionPerformed
-                setVisible(false);
+        setVisible(false);
 
         // Open the HomePage
         HomePage homePage = new HomePage();
@@ -1418,7 +1381,7 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
 
     private void exitBTn6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBTn6ActionPerformed
         // TODO add your handling code here:
-                setVisible(false);
+        setVisible(false);
 
         // Open the HomePage
         HomePage homePage = new HomePage();
@@ -1481,27 +1444,24 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
     private javax.swing.JPanel ComputersQuizPNL;
     public static javax.swing.JTextField ContactUsEmailField;
     private javax.swing.JLabel ContactUsEmailLabel;
+    private javax.swing.JLabel ContactUsFeedbackLabel;
     public static javax.swing.JTextField ContactUsFirstNameField;
     private javax.swing.JLabel ContactUsFirstNameLabel;
     private javax.swing.JLabel ContactUsLabel;
     private javax.swing.JLabel ContactUsLogoLabel;
     private javax.swing.JPanel ContactUsPNL;
+    private javax.swing.JFormattedTextField ContactUsReviewDateFormattedField;
+    private javax.swing.JLabel ContactUsReviewDateLabel;
     public static javax.swing.JTextField ContactUsSurnameField;
     private javax.swing.JLabel ContactUsSurnameLabel;
+    private javax.swing.JCheckBox ContactUsTermsAndConditionsCheckBox;
+    private javax.swing.JLabel ContactUsTermsAndConditionsLabel;
     private javax.swing.JLabel ContactUsTitleLabel;
-    private javax.swing.JLabel ContentLabel;
     private javax.swing.JTextArea ContentTextArea;
     private javax.swing.JLabel CourseLabel;
-    private javax.swing.JFormattedTextField DateFormattedField;
-    private javax.swing.JLabel DateLabel;
     private javax.swing.JButton DeleteBTN;
-    private javax.swing.JTextField EmailField;
-    private javax.swing.JLabel EmailLabel;
-    private javax.swing.JLabel FeedbackLabel;
     public static javax.swing.JTextArea FeedbackTextArea;
     private javax.swing.JScrollPane FeedbackTextAreaScrollPane;
-    private javax.swing.JTextField FirstNameField;
-    private javax.swing.JLabel FirstNameLabel;
     private javax.swing.JButton GeographyClearBTN1;
     private javax.swing.JLabel GeographyQuestionLabel1;
     private javax.swing.JLabel GeographyQuestionLabel2;
@@ -1517,7 +1477,7 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
     private javax.swing.JPanel GeographyQuizPNL;
     private javax.swing.JPanel HomePagePanel;
     private javax.swing.JLabel ManageRecourceLabel;
-    private javax.swing.JPanel ManageRecourcesPNL;
+    private javax.swing.JPanel ManageResourcesPNL;
     private javax.swing.JPanel Parent;
     private javax.swing.JButton ProgrammingClearBTN;
     private javax.swing.JComboBox<String> ProgrammingComboBox;
@@ -1534,38 +1494,42 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
     private javax.swing.JPanel ProgrammingQuizPNL;
     private javax.swing.JLabel QuizLabel;
     private javax.swing.JPanel QuizPNL;
-    private javax.swing.JLabel RecourceFirstNameLabel;
     private javax.swing.JLabel RecourceHubLabel;
     private javax.swing.JLabel RecourceHubLogoLabel;
-    private javax.swing.JPanel RecourceHubNavPNL;
-    private javax.swing.JPanel RecourceHubPNL;
-    private javax.swing.JComboBox<String> RecourceTypeComboBox;
-    private javax.swing.JLabel RecourcesSurnameLabel;
-    private javax.swing.JTextField RecourseCourseField;
-    private javax.swing.JTextField RecourseDateField;
-    private javax.swing.JLabel RecourseDateLabel;
-    private javax.swing.JTextField RecourseFirstNameField;
-    private javax.swing.JTextField RecourseSurnameField;
     private javax.swing.JTable RecourseTBL;
-    private javax.swing.JLabel RecourseTypeLabel;
-    private javax.swing.JTextField RecourseURLField;
+    private javax.swing.JLabel ReportGeneratorContentLabel;
+    private javax.swing.JFormattedTextField ReportGeneratorDateFormattedField;
+    private javax.swing.JLabel ReportGeneratorDateLabel;
+    private javax.swing.JTextField ReportGeneratorEmailField;
+    private javax.swing.JLabel ReportGeneratorEmailLabel;
+    private javax.swing.JTextField ReportGeneratorFirstNameField;
+    private javax.swing.JLabel ReportGeneratorFirstNameLabel;
     private javax.swing.JLabel ReportGeneratorLabel;
     private javax.swing.JLabel ReportGeneratorLabel1;
     private javax.swing.JLabel ReportGeneratorLabel2;
     private javax.swing.JLabel ReportGeneratorLabel3;
     private javax.swing.JLabel ReportGeneratorLogoLabel;
     private javax.swing.JPanel ReportGeneratorPNL;
+    private javax.swing.JTextField ReportGeneratorSurnameField;
+    private javax.swing.JLabel ReportGeneratorSurnameLabel;
     private javax.swing.JLabel ReportGeneratorTitleLabel;
-    private javax.swing.JFormattedTextField ReviewDateFormattedField;
-    private javax.swing.JLabel ReviewDateLabel;
+    private javax.swing.JLabel ResourceFirstNameLabel;
+    private javax.swing.JPanel ResourceHubNavPNL;
+    private javax.swing.JPanel ResourceHubPNL;
+    private javax.swing.JComboBox<String> ResourceTypeComboBox;
+    private javax.swing.JLabel ResourceURLLabel;
+    private javax.swing.JLabel ResourcesSurnameLabel;
+    private javax.swing.JTextField ResourseCourseField;
+    private javax.swing.JTextField ResourseDateField;
+    private javax.swing.JLabel ResourseDateLabel;
+    private javax.swing.JTextField ResourseFirstNameField;
+    private javax.swing.JTextField ResourseSurnameField;
+    private javax.swing.JLabel ResourseTypeLabel;
+    private javax.swing.JTextField ResourseURLField;
     private javax.swing.JButton SaveBTN;
-    private javax.swing.JButton SaveRecourseBTN;
+    private javax.swing.JButton SaveResourseBTN;
     private javax.swing.JPanel SecondParent;
     public static javax.swing.JButton SendFeedbackBTN;
-    private javax.swing.JTextField SurnameField;
-    private javax.swing.JLabel SurnameLabel;
-    private javax.swing.JCheckBox TermsAndConditionsCheckBox;
-    private javax.swing.JLabel TermsAndConditionsLabel;
     private javax.swing.JLabel Tutorial1Label;
     private javax.swing.JLabel TutorialLabel;
     private javax.swing.JLabel TutorialLabel2;
@@ -1578,9 +1542,8 @@ public class WarmEducationalEnviormentGUIGregory extends javax.swing.JFrame {
     private javax.swing.JLabel TutorialNameLabel4;
     private javax.swing.JLabel TutorialNameLabel5;
     private javax.swing.JPanel TutorialsPNL;
-    private javax.swing.JLabel URLLabel;
     private javax.swing.JButton ViewBTN;
-    private javax.swing.JButton ViewRecourceBTN;
+    private javax.swing.JButton ViewResourceBTN;
     private javax.swing.JButton exitBTn;
     private javax.swing.JButton exitBTn1;
     private javax.swing.JButton exitBTn2;

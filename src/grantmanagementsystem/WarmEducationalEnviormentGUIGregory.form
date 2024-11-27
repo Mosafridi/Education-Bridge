@@ -169,7 +169,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignCardLayout"/>
       <SubComponents>
-        <Container class="javax.swing.JPanel" name="RecourceHubPNL">
+        <Container class="javax.swing.JPanel" name="ResourceHubPNL">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="cc" red="33" type="rgb"/>
@@ -185,7 +185,7 @@
             <Property name="useNullLayout" type="boolean" value="true"/>
           </Layout>
           <SubComponents>
-            <Container class="javax.swing.JPanel" name="RecourceHubNavPNL">
+            <Container class="javax.swing.JPanel" name="ResourceHubNavPNL">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="cc" red="33" type="rgb"/>
@@ -331,7 +331,7 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.DesignCardLayout"/>
               <SubComponents>
-                <Container class="javax.swing.JPanel" name="ManageRecourcesPNL">
+                <Container class="javax.swing.JPanel" name="ManageResourcesPNL">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ff" green="cc" red="33" type="rgb"/>
@@ -347,7 +347,7 @@
                     <Property name="useNullLayout" type="boolean" value="false"/>
                   </Layout>
                   <SubComponents>
-                    <Component class="javax.swing.JLabel" name="RecourceFirstNameLabel">
+                    <Component class="javax.swing.JLabel" name="ResourceFirstNameLabel">
                       <Properties>
                         <Property name="horizontalAlignment" type="int" value="0"/>
                         <Property name="text" type="java.lang.String" value="FirstName"/>
@@ -358,16 +358,16 @@
                         </Constraint>
                       </Constraints>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="RecourseFirstNameField">
+                    <Component class="javax.swing.JTextField" name="ResourseFirstNameField">
                       <Constraints>
                         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                           <AbsoluteConstraints x="135" y="6" width="101" height="-1"/>
                         </Constraint>
                       </Constraints>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="RecourseSurnameField">
+                    <Component class="javax.swing.JTextField" name="ResourseSurnameField">
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="RecourseSurnameFieldActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ResourseSurnameFieldActionPerformed"/>
                       </Events>
                       <Constraints>
                         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -375,7 +375,7 @@
                         </Constraint>
                       </Constraints>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="RecourcesSurnameLabel">
+                    <Component class="javax.swing.JLabel" name="ResourcesSurnameLabel">
                       <Properties>
                         <Property name="horizontalAlignment" type="int" value="0"/>
                         <Property name="text" type="java.lang.String" value="Surname"/>
@@ -386,7 +386,7 @@
                         </Constraint>
                       </Constraints>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="RecourseTypeLabel">
+                    <Component class="javax.swing.JLabel" name="ResourseTypeLabel">
                       <Properties>
                         <Property name="horizontalAlignment" type="int" value="0"/>
                         <Property name="text" type="java.lang.String" value="RecourceType"/>
@@ -397,14 +397,14 @@
                         </Constraint>
                       </Constraints>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="RecourseDateField">
+                    <Component class="javax.swing.JTextField" name="ResourseDateField">
                       <Constraints>
                         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                           <AbsoluteConstraints x="135" y="46" width="101" height="-1"/>
                         </Constraint>
                       </Constraints>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="RecourseDateLabel">
+                    <Component class="javax.swing.JLabel" name="ResourseDateLabel">
                       <Properties>
                         <Property name="horizontalAlignment" type="int" value="0"/>
                         <Property name="text" type="java.lang.String" value="Date"/>
@@ -480,7 +480,7 @@
                         </Component>
                       </SubComponents>
                     </Container>
-                    <Component class="javax.swing.JLabel" name="URLLabel">
+                    <Component class="javax.swing.JLabel" name="ResourceURLLabel">
                       <Properties>
                         <Property name="horizontalAlignment" type="int" value="0"/>
                         <Property name="text" type="java.lang.String" value="URL"/>
@@ -491,7 +491,7 @@
                         </Constraint>
                       </Constraints>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="RecourseURLField">
+                    <Component class="javax.swing.JTextField" name="ResourseURLField">
                       <Constraints>
                         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                           <AbsoluteConstraints x="135" y="86" width="101" height="-1"/>
@@ -509,14 +509,14 @@
                         </Constraint>
                       </Constraints>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="RecourseCourseField">
+                    <Component class="javax.swing.JTextField" name="ResourseCourseField">
                       <Constraints>
                         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                           <AbsoluteConstraints x="445" y="86" width="101" height="-1"/>
                         </Constraint>
                       </Constraints>
                     </Component>
-                    <Component class="javax.swing.JButton" name="SaveRecourseBTN">
+                    <Component class="javax.swing.JButton" name="SaveResourseBTN">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Save"/>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -530,7 +530,7 @@
                         </Property>
                       </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SaveRecourseBTNActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SaveResourseBTNActionPerformed"/>
                       </Events>
                       <Constraints>
                         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -538,7 +538,7 @@
                         </Constraint>
                       </Constraints>
                     </Component>
-                    <Component class="javax.swing.JButton" name="ViewRecourceBTN">
+                    <Component class="javax.swing.JButton" name="ViewResourceBTN">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="View"/>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -552,7 +552,7 @@
                         </Property>
                       </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ViewRecourceBTNActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ViewResourceBTNActionPerformed"/>
                       </Events>
                       <Constraints>
                         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -560,7 +560,7 @@
                         </Constraint>
                       </Constraints>
                     </Component>
-                    <Component class="javax.swing.JComboBox" name="RecourceTypeComboBox">
+                    <Component class="javax.swing.JComboBox" name="ResourceTypeComboBox">
                       <Properties>
                         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                           <StringArray count="5">
@@ -1609,37 +1609,37 @@
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="DateFormattedField" alignment="0" min="-2" pref="120" max="-2" attributes="0"/>
+                                  <Component id="ReportGeneratorDateFormattedField" alignment="0" min="-2" pref="120" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                                      <Component id="DateLabel" min="-2" pref="62" max="-2" attributes="0"/>
+                                      <Component id="ReportGeneratorDateLabel" min="-2" pref="62" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="EmailField" alignment="1" min="-2" pref="120" max="-2" attributes="0"/>
+                                  <Component id="ReportGeneratorEmailField" alignment="1" min="-2" pref="120" max="-2" attributes="0"/>
                                   <Group type="102" alignment="1" attributes="0">
-                                      <Component id="EmailLabel" min="-2" pref="62" max="-2" attributes="0"/>
+                                      <Component id="ReportGeneratorEmailLabel" min="-2" pref="62" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                              <Component id="FirstNameLabel" min="-2" pref="62" max="-2" attributes="0"/>
+                              <Component id="ReportGeneratorFirstNameLabel" min="-2" pref="62" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
-                              <Component id="SurnameLabel" min="-2" pref="62" max="-2" attributes="0"/>
+                              <Component id="ReportGeneratorSurnameLabel" min="-2" pref="62" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                           </Group>
                           <Component id="jScrollPane1" alignment="0" max="32767" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="FirstNameField" min="-2" pref="120" max="-2" attributes="0"/>
+                              <Component id="ReportGeneratorFirstNameField" min="-2" pref="120" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
-                              <Component id="SurnameField" min="-2" pref="120" max="-2" attributes="0"/>
+                              <Component id="ReportGeneratorSurnameField" min="-2" pref="120" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="197" max="-2" attributes="0"/>
-                              <Component id="ContentLabel" min="-2" pref="62" max="-2" attributes="0"/>
+                              <Component id="ReportGeneratorContentLabel" min="-2" pref="62" max="-2" attributes="0"/>
                               <EmptySpace min="0" pref="239" max="32767" attributes="0"/>
                           </Group>
                       </Group>
@@ -1673,29 +1673,29 @@
                       <Component id="ReportGeneratorTitleLabel" min="-2" pref="36" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="FirstNameField" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="SurnameField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="ReportGeneratorFirstNameField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="ReportGeneratorSurnameField" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="FirstNameLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="SurnameLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="ReportGeneratorFirstNameLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="ReportGeneratorSurnameLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <Component id="EmailField" min="-2" max="-2" attributes="0"/>
+                              <Component id="ReportGeneratorEmailField" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="EmailLabel" min="-2" max="-2" attributes="0"/>
+                              <Component id="ReportGeneratorEmailLabel" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
-                              <Component id="DateFormattedField" min="-2" max="-2" attributes="0"/>
+                              <Component id="ReportGeneratorDateFormattedField" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="DateLabel" min="-2" max="-2" attributes="0"/>
+                              <Component id="ReportGeneratorDateLabel" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="ContentLabel" min="-2" max="-2" attributes="0"/>
+                      <Component id="ReportGeneratorContentLabel" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="jScrollPane1" min="-2" pref="148" max="-2" attributes="0"/>
                       <EmptySpace pref="50" max="32767" attributes="0"/>
@@ -1711,52 +1711,52 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="FirstNameLabel">
+            <Component class="javax.swing.JLabel" name="ReportGeneratorFirstNameLabel">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="First name"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="SurnameLabel">
+            <Component class="javax.swing.JLabel" name="ReportGeneratorSurnameLabel">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="Surname"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="DateLabel">
+            <Component class="javax.swing.JLabel" name="ReportGeneratorDateLabel">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="Date"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="EmailLabel">
+            <Component class="javax.swing.JLabel" name="ReportGeneratorEmailLabel">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="Email"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="FirstNameField">
+            <Component class="javax.swing.JTextField" name="ReportGeneratorFirstNameField">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="SurnameField">
-              <Properties>
-                <Property name="horizontalAlignment" type="int" value="0"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SurnameFieldActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JTextField" name="EmailField">
+            <Component class="javax.swing.JTextField" name="ReportGeneratorSurnameField">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="EmailFieldActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ReportGeneratorReportGeneratorSurnameFieldActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="ContentLabel">
+            <Component class="javax.swing.JTextField" name="ReportGeneratorEmailField">
+              <Properties>
+                <Property name="horizontalAlignment" type="int" value="0"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ReportGeneratorReportGeneratorEmailFieldActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="ReportGeneratorContentLabel">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="Content"/>
@@ -1792,9 +1792,9 @@
                 <Property name="text" type="java.lang.String" value="delete"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JFormattedTextField" name="DateFormattedField">
+            <Component class="javax.swing.JFormattedTextField" name="ReportGeneratorDateFormattedField">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="DateFormattedFieldActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ReportGeneratorDateFormattedFieldActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="ReportGeneratorTitleLabel">
@@ -1848,13 +1848,13 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
-                      <Component id="FeedbackLabel" min="-2" max="-2" attributes="0"/>
+                      <Component id="ContactUsFeedbackLabel" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <Component id="TermsAndConditionsLabel" min="-2" max="-2" attributes="0"/>
+                              <Component id="ContactUsTermsAndConditionsLabel" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="TermsAndConditionsCheckBox" min="-2" max="-2" attributes="0"/>
+                              <Component id="ContactUsTermsAndConditionsCheckBox" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
@@ -1871,9 +1871,9 @@
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="154" max="-2" attributes="0"/>
-                                      <Component id="ReviewDateLabel" min="-2" max="-2" attributes="0"/>
+                                      <Component id="ContactUsReviewDateLabel" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="ReviewDateFormattedField" min="-2" pref="159" max="-2" attributes="0"/>
+                                      <Component id="ContactUsReviewDateFormattedField" min="-2" pref="159" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
@@ -1923,20 +1923,20 @@
                       </Group>
                       <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="ReviewDateLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="ReviewDateFormattedField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="ContactUsReviewDateLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="ContactUsReviewDateFormattedField" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="ContactUsEmailLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="ContactUsEmailField" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="96" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="FeedbackLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="ContactUsFeedbackLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="FeedbackTextAreaScrollPane" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="TermsAndConditionsLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="TermsAndConditionsCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="ContactUsTermsAndConditionsLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="ContactUsTermsAndConditionsCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="28" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -1988,7 +1988,7 @@
                 <Property name="text" type="java.lang.String" value="FirstName"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="FeedbackLabel">
+            <Component class="javax.swing.JLabel" name="ContactUsFeedbackLabel">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="13" style="0"/>
@@ -2025,7 +2025,7 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Component class="javax.swing.JLabel" name="TermsAndConditionsLabel">
+            <Component class="javax.swing.JLabel" name="ContactUsTermsAndConditionsLabel">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="13" style="0"/>
@@ -2036,7 +2036,7 @@
                 <Property name="text" type="java.lang.String" value="Terms and conditions"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JCheckBox" name="TermsAndConditionsCheckBox">
+            <Component class="javax.swing.JCheckBox" name="ContactUsTermsAndConditionsCheckBox">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="12" style="0"/>
@@ -2048,7 +2048,7 @@
                 <Property name="toolTipText" type="java.lang.String" value="Please accept the terms and conditions in order to submit a review."/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="ReviewDateLabel">
+            <Component class="javax.swing.JLabel" name="ContactUsReviewDateLabel">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="13" style="0"/>
@@ -2059,7 +2059,7 @@
                 <Property name="text" type="java.lang.String" value="ReviewDate"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JFormattedTextField" name="ReviewDateFormattedField">
+            <Component class="javax.swing.JFormattedTextField" name="ContactUsReviewDateFormattedField">
               <Properties>
                 <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor">
                   <Format subtype="1" type="1"/>
@@ -2067,8 +2067,8 @@
                 <Property name="toolTipText" type="java.lang.String" value="Please enter the date that the review is being submitted."/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ReviewDateFormattedFieldActionPerformed"/>
-                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="ReviewDateFormattedFieldKeyPressed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ContactUsReviewDateFormattedFieldActionPerformed"/>
+                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="ContactUsReviewDateFormattedFieldKeyPressed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="ContactUsSurnameLabel">
