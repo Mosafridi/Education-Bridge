@@ -18,4 +18,50 @@ public class ResourceHub {
         }
     }
 
+    public ArrayList<String[]> loadRecources() {
+        ArrayList<String[]> resources = new ArrayList<>();
+        File inFile = new File(fileName);
+
+        if (!inFile.exists()) {
+            try {
+               if (!inFile.createNewFile()) {
+                    System.out.println("Created succesfully");
+                } else {
+                    System.out.println("failed to create the file.");
+                }
+            } catch (IOException e) {
+                System.out.println("Error making file: " + e.getMessage());
+            }
+        
+        try (BufferedReader br = new BufferedReader(new FileReader(inFile))) {
+            String ln;
+            while ((ln = br.readLine()) != null) {
+                String[] row = ln.split(",");
+                resources.add(row);
+            }
+        } catch (IOException e) {
+            System.out.println("Error loading file: " + e.getMessage());
+        }
+
+        return resources;
+    }
+        return null;
+    }
+    
+    public void linkTutorials(){
+        
+    }
+    
+    public void checkQuizAnswers(){
+        
+    }
+    
+    public void saveFolder(){// potentially ask the end user to add a folder, will figure our how difficult this is going to be
+        
+    }
+    
+    public void method(){
+        
+    }
+    
 }
