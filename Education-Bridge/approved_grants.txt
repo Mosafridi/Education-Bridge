@@ -1,0 +1,3 @@
+12345,John Doe,Computer Science,johndoe@example.com,500,S101,APPROVED
+12345,John Doe,Computer Science,johndoe@example.com,500,S101,APPROVED
+12346,Jane Smith,Mathematics,janesmith@example.com,300,S101,APPROVED

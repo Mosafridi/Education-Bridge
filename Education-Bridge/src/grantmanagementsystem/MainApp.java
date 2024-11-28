@@ -6,8 +6,11 @@ package grantmanagementsystem;
 
 /**
  *
- * @author gregm
+ * @author DEll
  */
-public class Course {
+public class MainApp {
     
+    public static void main(String[] args) {
+         new LoginPageGUI().setVisible(true);
+    }
 }
