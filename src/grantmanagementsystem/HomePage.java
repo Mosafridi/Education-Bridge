@@ -266,7 +266,7 @@ public class HomePage extends javax.swing.JFrame {
 
     private void GregLogoLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_GregLogoLabelMouseClicked
                 // Open the Student JFrame
-                new WarmEducationalEnviormentGUIGregory().setVisible(true);
+                new EducationalEnviormentGUIGregory().setVisible(true);
                 dispose(); // Close current frame
     }//GEN-LAST:event_GregLogoLabelMouseClicked
 
