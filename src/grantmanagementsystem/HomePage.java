@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package grantmanagementsystem;
+
 /**
  *
  * @author Gregory Mitchell Completed the home page on 16/11/2024
@@ -262,19 +263,18 @@ public class HomePage extends javax.swing.JFrame {//start class
     }// </editor-fold>//GEN-END:initComponents
 
     private void KarawanLogoLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_KarawanLogoLabelMouseClicked
-            new StudentInformationGUIKarawan().setVisible(true);//create karawans GUI if karawans logo label is mouse clickded
-                dispose(); // rid of current frame using dispose
+        new StudentInformationGUIKarawan().setVisible(true);//create karawans GUI if karawans logo label is mouse clickded
+        dispose(); // rid of current frame using dispose
     }//GEN-LAST:event_KarawanLogoLabelMouseClicked
 
     private void GregLogoLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_GregLogoLabelMouseClicked
-                // Open the Student JFrame
-                new EducationalEnviormentGUIGregory().setVisible(true);//create Gregory's GUI if Gregs logo label is mouse clickded
-                dispose(); // rid of current frame using dispose
+        new EducationalEnviormentGUIGregory().setVisible(true);//create Gregory's GUI if Gregs logo label is mouse clickded
+        dispose(); // rid of current frame using dispose
     }//GEN-LAST:event_GregLogoLabelMouseClicked
 
     private void ShoaibLogoLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ShoaibLogoLabelMouseClicked
-             new FinancialAidGUIShoaib().setVisible(true);//create Shoaibs GUI if Shoaibs logo label is mouse clickded
-                dispose(); // rid of current frame using dispose
+        new FinancialAidGUIShoaib().setVisible(true);//create Shoaibs GUI if Shoaibs logo label is mouse clickded
+        dispose(); // rid of current frame using dispose
     }//GEN-LAST:event_ShoaibLogoLabelMouseClicked
 
     /**

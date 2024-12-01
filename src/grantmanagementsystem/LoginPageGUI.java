@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package grantmanagementsystem;
+import java.awt.event.KeyEvent;
 import javax.swing.JOptionPane;
 /**
  *
@@ -12,7 +13,7 @@ public class LoginPageGUI extends javax.swing.JFrame {
    
     public LoginPageGUI() {//start constructor
         initComponents();
-        Administrator.createAdmins();//when a instance of this class is called upon it will create admins
+        Administrator.createAdminsAccount();//when a instance of this class is called upon it will create admins
         Student.createStudent();//when a instance of this class is called upon it will call uupon the create student method in the student class
     }//end constructor
 
@@ -47,6 +48,11 @@ public class LoginPageGUI extends javax.swing.JFrame {
                 passwordFieldActionPerformed(evt);
             }
         });
+        passwordField.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                passwordFieldKeyPressed(evt);
+            }
+        });
 
         EmailLabel.setText("Email Address");
 
@@ -58,10 +64,17 @@ public class LoginPageGUI extends javax.swing.JFrame {
                 emailFieldActionPerformed(evt);
             }
         });
+        emailField.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                emailFieldKeyPressed(evt);
+            }
+        });
 
         TermsAndConditionsCheckBox.setText("Accept terms and conditions");
+        TermsAndConditionsCheckBox.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         ContinueAsGuestBTN.setText("Continue as guest");
+        ContinueAsGuestBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         ContinueAsGuestBTN.setPreferredSize(new java.awt.Dimension(250, 30));
         ContinueAsGuestBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -73,6 +86,7 @@ public class LoginPageGUI extends javax.swing.JFrame {
         LoginHeadingLabel.setText("       LOGIN");
 
         LoginBTN.setText("Login");
+        LoginBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         LoginBTN.setPreferredSize(new java.awt.Dimension(250, 30));
         LoginBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -171,39 +185,81 @@ public class LoginPageGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_emailFieldActionPerformed
 
     private void ContinueAsGuestBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ContinueAsGuestBTNActionPerformed
-        setVisible(false);//set the login page to false visibility
-
-        // Open the HomePage
+                                                 
+        setVisible(false);//set the login page to false visibilit
         HomePage homePage = new HomePage();//create instance of home page
         homePage.setVisible(true);//set the home page visibility to true
+                                                
+
     }//GEN-LAST:event_ContinueAsGuestBTNActionPerformed
 
     private void LoginBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginBTNActionPerformed
-        String email = emailField.getText();//get the entered email from the email field in the gui and assign it to a string 
+        String email = emailField.getText();//get the entered email from the email field in the gui and assign it to a string
         String enteredPassword = passwordField.getText().trim();//get the entered password from a field in the gui and assing to a string
 
         if (Administrator.AdminLogin(email, enteredPassword)) {//if condition send the entered emaul and password into the method as args and see if it matches an admins login credentials
-            JOptionPane.showMessageDialog(null, "Welcome Admin!");//notify the end user with a joption pane popup
+            JOptionPane.showMessageDialog(null, "Admin has logged in succesfully, Welcome!");//notify the end user with a joption pane popup
             setVisible(false);//set the page to false visibility
             HomePage homePage = new HomePage();//creat a instance of the home page
             homePage.setVisible(true);//set the homepage to true visibility
-            
+
         } else if (Student.StudentLogin(email, enteredPassword)) {//if condition and send the entered emaul and password into the method as args and see if it matches an admins login credentials
-            JOptionPane.showMessageDialog(null, "Welcome Student!");//notify the end user with a joption pane popup
+            JOptionPane.showMessageDialog(null, "Student has sucessfully logged in, Welcome!");//notify the end user with a joption pane popup
             setVisible(false);//set the login page to false visibility
             HomePage homePage = new HomePage();//creat a instance of the home page
             homePage.setVisible(true);//set the home page to true visibility
         } else {//else if condition
-            
+
             JOptionPane.showMessageDialog(null, "Entered Credentials do not match!");//notify the end user with a joption pane popup that the entered credentials didnt match
-            
+
         }//end else if
+
 
     }//GEN-LAST:event_LoginBTNActionPerformed
 
     private void passwordFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_passwordFieldActionPerformed
+
+    private void emailFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_emailFieldKeyPressed
+String inputText = emailField.getText();
+    int maxLength = 30; 
+
+    int keyCode = evt.getKeyCode();
+
+    if ((keyCode >= KeyEvent.VK_A && keyCode <= KeyEvent.VK_Z) || 
+        (keyCode >= KeyEvent.VK_0 && keyCode <= KeyEvent.VK_9) || 
+        keyCode == KeyEvent.VK_BACK_SPACE){
+        
+        if (inputText.length() >= maxLength && keyCode != KeyEvent.VK_BACK_SPACE) {
+            JOptionPane.showMessageDialog(null, "Maximum 30 characters for email!");
+            evt.consume();
+        }
+    } else {
+        JOptionPane.showMessageDialog(null, "Invalid character. Please use valid email characters.");
+        evt.consume();
+    }
+    }//GEN-LAST:event_emailFieldKeyPressed
+
+    private void passwordFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_passwordFieldKeyPressed
+        String inputText = passwordField.getText();
+    int maxLength = 30; 
+
+    int keyCode = evt.getKeyCode();
+
+    if ((keyCode >= KeyEvent.VK_A && keyCode <= KeyEvent.VK_Z) || 
+        (keyCode >= KeyEvent.VK_0 && keyCode <= KeyEvent.VK_9) || 
+        keyCode == KeyEvent.VK_BACK_SPACE){
+        
+        if (inputText.length() >= maxLength && keyCode != KeyEvent.VK_BACK_SPACE) {
+            JOptionPane.showMessageDialog(null, "Maximum 30 characters for email!");
+            evt.consume();
+        }
+    } else {
+        JOptionPane.showMessageDialog(null, "Invalid character. Please use valid email characters.");
+        evt.consume();
+    }
+    }//GEN-LAST:event_passwordFieldKeyPressed
 
     /**
      * @param args the command line arguments
@@ -230,6 +286,8 @@ public class LoginPageGUI extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(LoginPageGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 

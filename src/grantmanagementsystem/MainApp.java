@@ -3,9 +3,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package grantmanagementsystem;
+
 /**
  *
- * @author Gregory Mitchell
+ * @author Gregory Mitchell, Gregory created this ladning page and coded its
+ * functionality
  */
 public class MainApp {//start main app class ( this will act as the landing page)
 

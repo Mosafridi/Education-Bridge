@@ -11,7 +11,6 @@ package grantmanagementsystem;
 public class Student {
 
     private String name, email, password;
-
     private int id;
 
     public Student(String name, String email, String password, int id) {
@@ -59,14 +58,15 @@ public class Student {
         this.id = id;
     }
     //--------Gregory added this for the login functionality----------------------------------------------------------------
-
-    public static boolean StudentLogin(String email, String password) {//login method for the student 
-        for (int x = 0; x < student.length; x++) {//for loop for the length of the student array, increment through the entire array to check
-            if (email.matches(email) && password.matches(password)) {//to check if the entered info ("email","password) match those in the array
-                return true;//return the boolean as true 
-            }//end if condition
-        }//end for loop
-        return false;//return boolean as false
-    }//end method
+public static boolean StudentLogin(String email, String password) {
+    for (int x = 0; x < student.length; x++) {
+        if (student[x] != null) {  // Ensure the student object is not null
+            if (email.equals(student[x].getEmail()) && password.equals(student[x].getPassword())) {
+                return true;  // Return true if credentials match
+            }
+        }
+    }
+    return false;  // Return false if no match is found
+}
     //--------------------------------------------------------------------------------------
 }//end class

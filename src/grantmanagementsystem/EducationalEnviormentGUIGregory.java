@@ -7,9 +7,11 @@ package grantmanagementsystem;
 
 /**
  *
- * @author Gregory Mitchell
+ * @author Gregory Mitchell, Gregory created this education Enviorment gui and
+ * coded its functionality
  */
 import java.awt.Color;//adding for color changing based on selected item in combo box for quiz, green = right, red - wrong
+import java.awt.event.KeyEvent;
 import javax.swing.JOptionPane;//adding for popups within the gui//cant commit
 
 /**
@@ -71,8 +73,6 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
         SaveResourseBTN = new javax.swing.JButton();
         ViewResourceBTN = new javax.swing.JButton();
         ResourceTypeComboBox = new javax.swing.JComboBox<>();
-        AdminBTNLayeredPane = new javax.swing.JLayeredPane();
-        AdminDeleteBTN = new javax.swing.JButton();
         exitBTn8 = new javax.swing.JButton();
         TutorialsPNL = new javax.swing.JPanel();
         TutorialLabel2 = new javax.swing.JLabel();
@@ -146,8 +146,6 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
         TBLScrollPane = new javax.swing.JScrollPane();
         ReportTBL = new javax.swing.JTable();
         ReportGeneratorDateField = new javax.swing.JTextField();
-        AdminBTNLayeredPane1 = new javax.swing.JLayeredPane();
-        AdminDeleteBTN1 = new javax.swing.JButton();
         ContactUsPNL = new javax.swing.JPanel();
         ContactUsTitleLabel = new javax.swing.JLabel();
         ContactUsFirstNameField = new javax.swing.JTextField();
@@ -328,12 +326,23 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
         ResourceFirstNameLabel.setText("FirstName");
         ManageResourcesPNL.add(ResourceFirstNameLabel);
         ResourceFirstNameLabel.setBounds(61, 9, 56, 16);
+
+        ResourseFirstNameField.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                ResourseFirstNameFieldKeyPressed(evt);
+            }
+        });
         ManageResourcesPNL.add(ResourseFirstNameField);
         ResourseFirstNameField.setBounds(135, 6, 101, 22);
 
         ResourseSurnameField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ResourseSurnameFieldActionPerformed(evt);
+            }
+        });
+        ResourseSurnameField.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                ResourseSurnameFieldKeyPressed(evt);
             }
         });
         ManageResourcesPNL.add(ResourseSurnameField);
@@ -348,6 +357,12 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
         ResourseTypeLabel.setText("RecourceType");
         ManageResourcesPNL.add(ResourseTypeLabel);
         ResourseTypeLabel.setBounds(358, 49, 75, 16);
+
+        ResourseDateField.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                ResourseDateFieldKeyPressed(evt);
+            }
+        });
         ManageResourcesPNL.add(ResourseDateField);
         ResourseDateField.setBounds(135, 46, 101, 22);
 
@@ -386,6 +401,12 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
         ResourceURLLabel.setText("URL");
         ManageResourcesPNL.add(ResourceURLLabel);
         ResourceURLLabel.setBounds(60, 90, 50, 16);
+
+        ResourseURLField.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                ResourseURLFieldKeyPressed(evt);
+            }
+        });
         ManageResourcesPNL.add(ResourseURLField);
         ResourseURLField.setBounds(135, 86, 101, 22);
 
@@ -393,6 +414,12 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
         CourseLabel.setText("Course");
         ManageResourcesPNL.add(CourseLabel);
         CourseLabel.setBounds(369, 89, 50, 16);
+
+        ResourseCourseField.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                ResourseCourseFieldKeyPressed(evt);
+            }
+        });
         ManageResourcesPNL.add(ResourseCourseField);
         ResourseCourseField.setBounds(445, 86, 101, 22);
 
@@ -406,7 +433,7 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
             }
         });
         ManageResourcesPNL.add(SaveResourseBTN);
-        SaveResourseBTN.setBounds(200, 340, 75, 22);
+        SaveResourseBTN.setBounds(130, 350, 75, 20);
 
         ViewResourceBTN.setText("View");
         ViewResourceBTN.setMaximumSize(new java.awt.Dimension(72, 22));
@@ -418,44 +445,11 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
             }
         });
         ManageResourcesPNL.add(ViewResourceBTN);
-        ViewResourceBTN.setBounds(390, 340, 80, 22);
+        ViewResourceBTN.setBounds(320, 350, 80, 20);
 
         ResourceTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Website", "Video", "Tutorial", "Book", " " }));
         ManageResourcesPNL.add(ResourceTypeComboBox);
         ResourceTypeComboBox.setBounds(440, 50, 110, 20);
-
-        AdminDeleteBTN.setBackground(new java.awt.Color(255, 51, 51));
-        AdminDeleteBTN.setText("delete");
-        AdminDeleteBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        AdminDeleteBTN.setMaximumSize(new java.awt.Dimension(72, 22));
-        AdminDeleteBTN.setMinimumSize(new java.awt.Dimension(72, 22));
-        AdminDeleteBTN.setPreferredSize(new java.awt.Dimension(72, 22));
-        AdminDeleteBTN.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AdminDeleteBTNActionPerformed(evt);
-            }
-        });
-
-        AdminBTNLayeredPane.setLayer(AdminDeleteBTN, javax.swing.JLayeredPane.DEFAULT_LAYER);
-
-        javax.swing.GroupLayout AdminBTNLayeredPaneLayout = new javax.swing.GroupLayout(AdminBTNLayeredPane);
-        AdminBTNLayeredPane.setLayout(AdminBTNLayeredPaneLayout);
-        AdminBTNLayeredPaneLayout.setHorizontalGroup(
-            AdminBTNLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(AdminBTNLayeredPaneLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(AdminDeleteBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(14, Short.MAX_VALUE))
-        );
-        AdminBTNLayeredPaneLayout.setVerticalGroup(
-            AdminBTNLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(AdminBTNLayeredPaneLayout.createSequentialGroup()
-                .addComponent(AdminDeleteBTN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 8, Short.MAX_VALUE))
-        );
-
-        ManageResourcesPNL.add(AdminBTNLayeredPane);
-        AdminBTNLayeredPane.setBounds(30, 340, 100, 30);
 
         exitBTn8.setBackground(new java.awt.Color(255, 51, 51));
         exitBTn8.setText("EXIT");
@@ -468,7 +462,7 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
             }
         });
         ManageResourcesPNL.add(exitBTn8);
-        exitBTn8.setBounds(570, 340, 70, 22);
+        exitBTn8.setBounds(500, 350, 70, 20);
 
         SecondParent.add(ManageResourcesPNL, "card4");
 
@@ -987,6 +981,11 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
         ReportGeneratorEmailLabel.setBounds(522, 197, 62, 16);
 
         ReportGeneratorFirstNameField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        ReportGeneratorFirstNameField.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                ReportGeneratorFirstNameFieldKeyPressed(evt);
+            }
+        });
         ReportGeneratorPNL.add(ReportGeneratorFirstNameField);
         ReportGeneratorFirstNameField.setBounds(93, 85, 120, 22);
 
@@ -996,6 +995,11 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
                 ReportGeneratorAVGGradeFieldActionPerformed(evt);
             }
         });
+        AVGGradeField.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                AVGGradeFieldKeyPressed(evt);
+            }
+        });
         ReportGeneratorPNL.add(AVGGradeField);
         AVGGradeField.setBounds(496, 85, 120, 22);
 
@@ -1003,6 +1007,11 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
         ReportGeneratorEmailField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ReportGeneratorReportGeneratorEmailFieldActionPerformed(evt);
+            }
+        });
+        ReportGeneratorEmailField.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                ReportGeneratorEmailFieldKeyPressed(evt);
             }
         });
         ReportGeneratorPNL.add(ReportGeneratorEmailField);
@@ -1020,7 +1029,7 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
             }
         });
         ReportGeneratorPNL.add(SaveBTN);
-        SaveBTN.setBounds(90, 470, 130, 23);
+        SaveBTN.setBounds(100, 470, 130, 23);
 
         ViewBTN.setText("view");
         ViewBTN.addActionListener(new java.awt.event.ActionListener() {
@@ -1029,7 +1038,7 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
             }
         });
         ReportGeneratorPNL.add(ViewBTN);
-        ViewBTN.setBounds(240, 470, 107, 23);
+        ViewBTN.setBounds(310, 470, 107, 23);
 
         ReportGeneratorTitleLabel.setFont(new java.awt.Font("Bauhaus 93", 1, 36)); // NOI18N
         ReportGeneratorTitleLabel.setForeground(new java.awt.Color(255, 255, 255));
@@ -1049,7 +1058,7 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
             }
         });
         ReportGeneratorPNL.add(exitBTn6);
-        exitBTn6.setBounds(370, 470, 104, 22);
+        exitBTn6.setBounds(500, 470, 104, 22);
 
         ReportTBL.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -1073,36 +1082,15 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
         TBLScrollPane.setViewportView(ReportTBL);
 
         ReportGeneratorPNL.add(TBLScrollPane);
-        TBLScrollPane.setBounds(80, 280, 550, 123);
-        ReportGeneratorPNL.add(ReportGeneratorDateField);
-        ReportGeneratorDateField.setBounds(93, 169, 120, 22);
+        TBLScrollPane.setBounds(40, 290, 620, 123);
 
-        javax.swing.GroupLayout AdminBTNLayeredPane1Layout = new javax.swing.GroupLayout(AdminBTNLayeredPane1);
-        AdminBTNLayeredPane1.setLayout(AdminBTNLayeredPane1Layout);
-        AdminBTNLayeredPane1Layout.setHorizontalGroup(
-            AdminBTNLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-        AdminBTNLayeredPane1Layout.setVerticalGroup(
-            AdminBTNLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 30, Short.MAX_VALUE)
-        );
-
-        ReportGeneratorPNL.add(AdminBTNLayeredPane1);
-        AdminBTNLayeredPane1.setBounds(30, 340, 100, 30);
-
-        AdminDeleteBTN1.setBackground(new java.awt.Color(255, 51, 51));
-        AdminDeleteBTN1.setText("delete");
-        AdminDeleteBTN1.setMaximumSize(new java.awt.Dimension(72, 22));
-        AdminDeleteBTN1.setMinimumSize(new java.awt.Dimension(72, 22));
-        AdminDeleteBTN1.setPreferredSize(new java.awt.Dimension(72, 22));
-        AdminDeleteBTN1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AdminDeleteBTN1ActionPerformed(evt);
+        ReportGeneratorDateField.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                ReportGeneratorDateFieldKeyPressed(evt);
             }
         });
-        ReportGeneratorPNL.add(AdminDeleteBTN1);
-        AdminDeleteBTN1.setBounds(500, 470, 105, 22);
+        ReportGeneratorPNL.add(ReportGeneratorDateField);
+        ReportGeneratorDateField.setBounds(93, 169, 120, 22);
 
         Parent.add(ReportGeneratorPNL, "card4");
 
@@ -1326,7 +1314,22 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
     }// </editor-fold>//GEN-END:initComponents
 
     private void ContactUsFirstNameFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ContactUsFirstNameFieldKeyPressed
+        String Text = ContactUsFirstNameField.getText();//get text as a string from the Field element within the GUI
+        int InpLength = 30;//setting the length limit of the field
 
+        int code = evt.getKeyCode();//getting code for key pressed
+
+        if ((code >= KeyEvent.VK_A && code <= KeyEvent.VK_Z)//if condition to ensure the end user is only able to enter the expected input and cant break the program
+                || code == KeyEvent.VK_BACK_SPACE) {//allow the end user to hit backspace
+
+            if (Text.length() >= InpLength && code != KeyEvent.VK_BACK_SPACE) {//allow backspace if the limit is reached
+                JOptionPane.showMessageDialog(null, "Most allowed is 30 inputs for first name!");//notify the end user if it was succesful or not using j option pane popup
+                evt.consume();//stops the key press from happenign
+            }//end if
+        } else {//start else if condition
+            JOptionPane.showMessageDialog(null, "Wrong input. Please use valid name inputs.");//notify the end user if it was succesful or not using j option pane popup
+            evt.consume();//stops the key press from happenign
+        }//end if
     }//GEN-LAST:event_ContactUsFirstNameFieldKeyPressed
 
     private void FeedbackTextAreaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_FeedbackTextAreaKeyPressed
@@ -1334,19 +1337,66 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
     }//GEN-LAST:event_FeedbackTextAreaKeyPressed
 
     private void ContactUsReviewDateFormattedFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ContactUsReviewDateFormattedFieldActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_ContactUsReviewDateFormattedFieldActionPerformed
 
     private void ContactUsReviewDateFormattedFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ContactUsReviewDateFormattedFieldKeyPressed
+        String Text = ContactUsReviewDateFormattedField.getText();//get text as a string from the Field element within the GUI
+        int InpLength = 30;//setting the length limit of the field
 
+        int code = evt.getKeyCode();//getting code for key pressed
+
+        if ((code >= KeyEvent.VK_0 && code <= KeyEvent.VK_9)//if condition to ensure the end user is only able to enter the expected input and cant break the program
+                || code == KeyEvent.VK_BACK_SPACE) {//allow the end user to hit backspace
+
+            if (Text.length() >= InpLength && code != KeyEvent.VK_BACK_SPACE) {//allow backspace if the limit is reached
+                JOptionPane.showMessageDialog(null, "Most allowed is 30 inputs for review!");//notify the end user if it was succesful or not using j option pane popup
+                evt.consume();//stops the key press from happenign
+            }//end if
+        } else {//start else if condition
+            JOptionPane.showMessageDialog(null, "Wrong input. Please use valid date // or digit/ inputs.");//notify the end user if it was succesful or not using j option pane popup
+            evt.consume();//stops the key press from happenign
+        }//end if
     }//GEN-LAST:event_ContactUsReviewDateFormattedFieldKeyPressed
 
     private void ContactUsSurnameFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ContactUsSurnameFieldKeyPressed
+        String Text = ContactUsSurnameField.getText();//get text as a string from the Field element within the GUI
+        int InpLength = 30;//setting the length limit of the field
 
+        int code = evt.getKeyCode();//getting code for key pressed
+
+        if ((code >= KeyEvent.VK_A && code <= KeyEvent.VK_Z)//if condition to ensure the end user is only able to enter the expected input and cant break the program
+                || (code >= KeyEvent.VK_0 && code <= KeyEvent.VK_9)//if condition to ensure the end user is only able to enter the expected input and cant break the program
+                || code == KeyEvent.VK_BACK_SPACE) {//allow the end user to hit backspace
+
+            if (Text.length() >= InpLength && code != KeyEvent.VK_BACK_SPACE) {//allow backspace if the limit is reached
+                JOptionPane.showMessageDialog(null, "Most allowed is 30 inputs for surname!");//notify the end user if it was succesful or not using j option pane popup
+                evt.consume();//stops the key press from happenign
+            }//end if
+        } else {//start else if condition
+            JOptionPane.showMessageDialog(null, "Wrong input. Please use valid name inputs.");//notify the end user if it was succesful or not using j option pane popup
+            evt.consume();//stops the key press from happenign
+        }//end if
     }//GEN-LAST:event_ContactUsSurnameFieldKeyPressed
 
     private void ContactUsEmailFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ContactUsEmailFieldKeyPressed
+        String Text = ContactUsEmailField.getText();//get text as a string from the Field element within the GUI
+        int InpLength = 30;//setting the length limit of the field
 
+        int code = evt.getKeyCode();//getting code for key pressed
+
+        if ((code >= KeyEvent.VK_A && code <= KeyEvent.VK_Z)//if condition to ensure the end user is only able to enter the expected input and cant break the program
+                || (code >= KeyEvent.VK_0 && code <= KeyEvent.VK_9)//if condition to ensure the end user is only able to enter the expected input and cant break the program
+                || code == KeyEvent.VK_BACK_SPACE) {//allow the end user to hit backspace
+
+            if (Text.length() >= InpLength && code != KeyEvent.VK_BACK_SPACE) {//allow backspace if the limit is reached
+                JOptionPane.showMessageDialog(null, "Most allowed is 30 inputs for email!");//notify the end user if it was succesful or not using j option pane popup
+                evt.consume();//stops the key press from happenign
+            }//end if
+        } else {//start else if condition
+            JOptionPane.showMessageDialog(null, "Wrong input. Please use valid email inputs.");//notify the end user if it was succesful or not using j option pane popup
+            evt.consume();//stops the key press from happenign
+        }//end if
     }//GEN-LAST:event_ContactUsEmailFieldKeyPressed
 
     private void SendFeedbackBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SendFeedbackBTNActionPerformed
@@ -1357,12 +1407,12 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
         String content = FeedbackTextArea.getText();//getting the feedback from the field in the gui and assinging it to a string
 
         if (ContactUsFirstNameField.getText().isEmpty() || ContactUsEmailField.getText().isEmpty() || dateReview.isEmpty() || FeedbackTextArea.getText().isEmpty() || ContactUsFirstNameField.getText().isEmpty()) {//if statement to ensure the fields are filled out to ensure the program does not crash
-            JOptionPane.showMessageDialog(null, "All fields must be filled!", "Error", JOptionPane.ERROR_MESSAGE);//joption pane popup to notify the end user the fields need to be filled out
+            JOptionPane.showMessageDialog(null, "Cannot leave any fields empty, please fill all!", "Error Encountered", JOptionPane.ERROR_MESSAGE);//joption pane popup to notify the end user the fields need to be filled out
             return;
         }//end if condition
 
-        ResourceHub resourceHub = new ResourceHub();//create an instance of the resource hub class
-        resourceHub.ContactUs(firstname, surname, gmail, dateReview, content);//call upon the contact us method in the contactUsPNL and pass in the entered variable as args
+        ResourceHub rh = new ResourceHub();//create an instance of the resource hub class
+        rh.SaveEndUserFeedback(firstname, surname, gmail, dateReview, content);//call upon the contact us method in the contactUsPNL and pass in the entered variable as args
 
         JOptionPane.showMessageDialog(null, "Your valuable feedback has been sent.", "Success", JOptionPane.INFORMATION_MESSAGE);//JOptionPane to notify the end user that the feedback was succesfully sent
 
@@ -1436,15 +1486,15 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
         String URL = ResourseURLField.getText();//getting the text from the GUI ResourseURLField using the get text method and assigning it to a string
 
         // Save resource using ResourceHub
-        ResourceHub resourceHub = new ResourceHub();//create an instance of the rescourceHub so i can access the methods
-        resourceHub.saveResource(firstname, surname, Course, Date, resourceType, URL);//call upon the save resource method and pass the variable in as args
+        ResourceHub rh = new ResourceHub();//create an instance of the rescourceHub so i can access the methods
+        rh.saveResourceToFile(firstname, surname, Course, Date, resourceType, URL);//call upon the save resource method and pass the variable in as args
 
-        JOptionPane.showMessageDialog(null, "Successfully added to the file");//joptionPane popup to notify the user it was succesful
+        JOptionPane.showMessageDialog(null, "This was a great success!! added to the file");//joptionPane popup to notify the user it was succesful
     }//GEN-LAST:event_SaveResourseBTNActionPerformed
 
     private void ViewResourceBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ViewResourceBTNActionPerformed
-        ResourceHub resourceHub = new ResourceHub();//create an instance of the rescourceHub so i can call upon the method for populating the table
-        resourceHub.loadResources(ResourceTBL);//call upon method to load resources and senign the tbl as a arg so it has access, i didnt know how to do with without making the table static , and i wanted to try my best to encapsulate as much as possible so this seemed to be the best way to do it
+        ResourceHub rh = new ResourceHub();//create an instance of the rescourceHub so i can call upon the method for populating the table
+        rh.PopulateRescourecTBL(ResourceTBL);//call upon method to load resources and senign the tbl as a arg so it has access, i didnt know how to do with without making the table static , and i wanted to try my best to encapsulate as much as possible so this seemed to be the best way to do it
     }//GEN-LAST:event_ViewResourceBTNActionPerformed
 
     private void exitBTn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBTn1ActionPerformed
@@ -1484,11 +1534,11 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
     }//GEN-LAST:event_exitBTn6ActionPerformed
 
     private void ComputersQuizCheckBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComputersQuizCheckBTNActionPerformed
-        String RightAnswer1 = "Central Processing Unit";//setting the correct answers to strings to compare against the selected answer
-        String RightAnswer2 = "Power Supply Unit";//setting the correct answers to strings to compare against the selected answer
-        String RightAnswer3 = "Storing data";//setting the correct answers to strings to compare against the selected answer
-        String RightAnswer4 = "Solid State Drive";//setting the correct answers to strings to compare against the selected answer
-        String RightAnswer5 = "Graphical Processing Unit";//setting the correct answers to strings to compare against the selected answer
+        String RightAnswer1 = "Central-Processing-Unit";//setting the correct answers to strings to compare against the selected answer
+        String RightAnswer2 = "Power-Supply-Unit";//setting the correct answers to strings to compare against the selected answer
+        String RightAnswer3 = "Storing-data";//setting the correct answers to strings to compare against the selected answer
+        String RightAnswer4 = "Solid-State-Drive";//setting the correct answers to strings to compare against the selected answer
+        String RightAnswer5 = "Graphical-Processing-Unit";//setting the correct answers to strings to compare against the selected answer
 
         String ChosenAnswer1 = (String) ComputerQuizComboBox.getSelectedItem();//assigning the selected items from the combo boxes to string to compare against the correct answers
         String ChosenAnswer2 = (String) ComputerQuizComboBox2.getSelectedItem();//assigning the selected items from the combo boxes to string to compare against the correct answers
@@ -1530,23 +1580,23 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
     }//GEN-LAST:event_ComputersQuizCheckBTNActionPerformed
 
     private void Tutorial1LabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Tutorial1LabelMouseClicked
-        ResourceHub.Tutorial1();//call upon the method in the resource hub class to link the tutorials succesfully
+        ResourceHub.ConnectingTutorial1();//call upon the method in the resource hub class to link the tutorials succesfully
     }//GEN-LAST:event_Tutorial1LabelMouseClicked
 
     private void TutorialLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TutorialLabel2MouseClicked
-        ResourceHub.Tutorial2();//call upon the method in the resource hub class to link the tutorials succesfully
+        ResourceHub.ConnectingTutorial2();//call upon the method in the resource hub class to link the tutorials succesfully
     }//GEN-LAST:event_TutorialLabel2MouseClicked
 
     private void TutorialLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TutorialLabel3MouseClicked
-        ResourceHub.Tutorial3();//call upon the method in the resource hub class to link the tutorials succesfully
+        ResourceHub.ConnectingTutorial3();//call upon the method in the resource hub class to link the tutorials succesfully
     }//GEN-LAST:event_TutorialLabel3MouseClicked
 
     private void TutorialLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TutorialLabel4MouseClicked
-        ResourceHub.Tutorial4();//call upon the method in the resource hub class to link the tutorials succesfully
+        ResourceHub.ConnectingTutorial4();//call upon the method in the resource hub class to link the tutorials succesfully
     }//GEN-LAST:event_TutorialLabel4MouseClicked
 
     private void TutorialLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TutorialLabel5MouseClicked
-        ResourceHub.Tutorial5();//call upon the method in the resource hub class to link the tutorials succesfully
+        ResourceHub.ConnectingTutorial5();//call upon the method in the resource hub class to link the tutorials succesfully
     }//GEN-LAST:event_TutorialLabel5MouseClicked
 
     private void GeographyQuizCheckBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GeographyQuizCheckBTNActionPerformed
@@ -1639,35 +1689,200 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
     }//GEN-LAST:event_ProgrammingQuizCheckBTNActionPerformed
 
     private void ViewBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ViewBTNActionPerformed
-        reportGenerator.viewReports(ReportTBL);
+        reportGenerator.PopulateReportsTBL(ReportTBL);
     }//GEN-LAST:event_ViewBTNActionPerformed
 
     private void SaveBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaveBTNActionPerformed
-// Get user input from the fields
-String name = ReportGeneratorFirstNameField.getText();  // Get name from input
-String avgGrade = AVGGradeField.getText();  // Get average grade from input
-String email = ReportGeneratorEmailField.getText();  // Get email from input
-String date = ReportGeneratorDateField.getText();  // Get date from input
+        String name = ReportGeneratorFirstNameField.getText();//getting the text from the fields and assigning it to a var string
+        String avgGrade = AVGGradeField.getText();//getting the text from the fields and assigning it to a var string
+        String email = ReportGeneratorEmailField.getText();//getting the text from the fields and assigning it to a var string
+        String date = ReportGeneratorDateField.getText();//getting the text from the fields and assigning it to a var string
 
-// Save the user's input along with generated feedback in the ReportGenerator
-reportGenerator.saveReport(name, email, date, avgGrade);
+        reportGenerator.addReport(name, email, date, avgGrade);//call upon the add report method and send in varibales as args
 
-// Now, call saveReportsToFile to save the ArrayList to the text file
-reportGenerator.saveReportsToFile();
+        reportGenerator.WriteReport();//write stuff tot the txt
 
     }//GEN-LAST:event_SaveBTNActionPerformed
 
-    private void AdminDeleteBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AdminDeleteBTNActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_AdminDeleteBTNActionPerformed
-
     private void exitBTn8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBTn8ActionPerformed
-        // TODO add your handling code here:
+        setVisible(false);//remove the current screen
+        HomePage homePage = new HomePage();//create the of the homepage
+        homePage.setVisible(true);//set its visibility to true
     }//GEN-LAST:event_exitBTn8ActionPerformed
 
-    private void AdminDeleteBTN1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AdminDeleteBTN1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_AdminDeleteBTN1ActionPerformed
+    private void ResourseCourseFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ResourseCourseFieldKeyPressed
+        String Text = ResourseCourseField.getText();//get text as a string from the Field element within the GUI
+        int InpLength = 20;//setting the length limit of the field
+
+        int code = evt.getKeyCode();//getting code for key pressed
+
+        if ((code >= KeyEvent.VK_A && code <= KeyEvent.VK_Z)//if condition to ensure the end user is only able to enter the expected input and cant break the program
+                || code == KeyEvent.VK_BACK_SPACE) {//allow the end user to hit backspace
+
+            if (Text.length() >= InpLength && code != KeyEvent.VK_BACK_SPACE) {//allow backspace if the limit is reached
+                JOptionPane.showMessageDialog(null, "Most allowed is 20 inputs for course field!");//notify the end user if it was succesful or not using j option pane popup
+                evt.consume();//stops the key press from happenign
+            }//end if
+        } else {//start else if condition
+            JOptionPane.showMessageDialog(null, "Wrong input. Please use valid email inputs.");//notify the end user if it was succesful or not using j option pane popup
+            evt.consume();//stops the key press from happenign
+        }//end if
+    }//GEN-LAST:event_ResourseCourseFieldKeyPressed
+
+    private void ResourseSurnameFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ResourseSurnameFieldKeyPressed
+        String Text = ResourseSurnameField.getText();//get text as a string from the Field element within the GUI
+        int InpLength = 30;//setting the length limit of the field
+
+        int code = evt.getKeyCode();//getting code for key pressed
+
+        if ((code >= KeyEvent.VK_A && code <= KeyEvent.VK_Z)//if condition to ensure the end user is only able to enter the expected input and cant break the program
+                || code == KeyEvent.VK_BACK_SPACE) {//allow the end user to hit backspace
+
+            if (Text.length() >= InpLength && code != KeyEvent.VK_BACK_SPACE) {//allow backspace if the limit is reached
+                JOptionPane.showMessageDialog(null, "Most allowed is 30 inputs for surname!");//notify the end user if it was succesful or not using j option pane popup
+                evt.consume();//stops the key press from happenign
+            }//end if
+        } else {//start else if condition
+            JOptionPane.showMessageDialog(null, "Wrong input. Please use valid email inputs.");//notify the end user if it was succesful or not using j option pane popup
+            evt.consume();//stops the key press from happenign
+        }//end if
+    }//GEN-LAST:event_ResourseSurnameFieldKeyPressed
+
+    private void ResourseFirstNameFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ResourseFirstNameFieldKeyPressed
+        String Text = ResourseFirstNameField.getText();//get text as a string from the Field element within the GUI
+        int InpLength = 30;//setting the length limit of the field
+
+        int code = evt.getKeyCode();//getting code for key pressed
+
+        if ((code >= KeyEvent.VK_A && code <= KeyEvent.VK_Z)//if condition to ensure the end user is only able to enter the expected input and cant break the program
+                || code == KeyEvent.VK_BACK_SPACE) {//allow the end user to hit backspace
+
+            if (Text.length() >= InpLength && code != KeyEvent.VK_BACK_SPACE) {//allow backspace if the limit is reached
+                JOptionPane.showMessageDialog(null, "Most allowed is 30 letters for first name!");//notify the end user if it was succesful or not using j option pane popup
+                evt.consume();//stops the key press from happenign
+            }//end if
+        } else {//start else if condition
+            JOptionPane.showMessageDialog(null, "Wrong input. Please use valid email inputs.");//notify the end user if it was succesful or not using j option pane popup
+            evt.consume();//stops the key press from happenign
+        }//end if
+    }//GEN-LAST:event_ResourseFirstNameFieldKeyPressed
+
+    private void ResourseDateFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ResourseDateFieldKeyPressed
+        String Text = ResourseDateField.getText();//get text as a string from the Field element within the GUI
+        int InpLength = 10;//setting the length limit of the field
+
+        int code = evt.getKeyCode();//getting code for key pressed
+
+        if ((code >= KeyEvent.VK_0 && code <= KeyEvent.VK_9)//if condition to ensure the end user is only able to enter the expected input and cant break the program
+                || code == KeyEvent.VK_BACK_SPACE) {//allow the end user to hit backspace
+
+            if (Text.length() >= InpLength && code != KeyEvent.VK_BACK_SPACE) {//allow backspace if the limit is reached
+                JOptionPane.showMessageDialog(null, "Most allowed is 10 numbers for date!");//notify the end user if it was succesful or not using j option pane popup
+                evt.consume();//stops the key press from happenign
+                //end if
+            } else {//start else if condition
+                JOptionPane.showMessageDialog(null, "Wrong input. Please use valid email inputs.");//notify the end user if it was succesful or not using j option pane popup
+                evt.consume();//stops the key press from happenign
+            }//end if
+        }
+    }//GEN-LAST:event_ResourseDateFieldKeyPressed
+
+    private void ResourseURLFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ResourseURLFieldKeyPressed
+        String Text = ResourseURLField.getText();//get text as a string from the Field element within the GUI
+        int InpLength = 50;//setting the length limit of the field
+
+        int code = evt.getKeyCode();//getting code for key pressed
+
+        if ((code >= KeyEvent.VK_A && code <= KeyEvent.VK_Z)//if condition to ensure the end user is only able to enter the expected input and cant break the program
+                || (code >= KeyEvent.VK_0 && code <= KeyEvent.VK_9)
+                || code == KeyEvent.VK_BACK_SPACE) {//allow the end user to hit backspace
+
+            if (Text.length() >= InpLength && code != KeyEvent.VK_BACK_SPACE) {//allow backspace if the limit is reached
+                JOptionPane.showMessageDialog(null, "Most allowed is 50 inputs for url!");//notify the end user if it was succesful or not using j option pane popup
+                evt.consume();//stops the key press from happenign
+            }//end if
+        } else {//start else if condition
+            JOptionPane.showMessageDialog(null, "Wrong input. Please use valid email inputs.");//notify the end user if it was succesful or not using j option pane popup
+            evt.consume();//stops the key press from happenign
+        }//end if
+    }//GEN-LAST:event_ResourseURLFieldKeyPressed
+
+    private void ReportGeneratorFirstNameFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ReportGeneratorFirstNameFieldKeyPressed
+        String Text = ReportGeneratorFirstNameField.getText();//get text as a string from the Field element within the GUI
+        int InpLength = 30;//setting the length limit of the field
+
+        int code = evt.getKeyCode();//getting code for key pressed
+
+        if ((code >= KeyEvent.VK_A && code <= KeyEvent.VK_Z)//if condition to ensure the end user is only able to enter the expected input and cant break the program
+                || code == KeyEvent.VK_BACK_SPACE) {//allow the end user to hit backspace
+
+            if (Text.length() >= InpLength && code != KeyEvent.VK_BACK_SPACE) {//allow backspace if the limit is reached
+                JOptionPane.showMessageDialog(null, "Most allowed is 30 inputs for name!");//notify the end user if it was succesful or not using j option pane popup
+                evt.consume();//stops the key press from happenign
+            }//end if
+        } else {//start else if condition
+            JOptionPane.showMessageDialog(null, "Wrong input. Please use valid email inputs.");//notify the end user if it was succesful or not using j option pane popup
+            evt.consume();//stops the key press from happenign
+        }//end if
+    }//GEN-LAST:event_ReportGeneratorFirstNameFieldKeyPressed
+
+    private void AVGGradeFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_AVGGradeFieldKeyPressed
+        String Text = AVGGradeField.getText();//get text as a string from the Field element within the GUI
+        int InpLength = 5;//setting the length limit of the field
+
+        int code = evt.getKeyCode();//getting code for key pressed
+
+        if ((code >= KeyEvent.VK_0 && code <= KeyEvent.VK_9)//if condition to ensure the end user is only able to enter the expected input and cant break the program
+                || code == KeyEvent.VK_BACK_SPACE) {//allow the end user to hit backspace
+
+            if (Text.length() >= InpLength && code != KeyEvent.VK_BACK_SPACE) {//allow backspace if the limit is reached
+                JOptionPane.showMessageDialog(null, "Most allowed is 5 inputs for grade!");//notify the end user if it was succesful or not using j option pane popup
+                evt.consume();//stops the key press from happenign
+            }//end if
+        } else {//start else if condition
+            JOptionPane.showMessageDialog(null, "Wrong input. Please use valid email inputs.");//notify the end user if it was succesful or not using j option pane popup
+            evt.consume();//stops the key press from happenign
+        }//end if
+    }//GEN-LAST:event_AVGGradeFieldKeyPressed
+
+    private void ReportGeneratorEmailFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ReportGeneratorEmailFieldKeyPressed
+        String Text = ReportGeneratorEmailField.getText();//get text as a string from the Field element within the GUI
+        int InpLength = 30;//setting the length limit of the field
+
+        int code = evt.getKeyCode();//getting code for key pressed
+
+        if ((code >= KeyEvent.VK_A && code <= KeyEvent.VK_Z)
+                || (code >= KeyEvent.VK_0 && code <= KeyEvent.VK_9//if condition to ensure the end user is only able to enter the expected input and cant break the program
+                || code == KeyEvent.VK_BACK_SPACE)) {//allow the end user to hit backspace
+
+            if (Text.length() >= InpLength && code != KeyEvent.VK_BACK_SPACE) {//allow backspace if the limit is reached
+                JOptionPane.showMessageDialog(null, "Most allowed is 30 inputs for email!");//notify the end user if it was succesful or not using j option pane popup
+                evt.consume();//stops the key press from happenign
+            }//end if
+        } else {//start else if condition
+            JOptionPane.showMessageDialog(null, "Wrong input. Please use valid email inputs.");//notify the end user if it was succesful or not using j option pane popup
+            evt.consume();//stops the key press from happenign//stops the key press from happenign
+        }//end if
+    }//GEN-LAST:event_ReportGeneratorEmailFieldKeyPressed
+
+    private void ReportGeneratorDateFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ReportGeneratorDateFieldKeyPressed
+        String Text = ReportGeneratorDateField.getText();//get text as a string from the Field element within the GUI
+        int InpLength = 10;//setting the length limit of the field
+
+        int code = evt.getKeyCode();//getting code for key pressed
+
+        if ((code >= KeyEvent.VK_0 && code <= KeyEvent.VK_9)//if condition to ensure the end user is only able to enter the expected input and cant break the program
+                || code == KeyEvent.VK_BACK_SPACE) {//allow the end user to hit backspace
+
+            if (Text.length() >= InpLength && code != KeyEvent.VK_BACK_SPACE) {//allow backspace if the limit is reached
+                JOptionPane.showMessageDialog(null, "Most allowed is 10 inputs for date field!");//notify the end user if it was succesful or not using j option pane popup
+                evt.consume();//stops the key press from happenign
+            }//end if
+        } else {//start else if condition//end if
+            JOptionPane.showMessageDialog(null, "Wrong input. Please use valid email inputs.");//notify the end user if it was succesful or not using j option pane popup
+            evt.consume();//stops the key press from happenign
+        }//end if
+    }//GEN-LAST:event_ReportGeneratorDateFieldKeyPressed
 
     /**
      * @param args the command line arguments
@@ -1709,10 +1924,6 @@ reportGenerator.saveReportsToFile();
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField AVGGradeField;
-    private javax.swing.JLayeredPane AdminBTNLayeredPane;
-    private javax.swing.JLayeredPane AdminBTNLayeredPane1;
-    private javax.swing.JButton AdminDeleteBTN;
-    private javax.swing.JButton AdminDeleteBTN1;
     private javax.swing.JLabel AverageGradeLabel;
     private javax.swing.JComboBox<String> ComputerQuizComboBox;
     private javax.swing.JComboBox<String> ComputerQuizComboBox2;
