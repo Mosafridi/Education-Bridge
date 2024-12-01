@@ -136,8 +136,8 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {
         ReportGeneratorDateFormattedField = new javax.swing.JFormattedTextField();
         ReportGeneratorTitleLabel = new javax.swing.JLabel();
         exitBTn6 = new javax.swing.JButton();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        TBLScrollPane = new javax.swing.JScrollPane();
+        ReportTBL = new javax.swing.JTable();
         ContactUsPNL = new javax.swing.JPanel();
         ContactUsTitleLabel = new javax.swing.JLabel();
         ContactUsFirstNameField = new javax.swing.JTextField();
@@ -880,10 +880,10 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {
         ReportGeneratorPNL.setBackground(new java.awt.Color(51, 204, 255));
 
         ReportGeneratorFirstNameLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ReportGeneratorFirstNameLabel.setText("First name");
+        ReportGeneratorFirstNameLabel.setText("Name");
 
         ReportGeneratorSurnameLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ReportGeneratorSurnameLabel.setText("Surname");
+        ReportGeneratorSurnameLabel.setText("Number");
 
         ReportGeneratorDateLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ReportGeneratorDateLabel.setText("Date");
@@ -938,7 +938,7 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {
             }
         });
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        ReportTBL.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -949,7 +949,7 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane3.setViewportView(jTable1);
+        TBLScrollPane.setViewportView(ReportTBL);
 
         javax.swing.GroupLayout ReportGeneratorPNLLayout = new javax.swing.GroupLayout(ReportGeneratorPNL);
         ReportGeneratorPNL.setLayout(ReportGeneratorPNLLayout);
@@ -959,7 +959,7 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {
                 .addGap(93, 93, 93)
                 .addGroup(ReportGeneratorPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(ReportGeneratorPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jScrollPane3)
+                        .addComponent(TBLScrollPane)
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ReportGeneratorPNLLayout.createSequentialGroup()
                             .addGroup(ReportGeneratorPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(ReportGeneratorDateFormattedField, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1028,7 +1028,7 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(ReportGeneratorContentLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 186, Short.MAX_VALUE)
+                .addComponent(TBLScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 186, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addGroup(ReportGeneratorPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(SaveBTN)
@@ -1718,6 +1718,7 @@ JOptionPane.showMessageDialog(null, "Your feedback has been successfully saved."
     private javax.swing.JTextField ReportGeneratorSurnameField;
     private javax.swing.JLabel ReportGeneratorSurnameLabel;
     private javax.swing.JLabel ReportGeneratorTitleLabel;
+    private javax.swing.JTable ReportTBL;
     private javax.swing.JLabel ResourceFirstNameLabel;
     private javax.swing.JPanel ResourceHubNavPNL;
     private javax.swing.JPanel ResourceHubPNL;
@@ -1736,6 +1737,7 @@ JOptionPane.showMessageDialog(null, "Your feedback has been successfully saved."
     private javax.swing.JButton SaveResourseBTN;
     private javax.swing.JPanel SecondParent;
     public static javax.swing.JButton SendFeedbackBTN;
+    private javax.swing.JScrollPane TBLScrollPane;
     private javax.swing.JLabel Tutorial1Label;
     private javax.swing.JLabel TutorialLabel;
     private javax.swing.JLabel TutorialLabel2;
@@ -1758,8 +1760,6 @@ JOptionPane.showMessageDialog(null, "Your feedback has been successfully saved."
     private javax.swing.JButton exitBTn5;
     private javax.swing.JButton exitBTn6;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTabbedPane jTabbedPane3;
-    private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
 }
