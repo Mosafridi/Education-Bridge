@@ -5,9 +5,9 @@
 package grantmanagementsystem;
 
 
-import java.awt.Color;
-import javax.swing.JComboBox;
-import javax.swing.JOptionPane;
+import java.awt.Color;//adding for color
+import javax.swing.JComboBox;//adding for color function
+import javax.swing.JOptionPane;//adding for popups within the gui
 
 /**
  *
