@@ -57,7 +57,7 @@ public class Student {
     public void setId(int id) {
         this.id = id;
     }
-  
+  //--------Gregory added this for the login functionality----------------------------------------------------------------
   public static boolean loginStudent(String email, String password) {
     for (int i = 0; i < student.length; i++) {  
         Student s = student[i];
@@ -67,5 +67,5 @@ public class Student {
     }
     return false;
 }
-
+  //--------------------------------------------------------------------------------------
 }
