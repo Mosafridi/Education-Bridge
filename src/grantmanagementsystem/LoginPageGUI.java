@@ -197,19 +197,26 @@ public class LoginPageGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_ContinueAsGuestBTNActionPerformed
 
     private void LoginBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginBTNActionPerformed
-                String email = emailField.getText();
-                String enteredPassword = passwordField.getText().trim();  
+        String email = emailField.getText();
+        String enteredPassword = passwordField.getText().trim();
 
+        // Check if the user is an admin or student
+        if (Administrator.loginAdmin(email, enteredPassword)) {
+            JOptionPane.showMessageDialog(null, "Welcome Admin!");
+            setVisible(false);
+            // Open the HomePage
+            HomePage homePage = new HomePage();
+            homePage.setVisible(true);
+        } else if (Student.loginStudent(email, enteredPassword)) {
+            JOptionPane.showMessageDialog(null, "Welcome Student!");
+            setVisible(false);
+            // Open the HomePage
+            HomePage homePage = new HomePage();
+            homePage.setVisible(true);
+        } else {
+            JOptionPane.showMessageDialog(null, "Invalid email or password!");
+        }
 
-                // Check if the user is an admin or student
-                if (Administrator.loginAdmin(email, enteredPassword)) {
-                    JOptionPane.showMessageDialog(null, "Welcome Admin!");
-                } else if (Student.loginStudent(email, enteredPassword)) {
-                    JOptionPane.showMessageDialog(null, "Welcome Student!");
-                } else {
-                    JOptionPane.showMessageDialog(null, "Invalid email or password!");
-                }
-            
     }//GEN-LAST:event_LoginBTNActionPerformed
 
     /**
