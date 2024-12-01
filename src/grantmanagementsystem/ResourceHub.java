@@ -3,7 +3,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package grantmanagementsystem;
-//author Gregory
+//gregory mitchell
+/**
+ *
+ * @author gregm
+ */
 import java.awt.Color;
 import java.awt.Desktop;
 import java.io.*;

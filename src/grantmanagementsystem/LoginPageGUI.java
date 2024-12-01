@@ -3,9 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package grantmanagementsystem;
-
 import javax.swing.JOptionPane;
-
 /**
  *
  * @author gregm// Gregory coded functionality of this jframe

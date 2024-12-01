@@ -3,7 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package grantmanagementsystem;
-
 /**
  *
  * @author Gregory Mitchell Completed the home page on 16/11/2024

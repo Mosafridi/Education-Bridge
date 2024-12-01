@@ -3,8 +3,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package grantmanagementsystem;
-
-
+//gregory mitchell
+/**
+ *
+ * @author gregm
+ */
 import java.awt.Color;//adding for color
 import javax.swing.JOptionPane;//adding for popups within the gui//cant commit
 
