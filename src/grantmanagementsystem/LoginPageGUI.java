@@ -4,9 +4,11 @@
  */
 package grantmanagementsystem;
 
+import javax.swing.JOptionPane;
+
 /**
  *
- * @author gregm
+ * @author gregm// Gregory coded functionality of this jframe
  */
 public class LoginPageGUI extends javax.swing.JFrame {
 
@@ -15,6 +17,8 @@ public class LoginPageGUI extends javax.swing.JFrame {
      */
     public LoginPageGUI() {
         initComponents();
+        Administrator.createAdmins();
+        Student.createStudent();
     }
 
     /**
@@ -27,10 +31,10 @@ public class LoginPageGUI extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jTextField2 = new javax.swing.JTextField();
+        passwordField = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        Password2 = new javax.swing.JTextField();
+        emailField = new javax.swing.JTextField();
         jCheckBox1 = new javax.swing.JCheckBox();
         jLabel2 = new javax.swing.JLabel();
         ContinueAsGuestBTN = new javax.swing.JButton();
@@ -44,16 +48,16 @@ public class LoginPageGUI extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        jTextField2.setPreferredSize(new java.awt.Dimension(64, 35));
+        passwordField.setPreferredSize(new java.awt.Dimension(64, 35));
 
         jLabel3.setText("Email Address");
 
         jLabel4.setText("Password");
 
-        Password2.setPreferredSize(new java.awt.Dimension(64, 35));
-        Password2.addActionListener(new java.awt.event.ActionListener() {
+        emailField.setPreferredSize(new java.awt.Dimension(64, 35));
+        emailField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Password2ActionPerformed(evt);
+                emailFieldActionPerformed(evt);
             }
         });
 
@@ -100,9 +104,9 @@ public class LoginPageGUI extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(LoginBTN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Password2, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(emailField, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(passwordField, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addGroup(jPanel1Layout.createSequentialGroup()
                             .addComponent(jCheckBox1)
@@ -119,11 +123,11 @@ public class LoginPageGUI extends javax.swing.JFrame {
                 .addGap(82, 82, 82)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 11, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Password2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(emailField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 11, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(passwordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(28, 28, 28)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jCheckBox1)
@@ -180,20 +184,32 @@ public class LoginPageGUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void Password2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Password2ActionPerformed
+    private void emailFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_Password2ActionPerformed
+    }//GEN-LAST:event_emailFieldActionPerformed
 
     private void ContinueAsGuestBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ContinueAsGuestBTNActionPerformed
-         setVisible(false);
+        setVisible(false);
 
-                // Open the HomePage
-                HomePage homePage = new HomePage();
-                homePage.setVisible(true);
+        // Open the HomePage
+        HomePage homePage = new HomePage();
+        homePage.setVisible(true);
     }//GEN-LAST:event_ContinueAsGuestBTNActionPerformed
 
     private void LoginBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginBTNActionPerformed
-        // TODO add your handling code here:
+                String email = emailField.getText();
+                String enteredPassword = passwordField.getText().trim();  
+
+
+                // Check if the user is an admin or student
+                if (Administrator.loginAdmin(email, enteredPassword)) {
+                    JOptionPane.showMessageDialog(null, "Welcome Admin!");
+                } else if (Student.loginStudent(email, enteredPassword)) {
+                    JOptionPane.showMessageDialog(null, "Welcome Student!");
+                } else {
+                    JOptionPane.showMessageDialog(null, "Invalid email or password!");
+                }
+            
     }//GEN-LAST:event_LoginBTNActionPerformed
 
     /**
@@ -235,7 +251,7 @@ public class LoginPageGUI extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ContinueAsGuestBTN;
     private javax.swing.JButton LoginBTN;
-    private javax.swing.JTextField Password2;
+    private javax.swing.JTextField emailField;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -245,6 +261,6 @@ public class LoginPageGUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField passwordField;
     // End of variables declaration//GEN-END:variables
 }

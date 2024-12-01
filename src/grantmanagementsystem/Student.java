@@ -20,9 +20,9 @@ public class Student {
         this.id = id;
     }
     
-    public Student[] student = new Student[6];
+    public static Student[] student = new Student[6];
     
-    public void createStudent(){
+    public static void createStudent(){
         student[0]= new Student("joe adams","michael@gmail.com","235",1);
     }
 
@@ -58,5 +58,14 @@ public class Student {
         this.id = id;
     }
   
-  
+  public static boolean loginStudent(String email, String password) {
+    for (int i = 0; i < student.length; i++) {  
+        Student s = student[i];
+        if (s != null && s.getEmail().equals(email) && s.getPassword().equals(password)) {
+            return true; 
+        }
+    }
+    return false;
+}
+
 }

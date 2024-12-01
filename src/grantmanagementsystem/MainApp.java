@@ -9,8 +9,8 @@ package grantmanagementsystem;
  * @author Gregory
  */
 public class MainApp {
-    
+
     public static void main(String[] args) {
-         new LoginPageGUI().setVisible(true);
+        new LoginPageGUI().setVisible(true);
     }
 }

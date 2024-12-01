@@ -1,4 +1,4 @@
-/*
+ /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
@@ -8,13 +8,16 @@ package grantmanagementsystem;
  *
  * @author gregm
  */
-public class Administrator {//declaring variables
+import java.util.ArrayList;
+
+public class Administrator {
+
     private String name;
     private String email;
     private String password;
     private int id;
 
-    // Constructor   
+    private static ArrayList<Administrator> adminList = new ArrayList<>();
 
     public Administrator(String name, String email, String password, int id) {
         this.name = name;
@@ -23,22 +26,26 @@ public class Administrator {//declaring variables
         this.id = id;
     }
 
+    // Static method to populate the admin list
+    public static void createAdmins() {
+        adminList.add(new Administrator("Jacob Williams", "JacobWilliams@gmail.com", "Dogs1234", 198));
+        adminList.add(new Administrator("Peter Jacobson", "PeterJacobson@gmail.com", "Cats234345", 2));
+        adminList.add(new Administrator("Anna White", "AnnaWhite@gmail.com", "HelloWorld3456", 3));
+        adminList.add(new Administrator("Sophie Blank", "SophieBlank@gmail.com", "Password4567", 4));
+        adminList.add(new Administrator("Fiona Clark", "FionaClark@gmail.com", "UnkownOcean5678", 5));
+        adminList.add(new Administrator("Jack Adams", "JackAdams@gmail.com", "Ali6789", 6));
+    }
 
-    public static Administrator[] admin = new Administrator[6];//creating 6 accounts
+    public static ArrayList<Administrator> getAdmins() {
+        return adminList;
+    }
 
-    private static void createAdmins() {//start create user//method to create all users in the array
-
-        admin[0] = new Administrator("Jacob Williams", "JacobWilliams@gmail.com", "Dogs1234", 198);
-        admin[1] = new Administrator("Peter Jacobson", "PeterJacobson@gmail.com", "Cats234345", 2);
-        admin[2] = new Administrator("Anna White", "AnnaWhite@gmail.com", "HelloWorld3456", 3);
-        admin[3] = new Administrator("Sophie Blank", "SophieBlank@gmail.com", "Password4567", 4);
-        admin[4] = new Administrator("Fiona Clark", "FionaClark@gmail.com", "UnkownOcean5678", 5);
-        admin[5] = new Administrator("Jack Adams", "JackAdams@gmail.com", "Ali6789", 6);
-
-    }//end 
-   
     public String getName() {
         return name;
+    }
+
+    public String getEmail() {
+        return email;
     }
 
     public String getPassword() {
@@ -48,35 +55,13 @@ public class Administrator {//declaring variables
     public int getId() {
         return id;
     }
-
-    public static Administrator[] getAdmin() {
-        return admin;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
     
-    public void setName(String name) {
-        this.name = name;
+    public static boolean loginAdmin(String email, String password) {
+        for (Administrator admin : adminList) {
+            if (admin.getEmail().equals(email) && admin.getPassword().equals(password)) {
+                return true;
+            }
+        }
+        return false;
     }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public static void setAdmins(Administrator[] admins) {
-        Administrator.admin = admins;
-    }
-    
-    
-    
 }
