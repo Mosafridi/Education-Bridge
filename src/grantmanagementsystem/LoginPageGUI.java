@@ -222,43 +222,11 @@ public class LoginPageGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_passwordFieldActionPerformed
 
     private void emailFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_emailFieldKeyPressed
-String inputText = emailField.getText();
-    int maxLength = 30; 
 
-    int keyCode = evt.getKeyCode();
-
-    if ((keyCode >= KeyEvent.VK_A && keyCode <= KeyEvent.VK_Z) || 
-        (keyCode >= KeyEvent.VK_0 && keyCode <= KeyEvent.VK_9) || 
-        keyCode == KeyEvent.VK_BACK_SPACE){
-        
-        if (inputText.length() >= maxLength && keyCode != KeyEvent.VK_BACK_SPACE) {
-            JOptionPane.showMessageDialog(null, "Maximum 30 characters for email!");
-            evt.consume();
-        }
-    } else {
-        JOptionPane.showMessageDialog(null, "Invalid character. Please use valid email characters.");
-        evt.consume();
-    }
     }//GEN-LAST:event_emailFieldKeyPressed
 
     private void passwordFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_passwordFieldKeyPressed
-        String inputText = passwordField.getText();
-    int maxLength = 30; 
 
-    int keyCode = evt.getKeyCode();
-
-    if ((keyCode >= KeyEvent.VK_A && keyCode <= KeyEvent.VK_Z) || 
-        (keyCode >= KeyEvent.VK_0 && keyCode <= KeyEvent.VK_9) || 
-        keyCode == KeyEvent.VK_BACK_SPACE){
-        
-        if (inputText.length() >= maxLength && keyCode != KeyEvent.VK_BACK_SPACE) {
-            JOptionPane.showMessageDialog(null, "Maximum 30 characters for email!");
-            evt.consume();
-        }
-    } else {
-        JOptionPane.showMessageDialog(null, "Invalid character. Please use valid email characters.");
-        evt.consume();
-    }
     }//GEN-LAST:event_passwordFieldKeyPressed
 
     /**
