@@ -710,6 +710,9 @@
                           <Image iconType="3" name="/img/video-lesson.png"/>
                         </Property>
                       </Properties>
+                      <Events>
+                        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="TutorialLabel2MouseClicked"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JLabel" name="TutorialLabel3">
                       <Properties>
@@ -718,6 +721,9 @@
                           <Image iconType="3" name="/img/video-lesson.png"/>
                         </Property>
                       </Properties>
+                      <Events>
+                        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="TutorialLabel3MouseClicked"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JLabel" name="TutorialLabel5">
                       <Properties>
@@ -726,6 +732,9 @@
                           <Image iconType="3" name="/img/video-lesson.png"/>
                         </Property>
                       </Properties>
+                      <Events>
+                        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="TutorialLabel5MouseClicked"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JLabel" name="TutorialLabel4">
                       <Properties>
@@ -734,6 +743,9 @@
                           <Image iconType="3" name="/img/video-lesson.png"/>
                         </Property>
                       </Properties>
+                      <Events>
+                        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="TutorialLabel4MouseClicked"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JLabel" name="Tutorial1Label">
                       <Properties>
@@ -742,6 +754,9 @@
                           <Image iconType="3" name="/img/video-lesson.png"/>
                         </Property>
                       </Properties>
+                      <Events>
+                        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Tutorial1LabelMouseClicked"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JLabel" name="TutorialNameLabel">
                       <Properties>
@@ -977,7 +992,7 @@
                               <Properties>
                                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                                   <StringArray count="6">
-                                    <StringItem index="0" value="Central processing unit"/>
+                                    <StringItem index="0" value="Central Processing Unit"/>
                                     <StringItem index="1" value="Cornered processing union"/>
                                     <StringItem index="2" value="Centrelised Power unit"/>
                                     <StringItem index="3" value="Cell processing unit"/>
@@ -1011,7 +1026,7 @@
                                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                                   <StringArray count="4">
                                     <StringItem index="0" value="Power Shell Unit"/>
-                                    <StringItem index="1" value="Power supply unit"/>
+                                    <StringItem index="1" value="Power Supply Unit"/>
                                     <StringItem index="2" value="Primary suppy unit"/>
                                     <StringItem index="3" value="Perfect supply unit"/>
                                   </StringArray>
@@ -1024,11 +1039,12 @@
                             <Component class="javax.swing.JComboBox" name="ComputerQuizComboBox4">
                               <Properties>
                                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                                  <StringArray count="4">
-                                    <StringItem index="0" value="Item 1"/>
-                                    <StringItem index="1" value="Item 2"/>
-                                    <StringItem index="2" value="Item 3"/>
-                                    <StringItem index="3" value="Item 4"/>
+                                  <StringArray count="5">
+                                    <StringItem index="0" value="Store Some Data"/>
+                                    <StringItem index="1" value="Save Some Data"/>
+                                    <StringItem index="2" value="Solid State Drive"/>
+                                    <StringItem index="3" value="Store State Drive"/>
+                                    <StringItem index="4" value=" "/>
                                   </StringArray>
                                 </Property>
                               </Properties>
@@ -1039,11 +1055,12 @@
                             <Component class="javax.swing.JComboBox" name="ComputerQuizComboBox5">
                               <Properties>
                                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                                  <StringArray count="4">
-                                    <StringItem index="0" value="Item 1"/>
-                                    <StringItem index="1" value="Item 2"/>
-                                    <StringItem index="2" value="Item 3"/>
-                                    <StringItem index="3" value="Item 4"/>
+                                  <StringArray count="5">
+                                    <StringItem index="0" value="Graphical Processing Unit"/>
+                                    <StringItem index="1" value="Graphic Prone Unit"/>
+                                    <StringItem index="2" value="Graphics Processing Under"/>
+                                    <StringItem index="3" value="Game Processing Unit"/>
+                                    <StringItem index="4" value=" "/>
                                   </StringArray>
                                 </Property>
                               </Properties>
@@ -1211,6 +1228,9 @@
                                   <Dimension value="[72, 22]"/>
                                 </Property>
                               </Properties>
+                              <Events>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="GeographyQuizCheckBTNActionPerformed"/>
+                              </Events>
                             </Component>
                             <Component class="javax.swing.JLabel" name="GeographyQuestionLabel1">
                               <Properties>
@@ -1234,7 +1254,7 @@
                             </Component>
                             <Component class="javax.swing.JLabel" name="GeographyQuestionLabel5">
                               <Properties>
-                                <Property name="text" type="java.lang.String" value="Which one of these is not a continent?"/>
+                                <Property name="text" type="java.lang.String" value="Which continent is the smallest?"/>
                               </Properties>
                             </Component>
                             <Component class="javax.swing.JButton" name="GeographyClearBTN1">
@@ -1255,10 +1275,10 @@
                               <Properties>
                                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                                   <StringArray count="4">
-                                    <StringItem index="0" value="Item 1"/>
-                                    <StringItem index="1" value="Item 2"/>
-                                    <StringItem index="2" value="Item 3"/>
-                                    <StringItem index="3" value="Item 4"/>
+                                    <StringItem index="0" value="Oceania"/>
+                                    <StringItem index="1" value="Africa"/>
+                                    <StringItem index="2" value="Europe"/>
+                                    <StringItem index="3" value="South America"/>
                                   </StringArray>
                                 </Property>
                               </Properties>
@@ -1270,10 +1290,10 @@
                               <Properties>
                                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                                   <StringArray count="4">
-                                    <StringItem index="0" value="Item 1"/>
-                                    <StringItem index="1" value="Item 2"/>
-                                    <StringItem index="2" value="Item 3"/>
-                                    <StringItem index="3" value="Item 4"/>
+                                    <StringItem index="0" value="Asia"/>
+                                    <StringItem index="1" value="Africa"/>
+                                    <StringItem index="2" value="North America"/>
+                                    <StringItem index="3" value="Antarctica"/>
                                   </StringArray>
                                 </Property>
                               </Properties>
@@ -1285,10 +1305,10 @@
                               <Properties>
                                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                                   <StringArray count="4">
-                                    <StringItem index="0" value="Item 1"/>
-                                    <StringItem index="1" value="Item 2"/>
-                                    <StringItem index="2" value="Item 3"/>
-                                    <StringItem index="3" value="Item 4"/>
+                                    <StringItem index="0" value="Dublin"/>
+                                    <StringItem index="1" value="Meath"/>
+                                    <StringItem index="2" value="Louth"/>
+                                    <StringItem index="3" value="Cork"/>
                                   </StringArray>
                                 </Property>
                               </Properties>
@@ -1299,11 +1319,12 @@
                             <Component class="javax.swing.JComboBox" name="GeographyQuizComboBox2">
                               <Properties>
                                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                                  <StringArray count="4">
-                                    <StringItem index="0" value="Item 1"/>
-                                    <StringItem index="1" value="Item 2"/>
-                                    <StringItem index="2" value="Item 3"/>
-                                    <StringItem index="3" value="Item 4"/>
+                                  <StringArray count="5">
+                                    <StringItem index="0" value="Izmir"/>
+                                    <StringItem index="1" value="Instanbul"/>
+                                    <StringItem index="2" value="Bursa"/>
+                                    <StringItem index="3" value="Konya"/>
+                                    <StringItem index="4" value=" "/>
                                   </StringArray>
                                 </Property>
                               </Properties>
@@ -1315,10 +1336,10 @@
                               <Properties>
                                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                                   <StringArray count="4">
-                                    <StringItem index="0" value="Item 1"/>
-                                    <StringItem index="1" value="Item 2"/>
-                                    <StringItem index="2" value="Item 3"/>
-                                    <StringItem index="3" value="Item 4"/>
+                                    <StringItem index="0" value="Hunan"/>
+                                    <StringItem index="1" value="Hebei"/>
+                                    <StringItem index="2" value="Sichuan"/>
+                                    <StringItem index="3" value="Beijing"/>
                                   </StringArray>
                                 </Property>
                               </Properties>
@@ -1379,6 +1400,9 @@
                                   <Dimension value="[72, 22]"/>
                                 </Property>
                               </Properties>
+                              <Events>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ProgrammingQuizCheckBTNActionPerformed"/>
+                              </Events>
                               <Constraints>
                                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                                   <AbsoluteConstraints x="260" y="310" width="-1" height="-1"/>
@@ -1406,7 +1430,7 @@
                             </Component>
                             <Component class="javax.swing.JLabel" name="ProgrammingQuestionLabel5">
                               <Properties>
-                                <Property name="text" type="java.lang.String" value="Which one of these is not a continent?"/>
+                                <Property name="text" type="java.lang.String" value="Which method is used to get the length of arraylists"/>
                               </Properties>
                               <Constraints>
                                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -1416,7 +1440,7 @@
                             </Component>
                             <Component class="javax.swing.JLabel" name="ProgrammingQuestionLabel4">
                               <Properties>
-                                <Property name="text" type="java.lang.String" value="Which continent is the largest?"/>
+                                <Property name="text" type="java.lang.String" value="Which is the correct way to delare a variable in java"/>
                               </Properties>
                               <Constraints>
                                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -1426,7 +1450,7 @@
                             </Component>
                             <Component class="javax.swing.JLabel" name="ProgrammingQuestionLabel3">
                               <Properties>
-                                <Property name="text" type="java.lang.String" value="What is the capital of Ireland?"/>
+                                <Property name="text" type="java.lang.String" value="What is the correct way to declare a constant in C"/>
                               </Properties>
                               <Constraints>
                                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -1436,7 +1460,7 @@
                             </Component>
                             <Component class="javax.swing.JLabel" name="ProgrammingQuestionLabel2">
                               <Properties>
-                                <Property name="text" type="java.lang.String" value="What is the capital of Turkey?"/>
+                                <Property name="text" type="java.lang.String" value="What is used to create a function in python"/>
                               </Properties>
                               <Constraints>
                                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -1446,7 +1470,7 @@
                             </Component>
                             <Component class="javax.swing.JLabel" name="ProgrammingQuestionLabel1">
                               <Properties>
-                                <Property name="text" type="java.lang.String" value="What is the capital of China?"/>
+                                <Property name="text" type="java.lang.String" value="Which one of these is a loop in python"/>
                               </Properties>
                               <Constraints>
                                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -1458,10 +1482,10 @@
                               <Properties>
                                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                                   <StringArray count="4">
-                                    <StringItem index="0" value="Item 1"/>
-                                    <StringItem index="1" value="Item 2"/>
-                                    <StringItem index="2" value="Item 3"/>
-                                    <StringItem index="3" value="Item 4"/>
+                                    <StringItem index="0" value="while"/>
+                                    <StringItem index="1" value="under"/>
+                                    <StringItem index="2" value="wtc"/>
+                                    <StringItem index="3" value="do-while"/>
                                   </StringArray>
                                 </Property>
                               </Properties>
@@ -1477,11 +1501,12 @@
                             <Component class="javax.swing.JComboBox" name="ProgrammingComboBox2">
                               <Properties>
                                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                                  <StringArray count="4">
-                                    <StringItem index="0" value="Item 1"/>
-                                    <StringItem index="1" value="Item 2"/>
-                                    <StringItem index="2" value="Item 3"/>
-                                    <StringItem index="3" value="Item 4"/>
+                                  <StringArray count="5">
+                                    <StringItem index="0" value="func"/>
+                                    <StringItem index="1" value="def"/>
+                                    <StringItem index="2" value="create"/>
+                                    <StringItem index="3" value="method"/>
+                                    <StringItem index="4" value=" "/>
                                   </StringArray>
                                 </Property>
                               </Properties>
@@ -1497,11 +1522,12 @@
                             <Component class="javax.swing.JComboBox" name="ProgrammingComboBox3">
                               <Properties>
                                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                                  <StringArray count="4">
-                                    <StringItem index="0" value="Item 1"/>
-                                    <StringItem index="1" value="Item 2"/>
-                                    <StringItem index="2" value="Item 3"/>
-                                    <StringItem index="3" value="Item 4"/>
+                                  <StringArray count="5">
+                                    <StringItem index="0" value="constant x = 5;"/>
+                                    <StringItem index="1" value="con x = 5;"/>
+                                    <StringItem index="2" value="var x = 5;"/>
+                                    <StringItem index="3" value="final int y  = 5;"/>
+                                    <StringItem index="4" value=" "/>
                                   </StringArray>
                                 </Property>
                               </Properties>
@@ -1518,10 +1544,10 @@
                               <Properties>
                                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                                   <StringArray count="4">
-                                    <StringItem index="0" value="Item 1"/>
-                                    <StringItem index="1" value="Item 2"/>
-                                    <StringItem index="2" value="Item 3"/>
-                                    <StringItem index="3" value="Item 4"/>
+                                    <StringItem index="0" value="int x = 10;"/>
+                                    <StringItem index="1" value="var y = 10;"/>
+                                    <StringItem index="2" value="delcare x int = 10;"/>
+                                    <StringItem index="3" value="x = int 10;"/>
                                   </StringArray>
                                 </Property>
                               </Properties>
@@ -1538,10 +1564,10 @@
                               <Properties>
                                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                                   <StringArray count="4">
-                                    <StringItem index="0" value="Item 1"/>
-                                    <StringItem index="1" value="Item 2"/>
-                                    <StringItem index="2" value="Item 3"/>
-                                    <StringItem index="3" value="Item 4"/>
+                                    <StringItem index="0" value="array.size()"/>
+                                    <StringItem index="1" value="array.length()"/>
+                                    <StringItem index="2" value="array.count()"/>
+                                    <StringItem index="3" value="array.getLength()"/>
                                   </StringArray>
                                 </Property>
                               </Properties>

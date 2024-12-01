@@ -10,17 +10,17 @@ package grantmanagementsystem;
  */
 public class Administrator {//declaring variables
     private String name;
+    private String email;
     private String password;
     private int id;
-    private int permissionsLevel;
 
     // Constructor   
 
-    public Administrator(String name, String password, int id, int permissionsLevel) {
+    public Administrator(String name, String email, String password, int id) {
         this.name = name;
+        this.email = email;
         this.password = password;
         this.id = id;
-        this.permissionsLevel = permissionsLevel;
     }
 
 
@@ -28,19 +28,15 @@ public class Administrator {//declaring variables
 
     private static void createAdmins() {//start create user//method to create all users in the array
 
-        admin[0] = new Administrator("Jacob Williams", "Dogs1234", 198, 5);
-        admin[1] = new Administrator("Peter Jacobson", "Cats234345", 2, 4);
-        admin[2] = new Administrator("Anna White", "HelloWorld3456", 3, 5);
-        admin[3] = new Administrator("Sophie Blank", "Password4567", 4, 2);
-        admin[4] = new Administrator("Fiona Clark", "UnkownOcean5678", 5, 1);
-        admin[5] = new Administrator("Jack Adams", "Ali6789", 6, 4);
+        admin[0] = new Administrator("Jacob Williams", "JacobWilliams@gmail.com", "Dogs1234", 198);
+        admin[1] = new Administrator("Peter Jacobson", "PeterJacobson@gmail.com", "Cats234345", 2);
+        admin[2] = new Administrator("Anna White", "AnnaWhite@gmail.com", "HelloWorld3456", 3);
+        admin[3] = new Administrator("Sophie Blank", "SophieBlank@gmail.com", "Password4567", 4);
+        admin[4] = new Administrator("Fiona Clark", "FionaClark@gmail.com", "UnkownOcean5678", 5);
+        admin[5] = new Administrator("Jack Adams", "JackAdams@gmail.com", "Ali6789", 6);
 
     }//end 
-    
-    public void permissionsfunctionality(){
-        
-    }
-
+   
     public String getName() {
         return name;
     }
@@ -57,6 +53,14 @@ public class Administrator {//declaring variables
         return admin;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    
     public void setName(String name) {
         this.name = name;
     }

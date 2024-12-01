@@ -4,17 +4,10 @@
  */
 package grantmanagementsystem;
 
-import java.awt.event.KeyEvent;
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.ArrayList;
+
+import java.awt.Color;
+import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
-import javax.swing.JOptionPane;
-import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -418,18 +411,43 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {
 
         TutorialLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TutorialLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/video-lesson.png"))); // NOI18N
+        TutorialLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                TutorialLabel2MouseClicked(evt);
+            }
+        });
 
         TutorialLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TutorialLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/video-lesson.png"))); // NOI18N
+        TutorialLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                TutorialLabel3MouseClicked(evt);
+            }
+        });
 
         TutorialLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TutorialLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/video-lesson.png"))); // NOI18N
+        TutorialLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                TutorialLabel5MouseClicked(evt);
+            }
+        });
 
         TutorialLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TutorialLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/video-lesson.png"))); // NOI18N
+        TutorialLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                TutorialLabel4MouseClicked(evt);
+            }
+        });
 
         Tutorial1Label.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Tutorial1Label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/video-lesson.png"))); // NOI18N
+        Tutorial1Label.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Tutorial1LabelMouseClicked(evt);
+            }
+        });
 
         TutorialNameLabel.setFont(new java.awt.Font("Bauhaus 93", 1, 12)); // NOI18N
         TutorialNameLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -544,15 +562,15 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {
 
         ComputersQuestionLabel5.setText("What does \"GPU\" stand for?");
 
-        ComputerQuizComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Central processing unit", "Cornered processing union", "Centrelised Power unit", "Cell processing unit", " ", " " }));
+        ComputerQuizComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Central Processing Unit", "Cornered processing union", "Centrelised Power unit", "Cell processing unit", " ", " " }));
 
         ComputerQuizComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Storing data", "Loading graphics", "Executing instructions", "Supply power", " " }));
 
-        ComputerQuizComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Power Shell Unit", "Power supply unit", "Primary suppy unit", "Perfect supply unit" }));
+        ComputerQuizComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Power Shell Unit", "Power Supply Unit", "Primary suppy unit", "Perfect supply unit" }));
 
-        ComputerQuizComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        ComputerQuizComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Store Some Data", "Save Some Data", "Solid State Drive", "Store State Drive", " " }));
 
-        ComputerQuizComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        ComputerQuizComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Graphical Processing Unit", "Graphic Prone Unit", "Graphics Processing Under", "Game Processing Unit", " " }));
 
         ComputersClearBTN.setText("Clear ");
         ComputersClearBTN.setMaximumSize(new java.awt.Dimension(72, 22));
@@ -655,6 +673,11 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {
         GeographyQuizCheckBTN.setMaximumSize(new java.awt.Dimension(72, 22));
         GeographyQuizCheckBTN.setMinimumSize(new java.awt.Dimension(72, 22));
         GeographyQuizCheckBTN.setPreferredSize(new java.awt.Dimension(72, 22));
+        GeographyQuizCheckBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                GeographyQuizCheckBTNActionPerformed(evt);
+            }
+        });
 
         GeographyQuestionLabel1.setText("What is the capital of China?");
 
@@ -664,22 +687,22 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {
 
         GeographyQuestionLabel4.setText("Which continent is the largest?");
 
-        GeographyQuestionLabel5.setText("Which one of these is not a continent?");
+        GeographyQuestionLabel5.setText("Which continent is the smallest?");
 
         GeographyClearBTN1.setText("Clear");
         GeographyClearBTN1.setMaximumSize(new java.awt.Dimension(72, 22));
         GeographyClearBTN1.setMinimumSize(new java.awt.Dimension(72, 22));
         GeographyClearBTN1.setPreferredSize(new java.awt.Dimension(72, 22));
 
-        GeographyQuizComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        GeographyQuizComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Oceania", "Africa", "Europe", "South America" }));
 
-        GeographyQuizComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        GeographyQuizComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Asia", "Africa", "North America", "Antarctica" }));
 
-        GeographyQuizComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        GeographyQuizComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Dublin", "Meath", "Louth", "Cork" }));
 
-        GeographyQuizComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        GeographyQuizComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Izmir", "Instanbul", "Bursa", "Konya", " " }));
 
-        GeographyQuizComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        GeographyQuizComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Hunan", "Hebei", "Sichuan", "Beijing" }));
 
         exitBTn3.setBackground(new java.awt.Color(255, 51, 51));
         exitBTn3.setText("EXIT");
@@ -765,6 +788,11 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {
         ProgrammingQuizCheckBTN.setMaximumSize(new java.awt.Dimension(72, 22));
         ProgrammingQuizCheckBTN.setMinimumSize(new java.awt.Dimension(72, 22));
         ProgrammingQuizCheckBTN.setPreferredSize(new java.awt.Dimension(72, 22));
+        ProgrammingQuizCheckBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ProgrammingQuizCheckBTNActionPerformed(evt);
+            }
+        });
         ProgrammingQuizPNL.add(ProgrammingQuizCheckBTN);
         ProgrammingQuizCheckBTN.setBounds(260, 310, 72, 22);
 
@@ -775,43 +803,43 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {
         ProgrammingQuizPNL.add(ProgrammingClearBTN);
         ProgrammingClearBTN.setBounds(170, 310, 72, 22);
 
-        ProgrammingQuestionLabel5.setText("Which one of these is not a continent?");
+        ProgrammingQuestionLabel5.setText("Which method is used to get the length of arraylists");
         ProgrammingQuizPNL.add(ProgrammingQuestionLabel5);
         ProgrammingQuestionLabel5.setBounds(21, 222, 275, 16);
 
-        ProgrammingQuestionLabel4.setText("Which continent is the largest?");
+        ProgrammingQuestionLabel4.setText("Which is the correct way to delare a variable in java");
         ProgrammingQuizPNL.add(ProgrammingQuestionLabel4);
         ProgrammingQuestionLabel4.setBounds(21, 182, 275, 16);
 
-        ProgrammingQuestionLabel3.setText("What is the capital of Ireland?");
+        ProgrammingQuestionLabel3.setText("What is the correct way to declare a constant in C");
         ProgrammingQuizPNL.add(ProgrammingQuestionLabel3);
         ProgrammingQuestionLabel3.setBounds(21, 148, 275, 16);
 
-        ProgrammingQuestionLabel2.setText("What is the capital of Turkey?");
+        ProgrammingQuestionLabel2.setText("What is used to create a function in python");
         ProgrammingQuizPNL.add(ProgrammingQuestionLabel2);
         ProgrammingQuestionLabel2.setBounds(21, 108, 275, 16);
 
-        ProgrammingQuestionLabel1.setText("What is the capital of China?");
+        ProgrammingQuestionLabel1.setText("Which one of these is a loop in python");
         ProgrammingQuizPNL.add(ProgrammingQuestionLabel1);
         ProgrammingQuestionLabel1.setBounds(21, 68, 275, 16);
 
-        ProgrammingComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        ProgrammingComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "while", "under", "wtc", "do-while" }));
         ProgrammingQuizPNL.add(ProgrammingComboBox);
         ProgrammingComboBox.setBounds(302, 65, 228, 22);
 
-        ProgrammingComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        ProgrammingComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "func", "def", "create", "method", " " }));
         ProgrammingQuizPNL.add(ProgrammingComboBox2);
         ProgrammingComboBox2.setBounds(302, 105, 228, 22);
 
-        ProgrammingComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        ProgrammingComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "constant x = 5;", "con x = 5;", "var x = 5;", "final int y  = 5;", " " }));
         ProgrammingQuizPNL.add(ProgrammingComboBox3);
         ProgrammingComboBox3.setBounds(302, 145, 228, 22);
 
-        ProgrammingComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        ProgrammingComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "int x = 10;", "var y = 10;", "delcare x int = 10;", "x = int 10;" }));
         ProgrammingQuizPNL.add(ProgrammingComboBox4);
         ProgrammingComboBox4.setBounds(302, 179, 228, 22);
 
-        ProgrammingComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        ProgrammingComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "array.size()", "array.length()", "array.count()", "array.getLength()" }));
         ProgrammingQuizPNL.add(ProgrammingComboBox5);
         ProgrammingComboBox5.setBounds(302, 219, 228, 22);
 
@@ -1245,6 +1273,22 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {
     }//GEN-LAST:event_ContactUsEmailFieldKeyPressed
 
     private void SendFeedbackBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SendFeedbackBTNActionPerformed
+String firstname = ContactUsFirstNameField.getText();
+String surname = ContactUsSurnameField.getText();
+String gmail = ContactUsEmailField.getText();
+String dateReview = ContactUsReviewDateFormattedField.getText();
+String content = FeedbackTextArea.getText();
+
+
+if (ContactUsFirstNameField.getText().isEmpty() || ContactUsEmailField.getText().isEmpty() || dateReview.isEmpty() || FeedbackTextArea.getText().isEmpty() || ContactUsFirstNameField.getText().isEmpty() ) {
+    JOptionPane.showMessageDialog(null, "All fields must be filled!", "Error", JOptionPane.ERROR_MESSAGE);
+    return;
+}
+
+ResourceHub resourceHub = new ResourceHub();
+resourceHub.ContactUs(firstname, surname, gmail, dateReview, content);
+
+JOptionPane.showMessageDialog(null, "Your feedback has been successfully saved.", "Success", JOptionPane.INFORMATION_MESSAGE);
 
     }//GEN-LAST:event_SendFeedbackBTNActionPerformed
 
@@ -1323,7 +1367,7 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {
     }//GEN-LAST:event_SaveResourseBTNActionPerformed
 
     private void ViewResourceBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ViewResourceBTNActionPerformed
-        ResourceHub resourceHub = new ResourceHub(); // creating instance
+        ResourceHub resourceHub = new ResourceHub();
 
         resourceHub.loadResources(ResourceTBL);//call upon method to load resources and senign the tbl as a arg so it has access, i didnt know how to do with without making the table static , and i wanted to try my best to encapsulate as much as possible so this seemed to be the best way to do it
     }//GEN-LAST:event_ViewResourceBTNActionPerformed
@@ -1335,7 +1379,7 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {
     private void exitBTnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBTnActionPerformed
         setVisible(false);
 
-        // Open the HomePage
+     
         HomePage homePage = new HomePage();
         homePage.setVisible(true);
     }//GEN-LAST:event_exitBTnActionPerformed
@@ -1343,7 +1387,7 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {
     private void exitBTn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBTn1ActionPerformed
         setVisible(false);
 
-        // Open the HomePage
+       
         HomePage homePage = new HomePage();
         homePage.setVisible(true);
     }//GEN-LAST:event_exitBTn1ActionPerformed
@@ -1351,7 +1395,7 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {
     private void exitBTn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBTn2ActionPerformed
         setVisible(false);
 
-        // Open the HomePage
+     
         HomePage homePage = new HomePage();
         homePage.setVisible(true);
     }//GEN-LAST:event_exitBTn2ActionPerformed
@@ -1359,7 +1403,7 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {
     private void exitBTn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBTn3ActionPerformed
         setVisible(false);
 
-        // Open the HomePage
+       
         HomePage homePage = new HomePage();
         homePage.setVisible(true);
     }//GEN-LAST:event_exitBTn3ActionPerformed
@@ -1367,7 +1411,7 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {
     private void exitBTn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBTn4ActionPerformed
         setVisible(false);
 
-        // Open the HomePage
+        
         HomePage homePage = new HomePage();
         homePage.setVisible(true);
     }//GEN-LAST:event_exitBTn4ActionPerformed
@@ -1375,24 +1419,176 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {
     private void exitBTn5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBTn5ActionPerformed
         setVisible(false);
 
-        // Open the HomePage
+    
         HomePage homePage = new HomePage();
         homePage.setVisible(true);
     }//GEN-LAST:event_exitBTn5ActionPerformed
 
     private void exitBTn6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBTn6ActionPerformed
-        // TODO add your handling code here:
         setVisible(false);
 
-        // Open the HomePage
+      
         HomePage homePage = new HomePage();
         homePage.setVisible(true);
     }//GEN-LAST:event_exitBTn6ActionPerformed
 
     private void ComputersQuizCheckBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComputersQuizCheckBTNActionPerformed
-        // TODO add your handling code here:
+    String correctAnswer1 = "Central Processing Unit";
+    String correctAnswer2 = "Power Supply Unit";
+    String correctAnswer3 = "Storing data";
+    String correctAnswer4 = "Solid State Drive";
+    String correctAnswer5 = "Graphical Processing Unit";
+
+    String selectedAnswer1 = (String) ComputerQuizComboBox.getSelectedItem();
+    String selectedAnswer2 = (String) ComputerQuizComboBox2.getSelectedItem();
+    String selectedAnswer3 = (String) ComputerQuizComboBox3.getSelectedItem();
+    String selectedAnswer4 = (String) ComputerQuizComboBox4.getSelectedItem();
+    String selectedAnswer5 = (String) ComputerQuizComboBox5.getSelectedItem();
+
+    if (selectedAnswer1.equals(correctAnswer1)) {
+        ComputerQuizComboBox.setBackground(Color.GREEN); 
+    } else {
+        ComputerQuizComboBox.setBackground(Color.RED);
+    }
+
+    if (selectedAnswer2.equals(correctAnswer2)) {
+        ComputerQuizComboBox2.setBackground(Color.GREEN);
+    } else {
+        ComputerQuizComboBox2.setBackground(Color.RED);
+    }
+
+    if (selectedAnswer3.equals(correctAnswer3)) {
+        ComputerQuizComboBox3.setBackground(Color.GREEN);
+    } else {
+        ComputerQuizComboBox2.setBackground(Color.RED);
+    }
+
+    if (selectedAnswer4.equals(correctAnswer4)) {
+        ComputerQuizComboBox4.setBackground(Color.GREEN);
+    } else {
+        ComputerQuizComboBox4.setBackground(Color.RED);
+    }
+
+    if (selectedAnswer5.equals(correctAnswer5)) {
+        ComputerQuizComboBox5.setBackground(Color.GREEN);
+    } else {
+        ComputerQuizComboBox5.setBackground(Color.RED);
+    }
+
+
     }//GEN-LAST:event_ComputersQuizCheckBTNActionPerformed
 
+    private void Tutorial1LabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Tutorial1LabelMouseClicked
+        ResourceHub.Tutorial1(); 
+    }//GEN-LAST:event_Tutorial1LabelMouseClicked
+
+    private void TutorialLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TutorialLabel2MouseClicked
+        ResourceHub.Tutorial2(); 
+
+    }//GEN-LAST:event_TutorialLabel2MouseClicked
+
+    private void TutorialLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TutorialLabel3MouseClicked
+        ResourceHub.Tutorial3(); 
+    }//GEN-LAST:event_TutorialLabel3MouseClicked
+
+    private void TutorialLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TutorialLabel4MouseClicked
+        ResourceHub.Tutorial4();
+    }//GEN-LAST:event_TutorialLabel4MouseClicked
+
+    private void TutorialLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TutorialLabel5MouseClicked
+        ResourceHub.Tutorial4();
+    }//GEN-LAST:event_TutorialLabel5MouseClicked
+
+    private void GeographyQuizCheckBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GeographyQuizCheckBTNActionPerformed
+    String correctAnswer1 = "Beijing";
+    String correctAnswer2 = "Instanbul";
+    String correctAnswer3 = "Dublin";
+    String correctAnswer4 = "Asia";
+    String correctAnswer5 = "Oceania";
+
+    String selectedAnswer1 = (String) GeographyQuizComboBox.getSelectedItem();
+    String selectedAnswer2 = (String) GeographyQuizComboBox2.getSelectedItem();
+    String selectedAnswer3 = (String) GeographyQuizComboBox3.getSelectedItem();
+    String selectedAnswer4 = (String) GeographyQuizComboBox4.getSelectedItem();
+    String selectedAnswer5 = (String) GeographyQuizComboBox5.getSelectedItem();
+
+    if (selectedAnswer1.equals(correctAnswer1)) {
+        GeographyQuizComboBox.setBackground(Color.GREEN); 
+    } else {
+        GeographyQuizComboBox.setBackground(Color.RED);
+    }
+
+    if (selectedAnswer2.equals(correctAnswer2)) {
+        GeographyQuizComboBox2.setBackground(Color.GREEN);
+    } else {
+        GeographyQuizComboBox2.setBackground(Color.RED);
+    }
+
+    if (selectedAnswer3.equals(correctAnswer3)) {
+        GeographyQuizComboBox3.setBackground(Color.GREEN);
+    } else {
+        GeographyQuizComboBox3.setBackground(Color.RED);
+    }
+
+    if (selectedAnswer4.equals(correctAnswer4)) {
+        GeographyQuizComboBox4.setBackground(Color.GREEN);
+    } else {
+        GeographyQuizComboBox4.setBackground(Color.RED);
+    }
+
+    if (selectedAnswer5.equals(correctAnswer5)) {
+        GeographyQuizComboBox5.setBackground(Color.GREEN);
+    } else {
+        GeographyQuizComboBox5.setBackground(Color.RED);
+    }
+    
+    }//GEN-LAST:event_GeographyQuizCheckBTNActionPerformed
+
+    private void ProgrammingQuizCheckBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProgrammingQuizCheckBTNActionPerformed
+    String correctAnswer1 = "while";
+    String correctAnswer2 = "func";
+    String correctAnswer3 = "constant x = 5;";
+    String correctAnswer4 = "int x = 10;";
+    String correctAnswer5 = "array.size()";
+
+    String selectedAnswer1 = (String) ProgrammingComboBox.getSelectedItem();
+    String selectedAnswer2 = (String) ProgrammingComboBox2.getSelectedItem();
+    String selectedAnswer3 = (String) ProgrammingComboBox3.getSelectedItem();
+    String selectedAnswer4 = (String) ProgrammingComboBox4.getSelectedItem();
+    String selectedAnswer5 = (String) ProgrammingComboBox5.getSelectedItem();
+
+    if (selectedAnswer1.equals(correctAnswer1)) {
+        ProgrammingComboBox.setBackground(Color.GREEN); 
+    } else {
+        ProgrammingComboBox.setBackground(Color.RED);
+    }
+
+    if (selectedAnswer2.equals(correctAnswer2)) {
+        ProgrammingComboBox2.setBackground(Color.GREEN);
+    } else {
+        ProgrammingComboBox2.setBackground(Color.RED);
+    }
+
+    if (selectedAnswer3.equals(correctAnswer3)) {
+        ProgrammingComboBox3.setBackground(Color.GREEN);
+    } else {
+        ProgrammingComboBox3.setBackground(Color.RED);
+    }
+
+    if (selectedAnswer4.equals(correctAnswer4)) {
+        ProgrammingComboBox4.setBackground(Color.GREEN);
+    } else {
+        ProgrammingComboBox4.setBackground(Color.RED);
+    }
+
+    if (selectedAnswer5.equals(correctAnswer5)) {
+        ProgrammingComboBox5.setBackground(Color.GREEN);
+    } else {
+        ProgrammingComboBox5.setBackground(Color.RED);
+    }
+    }//GEN-LAST:event_ProgrammingQuizCheckBTNActionPerformed
+
+    
     /**
      * @param args the command line arguments
      */
