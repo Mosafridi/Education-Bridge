@@ -6,7 +6,7 @@ package grantmanagementsystem;
 
 /**
  *
- * @author gregm
+ * @author karawan
  */
 public class Course {
     

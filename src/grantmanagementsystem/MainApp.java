@@ -6,7 +6,7 @@ package grantmanagementsystem;
 
 /**
  *
- * @author DEll
+ * @author Gregory
  */
 public class MainApp {
     
