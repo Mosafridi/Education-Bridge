@@ -6,7 +6,6 @@ package grantmanagementsystem;
 
 
 import java.awt.Color;//adding for color
-import javax.swing.JComboBox;//adding for color function
 import javax.swing.JOptionPane;//adding for popups within the gui//cant commit
 
 /**
@@ -131,14 +130,14 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {
         ReportGeneratorSurnameField = new javax.swing.JTextField();
         ReportGeneratorEmailField = new javax.swing.JTextField();
         ReportGeneratorContentLabel = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        ContentTextArea = new javax.swing.JTextArea();
         SaveBTN = new javax.swing.JButton();
         ViewBTN = new javax.swing.JButton();
         DeleteBTN = new javax.swing.JButton();
         ReportGeneratorDateFormattedField = new javax.swing.JFormattedTextField();
         ReportGeneratorTitleLabel = new javax.swing.JLabel();
         exitBTn6 = new javax.swing.JButton();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
         ContactUsPNL = new javax.swing.JPanel();
         ContactUsTitleLabel = new javax.swing.JLabel();
         ContactUsFirstNameField = new javax.swing.JTextField();
@@ -909,11 +908,7 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {
         });
 
         ReportGeneratorContentLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ReportGeneratorContentLabel.setText("Content");
-
-        ContentTextArea.setColumns(20);
-        ContentTextArea.setRows(5);
-        jScrollPane1.setViewportView(ContentTextArea);
+        ReportGeneratorContentLabel.setText("Report");
 
         SaveBTN.setText("save");
 
@@ -943,56 +938,69 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {
             }
         });
 
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane3.setViewportView(jTable1);
+
         javax.swing.GroupLayout ReportGeneratorPNLLayout = new javax.swing.GroupLayout(ReportGeneratorPNL);
         ReportGeneratorPNL.setLayout(ReportGeneratorPNLLayout);
         ReportGeneratorPNLLayout.setHorizontalGroup(
             ReportGeneratorPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ReportGeneratorPNLLayout.createSequentialGroup()
-                .addGap(80, 80, 80)
-                .addGroup(ReportGeneratorPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(ReportGeneratorPNLLayout.createSequentialGroup()
-                        .addGroup(ReportGeneratorPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(ReportGeneratorDateFormattedField, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(ReportGeneratorPNLLayout.createSequentialGroup()
-                                .addGap(29, 29, 29)
-                                .addComponent(ReportGeneratorDateLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(ReportGeneratorPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(ReportGeneratorEmailField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ReportGeneratorPNLLayout.createSequentialGroup()
-                                .addComponent(ReportGeneratorEmailLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(32, 32, 32))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, ReportGeneratorPNLLayout.createSequentialGroup()
-                        .addGap(29, 29, 29)
-                        .addComponent(ReportGeneratorFirstNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(ReportGeneratorSurnameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(30, 30, 30))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, ReportGeneratorPNLLayout.createSequentialGroup()
-                        .addComponent(ReportGeneratorFirstNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(ReportGeneratorSurnameField, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, ReportGeneratorPNLLayout.createSequentialGroup()
-                        .addGap(197, 197, 197)
-                        .addComponent(ReportGeneratorContentLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 239, Short.MAX_VALUE)))
-                .addGap(113, 113, 113))
             .addGroup(ReportGeneratorPNLLayout.createSequentialGroup()
+                .addGap(93, 93, 93)
                 .addGroup(ReportGeneratorPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(ReportGeneratorPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jScrollPane3)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ReportGeneratorPNLLayout.createSequentialGroup()
+                            .addGroup(ReportGeneratorPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(ReportGeneratorDateFormattedField, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(ReportGeneratorPNLLayout.createSequentialGroup()
+                                    .addGap(29, 29, 29)
+                                    .addComponent(ReportGeneratorDateLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(ReportGeneratorPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(ReportGeneratorEmailField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ReportGeneratorPNLLayout.createSequentialGroup()
+                                    .addComponent(ReportGeneratorEmailLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(32, 32, 32))))
+                        .addGroup(ReportGeneratorPNLLayout.createSequentialGroup()
+                            .addGap(29, 29, 29)
+                            .addComponent(ReportGeneratorFirstNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(ReportGeneratorSurnameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(30, 30, 30))
+                        .addGroup(ReportGeneratorPNLLayout.createSequentialGroup()
+                            .addComponent(ReportGeneratorFirstNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(ReportGeneratorSurnameField, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(ReportGeneratorPNLLayout.createSequentialGroup()
-                        .addGap(168, 168, 168)
-                        .addComponent(ReportGeneratorTitleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(ReportGeneratorPNLLayout.createSequentialGroup()
-                        .addGap(103, 103, 103)
-                        .addComponent(SaveBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(52, 52, 52)
-                        .addComponent(ViewBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(50, 50, 50)
-                        .addComponent(DeleteBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(46, 46, 46)
-                        .addComponent(exitBTn6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(ReportGeneratorPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(ReportGeneratorPNLLayout.createSequentialGroup()
+                                .addGap(88, 88, 88)
+                                .addComponent(ReportGeneratorTitleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(ReportGeneratorPNLLayout.createSequentialGroup()
+                                .addGap(23, 23, 23)
+                                .addComponent(SaveBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(52, 52, 52)
+                                .addComponent(ViewBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(50, 50, 50)
+                                .addComponent(DeleteBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(46, 46, 46)
+                                .addComponent(exitBTn6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(ReportGeneratorPNLLayout.createSequentialGroup()
+                                .addGap(218, 218, 218)
+                                .addComponent(ReportGeneratorContentLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(100, 100, 100))
         );
         ReportGeneratorPNLLayout.setVerticalGroup(
             ReportGeneratorPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1019,9 +1027,9 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {
                         .addComponent(ReportGeneratorDateLabel)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(ReportGeneratorContentLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 186, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addGroup(ReportGeneratorPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(SaveBTN)
                     .addComponent(ViewBTN)
@@ -1656,7 +1664,6 @@ JOptionPane.showMessageDialog(null, "Your feedback has been successfully saved."
     private javax.swing.JCheckBox ContactUsTermsAndConditionsCheckBox;
     private javax.swing.JLabel ContactUsTermsAndConditionsLabel;
     private javax.swing.JLabel ContactUsTitleLabel;
-    private javax.swing.JTextArea ContentTextArea;
     private javax.swing.JLabel CourseLabel;
     private javax.swing.JButton DeleteBTN;
     public static javax.swing.JTextArea FeedbackTextArea;
@@ -1750,8 +1757,9 @@ JOptionPane.showMessageDialog(null, "Your feedback has been successfully saved."
     private javax.swing.JButton exitBTn4;
     private javax.swing.JButton exitBTn5;
     private javax.swing.JButton exitBTn6;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTabbedPane jTabbedPane3;
+    private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
 }
