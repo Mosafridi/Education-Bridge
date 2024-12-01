@@ -83,7 +83,7 @@ public class ResourceHub {//start ResourceHub class
     public static void Tutorial1() {//method to link tutorials to labels within the GUI educational enviorment
         try {// start try
             Desktop.getDesktop().browse(new URI("https://www.youtube.com/watch?v=jhDUxynEQRI"));//linking youtube tutorial to the GUI labels, ive chosen a youtuber i watch a bit in my spar time as his videos are both entertaining and educations, will reference his channel in the write up
-        } catch (Exception e) {//catch if somethign wenr wrong so program doesnt catch
+        } catch (Exception e) {//catch if somethign went wrong so program doesnt catch
             System.out.println("Error encountered when opening link: " + e.getMessage());//sout to notify the end user there was a error encountered opening the link
         }//end catch for error handling
     }//end method
@@ -91,7 +91,7 @@ public class ResourceHub {//start ResourceHub class
     public static void Tutorial2() {//method to link tutorials to labels within the GUI educational enviorment
         try {// start try
             Desktop.getDesktop().browse(new URI("https://www.youtube.com/watch?v=K1iu1kXkVoA"));//linking youtube tutorial to the GUI labels, ive chosen a youtuber i watch a bit in my spar time as his videos are both entertaining and educations, will reference his channel in the write up
-        } catch (Exception e) {//catch if somethign wenr wrong so program doesnt catch
+        } catch (Exception e) {//catch if somethign went wrong so program doesnt catch
             System.out.println("Error encountered when opening link: " + e.getMessage());
         }//end catch for error handling
     }//end method
@@ -99,7 +99,7 @@ public class ResourceHub {//start ResourceHub class
     public static void Tutorial3() {//method to link tutorials to labels within the GUI educational enviorment
         try {// start try
             Desktop.getDesktop().browse(new URI("https://www.youtube.com/watch?v=tj5sLSFjVj4"));//linking youtube tutorial to the GUI labels, ive chosen a youtuber i watch a bit in my spar time as his videos are both entertaining and educations, will reference his channel in the write up
-        } catch (Exception e) {//catch if somethign wenr wrong so program doesnt catch
+        } catch (Exception e) {//catch if somethign went wrong so program doesnt catch
             System.out.println("Error encountered when opening link: " + e.getMessage());
         }//end catch for error handling
     }//end method
@@ -107,7 +107,7 @@ public class ResourceHub {//start ResourceHub class
     public static void Tutorial4() {//method to link tutorials to labels within the GUI educational enviorment
         try {// start try
             Desktop.getDesktop().browse(new URI("https://www.youtube.com/watch?v=vKVzRbsMnTQ"));//linking youtube tutorial to the GUI labels, ive chosen a youtuber i watch a bit in my spar time as his videos are both entertaining and educations, will reference his channel in the write up
-        } catch (Exception e) {//catch if somethign wenr wrong so program doesnt catch
+        } catch (Exception e) {//catch if somethign went wrong so program doesnt catch
             System.out.println("Error encountered when opening link: " + e.getMessage());
         }//end catch for error handling
     }//end method

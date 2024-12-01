@@ -182,20 +182,21 @@ public class LoginPageGUI extends javax.swing.JFrame {
         String email = emailField.getText();//get the entered email from the email field in the gui and assign it to a string 
         String enteredPassword = passwordField.getText().trim();//get the entered password from a field in the gui and assing to a string
 
-        if (Administrator.loginAdmin(email, enteredPassword)) {//if condition and send the entered emaul and password into the method as args and see if it matches an admins login credentials
+        if (Administrator.AdminLogin(email, enteredPassword)) {//if condition send the entered emaul and password into the method as args and see if it matches an admins login credentials
             JOptionPane.showMessageDialog(null, "Welcome Admin!");//notify the end user with a joption pane popup
             setVisible(false);//set the page to false visibility
-            // Open the HomePage
             HomePage homePage = new HomePage();//creat a instance of the home page
             homePage.setVisible(true);//set the homepage to true visibility
-        } else if (Student.loginStudent(email, enteredPassword)) {//if condition and send the entered emaul and password into the method as args and see if it matches an admins login credentials
+            
+        } else if (Student.StudentLogin(email, enteredPassword)) {//if condition and send the entered emaul and password into the method as args and see if it matches an admins login credentials
             JOptionPane.showMessageDialog(null, "Welcome Student!");//notify the end user with a joption pane popup
             setVisible(false);//set the login page to false visibility
-            // Open the HomePage
             HomePage homePage = new HomePage();//creat a instance of the home page
             homePage.setVisible(true);//set the home page to true visibility
         } else {//else if condition
+            
             JOptionPane.showMessageDialog(null, "Entered Credentials do not match!");//notify the end user with a joption pane popup that the entered credentials didnt match
+            
         }//end else if
 
     }//GEN-LAST:event_LoginBTNActionPerformed

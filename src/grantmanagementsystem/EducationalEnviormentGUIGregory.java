@@ -23,9 +23,9 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
     /**
      * Creates new form RecourceHubGUI
      */
-    public EducationalEnviormentGUIGregory() {
-        initComponents();
-        reportGenerator = new ReportGenerator();
+    public EducationalEnviormentGUIGregory() {//start jframe constructor
+        initComponents();//initialise components
+        reportGenerator = new ReportGenerator();//creating instance of report generator cclass
     }
 
     /**
@@ -1350,21 +1350,21 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
     }//GEN-LAST:event_ContactUsEmailFieldKeyPressed
 
     private void SendFeedbackBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SendFeedbackBTNActionPerformed
-        String firstname = ContactUsFirstNameField.getText();
-        String surname = ContactUsSurnameField.getText();
-        String gmail = ContactUsEmailField.getText();
-        String dateReview = ContactUsReviewDateFormattedField.getText();
-        String content = FeedbackTextArea.getText();
+        String firstname = ContactUsFirstNameField.getText();//getting the first name from the field in the gui and assinging it to a string
+        String surname = ContactUsSurnameField.getText();//getting the surname from the field in the gui and assinging it to a string
+        String gmail = ContactUsEmailField.getText();//getting the gmail from the field in the gui and assinging it to a string
+        String dateReview = ContactUsReviewDateFormattedField.getText();//getting the date from the field in the gui and assinging it to a string
+        String content = FeedbackTextArea.getText();//getting the feedback from the field in the gui and assinging it to a string
 
-        if (ContactUsFirstNameField.getText().isEmpty() || ContactUsEmailField.getText().isEmpty() || dateReview.isEmpty() || FeedbackTextArea.getText().isEmpty() || ContactUsFirstNameField.getText().isEmpty()) {
-            JOptionPane.showMessageDialog(null, "All fields must be filled!", "Error", JOptionPane.ERROR_MESSAGE);
+        if (ContactUsFirstNameField.getText().isEmpty() || ContactUsEmailField.getText().isEmpty() || dateReview.isEmpty() || FeedbackTextArea.getText().isEmpty() || ContactUsFirstNameField.getText().isEmpty()) {//if statement to ensure the fields are filled out to ensure the program does not crash
+            JOptionPane.showMessageDialog(null, "All fields must be filled!", "Error", JOptionPane.ERROR_MESSAGE);//joption pane popup to notify the end user the fields need to be filled out
             return;
-        }
+        }//end if condition
 
-        ResourceHub resourceHub = new ResourceHub();
-        resourceHub.ContactUs(firstname, surname, gmail, dateReview, content);
+        ResourceHub resourceHub = new ResourceHub();//create an instance of the resource hub class
+        resourceHub.ContactUs(firstname, surname, gmail, dateReview, content);//call upon the contact us method in the contactUsPNL and pass in the entered variable as args
 
-        JOptionPane.showMessageDialog(null, "Your feedback has been successfully saved.", "Success", JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(null, "Your valuable feedback has been sent.", "Success", JOptionPane.INFORMATION_MESSAGE);//JOptionPane to notify the end user that the feedback was succesfully sent
 
     }//GEN-LAST:event_SendFeedbackBTNActionPerformed
 
@@ -1381,46 +1381,46 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
     }//GEN-LAST:event_ReportGeneratorAVGGradeFieldActionPerformed
 
     private void ReportGeneratorLogoLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ReportGeneratorLogoLabelMouseClicked
-        Parent.removeAll();
-        Parent.add(ReportGeneratorPNL);
-        Parent.repaint();
-        Parent.revalidate();
+        Parent.removeAll();//using the card layout to switch  beetween panels, so i remove all at the beginning to avoid overlapping
+        Parent.add(ReportGeneratorPNL);//call upon the desired panel that the end user has clicked
+        Parent.repaint();//repainting thr parent panel to get the cuurent desired view in the CardLayout
+        Parent.revalidate();//revalidaiting the parent panel to make sure the layout is properly updated
 
     }//GEN-LAST:event_ReportGeneratorLogoLabelMouseClicked
 
     private void RecourceHubLogoLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RecourceHubLogoLabelMouseClicked
-        Parent.removeAll();
-        Parent.add(ResourceHubPNL);
-        Parent.repaint();
-        Parent.revalidate();
+        Parent.removeAll();//using the card layout to switch  beetween panels, so i remove all at the beginning to avoid overlapping
+        Parent.add(ResourceHubPNL);//call upon the desired panel that the end user has clicked
+        Parent.repaint();//repainting thr parent panel to get the cuurent desired view in the CardLayout
+        Parent.revalidate();//revalidaiting the parent panel to make sure the layout is properly updated
     }//GEN-LAST:event_RecourceHubLogoLabelMouseClicked
 
     private void ContactUsLogoLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ContactUsLogoLabelMouseClicked
-        Parent.removeAll();
-        Parent.add(ContactUsPNL);
-        Parent.repaint();
-        Parent.revalidate();
+        Parent.removeAll();//using the card layout to switch  beetween panels, so i remove all at the beginning to avoid overlapping
+        Parent.add(ContactUsPNL);//call upon the desired panel that the end user has clicked
+        Parent.repaint();//repainting thr parent panel to get the cuurent desired view in the CardLayout
+        Parent.revalidate();//revalidaiting the parent panel to make sure the layout is properly updated
     }//GEN-LAST:event_ContactUsLogoLabelMouseClicked
 
     private void TutorialLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TutorialLabelMouseClicked
-        SecondParent.removeAll();
-        SecondParent.add(TutorialsPNL);
-        SecondParent.repaint();
-        SecondParent.revalidate();
+        SecondParent.removeAll();//using the card layout to switch  beetween panels, so i remove all at the beginning to avoid overlapping
+        SecondParent.add(TutorialsPNL);//call upon the desired panel that the end user has clicked
+        SecondParent.repaint();//repainting thr parent panel to get the cuurent desired view in the CardLayout
+        SecondParent.revalidate();//revalidaiting the parent panel to make sure the layout is properly updated
     }//GEN-LAST:event_TutorialLabelMouseClicked
 
     private void QuizLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_QuizLabelMouseClicked
-        SecondParent.removeAll();
-        SecondParent.add(QuizPNL);
-        SecondParent.repaint();
-        SecondParent.revalidate();
+        SecondParent.removeAll();//using the card layout to switch  beetween panels, so i remove all at the beginning to avoid overlapping
+        SecondParent.add(QuizPNL);//call upon the desired panel that the end user has clicked
+        SecondParent.repaint();//repainting thr parent panel to get the cuurent desired view in the CardLayout
+        SecondParent.revalidate();//revalidaiting the parent panel to make sure the layout is properly updated
     }//GEN-LAST:event_QuizLabelMouseClicked
 
     private void ManageRecourceLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ManageRecourceLabelMouseClicked
-        SecondParent.removeAll();
-        SecondParent.add(ManageResourcesPNL);
-        SecondParent.repaint();
-        SecondParent.revalidate();
+        SecondParent.removeAll();//using the card layout to switch  beetween panels, so i remove all at the beginning to avoid overlapping
+        SecondParent.add(ManageResourcesPNL);//call upon the desired panel that the end user has clicked
+        SecondParent.repaint();//repainting thr parent panel to get the cuurent desired view in the CardLayout
+        SecondParent.revalidate();//revalidaiting the parent panel to make sure the layout is properly updated
     }//GEN-LAST:event_ManageRecourceLabelMouseClicked
 
     private void ResourseSurnameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ResourseSurnameFieldActionPerformed
@@ -1428,222 +1428,214 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
     }//GEN-LAST:event_ResourseSurnameFieldActionPerformed
 
     private void SaveResourseBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaveResourseBTNActionPerformed
-        String firstname = ResourseFirstNameField.getText();
-        String surname = ResourseSurnameField.getText();
-        String Course = ResourseCourseField.getText();
-        String Date = ResourseDateField.getText();
-        String resourceType = (String) ResourceTypeComboBox.getSelectedItem();
-        String URL = ResourseURLField.getText();
+        String firstname = ResourseFirstNameField.getText();//getting the text from the ResourseFirstNameField GUI using the get text method and assigning it to a string
+        String surname = ResourseSurnameField.getText();//getting the text from the ResourseSurnameField GUI using the get text method and assigning it to a string
+        String Course = ResourseCourseField.getText();//getting the text from the GUI ResourseCourseField using the get text method and assigning it to a string
+        String Date = ResourseDateField.getText();//getting the text from the GUI ResourseDateField using the get text method and assigning it to a string
+        String resourceType = (String) ResourceTypeComboBox.getSelectedItem();//getting the text from the GUI ResourceTypeComboBox using the get text method and assigning it to a string
+        String URL = ResourseURLField.getText();//getting the text from the GUI ResourseURLField using the get text method and assigning it to a string
 
         // Save resource using ResourceHub
-        ResourceHub resourceHub = new ResourceHub();
-        resourceHub.saveResource(firstname, surname, Course, Date, resourceType, URL);
+        ResourceHub resourceHub = new ResourceHub();//create an instance of the rescourceHub so i can access the methods
+        resourceHub.saveResource(firstname, surname, Course, Date, resourceType, URL);//call upon the save resource method and pass the variable in as args
 
-        JOptionPane.showMessageDialog(null, "Successfully added to the file");
+        JOptionPane.showMessageDialog(null, "Successfully added to the file");//joptionPane popup to notify the user it was succesful
     }//GEN-LAST:event_SaveResourseBTNActionPerformed
 
     private void ViewResourceBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ViewResourceBTNActionPerformed
-        ResourceHub resourceHub = new ResourceHub();
-
+        ResourceHub resourceHub = new ResourceHub();//create an instance of the rescourceHub so i can call upon the method for populating the table
         resourceHub.loadResources(ResourceTBL);//call upon method to load resources and senign the tbl as a arg so it has access, i didnt know how to do with without making the table static , and i wanted to try my best to encapsulate as much as possible so this seemed to be the best way to do it
     }//GEN-LAST:event_ViewResourceBTNActionPerformed
 
     private void exitBTn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBTn1ActionPerformed
-        setVisible(false);
-
-        HomePage homePage = new HomePage();
-        homePage.setVisible(true);
+        setVisible(false);//remove the current screen
+        HomePage homePage = new HomePage();//create the of the homepage
+        homePage.setVisible(true);//set its visibility to true
     }//GEN-LAST:event_exitBTn1ActionPerformed
 
     private void exitBTn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBTn2ActionPerformed
-        setVisible(false);
-
-        HomePage homePage = new HomePage();
-        homePage.setVisible(true);
+        setVisible(false);//remove the current screen
+        HomePage homePage = new HomePage();//create the of the homepage
+        homePage.setVisible(true);//set its visibility to true
     }//GEN-LAST:event_exitBTn2ActionPerformed
 
     private void exitBTn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBTn3ActionPerformed
-        setVisible(false);
-
-        HomePage homePage = new HomePage();
-        homePage.setVisible(true);
+        setVisible(false);//remove the current screen
+        HomePage homePage = new HomePage();//create the of the homepage
+        homePage.setVisible(true);//set its visibility to true
     }//GEN-LAST:event_exitBTn3ActionPerformed
 
     private void exitBTn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBTn4ActionPerformed
-        setVisible(false);
-
-        HomePage homePage = new HomePage();
-        homePage.setVisible(true);
+        setVisible(false);//remove the current screen
+        HomePage homePage = new HomePage();//create the of the homepage
+        homePage.setVisible(true);//set its visibility to true
     }//GEN-LAST:event_exitBTn4ActionPerformed
 
     private void exitBTn5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBTn5ActionPerformed
-        setVisible(false);
-
-        HomePage homePage = new HomePage();
-        homePage.setVisible(true);
+        setVisible(false);//remove the current screen
+        HomePage homePage = new HomePage();//create the of the homepage
+        homePage.setVisible(true);//set its visibility to true
     }//GEN-LAST:event_exitBTn5ActionPerformed
 
     private void exitBTn6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBTn6ActionPerformed
-        setVisible(false);
-
-        HomePage homePage = new HomePage();
-        homePage.setVisible(true);
+        setVisible(false);//remove the current screen
+        HomePage homePage = new HomePage();//create the of the homepage
+        homePage.setVisible(true);//set its visibility to true
     }//GEN-LAST:event_exitBTn6ActionPerformed
 
     private void ComputersQuizCheckBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComputersQuizCheckBTNActionPerformed
-        String correctAnswer1 = "Central Processing Unit";
-        String correctAnswer2 = "Power Supply Unit";
-        String correctAnswer3 = "Storing data";
-        String correctAnswer4 = "Solid State Drive";
-        String correctAnswer5 = "Graphical Processing Unit";
+        String RightAnswer1 = "Central Processing Unit";//setting the correct answers to strings to compare against the selected answer
+        String RightAnswer2 = "Power Supply Unit";//setting the correct answers to strings to compare against the selected answer
+        String RightAnswer3 = "Storing data";//setting the correct answers to strings to compare against the selected answer
+        String RightAnswer4 = "Solid State Drive";//setting the correct answers to strings to compare against the selected answer
+        String RightAnswer5 = "Graphical Processing Unit";//setting the correct answers to strings to compare against the selected answer
 
-        String selectedAnswer1 = (String) ComputerQuizComboBox.getSelectedItem();
-        String selectedAnswer2 = (String) ComputerQuizComboBox2.getSelectedItem();
-        String selectedAnswer3 = (String) ComputerQuizComboBox3.getSelectedItem();
-        String selectedAnswer4 = (String) ComputerQuizComboBox4.getSelectedItem();
-        String selectedAnswer5 = (String) ComputerQuizComboBox5.getSelectedItem();
+        String ChosenAnswer1 = (String) ComputerQuizComboBox.getSelectedItem();//assigning the selected items from the combo boxes to string to compare against the correct answers
+        String ChosenAnswer2 = (String) ComputerQuizComboBox2.getSelectedItem();//assigning the selected items from the combo boxes to string to compare against the correct answers
+        String ChosenAnswer3 = (String) ComputerQuizComboBox3.getSelectedItem();//assigning the selected items from the combo boxes to string to compare against the correct answers
+        String ChosenAnswer4 = (String) ComputerQuizComboBox4.getSelectedItem();//assigning the selected items from the combo boxes to string to compare against the correct answers
+        String ChosenAnswer5 = (String) ComputerQuizComboBox5.getSelectedItem();//assigning the selected items from the combo boxes to string to compare against the correct answers
 
-        if (selectedAnswer1.equals(correctAnswer1)) {
-            ComputerQuizComboBox.setBackground(Color.GREEN);
-        } else {
-            ComputerQuizComboBox.setBackground(Color.RED);
-        }
+        if (ChosenAnswer1.matches(RightAnswer1)) {// if the chosen answer matches the correct answer
+            ComputerQuizComboBox.setBackground(Color.GREEN);//set the combo box to green
+        } else {//else if its wrong
+            ComputerQuizComboBox.setBackground(Color.RED);//set the combo box to red
+        }//end else if
 
-        if (selectedAnswer2.equals(correctAnswer2)) {
-            ComputerQuizComboBox2.setBackground(Color.GREEN);
-        } else {
-            ComputerQuizComboBox2.setBackground(Color.RED);
-        }
+        if (ChosenAnswer2.matches(RightAnswer2)) {// if the chosen answer matches the correct answer
+            ComputerQuizComboBox2.setBackground(Color.GREEN);//set the combo box to green
+        } else {//else if its wrong
+            ComputerQuizComboBox2.setBackground(Color.RED);//set the combo box to red
+        }//end else if
 
-        if (selectedAnswer3.equals(correctAnswer3)) {
-            ComputerQuizComboBox3.setBackground(Color.GREEN);
-        } else {
-            ComputerQuizComboBox2.setBackground(Color.RED);
-        }
+        if (ChosenAnswer3.matches(RightAnswer3)) {// if the chosen answer matches the correct answer
+            ComputerQuizComboBox3.setBackground(Color.GREEN);//set the combo box to green
+        } else {//else if its wrong
+            ComputerQuizComboBox2.setBackground(Color.RED);//set the combo box to red
+        }//end else if
 
-        if (selectedAnswer4.equals(correctAnswer4)) {
-            ComputerQuizComboBox4.setBackground(Color.GREEN);
-        } else {
-            ComputerQuizComboBox4.setBackground(Color.RED);
-        }
+        if (ChosenAnswer4.matches(RightAnswer4)) {// if the chosen answer matches the correct answer
+            ComputerQuizComboBox4.setBackground(Color.GREEN);//set the combo box to green
+        } else {//else if its wrong
+            ComputerQuizComboBox4.setBackground(Color.RED);//set the combo box to red
+        }//end else if
 
-        if (selectedAnswer5.equals(correctAnswer5)) {
-            ComputerQuizComboBox5.setBackground(Color.GREEN);
-        } else {
-            ComputerQuizComboBox5.setBackground(Color.RED);
-        }
+        if (ChosenAnswer5.matches(RightAnswer5)) {// if the chosen answer matches the correct answer
+            ComputerQuizComboBox5.setBackground(Color.GREEN);//set the combo box to green
+        } else {//else if its wrong
+            ComputerQuizComboBox5.setBackground(Color.RED);//set the combo box to red
+        }//end else if
 
 
     }//GEN-LAST:event_ComputersQuizCheckBTNActionPerformed
 
     private void Tutorial1LabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Tutorial1LabelMouseClicked
-        ResourceHub.Tutorial1();
+        ResourceHub.Tutorial1();//call upon the method in the resource hub class to link the tutorials succesfully
     }//GEN-LAST:event_Tutorial1LabelMouseClicked
 
     private void TutorialLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TutorialLabel2MouseClicked
-        ResourceHub.Tutorial2();
-
+        ResourceHub.Tutorial2();//call upon the method in the resource hub class to link the tutorials succesfully
     }//GEN-LAST:event_TutorialLabel2MouseClicked
 
     private void TutorialLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TutorialLabel3MouseClicked
-        ResourceHub.Tutorial3();
+        ResourceHub.Tutorial3();//call upon the method in the resource hub class to link the tutorials succesfully
     }//GEN-LAST:event_TutorialLabel3MouseClicked
 
     private void TutorialLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TutorialLabel4MouseClicked
-        ResourceHub.Tutorial4();
+        ResourceHub.Tutorial4();//call upon the method in the resource hub class to link the tutorials succesfully
     }//GEN-LAST:event_TutorialLabel4MouseClicked
 
     private void TutorialLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TutorialLabel5MouseClicked
-        ResourceHub.Tutorial4();
+        ResourceHub.Tutorial5();//call upon the method in the resource hub class to link the tutorials succesfully
     }//GEN-LAST:event_TutorialLabel5MouseClicked
 
     private void GeographyQuizCheckBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GeographyQuizCheckBTNActionPerformed
-        String correctAnswer1 = "Beijing";
-        String correctAnswer2 = "Instanbul";
-        String correctAnswer3 = "Dublin";
-        String correctAnswer4 = "Asia";
-        String correctAnswer5 = "Oceania";
+        String RightAnswer1 = "Beijing";//setting the correct answers to strings to compare against the selected answer
+        String RightAnswer2 = "Instanbul";//setting the correct answers to strings to compare against the selected answer
+        String RightAnswer3 = "Dublin";//setting the correct answers to strings to compare against the selected answer
+        String RightAnswer4 = "Asia";//setting the correct answers to strings to compare against the selected answer
+        String RightAnswer5 = "Oceania";//setting the correct answers to strings to compare against the selected answer
 
-        String selectedAnswer1 = (String) GeographyQuizComboBox.getSelectedItem();
-        String selectedAnswer2 = (String) GeographyQuizComboBox2.getSelectedItem();
-        String selectedAnswer3 = (String) GeographyQuizComboBox3.getSelectedItem();
-        String selectedAnswer4 = (String) GeographyQuizComboBox4.getSelectedItem();
-        String selectedAnswer5 = (String) GeographyQuizComboBox5.getSelectedItem();
+        String ChosenAnswer1 = (String) GeographyQuizComboBox.getSelectedItem();//assigning the selected items from the combo boxes to string to compare against the correct answers
+        String ChosenAnswer2 = (String) GeographyQuizComboBox2.getSelectedItem();//assigning the selected items from the combo boxes to string to compare against the correct answers
+        String ChosenAnswer3 = (String) GeographyQuizComboBox3.getSelectedItem();//assigning the selected items from the combo boxes to string to compare against the correct answers
+        String ChosenAnswer4 = (String) GeographyQuizComboBox4.getSelectedItem();//assigning the selected items from the combo boxes to string to compare against the correct answers
+        String ChosenAnswer5 = (String) GeographyQuizComboBox5.getSelectedItem();//assigning the selected items from the combo boxes to string to compare against the correct answers
 
-        if (selectedAnswer1.equals(correctAnswer1)) {
-            GeographyQuizComboBox.setBackground(Color.GREEN);
-        } else {
-            GeographyQuizComboBox.setBackground(Color.RED);
-        }
+        if (ChosenAnswer1.matches(RightAnswer1)) {// if the chosen answer matches the correct answer
+            GeographyQuizComboBox.setBackground(Color.GREEN);//set the combo box to green
+        } else {//else if its wrong
+            GeographyQuizComboBox.setBackground(Color.RED);//set the combo box to red
+        }//end else if
 
-        if (selectedAnswer2.equals(correctAnswer2)) {
-            GeographyQuizComboBox2.setBackground(Color.GREEN);
-        } else {
-            GeographyQuizComboBox2.setBackground(Color.RED);
-        }
+        if (ChosenAnswer2.matches(RightAnswer2)) {// if the chosen answer matches the correct answer
+            GeographyQuizComboBox2.setBackground(Color.GREEN);//set the combo box to green
+        } else {//else if its wrong
+            GeographyQuizComboBox2.setBackground(Color.RED);//set the combo box to red
+        }//end else if
 
-        if (selectedAnswer3.equals(correctAnswer3)) {
-            GeographyQuizComboBox3.setBackground(Color.GREEN);
-        } else {
-            GeographyQuizComboBox3.setBackground(Color.RED);
-        }
+        if (ChosenAnswer3.matches(RightAnswer3)) {// if the chosen answer matches the correct answer
+            GeographyQuizComboBox3.setBackground(Color.GREEN);//set the combo box to green
+        } else {//else if its wrong
+            GeographyQuizComboBox3.setBackground(Color.RED);//set the combo box to red
+        }//end else if
 
-        if (selectedAnswer4.equals(correctAnswer4)) {
-            GeographyQuizComboBox4.setBackground(Color.GREEN);
-        } else {
-            GeographyQuizComboBox4.setBackground(Color.RED);
-        }
+        if (ChosenAnswer4.matches(RightAnswer4)) {// if the chosen answer matches the correct answer
+            GeographyQuizComboBox4.setBackground(Color.GREEN);//set the combo box to green
+        } else {//else if its wrong
+            GeographyQuizComboBox4.setBackground(Color.RED);//set the combo box to red
+        }//end else if
 
-        if (selectedAnswer5.equals(correctAnswer5)) {
-            GeographyQuizComboBox5.setBackground(Color.GREEN);
-        } else {
-            GeographyQuizComboBox5.setBackground(Color.RED);
-        }
+        if (ChosenAnswer5.matches(RightAnswer5)) {// if the chosen answer matches the correct answer
+            GeographyQuizComboBox5.setBackground(Color.GREEN);//set the combo box to green
+        } else {//else if its wrong
+            GeographyQuizComboBox5.setBackground(Color.RED);//set the combo box to red
+        }//end else if
 
     }//GEN-LAST:event_GeographyQuizCheckBTNActionPerformed
 
     private void ProgrammingQuizCheckBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProgrammingQuizCheckBTNActionPerformed
-        String correctAnswer1 = "while";
-        String correctAnswer2 = "func";
-        String correctAnswer3 = "constant x = 5;";
-        String correctAnswer4 = "int x = 10;";
-        String correctAnswer5 = "array.size()";
+        String RightAnswer1 = "while";//setting the correct answers to strings to compare against the selected answer
+        String RightAnswer2 = "func";//setting the correct answers to strings to compare against the selected answer
+        String RightAnswer3 = "constant x = 5;";//setting the correct answers to strings to compare against the selected answer
+        String RightAnswer4 = "int x = 10;";//setting the correct answers to strings to compare against the selected answer
+        String RightAnswer5 = "array.size()";//setting the correct answers to strings to compare against the selected answer
 
-        String selectedAnswer1 = (String) ProgrammingComboBox.getSelectedItem();
-        String selectedAnswer2 = (String) ProgrammingComboBox2.getSelectedItem();
-        String selectedAnswer3 = (String) ProgrammingComboBox3.getSelectedItem();
-        String selectedAnswer4 = (String) ProgrammingComboBox4.getSelectedItem();
-        String selectedAnswer5 = (String) ProgrammingComboBox5.getSelectedItem();
+        String ChosenAnswer1 = (String) ProgrammingComboBox.getSelectedItem();//assigning the selected items from the combo boxes to string to compare against the correct answers
+        String ChosenAnswer2 = (String) ProgrammingComboBox2.getSelectedItem();//assigning the selected items from the combo boxes to string to compare against the correct answers
+        String ChosenAnswer3 = (String) ProgrammingComboBox3.getSelectedItem();//assigning the selected items from the combo boxes to string to compare against the correct answers
+        String ChosenAnswer4 = (String) ProgrammingComboBox4.getSelectedItem();//assigning the selected items from the combo boxes to string to compare against the correct answers
+        String ChosenAnswer5 = (String) ProgrammingComboBox5.getSelectedItem();//assigning the selected items from the combo boxes to string to compare against the correct answers
 
-        if (selectedAnswer1.equals(correctAnswer1)) {
-            ProgrammingComboBox.setBackground(Color.GREEN);
-        } else {
-            ProgrammingComboBox.setBackground(Color.RED);
-        }
+        if (ChosenAnswer1.matches(RightAnswer1)) {// if the chosen answer matches the correct answer
+            ProgrammingComboBox.setBackground(Color.GREEN);//set the combo box to green
+        } else {//else if its wrong
+            ProgrammingComboBox.setBackground(Color.RED);//set the combo box to red
+        }//end else if
 
-        if (selectedAnswer2.equals(correctAnswer2)) {
-            ProgrammingComboBox2.setBackground(Color.GREEN);
-        } else {
-            ProgrammingComboBox2.setBackground(Color.RED);
-        }
+        if (ChosenAnswer2.matches(RightAnswer2)) {// if the chosen answer matches the correct answer
+            ProgrammingComboBox2.setBackground(Color.GREEN);//set the combo box to green
+        } else {//else if its wrong
+            ProgrammingComboBox2.setBackground(Color.RED);//set the combo box to red
+        }//end else if
 
-        if (selectedAnswer3.equals(correctAnswer3)) {
-            ProgrammingComboBox3.setBackground(Color.GREEN);
-        } else {
-            ProgrammingComboBox3.setBackground(Color.RED);
-        }
+        if (ChosenAnswer3.matches(RightAnswer3)) {// if the chosen answer matches the correct answer
+            ProgrammingComboBox3.setBackground(Color.GREEN);//set the combo box to green
+        } else {//else if its wrong
+            ProgrammingComboBox3.setBackground(Color.RED);//set the combo box to red
+        }//end else if
 
-        if (selectedAnswer4.equals(correctAnswer4)) {
-            ProgrammingComboBox4.setBackground(Color.GREEN);
-        } else {
-            ProgrammingComboBox4.setBackground(Color.RED);
-        }
+        if (ChosenAnswer4.matches(RightAnswer4)) {// if the chosen answer matches the correct answer
+            ProgrammingComboBox4.setBackground(Color.GREEN);//set the combo box to green
+        } else {//else if its wrong
+            ProgrammingComboBox4.setBackground(Color.RED);//set the combo box to red
+        }//end else if
 
-        if (selectedAnswer5.equals(correctAnswer5)) {
-            ProgrammingComboBox5.setBackground(Color.GREEN);
-        } else {
-            ProgrammingComboBox5.setBackground(Color.RED);
-        }
+        if (ChosenAnswer5.matches(RightAnswer5)) {// if the chosen answer matches the correct answer
+            ProgrammingComboBox5.setBackground(Color.GREEN);//set the combo box to green
+        } else {//else if its wrong
+            ProgrammingComboBox5.setBackground(Color.RED);//set the combo box to red
+        }//end else if
     }//GEN-LAST:event_ProgrammingQuizCheckBTNActionPerformed
 
     private void ViewBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ViewBTNActionPerformed

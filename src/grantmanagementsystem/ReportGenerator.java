@@ -6,77 +6,63 @@ package grantmanagementsystem;
 
 /**
  *
- * @author gregm
+ * @author gregory mitchell
  */
-import javax.swing.*;
-import javax.swing.table.DefaultTableModel;
-import java.io.*;
-import java.util.ArrayList;
 
-public class ReportGenerator {
+import javax.swing.table.DefaultTableModel;//immport libraries
+import javax.swing.*;//needed for jtable population
+import java.util.ArrayList;//neccasary for the array list of reports
+import java.io.*;//neccesary for reading and writing from a file
 
-    // ArrayList to store reports
-    private ArrayList<String[]> reports;
+public class ReportGenerator {//start class
 
-    // Constructor to initialize the report data list
-    public ReportGenerator() {
-        // Initialize the reports ArrayList
-        reports = new ArrayList<>();
-    }
+    private ArrayList<String[]> reports;//private array list for reports
 
-    // Method to generate feedback based on average grade
-    private String generateFeedback(String avgGrade) {
-        try {
-            int grade = Integer.parseInt(avgGrade);
+    public ReportGenerator() {//constrcutore for the report generator obj
+        reports = new ArrayList<>();//create the report arraylist
+    }//end constructor
 
-            // Generate feedback based on grade ranges
-            if (grade >= 80) {
-                return "Great work, you're doing amazing!";
-            } else if (grade >= 70) {
-                return "Good job, but there's room for improvement.";
-            } else if (grade >= 50) {
-                return "Needs improvement, try harder!";
-            } else {
-                return "You need to start studying more.";
+    private String generateFeedback(String avgGrade) {//method in order to generate Feedback in the report based on the end users avg grade
+        try {//try catch for error handling
+            int average = Integer.parseInt(avgGrade);//parse the avg grade to average 
+
+            if (average >= 80) {//if the users average grade was equal to or above 80
+                return "Wow, Doing Great!";//set the feedbackk to :
+            } else if (average >= 70) {//if the users average grade was equal to or above 70
+                return "You can do better!.";//return this feedback:
+            } else if (average >= 50) {//if the users average grade was equal to or above 50
+                return "Barely passed, need to try more!";//return this feedback:
+            } else {//else if anything lower
+                return "You may need to try harder.";//return this feedback:
             }
-        } catch (NumberFormatException e) {
-            return "Invalid grade input!";
-        }
-    }
+        } catch (NumberFormatException e) {//catch an errors with the user input
+            return "Invalid grade input!";//notify the end user of their mistake
+        }//end catch
+    }//end method
 
-    // Method to save the user's input into the reports ArrayList
-    public void saveReport(String name, String email, String date, String avgGrade) {
-        // Create a report with the user input and generated feedback
-        String feedback = generateFeedback(avgGrade);
+    public void saveReport(String name, String email, String date, String avgGrade) {//method for saving the report and adding it to the array list, taking in the entered user input via the gui
+        String feedback = generateFeedback(avgGrade);//getting the feedback based on their avg grade
+        reports.add(new String[]{name, email, date, avgGrade, feedback});//adding user input to the array list
+    }//end method
 
-        // Add the report to the ArrayList
-        reports.add(new String[]{name, email, date, avgGrade, feedback});
-    }
+    public void viewReports(JTable reportTBL) {//method to populate the reportTBL with reports
+        DefaultTableModel table = new DefaultTableModel();//using the defaulttablemodel to populate the table in the GUI
+        table.addColumn("Name");//adding the name as column
+        table.addColumn("Email");//adding the email as column
+        table.addColumn("Date");//adding the date as column
+        table.addColumn("Average Grade");//adding the avg grade as column
+        table.addColumn("Feedback");//adding the chosen feedbacl as column
 
-    // Method to populate the JTable with the reports
-    public void viewReports(JTable reportTable) {
-        DefaultTableModel model = new DefaultTableModel();
-        model.addColumn("Name");
-        model.addColumn("Email");
-        model.addColumn("Date");
-        model.addColumn("Average Grade");
-        model.addColumn("Feedback");
-
-        // Loop through the reports ArrayList and add each row to the model
         for (String[] report : reports) {
-            model.addRow(report);
+            table.addRow(report);
         }
 
-        // Set the model for the JTable to populate it with the report data
-        reportTable.setModel(model);
+        reportTBL.setModel(table);
     }
 
-    // Method to permanently save the reports to a text file
     public void saveReportsToFile() {
         try (BufferedWriter bw = new BufferedWriter(new FileWriter("reports.txt", false))) { // Use false to overwrite the file
-            // Loop through the reports and write each report to the file
             for (String[] report : reports) {
-                // Write the report fields as comma-separated values
                 bw.write(String.join(",", report));
                 bw.newLine();
             }

@@ -9,9 +9,10 @@ package grantmanagementsystem;
  * @author karawan
  */
 public class Student {
-   private String name,email,password;
-   
-  private int id;
+
+    private String name, email, password;
+
+    private int id;
 
     public Student(String name, String email, String password, int id) {
         this.name = name;
@@ -19,11 +20,11 @@ public class Student {
         this.password = password;
         this.id = id;
     }
-    
+
     public static Student[] student = new Student[6];
-    
-    public static void createStudent(){
-        student[0]= new Student("joe adams","michael@gmail.com","235",1);
+
+    public static void createStudent() {
+        student[0] = new Student("joe adams", "michael@gmail.com", "235", 1);
     }
 
     public String getName() {
@@ -57,15 +58,15 @@ public class Student {
     public void setId(int id) {
         this.id = id;
     }
-  //--------Gregory added this for the login functionality----------------------------------------------------------------
-  public static boolean loginStudent(String email, String password) {
-    for (int i = 0; i < student.length; i++) {  
-        Student s = student[i];
-        if (s != null && s.getEmail().equals(email) && s.getPassword().equals(password)) {
-            return true; 
-        }
-    }
-    return false;
-}
-  //--------------------------------------------------------------------------------------
-}
+    //--------Gregory added this for the login functionality----------------------------------------------------------------
+
+    public static boolean StudentLogin(String email, String password) {//login method for the student 
+        for (int x = 0; x < student.length; x++) {//for loop for the length of the student array, increment through the entire array to check
+            if (email.matches(email) && password.matches(password)) {//to check if the entered info ("email","password) match those in the array
+                return true;//return the boolean as true 
+            }//end if condition
+        }//end for loop
+        return false;//return boolean as false
+    }//end method
+    //--------------------------------------------------------------------------------------
+}//end class

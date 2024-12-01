@@ -6,62 +6,60 @@ package grantmanagementsystem;
 
 /**
  *
- * @author gregm
+ * @author Gregory Mitchell
  */
-import java.util.ArrayList;
+import java.util.ArrayList;//import array list to contain the administrator array list
 
-public class Administrator {
+public class Administrator {//start class
 
-    private String name;
-    private String email;
-    private String password;
-    private int id;
+    private String name, email, password;//declaring variables, name email and password as strings//private forfor encapuslation
+    private int id;//private integer for encapuslation
 
-    private static ArrayList<Administrator> adminList = new ArrayList<>();
+    private static ArrayList<Administrator> adminList = new ArrayList<>();//create array list for administrators
 
-    public Administrator(String name, String email, String password, int id) {
+    public Administrator(String name, String email, String password, int id) {//start constructor for admins obj
         this.name = name;
         this.email = email;
         this.password = password;
         this.id = id;
+    }//end administrator
+
+    public static void createAdmins() {//create admins method that is called upon when the login page jframe is called upon, i put it in the jframes constructor
+        adminList.add(new Administrator("Adam White", "AW@gmail.com", "password1234", 1));//admin information being added to the array list using .add//admin obj contains name, email, password and an ID
+        adminList.add(new Administrator("Paul Black", "PB@gmail.com", "Cats1234", 2));//admin obj contains name, email, password and an ID
+        adminList.add(new Administrator("Johan Libre", "JL@gmail.com", "HelloWorld1", 3));//admin obj contains name, email, password and an ID
+        adminList.add(new Administrator("Sean Williams", "SW@gmail.com", "Pass4567", 4));//admin obj contains name, email, password and an ID
+        adminList.add(new Administrator("Fiona Shreck", "FS@gmail.com", "Forgot678", 5));//admin obj contains name, email, password and an ID
+        adminList.add(new Administrator("Goku Kid", "GK@gmail.com", "Apple123", 6));//admin obj contains name, email, password and an ID
     }
 
-    // Static method to populate the admin list
-    public static void createAdmins() {
-        adminList.add(new Administrator("Jacob Williams", "JacobWilliams@gmail.com", "Dogs1234", 198));
-        adminList.add(new Administrator("Peter Jacobson", "PeterJacobson@gmail.com", "Cats234345", 2));
-        adminList.add(new Administrator("Anna White", "AnnaWhite@gmail.com", "HelloWorld3456", 3));
-        adminList.add(new Administrator("Sophie Blank", "SophieBlank@gmail.com", "Password4567", 4));
-        adminList.add(new Administrator("Fiona Clark", "FionaClark@gmail.com", "UnkownOcean5678", 5));
-        adminList.add(new Administrator("Jack Adams", "JackAdams@gmail.com", "Ali6789", 6));
-    }
-
-    public static ArrayList<Administrator> getAdmins() {
+    public static ArrayList<Administrator> getAdmins() {//gettter for array list of admins for encapsulation
         return adminList;
     }
 
-    public String getName() {
+    public String getName() {//get name method
         return name;
     }
 
-    public String getEmail() {
+    public String getEmail() {//get email method
         return email;
     }
 
-    public String getPassword() {
+    public String getPassword() {//get password method
         return password;
     }
 
-    public int getId() {
+    public int getId() {//get ID method
         return id;
     }
-    
-    public static boolean loginAdmin(String email, String password) {
-        for (Administrator admin : adminList) {
-            if (admin.getEmail().equals(email) && admin.getPassword().equals(password)) {
-                return true;
-            }
-        }
-        return false;
-    }
+    //----------------------------------------------------------------------------------------------
+    public static boolean AdminLogin(String email, String password) {//login method for the admin 
+        for (int x = 0; x < adminList.size();x++){//for loop for the length of the admins arraylist, increment through the entire array to check//changed to x for improved readibility as i tend to get confused with the [i] index
+            if (email.matches(email) && password.matches(password)) {//to check if the entered info ("email","password) match those in the arraylist
+                return true;//return boolean as true
+            }//end if condition
+        }//end for loop
+        return false;//otherwise return the boolean as false
+    }//ene method
+   //----------------------------------------------------------------------------------------------
 }
