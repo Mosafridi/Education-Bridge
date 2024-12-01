@@ -9,15 +9,12 @@ import javax.swing.JOptionPane;
  * @author gregm// Gregory coded functionality of this jframe
  */
 public class LoginPageGUI extends javax.swing.JFrame {
-
-    /**
-     * Creates new form LoginPage
-     */
-    public LoginPageGUI() {
+   
+    public LoginPageGUI() {//start constructor
         initComponents();
-        Administrator.createAdmins();
-        Student.createStudent();
-    }
+        Administrator.createAdmins();//when a instance of this class is called upon it will create admins
+        Student.createStudent();//when a instance of this class is called upon it will call uupon the create student method in the student class
+    }//end constructor
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -174,33 +171,32 @@ public class LoginPageGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_emailFieldActionPerformed
 
     private void ContinueAsGuestBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ContinueAsGuestBTNActionPerformed
-        setVisible(false);
+        setVisible(false);//set the login page to false visibility
 
         // Open the HomePage
-        HomePage homePage = new HomePage();
-        homePage.setVisible(true);
+        HomePage homePage = new HomePage();//create instance of home page
+        homePage.setVisible(true);//set the home page visibility to true
     }//GEN-LAST:event_ContinueAsGuestBTNActionPerformed
 
     private void LoginBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginBTNActionPerformed
-        String email = emailField.getText();
-        String enteredPassword = passwordField.getText().trim();
+        String email = emailField.getText();//get the entered email from the email field in the gui and assign it to a string 
+        String enteredPassword = passwordField.getText().trim();//get the entered password from a field in the gui and assing to a string
 
-        // Check if the user is an admin or student
-        if (Administrator.loginAdmin(email, enteredPassword)) {
-            JOptionPane.showMessageDialog(null, "Welcome Admin!");
-            setVisible(false);
+        if (Administrator.loginAdmin(email, enteredPassword)) {//if condition and send the entered emaul and password into the method as args and see if it matches an admins login credentials
+            JOptionPane.showMessageDialog(null, "Welcome Admin!");//notify the end user with a joption pane popup
+            setVisible(false);//set the page to false visibility
             // Open the HomePage
-            HomePage homePage = new HomePage();
-            homePage.setVisible(true);
-        } else if (Student.loginStudent(email, enteredPassword)) {
-            JOptionPane.showMessageDialog(null, "Welcome Student!");
-            setVisible(false);
+            HomePage homePage = new HomePage();//creat a instance of the home page
+            homePage.setVisible(true);//set the homepage to true visibility
+        } else if (Student.loginStudent(email, enteredPassword)) {//if condition and send the entered emaul and password into the method as args and see if it matches an admins login credentials
+            JOptionPane.showMessageDialog(null, "Welcome Student!");//notify the end user with a joption pane popup
+            setVisible(false);//set the login page to false visibility
             // Open the HomePage
-            HomePage homePage = new HomePage();
-            homePage.setVisible(true);
-        } else {
-            JOptionPane.showMessageDialog(null, "Invalid email or password!");
-        }
+            HomePage homePage = new HomePage();//creat a instance of the home page
+            homePage.setVisible(true);//set the home page to true visibility
+        } else {//else if condition
+            JOptionPane.showMessageDialog(null, "Entered Credentials do not match!");//notify the end user with a joption pane popup that the entered credentials didnt match
+        }//end else if
 
     }//GEN-LAST:event_LoginBTNActionPerformed
 

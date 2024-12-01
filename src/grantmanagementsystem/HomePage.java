@@ -7,14 +7,14 @@ package grantmanagementsystem;
  *
  * @author Gregory Mitchell Completed the home page on 16/11/2024
  */
-public class HomePage extends javax.swing.JFrame {
+public class HomePage extends javax.swing.JFrame {//start class
 
     /**
      * Creates new form Home
      */
-    public HomePage() {
+    public HomePage() {//home page constrcutor
         initComponents();
-    }
+    }//end constructor
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -51,6 +51,7 @@ public class HomePage extends javax.swing.JFrame {
 
         ShoaibLogoLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ShoaibLogoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/salary.png"))); // NOI18N
+        ShoaibLogoLabel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         ShoaibLogoLabel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ShoaibLogoLabelMouseClicked(evt);
@@ -59,6 +60,7 @@ public class HomePage extends javax.swing.JFrame {
 
         KarawanLogoLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         KarawanLogoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/graduate.png"))); // NOI18N
+        KarawanLogoLabel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         KarawanLogoLabel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 KarawanLogoLabelMouseClicked(evt);
@@ -67,6 +69,7 @@ public class HomePage extends javax.swing.JFrame {
 
         GregLogoLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         GregLogoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/school-bag.png"))); // NOI18N
+        GregLogoLabel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         GregLogoLabel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 GregLogoLabelMouseClicked(evt);
@@ -259,19 +262,19 @@ public class HomePage extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void KarawanLogoLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_KarawanLogoLabelMouseClicked
-            new StudentInformationGUIKarawan().setVisible(true);
-                dispose(); // Close current frame
+            new StudentInformationGUIKarawan().setVisible(true);//create karawans GUI if karawans logo label is mouse clickded
+                dispose(); // rid of current frame using dispose
     }//GEN-LAST:event_KarawanLogoLabelMouseClicked
 
     private void GregLogoLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_GregLogoLabelMouseClicked
                 // Open the Student JFrame
-                new EducationalEnviormentGUIGregory().setVisible(true);
-                dispose(); // Close current frame
+                new EducationalEnviormentGUIGregory().setVisible(true);//create Gregory's GUI if Gregs logo label is mouse clickded
+                dispose(); // rid of current frame using dispose
     }//GEN-LAST:event_GregLogoLabelMouseClicked
 
     private void ShoaibLogoLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ShoaibLogoLabelMouseClicked
-             new FinancialAidGUIShoaib().setVisible(true);
-                dispose(); // Close current frame
+             new FinancialAidGUIShoaib().setVisible(true);//create Shoaibs GUI if Shoaibs logo label is mouse clickded
+                dispose(); // rid of current frame using dispose
     }//GEN-LAST:event_ShoaibLogoLabelMouseClicked
 
     /**

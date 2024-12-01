@@ -4,24 +4,28 @@
  */
 package grantmanagementsystem;
 //gregory mitchell
+
 /**
  *
- * @author gregm
+ * @author Gregory Mitchell
  */
-import java.awt.Color;//adding for color
+import java.awt.Color;//adding for color changing based on selected item in combo box for quiz, green = right, red - wrong
 import javax.swing.JOptionPane;//adding for popups within the gui//cant commit
 
 /**
  *
- * @author gregm
+ * @author Gregory Mitchell
  */
-public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {
+public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creating the jframe for the warm educaitonal enviorment
+
+    private ReportGenerator reportGenerator;
 
     /**
      * Creates new form RecourceHubGUI
      */
     public EducationalEnviormentGUIGregory() {
         initComponents();
+        reportGenerator = new ReportGenerator();
     }
 
     /**
@@ -46,9 +50,9 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {
         ManageRecourceLabel = new javax.swing.JLabel();
         QuizLabel = new javax.swing.JLabel();
         TutorialLabel = new javax.swing.JLabel();
-        ReportGeneratorLabel1 = new javax.swing.JLabel();
-        ReportGeneratorLabel2 = new javax.swing.JLabel();
-        ReportGeneratorLabel3 = new javax.swing.JLabel();
+        TutorialsLabel = new javax.swing.JLabel();
+        ManageResourcesLabel = new javax.swing.JLabel();
+        QuizLogoLabel = new javax.swing.JLabel();
         SecondParent = new javax.swing.JPanel();
         ManageResourcesPNL = new javax.swing.JPanel();
         ResourceFirstNameLabel = new javax.swing.JLabel();
@@ -67,7 +71,9 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {
         SaveResourseBTN = new javax.swing.JButton();
         ViewResourceBTN = new javax.swing.JButton();
         ResourceTypeComboBox = new javax.swing.JComboBox<>();
-        exitBTn = new javax.swing.JButton();
+        AdminBTNLayeredPane = new javax.swing.JLayeredPane();
+        AdminDeleteBTN = new javax.swing.JButton();
+        exitBTn8 = new javax.swing.JButton();
         TutorialsPNL = new javax.swing.JPanel();
         TutorialLabel2 = new javax.swing.JLabel();
         TutorialLabel3 = new javax.swing.JLabel();
@@ -126,21 +132,22 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {
         exitBTn4 = new javax.swing.JButton();
         ReportGeneratorPNL = new javax.swing.JPanel();
         ReportGeneratorFirstNameLabel = new javax.swing.JLabel();
-        ReportGeneratorSurnameLabel = new javax.swing.JLabel();
+        AverageGradeLabel = new javax.swing.JLabel();
         ReportGeneratorDateLabel = new javax.swing.JLabel();
         ReportGeneratorEmailLabel = new javax.swing.JLabel();
         ReportGeneratorFirstNameField = new javax.swing.JTextField();
-        ReportGeneratorSurnameField = new javax.swing.JTextField();
+        AVGGradeField = new javax.swing.JTextField();
         ReportGeneratorEmailField = new javax.swing.JTextField();
         ReportGeneratorContentLabel = new javax.swing.JLabel();
         SaveBTN = new javax.swing.JButton();
         ViewBTN = new javax.swing.JButton();
-        DeleteBTN = new javax.swing.JButton();
-        ReportGeneratorDateFormattedField = new javax.swing.JFormattedTextField();
         ReportGeneratorTitleLabel = new javax.swing.JLabel();
         exitBTn6 = new javax.swing.JButton();
         TBLScrollPane = new javax.swing.JScrollPane();
         ReportTBL = new javax.swing.JTable();
+        ReportGeneratorDateField = new javax.swing.JTextField();
+        AdminBTNLayeredPane1 = new javax.swing.JLayeredPane();
+        AdminDeleteBTN1 = new javax.swing.JButton();
         ContactUsPNL = new javax.swing.JPanel();
         ContactUsTitleLabel = new javax.swing.JLabel();
         ContactUsFirstNameField = new javax.swing.JTextField();
@@ -168,6 +175,7 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {
 
         ReportGeneratorLogoLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ReportGeneratorLogoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/document.png"))); // NOI18N
+        ReportGeneratorLogoLabel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         ReportGeneratorLogoLabel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ReportGeneratorLogoLabelMouseClicked(evt);
@@ -185,6 +193,7 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {
 
         RecourceHubLogoLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         RecourceHubLogoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/book.png"))); // NOI18N
+        RecourceHubLogoLabel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         RecourceHubLogoLabel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 RecourceHubLogoLabelMouseClicked(evt);
@@ -202,6 +211,7 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {
 
         ContactUsLogoLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ContactUsLogoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/communicate.png"))); // NOI18N
+        ContactUsLogoLabel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         ContactUsLogoLabel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ContactUsLogoLabelMouseClicked(evt);
@@ -225,8 +235,10 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {
 
         ResourceHubNavPNL.setBackground(new java.awt.Color(51, 204, 255));
         ResourceHubNavPNL.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 153, 255)));
+        ResourceHubNavPNL.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         ManageRecourceLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/coordinator.png"))); // NOI18N
+        ManageRecourceLabel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         ManageRecourceLabel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ManageRecourceLabelMouseClicked(evt);
@@ -234,6 +246,7 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {
         });
 
         QuizLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/choose.png"))); // NOI18N
+        QuizLabel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         QuizLabel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 QuizLabelMouseClicked(evt);
@@ -241,26 +254,27 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {
         });
 
         TutorialLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/educational-video.png"))); // NOI18N
+        TutorialLabel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         TutorialLabel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 TutorialLabelMouseClicked(evt);
             }
         });
 
-        ReportGeneratorLabel1.setFont(new java.awt.Font("Bauhaus 93", 1, 12)); // NOI18N
-        ReportGeneratorLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        ReportGeneratorLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ReportGeneratorLabel1.setText("Tutorials");
+        TutorialsLabel.setFont(new java.awt.Font("Bauhaus 93", 1, 12)); // NOI18N
+        TutorialsLabel.setForeground(new java.awt.Color(255, 255, 255));
+        TutorialsLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TutorialsLabel.setText("Tutorials");
 
-        ReportGeneratorLabel2.setFont(new java.awt.Font("Bauhaus 93", 1, 12)); // NOI18N
-        ReportGeneratorLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        ReportGeneratorLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ReportGeneratorLabel2.setText("Manage recources");
+        ManageResourcesLabel.setFont(new java.awt.Font("Bauhaus 93", 1, 12)); // NOI18N
+        ManageResourcesLabel.setForeground(new java.awt.Color(255, 255, 255));
+        ManageResourcesLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ManageResourcesLabel.setText("Manage recources");
 
-        ReportGeneratorLabel3.setFont(new java.awt.Font("Bauhaus 93", 1, 12)); // NOI18N
-        ReportGeneratorLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        ReportGeneratorLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ReportGeneratorLabel3.setText("Quiz");
+        QuizLogoLabel.setFont(new java.awt.Font("Bauhaus 93", 1, 12)); // NOI18N
+        QuizLogoLabel.setForeground(new java.awt.Color(255, 255, 255));
+        QuizLogoLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        QuizLogoLabel.setText("Quiz");
 
         javax.swing.GroupLayout ResourceHubNavPNLLayout = new javax.swing.GroupLayout(ResourceHubNavPNL);
         ResourceHubNavPNL.setLayout(ResourceHubNavPNLLayout);
@@ -278,11 +292,11 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {
                         .addComponent(ManageRecourceLabel)
                         .addGap(126, 126, 126))
                     .addGroup(ResourceHubNavPNLLayout.createSequentialGroup()
-                        .addComponent(ReportGeneratorLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(TutorialsLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 115, Short.MAX_VALUE)
-                        .addComponent(ReportGeneratorLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(QuizLogoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(98, 98, 98)
-                        .addComponent(ReportGeneratorLabel2)
+                        .addComponent(ManageResourcesLabel)
                         .addGap(104, 104, 104))))
         );
         ResourceHubNavPNLLayout.setVerticalGroup(
@@ -296,9 +310,9 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {
                         .addComponent(ManageRecourceLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(ResourceHubNavPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ReportGeneratorLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ReportGeneratorLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ReportGeneratorLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(TutorialsLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ManageResourcesLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(QuizLogoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(18, Short.MAX_VALUE))
         );
 
@@ -308,32 +322,39 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {
         SecondParent.setLayout(new java.awt.CardLayout());
 
         ManageResourcesPNL.setBackground(new java.awt.Color(51, 204, 255));
-        ManageResourcesPNL.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        ManageResourcesPNL.setLayout(null);
 
         ResourceFirstNameLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ResourceFirstNameLabel.setText("FirstName");
-        ManageResourcesPNL.add(ResourceFirstNameLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(61, 9, 56, -1));
-        ManageResourcesPNL.add(ResourseFirstNameField, new org.netbeans.lib.awtextra.AbsoluteConstraints(135, 6, 101, -1));
+        ManageResourcesPNL.add(ResourceFirstNameLabel);
+        ResourceFirstNameLabel.setBounds(61, 9, 56, 16);
+        ManageResourcesPNL.add(ResourseFirstNameField);
+        ResourseFirstNameField.setBounds(135, 6, 101, 22);
 
         ResourseSurnameField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ResourseSurnameFieldActionPerformed(evt);
             }
         });
-        ManageResourcesPNL.add(ResourseSurnameField, new org.netbeans.lib.awtextra.AbsoluteConstraints(445, 6, 101, -1));
+        ManageResourcesPNL.add(ResourseSurnameField);
+        ResourseSurnameField.setBounds(445, 6, 101, 22);
 
         ResourcesSurnameLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ResourcesSurnameLabel.setText("Surname");
-        ManageResourcesPNL.add(ResourcesSurnameLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(369, 9, 50, -1));
+        ManageResourcesPNL.add(ResourcesSurnameLabel);
+        ResourcesSurnameLabel.setBounds(369, 9, 50, 16);
 
         ResourseTypeLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ResourseTypeLabel.setText("RecourceType");
-        ManageResourcesPNL.add(ResourseTypeLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(358, 49, 75, -1));
-        ManageResourcesPNL.add(ResourseDateField, new org.netbeans.lib.awtextra.AbsoluteConstraints(135, 46, 101, -1));
+        ManageResourcesPNL.add(ResourseTypeLabel);
+        ResourseTypeLabel.setBounds(358, 49, 75, 16);
+        ManageResourcesPNL.add(ResourseDateField);
+        ResourseDateField.setBounds(135, 46, 101, 22);
 
         ResourseDateLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ResourseDateLabel.setText("Date");
-        ManageResourcesPNL.add(ResourseDateLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 50, 50, -1));
+        ManageResourcesPNL.add(ResourseDateLabel);
+        ResourseDateLabel.setBounds(60, 50, 50, 16);
 
         ResourceTBL.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -358,17 +379,22 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {
         });
         jScrollPane2.setViewportView(ResourceTBL);
 
-        ManageResourcesPNL.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(19, 167, 636, 166));
+        ManageResourcesPNL.add(jScrollPane2);
+        jScrollPane2.setBounds(19, 167, 636, 166);
 
         ResourceURLLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ResourceURLLabel.setText("URL");
-        ManageResourcesPNL.add(ResourceURLLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 90, 50, -1));
-        ManageResourcesPNL.add(ResourseURLField, new org.netbeans.lib.awtextra.AbsoluteConstraints(135, 86, 101, -1));
+        ManageResourcesPNL.add(ResourceURLLabel);
+        ResourceURLLabel.setBounds(60, 90, 50, 16);
+        ManageResourcesPNL.add(ResourseURLField);
+        ResourseURLField.setBounds(135, 86, 101, 22);
 
         CourseLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         CourseLabel.setText("Course");
-        ManageResourcesPNL.add(CourseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(369, 89, 50, -1));
-        ManageResourcesPNL.add(ResourseCourseField, new org.netbeans.lib.awtextra.AbsoluteConstraints(445, 86, 101, -1));
+        ManageResourcesPNL.add(CourseLabel);
+        CourseLabel.setBounds(369, 89, 50, 16);
+        ManageResourcesPNL.add(ResourseCourseField);
+        ResourseCourseField.setBounds(445, 86, 101, 22);
 
         SaveResourseBTN.setText("Save");
         SaveResourseBTN.setMaximumSize(new java.awt.Dimension(72, 22));
@@ -379,7 +405,8 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {
                 SaveResourseBTNActionPerformed(evt);
             }
         });
-        ManageResourcesPNL.add(SaveResourseBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 340, 75, -1));
+        ManageResourcesPNL.add(SaveResourseBTN);
+        SaveResourseBTN.setBounds(200, 340, 75, 22);
 
         ViewResourceBTN.setText("View");
         ViewResourceBTN.setMaximumSize(new java.awt.Dimension(72, 22));
@@ -390,22 +417,58 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {
                 ViewResourceBTNActionPerformed(evt);
             }
         });
-        ManageResourcesPNL.add(ViewResourceBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 340, 80, -1));
+        ManageResourcesPNL.add(ViewResourceBTN);
+        ViewResourceBTN.setBounds(390, 340, 80, 22);
 
         ResourceTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Website", "Video", "Tutorial", "Book", " " }));
-        ManageResourcesPNL.add(ResourceTypeComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 50, 110, 20));
+        ManageResourcesPNL.add(ResourceTypeComboBox);
+        ResourceTypeComboBox.setBounds(440, 50, 110, 20);
 
-        exitBTn.setBackground(new java.awt.Color(255, 51, 51));
-        exitBTn.setText("EXIT");
-        exitBTn.setMaximumSize(new java.awt.Dimension(72, 22));
-        exitBTn.setMinimumSize(new java.awt.Dimension(72, 22));
-        exitBTn.setPreferredSize(new java.awt.Dimension(72, 22));
-        exitBTn.addActionListener(new java.awt.event.ActionListener() {
+        AdminDeleteBTN.setBackground(new java.awt.Color(255, 51, 51));
+        AdminDeleteBTN.setText("delete");
+        AdminDeleteBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        AdminDeleteBTN.setMaximumSize(new java.awt.Dimension(72, 22));
+        AdminDeleteBTN.setMinimumSize(new java.awt.Dimension(72, 22));
+        AdminDeleteBTN.setPreferredSize(new java.awt.Dimension(72, 22));
+        AdminDeleteBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                exitBTnActionPerformed(evt);
+                AdminDeleteBTNActionPerformed(evt);
             }
         });
-        ManageResourcesPNL.add(exitBTn, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 340, 70, -1));
+
+        AdminBTNLayeredPane.setLayer(AdminDeleteBTN, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        javax.swing.GroupLayout AdminBTNLayeredPaneLayout = new javax.swing.GroupLayout(AdminBTNLayeredPane);
+        AdminBTNLayeredPane.setLayout(AdminBTNLayeredPaneLayout);
+        AdminBTNLayeredPaneLayout.setHorizontalGroup(
+            AdminBTNLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(AdminBTNLayeredPaneLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(AdminDeleteBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(14, Short.MAX_VALUE))
+        );
+        AdminBTNLayeredPaneLayout.setVerticalGroup(
+            AdminBTNLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(AdminBTNLayeredPaneLayout.createSequentialGroup()
+                .addComponent(AdminDeleteBTN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 8, Short.MAX_VALUE))
+        );
+
+        ManageResourcesPNL.add(AdminBTNLayeredPane);
+        AdminBTNLayeredPane.setBounds(30, 340, 100, 30);
+
+        exitBTn8.setBackground(new java.awt.Color(255, 51, 51));
+        exitBTn8.setText("EXIT");
+        exitBTn8.setMaximumSize(new java.awt.Dimension(72, 22));
+        exitBTn8.setMinimumSize(new java.awt.Dimension(72, 22));
+        exitBTn8.setPreferredSize(new java.awt.Dimension(72, 22));
+        exitBTn8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exitBTn8ActionPerformed(evt);
+            }
+        });
+        ManageResourcesPNL.add(exitBTn8);
+        exitBTn8.setBounds(570, 340, 70, 22);
 
         SecondParent.add(ManageResourcesPNL, "card4");
 
@@ -413,6 +476,7 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {
 
         TutorialLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TutorialLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/video-lesson.png"))); // NOI18N
+        TutorialLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         TutorialLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 TutorialLabel2MouseClicked(evt);
@@ -421,6 +485,7 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {
 
         TutorialLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TutorialLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/video-lesson.png"))); // NOI18N
+        TutorialLabel3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         TutorialLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 TutorialLabel3MouseClicked(evt);
@@ -429,6 +494,7 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {
 
         TutorialLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TutorialLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/video-lesson.png"))); // NOI18N
+        TutorialLabel5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         TutorialLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 TutorialLabel5MouseClicked(evt);
@@ -437,6 +503,7 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {
 
         TutorialLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TutorialLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/video-lesson.png"))); // NOI18N
+        TutorialLabel4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         TutorialLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 TutorialLabel4MouseClicked(evt);
@@ -445,6 +512,7 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {
 
         Tutorial1Label.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Tutorial1Label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/video-lesson.png"))); // NOI18N
+        Tutorial1Label.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Tutorial1Label.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Tutorial1LabelMouseClicked(evt);
@@ -551,8 +619,10 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {
         QuizPNL.setBackground(new java.awt.Color(51, 204, 255));
 
         jTabbedPane3.setBackground(new java.awt.Color(51, 204, 255));
+        jTabbedPane3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         ComputersQuizPNL.setBackground(new java.awt.Color(51, 204, 255));
+        ComputersQuizPNL.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         ComputersQuestionLabel2.setText("What does \"PSU\" stand for?");
 
@@ -575,11 +645,13 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {
         ComputerQuizComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Graphical Processing Unit", "Graphic Prone Unit", "Graphics Processing Under", "Game Processing Unit", " " }));
 
         ComputersClearBTN.setText("Clear ");
+        ComputersClearBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         ComputersClearBTN.setMaximumSize(new java.awt.Dimension(72, 22));
         ComputersClearBTN.setMinimumSize(new java.awt.Dimension(72, 22));
         ComputersClearBTN.setPreferredSize(new java.awt.Dimension(72, 22));
 
         ComputersQuizCheckBTN.setText("Check");
+        ComputersQuizCheckBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         ComputersQuizCheckBTN.setMaximumSize(new java.awt.Dimension(72, 22));
         ComputersQuizCheckBTN.setMinimumSize(new java.awt.Dimension(72, 22));
         ComputersQuizCheckBTN.setPreferredSize(new java.awt.Dimension(72, 22));
@@ -591,6 +663,8 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {
 
         exitBTn2.setBackground(new java.awt.Color(255, 51, 51));
         exitBTn2.setText("EXIT");
+        exitBTn2.setBorderPainted(false);
+        exitBTn2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         exitBTn2.setMaximumSize(new java.awt.Dimension(72, 22));
         exitBTn2.setMinimumSize(new java.awt.Dimension(72, 22));
         exitBTn2.setPreferredSize(new java.awt.Dimension(72, 22));
@@ -670,8 +744,10 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {
         jTabbedPane3.addTab("Computers quiz", ComputersQuizPNL);
 
         GeographyQuizPNL.setBackground(new java.awt.Color(51, 204, 255));
+        GeographyQuizPNL.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         GeographyQuizCheckBTN.setText("Check");
+        GeographyQuizCheckBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         GeographyQuizCheckBTN.setMaximumSize(new java.awt.Dimension(72, 22));
         GeographyQuizCheckBTN.setMinimumSize(new java.awt.Dimension(72, 22));
         GeographyQuizCheckBTN.setPreferredSize(new java.awt.Dimension(72, 22));
@@ -692,6 +768,7 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {
         GeographyQuestionLabel5.setText("Which continent is the smallest?");
 
         GeographyClearBTN1.setText("Clear");
+        GeographyClearBTN1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         GeographyClearBTN1.setMaximumSize(new java.awt.Dimension(72, 22));
         GeographyClearBTN1.setMinimumSize(new java.awt.Dimension(72, 22));
         GeographyClearBTN1.setPreferredSize(new java.awt.Dimension(72, 22));
@@ -708,6 +785,7 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {
 
         exitBTn3.setBackground(new java.awt.Color(255, 51, 51));
         exitBTn3.setText("EXIT");
+        exitBTn3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         exitBTn3.setMaximumSize(new java.awt.Dimension(72, 22));
         exitBTn3.setMinimumSize(new java.awt.Dimension(72, 22));
         exitBTn3.setPreferredSize(new java.awt.Dimension(72, 22));
@@ -784,9 +862,11 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {
         jTabbedPane3.addTab("Geography quiz", GeographyQuizPNL);
 
         ProgrammingQuizPNL.setBackground(new java.awt.Color(51, 204, 255));
+        ProgrammingQuizPNL.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         ProgrammingQuizPNL.setLayout(null);
 
         ProgrammingQuizCheckBTN.setText("Check");
+        ProgrammingQuizCheckBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         ProgrammingQuizCheckBTN.setMaximumSize(new java.awt.Dimension(72, 22));
         ProgrammingQuizCheckBTN.setMinimumSize(new java.awt.Dimension(72, 22));
         ProgrammingQuizCheckBTN.setPreferredSize(new java.awt.Dimension(72, 22));
@@ -799,6 +879,7 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {
         ProgrammingQuizCheckBTN.setBounds(260, 310, 72, 22);
 
         ProgrammingClearBTN.setText("Clear ");
+        ProgrammingClearBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         ProgrammingClearBTN.setMaximumSize(new java.awt.Dimension(72, 22));
         ProgrammingClearBTN.setMinimumSize(new java.awt.Dimension(72, 22));
         ProgrammingClearBTN.setPreferredSize(new java.awt.Dimension(72, 22));
@@ -847,6 +928,7 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {
 
         exitBTn4.setBackground(new java.awt.Color(255, 51, 51));
         exitBTn4.setText("EXIT");
+        exitBTn4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         exitBTn4.setMaximumSize(new java.awt.Dimension(72, 22));
         exitBTn4.setMinimumSize(new java.awt.Dimension(72, 22));
         exitBTn4.setPreferredSize(new java.awt.Dimension(72, 22));
@@ -881,27 +963,41 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {
         Parent.add(ResourceHubPNL, "card3");
 
         ReportGeneratorPNL.setBackground(new java.awt.Color(51, 204, 255));
+        ReportGeneratorPNL.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        ReportGeneratorPNL.setLayout(null);
 
         ReportGeneratorFirstNameLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ReportGeneratorFirstNameLabel.setText("Name");
+        ReportGeneratorPNL.add(ReportGeneratorFirstNameLabel);
+        ReportGeneratorFirstNameLabel.setBounds(122, 119, 62, 16);
 
-        ReportGeneratorSurnameLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ReportGeneratorSurnameLabel.setText("Number");
+        AverageGradeLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        AverageGradeLabel.setText("AVG grade");
+        ReportGeneratorPNL.add(AverageGradeLabel);
+        AverageGradeLabel.setBounds(514, 119, 76, 16);
 
         ReportGeneratorDateLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ReportGeneratorDateLabel.setText("Date");
+        ReportGeneratorPNL.add(ReportGeneratorDateLabel);
+        ReportGeneratorDateLabel.setBounds(122, 197, 62, 16);
 
         ReportGeneratorEmailLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ReportGeneratorEmailLabel.setText("Email");
+        ReportGeneratorPNL.add(ReportGeneratorEmailLabel);
+        ReportGeneratorEmailLabel.setBounds(522, 197, 62, 16);
 
         ReportGeneratorFirstNameField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        ReportGeneratorPNL.add(ReportGeneratorFirstNameField);
+        ReportGeneratorFirstNameField.setBounds(93, 85, 120, 22);
 
-        ReportGeneratorSurnameField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        ReportGeneratorSurnameField.addActionListener(new java.awt.event.ActionListener() {
+        AVGGradeField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        AVGGradeField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ReportGeneratorReportGeneratorSurnameFieldActionPerformed(evt);
+                ReportGeneratorAVGGradeFieldActionPerformed(evt);
             }
         });
+        ReportGeneratorPNL.add(AVGGradeField);
+        AVGGradeField.setBounds(496, 85, 120, 22);
 
         ReportGeneratorEmailField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         ReportGeneratorEmailField.addActionListener(new java.awt.event.ActionListener() {
@@ -909,26 +1005,38 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {
                 ReportGeneratorReportGeneratorEmailFieldActionPerformed(evt);
             }
         });
+        ReportGeneratorPNL.add(ReportGeneratorEmailField);
+        ReportGeneratorEmailField.setBounds(496, 169, 120, 22);
 
         ReportGeneratorContentLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ReportGeneratorContentLabel.setText("Report");
+        ReportGeneratorContentLabel.setText("Reports");
+        ReportGeneratorPNL.add(ReportGeneratorContentLabel);
+        ReportGeneratorContentLabel.setBounds(310, 260, 62, 16);
 
-        SaveBTN.setText("save");
-
-        ViewBTN.setText("view");
-
-        DeleteBTN.setText("delete");
-
-        ReportGeneratorDateFormattedField.addActionListener(new java.awt.event.ActionListener() {
+        SaveBTN.setText("Save/Generate");
+        SaveBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ReportGeneratorDateFormattedFieldActionPerformed(evt);
+                SaveBTNActionPerformed(evt);
             }
         });
+        ReportGeneratorPNL.add(SaveBTN);
+        SaveBTN.setBounds(90, 470, 130, 23);
+
+        ViewBTN.setText("view");
+        ViewBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ViewBTNActionPerformed(evt);
+            }
+        });
+        ReportGeneratorPNL.add(ViewBTN);
+        ViewBTN.setBounds(240, 470, 107, 23);
 
         ReportGeneratorTitleLabel.setFont(new java.awt.Font("Bauhaus 93", 1, 36)); // NOI18N
         ReportGeneratorTitleLabel.setForeground(new java.awt.Color(255, 255, 255));
         ReportGeneratorTitleLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ReportGeneratorTitleLabel.setText("Report Generator");
+        ReportGeneratorPNL.add(ReportGeneratorTitleLabel);
+        ReportGeneratorTitleLabel.setBounds(181, 31, 295, 36);
 
         exitBTn6.setBackground(new java.awt.Color(255, 51, 51));
         exitBTn6.setText("EXIT");
@@ -940,106 +1048,61 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {
                 exitBTn6ActionPerformed(evt);
             }
         });
+        ReportGeneratorPNL.add(exitBTn6);
+        exitBTn6.setBounds(370, 470, 104, 22);
 
         ReportTBL.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Name", "AVG Grade", "Date", "Email", "Feedback"
             }
-        ));
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.Double.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
         TBLScrollPane.setViewportView(ReportTBL);
 
-        javax.swing.GroupLayout ReportGeneratorPNLLayout = new javax.swing.GroupLayout(ReportGeneratorPNL);
-        ReportGeneratorPNL.setLayout(ReportGeneratorPNLLayout);
-        ReportGeneratorPNLLayout.setHorizontalGroup(
-            ReportGeneratorPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ReportGeneratorPNLLayout.createSequentialGroup()
-                .addGap(93, 93, 93)
-                .addGroup(ReportGeneratorPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(ReportGeneratorPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(TBLScrollPane)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ReportGeneratorPNLLayout.createSequentialGroup()
-                            .addGroup(ReportGeneratorPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(ReportGeneratorDateFormattedField, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(ReportGeneratorPNLLayout.createSequentialGroup()
-                                    .addGap(29, 29, 29)
-                                    .addComponent(ReportGeneratorDateLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(ReportGeneratorPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(ReportGeneratorEmailField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ReportGeneratorPNLLayout.createSequentialGroup()
-                                    .addComponent(ReportGeneratorEmailLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(32, 32, 32))))
-                        .addGroup(ReportGeneratorPNLLayout.createSequentialGroup()
-                            .addGap(29, 29, 29)
-                            .addComponent(ReportGeneratorFirstNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(ReportGeneratorSurnameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(30, 30, 30))
-                        .addGroup(ReportGeneratorPNLLayout.createSequentialGroup()
-                            .addComponent(ReportGeneratorFirstNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(ReportGeneratorSurnameField, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(ReportGeneratorPNLLayout.createSequentialGroup()
-                        .addGroup(ReportGeneratorPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(ReportGeneratorPNLLayout.createSequentialGroup()
-                                .addGap(88, 88, 88)
-                                .addComponent(ReportGeneratorTitleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(ReportGeneratorPNLLayout.createSequentialGroup()
-                                .addGap(23, 23, 23)
-                                .addComponent(SaveBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(52, 52, 52)
-                                .addComponent(ViewBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(50, 50, 50)
-                                .addComponent(DeleteBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(46, 46, 46)
-                                .addComponent(exitBTn6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(ReportGeneratorPNLLayout.createSequentialGroup()
-                                .addGap(218, 218, 218)
-                                .addComponent(ReportGeneratorContentLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(100, 100, 100))
+        ReportGeneratorPNL.add(TBLScrollPane);
+        TBLScrollPane.setBounds(80, 280, 550, 123);
+        ReportGeneratorPNL.add(ReportGeneratorDateField);
+        ReportGeneratorDateField.setBounds(93, 169, 120, 22);
+
+        javax.swing.GroupLayout AdminBTNLayeredPane1Layout = new javax.swing.GroupLayout(AdminBTNLayeredPane1);
+        AdminBTNLayeredPane1.setLayout(AdminBTNLayeredPane1Layout);
+        AdminBTNLayeredPane1Layout.setHorizontalGroup(
+            AdminBTNLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
         );
-        ReportGeneratorPNLLayout.setVerticalGroup(
-            ReportGeneratorPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ReportGeneratorPNLLayout.createSequentialGroup()
-                .addGap(31, 31, 31)
-                .addComponent(ReportGeneratorTitleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(ReportGeneratorPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ReportGeneratorFirstNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ReportGeneratorSurnameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(ReportGeneratorPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ReportGeneratorFirstNameLabel)
-                    .addComponent(ReportGeneratorSurnameLabel))
-                .addGap(34, 34, 34)
-                .addGroup(ReportGeneratorPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(ReportGeneratorPNLLayout.createSequentialGroup()
-                        .addComponent(ReportGeneratorEmailField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(ReportGeneratorEmailLabel))
-                    .addGroup(ReportGeneratorPNLLayout.createSequentialGroup()
-                        .addComponent(ReportGeneratorDateFormattedField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(ReportGeneratorDateLabel)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(ReportGeneratorContentLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(TBLScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 186, Short.MAX_VALUE)
-                .addGap(18, 18, 18)
-                .addGroup(ReportGeneratorPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(SaveBTN)
-                    .addComponent(ViewBTN)
-                    .addComponent(DeleteBTN)
-                    .addComponent(exitBTn6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(32, 32, 32))
+        AdminBTNLayeredPane1Layout.setVerticalGroup(
+            AdminBTNLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
         );
+
+        ReportGeneratorPNL.add(AdminBTNLayeredPane1);
+        AdminBTNLayeredPane1.setBounds(30, 340, 100, 30);
+
+        AdminDeleteBTN1.setBackground(new java.awt.Color(255, 51, 51));
+        AdminDeleteBTN1.setText("delete");
+        AdminDeleteBTN1.setMaximumSize(new java.awt.Dimension(72, 22));
+        AdminDeleteBTN1.setMinimumSize(new java.awt.Dimension(72, 22));
+        AdminDeleteBTN1.setPreferredSize(new java.awt.Dimension(72, 22));
+        AdminDeleteBTN1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AdminDeleteBTN1ActionPerformed(evt);
+            }
+        });
+        ReportGeneratorPNL.add(AdminDeleteBTN1);
+        AdminDeleteBTN1.setBounds(500, 470, 105, 22);
 
         Parent.add(ReportGeneratorPNL, "card4");
 
@@ -1092,6 +1155,7 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {
         ContactUsTermsAndConditionsCheckBox.setForeground(new java.awt.Color(255, 255, 255));
         ContactUsTermsAndConditionsCheckBox.setText("I Accept");
         ContactUsTermsAndConditionsCheckBox.setToolTipText("Please accept the terms and conditions in order to submit a review.");
+        ContactUsTermsAndConditionsCheckBox.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         ContactUsReviewDateLabel.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         ContactUsReviewDateLabel.setForeground(new java.awt.Color(255, 255, 255));
@@ -1137,6 +1201,7 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {
         SendFeedbackBTN.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         SendFeedbackBTN.setText("Send");
         SendFeedbackBTN.setToolTipText("After you've filled out all of the fields above and want to submit your review, please press this 'send' button.\n");
+        SendFeedbackBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         SendFeedbackBTN.setMaximumSize(new java.awt.Dimension(72, 22));
         SendFeedbackBTN.setMinimumSize(new java.awt.Dimension(72, 22));
         SendFeedbackBTN.addActionListener(new java.awt.event.ActionListener() {
@@ -1147,6 +1212,7 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {
 
         exitBTn5.setBackground(new java.awt.Color(255, 51, 51));
         exitBTn5.setText("EXIT");
+        exitBTn5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         exitBTn5.setMaximumSize(new java.awt.Dimension(72, 22));
         exitBTn5.setMinimumSize(new java.awt.Dimension(72, 22));
         exitBTn5.setPreferredSize(new java.awt.Dimension(72, 22));
@@ -1284,22 +1350,21 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {
     }//GEN-LAST:event_ContactUsEmailFieldKeyPressed
 
     private void SendFeedbackBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SendFeedbackBTNActionPerformed
-String firstname = ContactUsFirstNameField.getText();
-String surname = ContactUsSurnameField.getText();
-String gmail = ContactUsEmailField.getText();
-String dateReview = ContactUsReviewDateFormattedField.getText();
-String content = FeedbackTextArea.getText();
+        String firstname = ContactUsFirstNameField.getText();
+        String surname = ContactUsSurnameField.getText();
+        String gmail = ContactUsEmailField.getText();
+        String dateReview = ContactUsReviewDateFormattedField.getText();
+        String content = FeedbackTextArea.getText();
 
+        if (ContactUsFirstNameField.getText().isEmpty() || ContactUsEmailField.getText().isEmpty() || dateReview.isEmpty() || FeedbackTextArea.getText().isEmpty() || ContactUsFirstNameField.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "All fields must be filled!", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
 
-if (ContactUsFirstNameField.getText().isEmpty() || ContactUsEmailField.getText().isEmpty() || dateReview.isEmpty() || FeedbackTextArea.getText().isEmpty() || ContactUsFirstNameField.getText().isEmpty() ) {
-    JOptionPane.showMessageDialog(null, "All fields must be filled!", "Error", JOptionPane.ERROR_MESSAGE);
-    return;
-}
+        ResourceHub resourceHub = new ResourceHub();
+        resourceHub.ContactUs(firstname, surname, gmail, dateReview, content);
 
-ResourceHub resourceHub = new ResourceHub();
-resourceHub.ContactUs(firstname, surname, gmail, dateReview, content);
-
-JOptionPane.showMessageDialog(null, "Your feedback has been successfully saved.", "Success", JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(null, "Your feedback has been successfully saved.", "Success", JOptionPane.INFORMATION_MESSAGE);
 
     }//GEN-LAST:event_SendFeedbackBTNActionPerformed
 
@@ -1311,9 +1376,9 @@ JOptionPane.showMessageDialog(null, "Your feedback has been successfully saved."
         // TODO add your handling code here:
     }//GEN-LAST:event_ReportGeneratorReportGeneratorEmailFieldActionPerformed
 
-    private void ReportGeneratorReportGeneratorSurnameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReportGeneratorReportGeneratorSurnameFieldActionPerformed
+    private void ReportGeneratorAVGGradeFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReportGeneratorAVGGradeFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_ReportGeneratorReportGeneratorSurnameFieldActionPerformed
+    }//GEN-LAST:event_ReportGeneratorAVGGradeFieldActionPerformed
 
     private void ReportGeneratorLogoLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ReportGeneratorLogoLabelMouseClicked
         Parent.removeAll();
@@ -1363,16 +1428,16 @@ JOptionPane.showMessageDialog(null, "Your feedback has been successfully saved."
     }//GEN-LAST:event_ResourseSurnameFieldActionPerformed
 
     private void SaveResourseBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaveResourseBTNActionPerformed
-        String fName = ResourseFirstNameField.getText();
-        String sName = ResourseSurnameField.getText();
-        String resourceCourse = ResourseCourseField.getText();
-        String resourceDate = ResourseDateField.getText();
+        String firstname = ResourseFirstNameField.getText();
+        String surname = ResourseSurnameField.getText();
+        String Course = ResourseCourseField.getText();
+        String Date = ResourseDateField.getText();
         String resourceType = (String) ResourceTypeComboBox.getSelectedItem();
-        String resourceURL = ResourseURLField.getText();
+        String URL = ResourseURLField.getText();
 
         // Save resource using ResourceHub
         ResourceHub resourceHub = new ResourceHub();
-        resourceHub.saveResource(fName, sName, resourceCourse, resourceDate, resourceType, resourceURL);
+        resourceHub.saveResource(firstname, surname, Course, Date, resourceType, URL);
 
         JOptionPane.showMessageDialog(null, "Successfully added to the file");
     }//GEN-LAST:event_SaveResourseBTNActionPerformed
@@ -1383,22 +1448,9 @@ JOptionPane.showMessageDialog(null, "Your feedback has been successfully saved."
         resourceHub.loadResources(ResourceTBL);//call upon method to load resources and senign the tbl as a arg so it has access, i didnt know how to do with without making the table static , and i wanted to try my best to encapsulate as much as possible so this seemed to be the best way to do it
     }//GEN-LAST:event_ViewResourceBTNActionPerformed
 
-    private void ReportGeneratorDateFormattedFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReportGeneratorDateFormattedFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ReportGeneratorDateFormattedFieldActionPerformed
-
-    private void exitBTnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBTnActionPerformed
-        setVisible(false);
-
-     
-        HomePage homePage = new HomePage();
-        homePage.setVisible(true);
-    }//GEN-LAST:event_exitBTnActionPerformed
-
     private void exitBTn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBTn1ActionPerformed
         setVisible(false);
 
-       
         HomePage homePage = new HomePage();
         homePage.setVisible(true);
     }//GEN-LAST:event_exitBTn1ActionPerformed
@@ -1406,7 +1458,6 @@ JOptionPane.showMessageDialog(null, "Your feedback has been successfully saved."
     private void exitBTn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBTn2ActionPerformed
         setVisible(false);
 
-     
         HomePage homePage = new HomePage();
         homePage.setVisible(true);
     }//GEN-LAST:event_exitBTn2ActionPerformed
@@ -1414,7 +1465,6 @@ JOptionPane.showMessageDialog(null, "Your feedback has been successfully saved."
     private void exitBTn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBTn3ActionPerformed
         setVisible(false);
 
-       
         HomePage homePage = new HomePage();
         homePage.setVisible(true);
     }//GEN-LAST:event_exitBTn3ActionPerformed
@@ -1422,7 +1472,6 @@ JOptionPane.showMessageDialog(null, "Your feedback has been successfully saved."
     private void exitBTn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBTn4ActionPerformed
         setVisible(false);
 
-        
         HomePage homePage = new HomePage();
         homePage.setVisible(true);
     }//GEN-LAST:event_exitBTn4ActionPerformed
@@ -1430,7 +1479,6 @@ JOptionPane.showMessageDialog(null, "Your feedback has been successfully saved."
     private void exitBTn5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBTn5ActionPerformed
         setVisible(false);
 
-    
         HomePage homePage = new HomePage();
         homePage.setVisible(true);
     }//GEN-LAST:event_exitBTn5ActionPerformed
@@ -1438,68 +1486,67 @@ JOptionPane.showMessageDialog(null, "Your feedback has been successfully saved."
     private void exitBTn6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBTn6ActionPerformed
         setVisible(false);
 
-      
         HomePage homePage = new HomePage();
         homePage.setVisible(true);
     }//GEN-LAST:event_exitBTn6ActionPerformed
 
     private void ComputersQuizCheckBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComputersQuizCheckBTNActionPerformed
-    String correctAnswer1 = "Central Processing Unit";
-    String correctAnswer2 = "Power Supply Unit";
-    String correctAnswer3 = "Storing data";
-    String correctAnswer4 = "Solid State Drive";
-    String correctAnswer5 = "Graphical Processing Unit";
+        String correctAnswer1 = "Central Processing Unit";
+        String correctAnswer2 = "Power Supply Unit";
+        String correctAnswer3 = "Storing data";
+        String correctAnswer4 = "Solid State Drive";
+        String correctAnswer5 = "Graphical Processing Unit";
 
-    String selectedAnswer1 = (String) ComputerQuizComboBox.getSelectedItem();
-    String selectedAnswer2 = (String) ComputerQuizComboBox2.getSelectedItem();
-    String selectedAnswer3 = (String) ComputerQuizComboBox3.getSelectedItem();
-    String selectedAnswer4 = (String) ComputerQuizComboBox4.getSelectedItem();
-    String selectedAnswer5 = (String) ComputerQuizComboBox5.getSelectedItem();
+        String selectedAnswer1 = (String) ComputerQuizComboBox.getSelectedItem();
+        String selectedAnswer2 = (String) ComputerQuizComboBox2.getSelectedItem();
+        String selectedAnswer3 = (String) ComputerQuizComboBox3.getSelectedItem();
+        String selectedAnswer4 = (String) ComputerQuizComboBox4.getSelectedItem();
+        String selectedAnswer5 = (String) ComputerQuizComboBox5.getSelectedItem();
 
-    if (selectedAnswer1.equals(correctAnswer1)) {
-        ComputerQuizComboBox.setBackground(Color.GREEN); 
-    } else {
-        ComputerQuizComboBox.setBackground(Color.RED);
-    }
+        if (selectedAnswer1.equals(correctAnswer1)) {
+            ComputerQuizComboBox.setBackground(Color.GREEN);
+        } else {
+            ComputerQuizComboBox.setBackground(Color.RED);
+        }
 
-    if (selectedAnswer2.equals(correctAnswer2)) {
-        ComputerQuizComboBox2.setBackground(Color.GREEN);
-    } else {
-        ComputerQuizComboBox2.setBackground(Color.RED);
-    }
+        if (selectedAnswer2.equals(correctAnswer2)) {
+            ComputerQuizComboBox2.setBackground(Color.GREEN);
+        } else {
+            ComputerQuizComboBox2.setBackground(Color.RED);
+        }
 
-    if (selectedAnswer3.equals(correctAnswer3)) {
-        ComputerQuizComboBox3.setBackground(Color.GREEN);
-    } else {
-        ComputerQuizComboBox2.setBackground(Color.RED);
-    }
+        if (selectedAnswer3.equals(correctAnswer3)) {
+            ComputerQuizComboBox3.setBackground(Color.GREEN);
+        } else {
+            ComputerQuizComboBox2.setBackground(Color.RED);
+        }
 
-    if (selectedAnswer4.equals(correctAnswer4)) {
-        ComputerQuizComboBox4.setBackground(Color.GREEN);
-    } else {
-        ComputerQuizComboBox4.setBackground(Color.RED);
-    }
+        if (selectedAnswer4.equals(correctAnswer4)) {
+            ComputerQuizComboBox4.setBackground(Color.GREEN);
+        } else {
+            ComputerQuizComboBox4.setBackground(Color.RED);
+        }
 
-    if (selectedAnswer5.equals(correctAnswer5)) {
-        ComputerQuizComboBox5.setBackground(Color.GREEN);
-    } else {
-        ComputerQuizComboBox5.setBackground(Color.RED);
-    }
+        if (selectedAnswer5.equals(correctAnswer5)) {
+            ComputerQuizComboBox5.setBackground(Color.GREEN);
+        } else {
+            ComputerQuizComboBox5.setBackground(Color.RED);
+        }
 
 
     }//GEN-LAST:event_ComputersQuizCheckBTNActionPerformed
 
     private void Tutorial1LabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Tutorial1LabelMouseClicked
-        ResourceHub.Tutorial1(); 
+        ResourceHub.Tutorial1();
     }//GEN-LAST:event_Tutorial1LabelMouseClicked
 
     private void TutorialLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TutorialLabel2MouseClicked
-        ResourceHub.Tutorial2(); 
+        ResourceHub.Tutorial2();
 
     }//GEN-LAST:event_TutorialLabel2MouseClicked
 
     private void TutorialLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TutorialLabel3MouseClicked
-        ResourceHub.Tutorial3(); 
+        ResourceHub.Tutorial3();
     }//GEN-LAST:event_TutorialLabel3MouseClicked
 
     private void TutorialLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TutorialLabel4MouseClicked
@@ -1511,95 +1558,125 @@ JOptionPane.showMessageDialog(null, "Your feedback has been successfully saved."
     }//GEN-LAST:event_TutorialLabel5MouseClicked
 
     private void GeographyQuizCheckBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GeographyQuizCheckBTNActionPerformed
-    String correctAnswer1 = "Beijing";
-    String correctAnswer2 = "Instanbul";
-    String correctAnswer3 = "Dublin";
-    String correctAnswer4 = "Asia";
-    String correctAnswer5 = "Oceania";
+        String correctAnswer1 = "Beijing";
+        String correctAnswer2 = "Instanbul";
+        String correctAnswer3 = "Dublin";
+        String correctAnswer4 = "Asia";
+        String correctAnswer5 = "Oceania";
 
-    String selectedAnswer1 = (String) GeographyQuizComboBox.getSelectedItem();
-    String selectedAnswer2 = (String) GeographyQuizComboBox2.getSelectedItem();
-    String selectedAnswer3 = (String) GeographyQuizComboBox3.getSelectedItem();
-    String selectedAnswer4 = (String) GeographyQuizComboBox4.getSelectedItem();
-    String selectedAnswer5 = (String) GeographyQuizComboBox5.getSelectedItem();
+        String selectedAnswer1 = (String) GeographyQuizComboBox.getSelectedItem();
+        String selectedAnswer2 = (String) GeographyQuizComboBox2.getSelectedItem();
+        String selectedAnswer3 = (String) GeographyQuizComboBox3.getSelectedItem();
+        String selectedAnswer4 = (String) GeographyQuizComboBox4.getSelectedItem();
+        String selectedAnswer5 = (String) GeographyQuizComboBox5.getSelectedItem();
 
-    if (selectedAnswer1.equals(correctAnswer1)) {
-        GeographyQuizComboBox.setBackground(Color.GREEN); 
-    } else {
-        GeographyQuizComboBox.setBackground(Color.RED);
-    }
+        if (selectedAnswer1.equals(correctAnswer1)) {
+            GeographyQuizComboBox.setBackground(Color.GREEN);
+        } else {
+            GeographyQuizComboBox.setBackground(Color.RED);
+        }
 
-    if (selectedAnswer2.equals(correctAnswer2)) {
-        GeographyQuizComboBox2.setBackground(Color.GREEN);
-    } else {
-        GeographyQuizComboBox2.setBackground(Color.RED);
-    }
+        if (selectedAnswer2.equals(correctAnswer2)) {
+            GeographyQuizComboBox2.setBackground(Color.GREEN);
+        } else {
+            GeographyQuizComboBox2.setBackground(Color.RED);
+        }
 
-    if (selectedAnswer3.equals(correctAnswer3)) {
-        GeographyQuizComboBox3.setBackground(Color.GREEN);
-    } else {
-        GeographyQuizComboBox3.setBackground(Color.RED);
-    }
+        if (selectedAnswer3.equals(correctAnswer3)) {
+            GeographyQuizComboBox3.setBackground(Color.GREEN);
+        } else {
+            GeographyQuizComboBox3.setBackground(Color.RED);
+        }
 
-    if (selectedAnswer4.equals(correctAnswer4)) {
-        GeographyQuizComboBox4.setBackground(Color.GREEN);
-    } else {
-        GeographyQuizComboBox4.setBackground(Color.RED);
-    }
+        if (selectedAnswer4.equals(correctAnswer4)) {
+            GeographyQuizComboBox4.setBackground(Color.GREEN);
+        } else {
+            GeographyQuizComboBox4.setBackground(Color.RED);
+        }
 
-    if (selectedAnswer5.equals(correctAnswer5)) {
-        GeographyQuizComboBox5.setBackground(Color.GREEN);
-    } else {
-        GeographyQuizComboBox5.setBackground(Color.RED);
-    }
-    
+        if (selectedAnswer5.equals(correctAnswer5)) {
+            GeographyQuizComboBox5.setBackground(Color.GREEN);
+        } else {
+            GeographyQuizComboBox5.setBackground(Color.RED);
+        }
+
     }//GEN-LAST:event_GeographyQuizCheckBTNActionPerformed
 
     private void ProgrammingQuizCheckBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProgrammingQuizCheckBTNActionPerformed
-    String correctAnswer1 = "while";
-    String correctAnswer2 = "func";
-    String correctAnswer3 = "constant x = 5;";
-    String correctAnswer4 = "int x = 10;";
-    String correctAnswer5 = "array.size()";
+        String correctAnswer1 = "while";
+        String correctAnswer2 = "func";
+        String correctAnswer3 = "constant x = 5;";
+        String correctAnswer4 = "int x = 10;";
+        String correctAnswer5 = "array.size()";
 
-    String selectedAnswer1 = (String) ProgrammingComboBox.getSelectedItem();
-    String selectedAnswer2 = (String) ProgrammingComboBox2.getSelectedItem();
-    String selectedAnswer3 = (String) ProgrammingComboBox3.getSelectedItem();
-    String selectedAnswer4 = (String) ProgrammingComboBox4.getSelectedItem();
-    String selectedAnswer5 = (String) ProgrammingComboBox5.getSelectedItem();
+        String selectedAnswer1 = (String) ProgrammingComboBox.getSelectedItem();
+        String selectedAnswer2 = (String) ProgrammingComboBox2.getSelectedItem();
+        String selectedAnswer3 = (String) ProgrammingComboBox3.getSelectedItem();
+        String selectedAnswer4 = (String) ProgrammingComboBox4.getSelectedItem();
+        String selectedAnswer5 = (String) ProgrammingComboBox5.getSelectedItem();
 
-    if (selectedAnswer1.equals(correctAnswer1)) {
-        ProgrammingComboBox.setBackground(Color.GREEN); 
-    } else {
-        ProgrammingComboBox.setBackground(Color.RED);
-    }
+        if (selectedAnswer1.equals(correctAnswer1)) {
+            ProgrammingComboBox.setBackground(Color.GREEN);
+        } else {
+            ProgrammingComboBox.setBackground(Color.RED);
+        }
 
-    if (selectedAnswer2.equals(correctAnswer2)) {
-        ProgrammingComboBox2.setBackground(Color.GREEN);
-    } else {
-        ProgrammingComboBox2.setBackground(Color.RED);
-    }
+        if (selectedAnswer2.equals(correctAnswer2)) {
+            ProgrammingComboBox2.setBackground(Color.GREEN);
+        } else {
+            ProgrammingComboBox2.setBackground(Color.RED);
+        }
 
-    if (selectedAnswer3.equals(correctAnswer3)) {
-        ProgrammingComboBox3.setBackground(Color.GREEN);
-    } else {
-        ProgrammingComboBox3.setBackground(Color.RED);
-    }
+        if (selectedAnswer3.equals(correctAnswer3)) {
+            ProgrammingComboBox3.setBackground(Color.GREEN);
+        } else {
+            ProgrammingComboBox3.setBackground(Color.RED);
+        }
 
-    if (selectedAnswer4.equals(correctAnswer4)) {
-        ProgrammingComboBox4.setBackground(Color.GREEN);
-    } else {
-        ProgrammingComboBox4.setBackground(Color.RED);
-    }
+        if (selectedAnswer4.equals(correctAnswer4)) {
+            ProgrammingComboBox4.setBackground(Color.GREEN);
+        } else {
+            ProgrammingComboBox4.setBackground(Color.RED);
+        }
 
-    if (selectedAnswer5.equals(correctAnswer5)) {
-        ProgrammingComboBox5.setBackground(Color.GREEN);
-    } else {
-        ProgrammingComboBox5.setBackground(Color.RED);
-    }
+        if (selectedAnswer5.equals(correctAnswer5)) {
+            ProgrammingComboBox5.setBackground(Color.GREEN);
+        } else {
+            ProgrammingComboBox5.setBackground(Color.RED);
+        }
     }//GEN-LAST:event_ProgrammingQuizCheckBTNActionPerformed
 
-    
+    private void ViewBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ViewBTNActionPerformed
+        reportGenerator.viewReports(ReportTBL);
+    }//GEN-LAST:event_ViewBTNActionPerformed
+
+    private void SaveBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaveBTNActionPerformed
+// Get user input from the fields
+String name = ReportGeneratorFirstNameField.getText();  // Get name from input
+String avgGrade = AVGGradeField.getText();  // Get average grade from input
+String email = ReportGeneratorEmailField.getText();  // Get email from input
+String date = ReportGeneratorDateField.getText();  // Get date from input
+
+// Save the user's input along with generated feedback in the ReportGenerator
+reportGenerator.saveReport(name, email, date, avgGrade);
+
+// Now, call saveReportsToFile to save the ArrayList to the text file
+reportGenerator.saveReportsToFile();
+
+    }//GEN-LAST:event_SaveBTNActionPerformed
+
+    private void AdminDeleteBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AdminDeleteBTNActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AdminDeleteBTNActionPerformed
+
+    private void exitBTn8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBTn8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_exitBTn8ActionPerformed
+
+    private void AdminDeleteBTN1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AdminDeleteBTN1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AdminDeleteBTN1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1639,6 +1716,12 @@ JOptionPane.showMessageDialog(null, "Your feedback has been successfully saved."
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField AVGGradeField;
+    private javax.swing.JLayeredPane AdminBTNLayeredPane;
+    private javax.swing.JLayeredPane AdminBTNLayeredPane1;
+    private javax.swing.JButton AdminDeleteBTN;
+    private javax.swing.JButton AdminDeleteBTN1;
+    private javax.swing.JLabel AverageGradeLabel;
     private javax.swing.JComboBox<String> ComputerQuizComboBox;
     private javax.swing.JComboBox<String> ComputerQuizComboBox2;
     private javax.swing.JComboBox<String> ComputerQuizComboBox3;
@@ -1668,7 +1751,6 @@ JOptionPane.showMessageDialog(null, "Your feedback has been successfully saved."
     private javax.swing.JLabel ContactUsTermsAndConditionsLabel;
     private javax.swing.JLabel ContactUsTitleLabel;
     private javax.swing.JLabel CourseLabel;
-    private javax.swing.JButton DeleteBTN;
     public static javax.swing.JTextArea FeedbackTextArea;
     private javax.swing.JScrollPane FeedbackTextAreaScrollPane;
     private javax.swing.JButton GeographyClearBTN1;
@@ -1686,6 +1768,7 @@ JOptionPane.showMessageDialog(null, "Your feedback has been successfully saved."
     private javax.swing.JPanel GeographyQuizPNL;
     private javax.swing.JPanel HomePagePanel;
     private javax.swing.JLabel ManageRecourceLabel;
+    private javax.swing.JLabel ManageResourcesLabel;
     private javax.swing.JPanel ManageResourcesPNL;
     private javax.swing.JPanel Parent;
     private javax.swing.JButton ProgrammingClearBTN;
@@ -1702,24 +1785,20 @@ JOptionPane.showMessageDialog(null, "Your feedback has been successfully saved."
     private javax.swing.JButton ProgrammingQuizCheckBTN;
     private javax.swing.JPanel ProgrammingQuizPNL;
     private javax.swing.JLabel QuizLabel;
+    private javax.swing.JLabel QuizLogoLabel;
     private javax.swing.JPanel QuizPNL;
     private javax.swing.JLabel RecourceHubLabel;
     private javax.swing.JLabel RecourceHubLogoLabel;
     private javax.swing.JLabel ReportGeneratorContentLabel;
-    private javax.swing.JFormattedTextField ReportGeneratorDateFormattedField;
+    private javax.swing.JTextField ReportGeneratorDateField;
     private javax.swing.JLabel ReportGeneratorDateLabel;
     private javax.swing.JTextField ReportGeneratorEmailField;
     private javax.swing.JLabel ReportGeneratorEmailLabel;
     private javax.swing.JTextField ReportGeneratorFirstNameField;
     private javax.swing.JLabel ReportGeneratorFirstNameLabel;
     private javax.swing.JLabel ReportGeneratorLabel;
-    private javax.swing.JLabel ReportGeneratorLabel1;
-    private javax.swing.JLabel ReportGeneratorLabel2;
-    private javax.swing.JLabel ReportGeneratorLabel3;
     private javax.swing.JLabel ReportGeneratorLogoLabel;
     private javax.swing.JPanel ReportGeneratorPNL;
-    private javax.swing.JTextField ReportGeneratorSurnameField;
-    private javax.swing.JLabel ReportGeneratorSurnameLabel;
     private javax.swing.JLabel ReportGeneratorTitleLabel;
     private javax.swing.JTable ReportTBL;
     private javax.swing.JLabel ResourceFirstNameLabel;
@@ -1752,16 +1831,17 @@ JOptionPane.showMessageDialog(null, "Your feedback has been successfully saved."
     private javax.swing.JLabel TutorialNameLabel3;
     private javax.swing.JLabel TutorialNameLabel4;
     private javax.swing.JLabel TutorialNameLabel5;
+    private javax.swing.JLabel TutorialsLabel;
     private javax.swing.JPanel TutorialsPNL;
     private javax.swing.JButton ViewBTN;
     private javax.swing.JButton ViewResourceBTN;
-    private javax.swing.JButton exitBTn;
     private javax.swing.JButton exitBTn1;
     private javax.swing.JButton exitBTn2;
     private javax.swing.JButton exitBTn3;
     private javax.swing.JButton exitBTn4;
     private javax.swing.JButton exitBTn5;
     private javax.swing.JButton exitBTn6;
+    private javax.swing.JButton exitBTn8;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTabbedPane jTabbedPane3;
     // End of variables declaration//GEN-END:variables

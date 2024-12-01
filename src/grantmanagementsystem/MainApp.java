@@ -5,11 +5,11 @@
 package grantmanagementsystem;
 /**
  *
- * @author Gregory
+ * @author Gregory Mitchell
  */
-public class MainApp {
+public class MainApp {//start main app class ( this will act as the landing page)
 
-    public static void main(String[] args) {
-        new LoginPageGUI().setVisible(true);
-    }
-}
+    public static void main(String[] args) {//start main
+        new LoginPageGUI().setVisible(true);//creating the login page and setting it to visible
+    }//end main
+}//end class
