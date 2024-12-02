@@ -1,8 +1,8 @@
 
 12345,John Doe,Computer Science,johndoe@example.com,500,Need for textbooks,APPROVED,2024-11-20
 12346,Jane Smith,Mathematics,janesmith@example.com,300,Tuition assistance,APPROVED,2024-11-20
-12347,Michael Brown,Engineering,michaelb@example.com,1000,Research project materials,PENDING,2024-11-20
-12348,Emily Davis,Physics,emilyd@example.com,400,Lab fees,PENDING,2024-11-20
+12347,Michael Brown,Engineering,michaelb@example.com,1000,Research project materials,APPROVED,2024-11-20
+12348,Emily Davis,Physics,emilyd@example.com,400,Lab fees,APPROVED,2024-11-20
 12349,David Clark,Chemistry,davidc@example.com,600,Scientific papers,PENDING,2024-11-20
 12350,Susan Lee,Biology,susanl@example.com,200,Fieldwork supplies,PENDING,2024-11-20
 12351,James Harris,Philosophy,jamesh@example.com,150,Book purchase,PENDING,2024-11-20

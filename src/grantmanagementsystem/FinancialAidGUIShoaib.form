@@ -90,9 +90,9 @@
                               <EmptySpace min="314" pref="314" max="-2" attributes="0"/>
                               <Component id="submitBTN" min="-2" pref="139" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="QuotePNL" alignment="0" min="-2" pref="815" max="-2" attributes="0"/>
+                          <Component id="QuotePNL" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="0" pref="1" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="5" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="32767" attributes="0"/>
@@ -336,71 +336,42 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="keeplearningPNG" pref="147" max="32767" attributes="0"/>
-                              <Component id="schoolPNG" max="32767" attributes="0"/>
-                          </Group>
+                      <Group type="102" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="quote2" min="-2" pref="474" max="-2" attributes="0"/>
-                              <Component id="quoteLBL" min="-2" pref="570" max="-2" attributes="0"/>
+                              <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                  <Component id="learningPNG" alignment="0" pref="149" max="32767" attributes="0"/>
+                                  <Component id="schoolPNG" alignment="0" max="32767" attributes="0"/>
+                              </Group>
+                              <Component id="quote2" alignment="0" min="-2" pref="474" max="-2" attributes="0"/>
+                              <Component id="quoteLBL" alignment="0" min="-2" pref="570" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="makethingshappenPNG" min="-2" pref="87" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace pref="239" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
-                                  <Component id="schoolPNG" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
-                                  <Component id="keeplearningPNG" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="118" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="1" attributes="0">
-                                      <Component id="makethingshappenPNG" min="-2" max="-2" attributes="0"/>
-                                      <Group type="102" attributes="0">
-                                          <Component id="quoteLBL" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="quote2" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                              </Group>
-                          </Group>
-                          <EmptySpace pref="84" max="32767" attributes="0"/>
+                          <Component id="schoolPNG" min="-2" pref="112" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="quoteLBL" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace pref="107" max="32767" attributes="0"/>
+                          <Component id="quote2" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="learningPNG" min="-2" pref="141" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="schoolPNG">
-                  <Properties>
-                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/img/school (1).png"/>
-                    </Property>
-                  </Properties>
-                </Component>
                 <Component class="javax.swing.JLabel" name="quoteLBL">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Segoe UI" size="12" style="1"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="&quot;Education is the most powerful weapon which you can use to change the world.&quot; &#x2013; Nelson Mandela"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="keeplearningPNG">
-                  <Properties>
-                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/img/learning (2).png"/>
-                    </Property>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="quote2">
@@ -411,10 +382,17 @@
                     <Property name="text" type="java.lang.String" value="&quot;The beautiful thing about learning is that no one can take it away from you.&quot; &#x2013; B.B. King"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="makethingshappenPNG">
+                <Component class="javax.swing.JLabel" name="schoolPNG">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/grantmanagementsystem/creativity.png"/>
+                      <Image iconType="3" name="/img/school (1).png"/>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="learningPNG">
+                  <Properties>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/img/learning (2).png"/>
                     </Property>
                   </Properties>
                 </Component>
@@ -430,8 +408,8 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="Scholarship ">
-                <Property name="tabTitle" type="java.lang.String" value="Scholarship "/>
+              <JTabbedPaneConstraints tabName="Sponsorship">
+                <Property name="tabTitle" type="java.lang.String" value="Sponsorship"/>
               </JTabbedPaneConstraints>
             </Constraint>
           </Constraints>
@@ -499,7 +477,7 @@
                                   <Component id="jLabel1" min="-2" pref="88" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="sidTF" min="-2" pref="120" max="-2" attributes="0"/>
-                                  <EmptySpace pref="262" max="32767" attributes="0"/>
+                                  <EmptySpace pref="266" max="32767" attributes="0"/>
                                   <Component id="jLabel2" min="-2" pref="101" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
                                   <Component id="fundsTF" min="-2" pref="120" max="-2" attributes="0"/>
@@ -615,7 +593,7 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jScrollPane2" alignment="1" pref="810" max="32767" attributes="0"/>
+                      <Component id="jScrollPane2" alignment="1" pref="814" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
