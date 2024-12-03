@@ -1341,22 +1341,7 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
     }//GEN-LAST:event_ContactUsReviewDateFormattedFieldActionPerformed
 
     private void ContactUsReviewDateFormattedFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ContactUsReviewDateFormattedFieldKeyPressed
-        String Text = ContactUsReviewDateFormattedField.getText();//get text as a string from the Field element within the GUI
-        int InpLength = 30;//setting the length limit of the field
 
-        int code = evt.getKeyCode();//getting code for key pressed
-
-        if ((code >= KeyEvent.VK_0 && code <= KeyEvent.VK_9)//if condition to ensure the end user is only able to enter the expected input and cant break the program
-                || code == KeyEvent.VK_BACK_SPACE) {//allow the end user to hit backspace
-
-            if (Text.length() >= InpLength && code != KeyEvent.VK_BACK_SPACE) {//allow backspace if the limit is reached
-                JOptionPane.showMessageDialog(null, "Most allowed is 30 inputs for review!");//notify the end user if it was succesful or not using j option pane popup
-                evt.consume();//stops the key press from happenign
-            }//end if
-        } else {//start else if condition
-            JOptionPane.showMessageDialog(null, "Wrong input. Please use valid date // or digit/ inputs.");//notify the end user if it was succesful or not using j option pane popup
-            evt.consume();//stops the key press from happenign
-        }//end if
     }//GEN-LAST:event_ContactUsReviewDateFormattedFieldKeyPressed
 
     private void ContactUsSurnameFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ContactUsSurnameFieldKeyPressed
@@ -1380,23 +1365,7 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
     }//GEN-LAST:event_ContactUsSurnameFieldKeyPressed
 
     private void ContactUsEmailFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ContactUsEmailFieldKeyPressed
-        String Text = ContactUsEmailField.getText();//get text as a string from the Field element within the GUI
-        int InpLength = 30;//setting the length limit of the field
-
-        int code = evt.getKeyCode();//getting code for key pressed
-
-        if ((code >= KeyEvent.VK_A && code <= KeyEvent.VK_Z)//if condition to ensure the end user is only able to enter the expected input and cant break the program
-                || (code >= KeyEvent.VK_0 && code <= KeyEvent.VK_9)//if condition to ensure the end user is only able to enter the expected input and cant break the program
-                || code == KeyEvent.VK_BACK_SPACE) {//allow the end user to hit backspace
-
-            if (Text.length() >= InpLength && code != KeyEvent.VK_BACK_SPACE) {//allow backspace if the limit is reached
-                JOptionPane.showMessageDialog(null, "Most allowed is 30 inputs for email!");//notify the end user if it was succesful or not using j option pane popup
-                evt.consume();//stops the key press from happenign
-            }//end if
-        } else {//start else if condition
-            JOptionPane.showMessageDialog(null, "Wrong input. Please use valid email inputs.");//notify the end user if it was succesful or not using j option pane popup
-            evt.consume();//stops the key press from happenign
-        }//end if
+ 
     }//GEN-LAST:event_ContactUsEmailFieldKeyPressed
 
     private void SendFeedbackBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SendFeedbackBTNActionPerformed
@@ -1768,43 +1737,11 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
     }//GEN-LAST:event_ResourseFirstNameFieldKeyPressed
 
     private void ResourseDateFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ResourseDateFieldKeyPressed
-        String Text = ResourseDateField.getText();//get text as a string from the Field element within the GUI
-        int InpLength = 10;//setting the length limit of the field
 
-        int code = evt.getKeyCode();//getting code for key pressed
-
-        if ((code >= KeyEvent.VK_0 && code <= KeyEvent.VK_9)//if condition to ensure the end user is only able to enter the expected input and cant break the program
-                || code == KeyEvent.VK_BACK_SPACE) {//allow the end user to hit backspace
-
-            if (Text.length() >= InpLength && code != KeyEvent.VK_BACK_SPACE) {//allow backspace if the limit is reached
-                JOptionPane.showMessageDialog(null, "Most allowed is 10 numbers for date!");//notify the end user if it was succesful or not using j option pane popup
-                evt.consume();//stops the key press from happenign
-                //end if
-            } else {//start else if condition
-                JOptionPane.showMessageDialog(null, "Wrong input. Please use valid email inputs.");//notify the end user if it was succesful or not using j option pane popup
-                evt.consume();//stops the key press from happenign
-            }//end if
-        }
     }//GEN-LAST:event_ResourseDateFieldKeyPressed
 
     private void ResourseURLFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ResourseURLFieldKeyPressed
-        String Text = ResourseURLField.getText();//get text as a string from the Field element within the GUI
-        int InpLength = 50;//setting the length limit of the field
 
-        int code = evt.getKeyCode();//getting code for key pressed
-
-        if ((code >= KeyEvent.VK_A && code <= KeyEvent.VK_Z)//if condition to ensure the end user is only able to enter the expected input and cant break the program
-                || (code >= KeyEvent.VK_0 && code <= KeyEvent.VK_9)
-                || code == KeyEvent.VK_BACK_SPACE) {//allow the end user to hit backspace
-
-            if (Text.length() >= InpLength && code != KeyEvent.VK_BACK_SPACE) {//allow backspace if the limit is reached
-                JOptionPane.showMessageDialog(null, "Most allowed is 50 inputs for url!");//notify the end user if it was succesful or not using j option pane popup
-                evt.consume();//stops the key press from happenign
-            }//end if
-        } else {//start else if condition
-            JOptionPane.showMessageDialog(null, "Wrong input. Please use valid email inputs.");//notify the end user if it was succesful or not using j option pane popup
-            evt.consume();//stops the key press from happenign
-        }//end if
     }//GEN-LAST:event_ResourseURLFieldKeyPressed
 
     private void ReportGeneratorFirstNameFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ReportGeneratorFirstNameFieldKeyPressed
@@ -1846,42 +1783,11 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
     }//GEN-LAST:event_AVGGradeFieldKeyPressed
 
     private void ReportGeneratorEmailFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ReportGeneratorEmailFieldKeyPressed
-        String Text = ReportGeneratorEmailField.getText();//get text as a string from the Field element within the GUI
-        int InpLength = 30;//setting the length limit of the field
 
-        int code = evt.getKeyCode();//getting code for key pressed
-
-        if ((code >= KeyEvent.VK_A && code <= KeyEvent.VK_Z)
-                || (code >= KeyEvent.VK_0 && code <= KeyEvent.VK_9//if condition to ensure the end user is only able to enter the expected input and cant break the program
-                || code == KeyEvent.VK_BACK_SPACE)) {//allow the end user to hit backspace
-
-            if (Text.length() >= InpLength && code != KeyEvent.VK_BACK_SPACE) {//allow backspace if the limit is reached
-                JOptionPane.showMessageDialog(null, "Most allowed is 30 inputs for email!");//notify the end user if it was succesful or not using j option pane popup
-                evt.consume();//stops the key press from happenign
-            }//end if
-        } else {//start else if condition
-            JOptionPane.showMessageDialog(null, "Wrong input. Please use valid email inputs.");//notify the end user if it was succesful or not using j option pane popup
-            evt.consume();//stops the key press from happenign//stops the key press from happenign
-        }//end if
     }//GEN-LAST:event_ReportGeneratorEmailFieldKeyPressed
 
     private void ReportGeneratorDateFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ReportGeneratorDateFieldKeyPressed
-        String Text = ReportGeneratorDateField.getText();//get text as a string from the Field element within the GUI
-        int InpLength = 10;//setting the length limit of the field
 
-        int code = evt.getKeyCode();//getting code for key pressed
-
-        if ((code >= KeyEvent.VK_0 && code <= KeyEvent.VK_9)//if condition to ensure the end user is only able to enter the expected input and cant break the program
-                || code == KeyEvent.VK_BACK_SPACE) {//allow the end user to hit backspace
-
-            if (Text.length() >= InpLength && code != KeyEvent.VK_BACK_SPACE) {//allow backspace if the limit is reached
-                JOptionPane.showMessageDialog(null, "Most allowed is 10 inputs for date field!");//notify the end user if it was succesful or not using j option pane popup
-                evt.consume();//stops the key press from happenign
-            }//end if
-        } else {//start else if condition//end if
-            JOptionPane.showMessageDialog(null, "Wrong input. Please use valid email inputs.");//notify the end user if it was succesful or not using j option pane popup
-            evt.consume();//stops the key press from happenign
-        }//end if
     }//GEN-LAST:event_ReportGeneratorDateFieldKeyPressed
 
     /**
