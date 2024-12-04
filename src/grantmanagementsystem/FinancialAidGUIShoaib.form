@@ -474,17 +474,17 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jLabel1" min="-2" pref="88" max="-2" attributes="0"/>
+                                  <Component id="sidLBL" min="-2" pref="88" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="sidTF" min="-2" pref="120" max="-2" attributes="0"/>
+                                  <Component id="sponsoridTF" min="-2" pref="120" max="-2" attributes="0"/>
                                   <EmptySpace pref="266" max="32767" attributes="0"/>
-                                  <Component id="jLabel2" min="-2" pref="101" max="-2" attributes="0"/>
+                                  <Component id="fundsLBL" min="-2" pref="101" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
                                   <Component id="fundsTF" min="-2" pref="120" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jLabel3" min="-2" pref="88" max="-2" attributes="0"/>
+                                  <Component id="SnameLBL" min="-2" pref="88" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="sponsornameTF" min="-2" pref="120" max="-2" attributes="0"/>
                                   <EmptySpace max="32767" attributes="0"/>
@@ -500,14 +500,14 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="sidTF" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="sidLBL" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="sponsoridTF" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fundsLBL" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="fundsTF" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="SnameLBL" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="sponsornameTF" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="registerBTN" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                           </Group>
@@ -517,21 +517,21 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="jLabel1">
+                <Component class="javax.swing.JLabel" name="sidLBL">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Sponsor ID"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="sidTF">
+                <Component class="javax.swing.JTextField" name="sponsoridTF">
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel2">
+                <Component class="javax.swing.JLabel" name="fundsLBL">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Available Funds"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="fundsTF">
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel3">
+                <Component class="javax.swing.JLabel" name="SnameLBL">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Sponsor Name"/>
                   </Properties>
@@ -689,6 +689,8 @@
                       <Component id="approveBTN1" min="-2" pref="110" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                       <Component id="rejectBTN1" min="-2" pref="110" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="deleteBTN" min="-2" pref="110" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                       <Component id="exitBTN2" min="-2" pref="110" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
@@ -705,6 +707,7 @@
                           <Component id="approveBTN1" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
                           <Component id="rejectBTN1" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
                           <Component id="exitBTN2" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="deleteBTN" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -738,7 +741,7 @@
                     </Property>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                       <Table columnCount="8" rowCount="4">
-                        <Column editable="true" title="Application ID" type="java.lang.Object"/>
+                        <Column editable="true" title="Student ID" type="java.lang.Object"/>
                         <Column editable="true" title="Student Name" type="java.lang.Object"/>
                         <Column editable="true" title="Course Name" type="java.lang.Object"/>
                         <Column editable="true" title="Email" type="java.lang.Object"/>
@@ -861,6 +864,22 @@
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="exitBTN2ActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="deleteBTN">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="33" green="33" red="ff" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="DELETE"/>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
+                    <BevelBorder/>
+                  </Border>
+                </Property>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="deleteBTNActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>

@@ -1,5 +1,6 @@
-12345,John Doe,Computer Science,johndoe@example.com,500,S101,APPROVED
-12345,John Doe,Computer Science,johndoe@example.com,500,S101,APPROVED
-12346,Jane Smith,Mathematics,janesmith@example.com,300,S101,APPROVED
-12348,Emily Davis,Physics,emilyd@example.com,400,S101,APPROVED
-12347,Michael Brown,Engineering,michaelb@example.com,1000,S101,APPROVED
+
+S101,Khan,BSC,khan@gmail.com,6700,S101,APPROVED
+S101,Khan,BSC,khan@gmail.com,6700,S101,APPROVED
+S102,Aisha,BA,aisha@gmail.com,5000,s101,APPROVED
+S103,Ali,BBA,ali@gmail.com,8000,t101,APPROVED
+S106,Zara,BSC CS,zara@gmail.com,4500,S101,APPROVED

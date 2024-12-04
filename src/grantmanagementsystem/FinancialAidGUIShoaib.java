@@ -7,6 +7,7 @@ package grantmanagementsystem;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.io.*;
+import java.time.LocalDate;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -59,11 +60,11 @@ public class FinancialAidGUIShoaib extends javax.swing.JFrame {
         learningPNG = new javax.swing.JLabel();
         scholarshipPNL = new javax.swing.JPanel();
         registeration = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        sidTF = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
+        sidLBL = new javax.swing.JLabel();
+        sponsoridTF = new javax.swing.JTextField();
+        fundsLBL = new javax.swing.JLabel();
         fundsTF = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
+        SnameLBL = new javax.swing.JLabel();
         sponsornameTF = new javax.swing.JTextField();
         registerBTN = new javax.swing.JButton();
         viewAllBTN = new javax.swing.JButton();
@@ -78,6 +79,7 @@ public class FinancialAidGUIShoaib extends javax.swing.JFrame {
         approveBTN1 = new javax.swing.JButton();
         rejectBTN1 = new javax.swing.JButton();
         exitBTN2 = new javax.swing.JButton();
+        deleteBTN = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(153, 255, 255));
@@ -280,11 +282,11 @@ public class FinancialAidGUIShoaib extends javax.swing.JFrame {
         registeration.setBackground(new java.awt.Color(51, 204, 255));
         registeration.setBorder(javax.swing.BorderFactory.createTitledBorder("Registeration"));
 
-        jLabel1.setText("Sponsor ID");
+        sidLBL.setText("Sponsor ID");
 
-        jLabel2.setText("Available Funds");
+        fundsLBL.setText("Available Funds");
 
-        jLabel3.setText("Sponsor Name");
+        SnameLBL.setText("Sponsor Name");
 
         registerBTN.setBackground(new java.awt.Color(102, 255, 102));
         registerBTN.setText("Register Sponsor");
@@ -303,16 +305,16 @@ public class FinancialAidGUIShoaib extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(registerationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(registerationLayout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(sidLBL, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(sidTF, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(sponsoridTF, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 266, Short.MAX_VALUE)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(fundsLBL, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(41, 41, 41)
                         .addComponent(fundsTF, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(44, 44, 44))
                     .addGroup(registerationLayout.createSequentialGroup()
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(SnameLBL, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(sponsornameTF, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -324,13 +326,13 @@ public class FinancialAidGUIShoaib extends javax.swing.JFrame {
             .addGroup(registerationLayout.createSequentialGroup()
                 .addGap(22, 22, 22)
                 .addGroup(registerationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(sidTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2)
+                    .addComponent(sidLBL)
+                    .addComponent(sponsoridTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(fundsLBL)
                     .addComponent(fundsTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(46, 46, 46)
                 .addGroup(registerationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
+                    .addComponent(SnameLBL)
                     .addComponent(sponsornameTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(registerBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(21, Short.MAX_VALUE))
@@ -435,7 +437,7 @@ public class FinancialAidGUIShoaib extends javax.swing.JFrame {
                 {null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Application ID", "Student Name", "Course Name", "Email", "Requested Amount", "Reason for Aid", "Status", "Date"
+                "Student ID", "Student Name", "Course Name", "Email", "Requested Amount", "Reason for Aid", "Status", "Date"
             }
         ));
         grant.setViewportView(grantTBL);
@@ -476,6 +478,15 @@ public class FinancialAidGUIShoaib extends javax.swing.JFrame {
             }
         });
 
+        deleteBTN.setBackground(new java.awt.Color(255, 51, 51));
+        deleteBTN.setText("DELETE");
+        deleteBTN.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        deleteBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deleteBTNActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout adminPNLLayout = new javax.swing.GroupLayout(adminPNL);
         adminPNL.setLayout(adminPNLLayout);
         adminPNLLayout.setHorizontalGroup(
@@ -490,6 +501,8 @@ public class FinancialAidGUIShoaib extends javax.swing.JFrame {
                 .addComponent(approveBTN1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(32, 32, 32)
                 .addComponent(rejectBTN1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(deleteBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(exitBTN2, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -503,7 +516,8 @@ public class FinancialAidGUIShoaib extends javax.swing.JFrame {
                     .addComponent(allGrantBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(approveBTN1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(rejectBTN1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(exitBTN2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(exitBTN2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(deleteBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
@@ -536,14 +550,45 @@ public class FinancialAidGUIShoaib extends javax.swing.JFrame {
     }//GEN-LAST:event_exitBTnActionPerformed
 
     private void submitBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitBTNActionPerformed
-     String studentId = sidTF.getText();
-    String name = snameTF5.getText();
-    String course = courseTF5.getText();
-    String email = emailTF5.getText();
-    String amount = requestAmountTF5.getText();
-    String reason = reasonTA.getText();
-    
-    FinancialAidApplication.submitApplication(studentId, name,course,email, amount, reason);
+      // Retrieve data from input fields
+    String studentId = sidTF5.getText().trim();
+    String name = snameTF5.getText().trim();
+    String course = courseTF5.getText().trim();
+    String email = emailTF5.getText().trim();
+    String amount = requestAmountTF5.getText().trim();
+    String reason = reasonTA.getText().trim(); // TextArea for reason input
+
+    // Validation
+    if (studentId.isEmpty() || name.isEmpty() || course.isEmpty() || email.isEmpty() || amount.isEmpty() || reason.isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Please fill in all fields.");
+        return;
+    }
+
+    try {
+        double amountValue = Double.parseDouble(amount);
+        if (amountValue <= 0) {
+            JOptionPane.showMessageDialog(this, "Amount must be greater than 0.");
+            return;
+        }
+    } catch (NumberFormatException e) {
+        JOptionPane.showMessageDialog(this, "Please enter a valid amount.");
+        return;
+    }
+
+    // Save application to file
+    FinancialAidApplication.submitApplication(studentId, name, course, email, amount, reason);
+
+    // Add the data to the table (grantTBL)
+    DefaultTableModel model = (DefaultTableModel) grantTBL.getModel();
+    model.addRow(new Object[]{studentId, name, course, email, amount, reason, "PENDING", LocalDate.now().toString()});
+
+    // Clear the input fields after successful submission
+    sidTF5.setText("");
+    snameTF5.setText("");
+    courseTF5.setText("");
+    emailTF5.setText("");
+    requestAmountTF5.setText("");
+    reasonTA.setText("");
     
 }
 
@@ -561,13 +606,18 @@ private void viewMyApplicationsBTNActionPerformed(java.awt.event.ActionEvent evt
     }//GEN-LAST:event_exitsponsorBTNActionPerformed
 
     private void registerBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerBTNActionPerformed
-   // Trim inputs to remove leading/trailing spaces
-    String sponsorId = sidTF.getText().trim();
-    String name = snameTF5.getText().trim();
+     // Trim inputs to remove leading/trailing spaces
+    String sponsorId = sponsoridTF.getText().trim();
+    String sponsorName = sponsornameTF.getText().trim();
     String funds = fundsTF.getText().trim();
 
+//    // Debugging logs to check input
+//    System.out.println("Sponsor ID: " + sponsorId);
+//    System.out.println("Name: " + sponsorName);
+//    System.out.println("Funds: " + funds);
+
     // Input validation
-    if (sponsorId.isEmpty() || name.isEmpty() || funds.isEmpty()) {
+    if (sponsorId.isEmpty() || sponsorName.isEmpty() || funds.isEmpty()) {
         JOptionPane.showMessageDialog(this, "Please fill in all sponsor fields");
         return;
     }
@@ -585,10 +635,14 @@ private void viewMyApplicationsBTNActionPerformed(java.awt.event.ActionEvent evt
     }
 
     // Save sponsor data using the Sponsorship class
-    Sponsorship.saveSponsor(sponsorId, name, funds);
+    Sponsorship.saveSponsor(sponsorId, sponsorName, funds);
+
+    // Update sponsorTBL (assumed to be a DefaultTableModel)
+    DefaultTableModel model = (DefaultTableModel) sponsorTBL.getModel();
+    model.addRow(new Object[]{sponsorId, sponsorName, funds});
 
     // Clear the input fields after successful registration
-    sidTF.setText("");
+    sponsoridTF.setText("");
     snameTF5.setText("");
     fundsTF.setText("");
     }//GEN-LAST:event_registerBTNActionPerformed
@@ -600,111 +654,161 @@ private void viewMyApplicationsBTNActionPerformed(java.awt.event.ActionEvent evt
     }//GEN-LAST:event_viewAllBTNActionPerformed
 
     private void approveBTN1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_approveBTN1ActionPerformed
-       int selectedRow = grantTBL.getSelectedRow(); // Get the selected row from the table
-        if (selectedRow == -1) {
-            JOptionPane.showMessageDialog(this, "Please select an application to approve.");
-            return;
+      int selectedRow = grantTBL.getSelectedRow(); // Get the selected row from the table
+if (selectedRow == -1) {
+    JOptionPane.showMessageDialog(this, "Please select an application to approve.");
+    return;
+}
+
+String studentId = (String) grantTBL.getValueAt(selectedRow, 0);
+String studentName = (String) grantTBL.getValueAt(selectedRow, 1);
+String course = (String) grantTBL.getValueAt(selectedRow, 2);
+String email = (String) grantTBL.getValueAt(selectedRow, 3);
+String amount = (String) grantTBL.getValueAt(selectedRow, 4);
+
+String sponsorId = JOptionPane.showInputDialog(this, 
+    "Enter Sponsor ID for this grant:", 
+    "Sponsor ID Required", 
+    JOptionPane.PLAIN_MESSAGE);
+
+if (sponsorId == null || sponsorId.trim().isEmpty()) {
+    JOptionPane.showMessageDialog(this, "Approval requires a valid Sponsor ID.");
+    return;
+}
+
+// Check if sponsor ID exists in the sponsors.txt file
+boolean sponsorExists = false;
+try (BufferedReader reader = new BufferedReader(new FileReader("sponsors.txt"))) {
+    String line;
+    while ((line = reader.readLine()) != null) {
+        String[] sponsorData = line.split(",");
+        if (sponsorData[0].equals(sponsorId)) {
+            sponsorExists = true;
+            break;
         }
+    }
+} catch (IOException e) {
+    JOptionPane.showMessageDialog(this, "Error checking sponsor ID: " + e.getMessage());
+    return;
+}
 
-        String studentId = (String) grantTBL.getValueAt(selectedRow, 0);
-        String studentName = (String) grantTBL.getValueAt(selectedRow, 1);
-        String course = (String) grantTBL.getValueAt(selectedRow, 2);
-        String email = (String) grantTBL.getValueAt(selectedRow, 3);
-        String amount = (String) grantTBL.getValueAt(selectedRow, 4);
+if (!sponsorExists) {
+    JOptionPane.showMessageDialog(this, "No sponsor found with the provided ID. Please enter a correct Sponsor ID.");
+    return;
+}
 
-        String sponsorId = JOptionPane.showInputDialog(this, 
-            "Enter Sponsor ID for this grant:", 
-            "Sponsor ID Required", 
-            JOptionPane.PLAIN_MESSAGE);
+int confirm = JOptionPane.showConfirmDialog(this, 
+    "Are you sure you want to approve the application for " + studentName + " (ID: " + studentId + ")?", 
+    "Approval Confirmation", 
+    JOptionPane.YES_NO_OPTION);
 
-        if (sponsorId == null || sponsorId.trim().isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Approval requires a valid Sponsor ID.");
-            return;
-        }
+if (confirm == JOptionPane.YES_OPTION) {
+    try (BufferedReader reader = new BufferedReader(new FileReader("applications.txt"));
+         BufferedWriter writer = new BufferedWriter(new FileWriter("applications_temp.txt"))) {
 
-        int confirm = JOptionPane.showConfirmDialog(this, 
-            "Are you sure you want to approve the application for " + studentName + " (ID: " + studentId + ")?", 
-            "Approval Confirmation", 
-            JOptionPane.YES_NO_OPTION);
-
-        if (confirm == JOptionPane.YES_OPTION) {
-            try (BufferedReader reader = new BufferedReader(new FileReader("applications.txt"));
-                 BufferedWriter writer = new BufferedWriter(new FileWriter("applications_temp.txt"))) {
-
-                String line;
-                while ((line = reader.readLine()) != null) {
-                    String[] data = line.split(",");
-                    if (data[0].equals(studentId)) {
-                        data[6] = "APPROVED"; 
-                        writer.write(String.join(",", data));
-                    } else {
-                        writer.write(line);
-                    }
-                    writer.newLine();
-                }
-            } catch (IOException e) {
-                JOptionPane.showMessageDialog(this, "Error approving application: " + e.getMessage());
-                return;
+        String line;
+        while ((line = reader.readLine()) != null) {
+            String[] data = line.split(",");
+            if (data[0].equals(studentId)) {
+                data[6] = "APPROVED"; 
+                writer.write(String.join(",", data));
+            } else {
+                writer.write(line);
             }
-
-            File originalFile = new File("applications.txt");
-            File tempFile = new File("applications_temp.txt");
-            if (originalFile.delete()) {
-                tempFile.renameTo(originalFile);
-            }
-
-            Grant.saveGrant(studentId, studentName, course, email, amount, sponsorId);
-            Grant.loadApplicationsToTable(grantTBL);
-            JOptionPane.showMessageDialog(this, "Application for " + studentName + " has been approved.");
+            writer.newLine();
         }
+    } catch (IOException e) {
+        JOptionPane.showMessageDialog(this, "Error approving application: " + e.getMessage());
+        return;
+    }
+
+    File originalFile = new File("applications.txt");
+    File tempFile = new File("applications_temp.txt");
+    if (originalFile.delete()) {
+        tempFile.renameTo(originalFile);
+    }
+
+    Grant.saveGrant(studentId, studentName, course, email, amount, sponsorId);
+    Grant.loadApplicationsToTable(grantTBL);
+    JOptionPane.showMessageDialog(this, "Application for " + studentName + " has been approved.");
+}
     }//GEN-LAST:event_approveBTN1ActionPerformed
 
     private void rejectBTN1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rejectBTN1ActionPerformed
-      
-        int selectedRow = grantTBL.getSelectedRow(); 
-        if (selectedRow == -1) {
-            JOptionPane.showMessageDialog(this, "Please select an application to reject.");
+          int selectedRow = grantTBL.getSelectedRow(); 
+    if (selectedRow == -1) {
+        JOptionPane.showMessageDialog(this, "Please select an application to reject.");
+        return;
+    }
+
+    String studentId = (String) grantTBL.getValueAt(selectedRow, 0);
+    String studentName = (String) grantTBL.getValueAt(selectedRow, 1);
+
+    String sponsorId = JOptionPane.showInputDialog(this, 
+        "Enter Sponsor ID for this grant:", 
+        "Sponsor ID Required", 
+        JOptionPane.PLAIN_MESSAGE);
+
+    if (sponsorId == null || sponsorId.trim().isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Rejection requires a valid Sponsor ID.");
+        return;
+    }
+
+    // Check if sponsor ID exists in the sponsors.txt file
+    boolean sponsorExists = false;
+    try (BufferedReader reader = new BufferedReader(new FileReader("sponsors.txt"))) {
+        String line;
+        while ((line = reader.readLine()) != null) {
+            String[] sponsorData = line.split(",");
+            if (sponsorData[0].equals(sponsorId)) {
+                sponsorExists = true;
+                break;
+            }
+        }
+    } catch (IOException e) {
+        JOptionPane.showMessageDialog(this, "Error checking sponsor ID: " + e.getMessage());
+        return;
+    }
+
+    if (!sponsorExists) {
+        JOptionPane.showMessageDialog(this, "No sponsor found with the provided ID. Please enter a correct Sponsor ID.");
+        return;
+    }
+
+    int confirm = JOptionPane.showConfirmDialog(this, 
+        "Are you sure you want to reject the application for " + studentName + " (ID: " + studentId + ")?", 
+        "Reject Confirmation", 
+        JOptionPane.YES_NO_OPTION);
+
+    if (confirm == JOptionPane.YES_OPTION) {
+        try (BufferedReader reader = new BufferedReader(new FileReader("applications.txt"));
+             BufferedWriter writer = new BufferedWriter(new FileWriter("applications_temp.txt"))) {
+            
+            String line;
+            while ((line = reader.readLine()) != null) {
+                String[] data = line.split(",");
+                if (data[0].equals(studentId)) {
+                    data[6] = "REJECTED"; 
+                    writer.write(String.join(",", data));
+                } else {
+                    writer.write(line);
+                }
+                writer.newLine();
+            }
+        } catch (IOException e) {
+            JOptionPane.showMessageDialog(this, "Error rejecting application: " + e.getMessage());
             return;
         }
 
-        String studentId = (String) grantTBL.getValueAt(selectedRow, 0);
-        String studentName = (String) grantTBL.getValueAt(selectedRow, 1);
-
-        int confirm = JOptionPane.showConfirmDialog(this, 
-            "Are you sure you want to reject the application for " + studentName + " (ID: " + studentId + ")?", 
-            "Reject Confirmation", 
-            JOptionPane.YES_NO_OPTION);
-
-        if (confirm == JOptionPane.YES_OPTION) {
-            try (BufferedReader reader = new BufferedReader(new FileReader("applications.txt"));
-                 BufferedWriter writer = new BufferedWriter(new FileWriter("applications_temp.txt"))) {
-                
-                String line;
-                while ((line = reader.readLine()) != null) {
-                    String[] data = line.split(",");
-                    if (data[0].equals(studentId)) {
-                        data[6] = "REJECTED"; 
-                        writer.write(String.join(",", data));
-                    } else {
-                        writer.write(line);
-                    }
-                    writer.newLine();
-                }
-            } catch (IOException e) {
-                JOptionPane.showMessageDialog(this, "Error rejecting application: " + e.getMessage());
-                return;
-            }
-
-            File originalFile = new File("applications.txt");
-            File tempFile = new File("applications_temp.txt");
-            if (originalFile.delete()) {
-                tempFile.renameTo(originalFile);
-            }
-
-            Grant.loadApplicationsToTable(grantTBL);
-            JOptionPane.showMessageDialog(this, "Application for " + studentName + " has been rejected.");
+        File originalFile = new File("applications.txt");
+        File tempFile = new File("applications_temp.txt");
+        if (originalFile.delete()) {
+            tempFile.renameTo(originalFile);
         }
-        
+
+        Grant.loadApplicationsToTable(grantTBL);
+        JOptionPane.showMessageDialog(this, "Application for " + studentName + " has been rejected.");
+    }
     }//GEN-LAST:event_rejectBTN1ActionPerformed
 
     private void exitBTN2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBTN2ActionPerformed
@@ -712,6 +816,82 @@ private void viewMyApplicationsBTNActionPerformed(java.awt.event.ActionEvent evt
         HomePage homePage = new HomePage();
         homePage.setVisible(true);
     }//GEN-LAST:event_exitBTN2ActionPerformed
+
+    private void deleteBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteBTNActionPerformed
+    
+         int selectedRow = grantTBL.getSelectedRow(); 
+    if (selectedRow == -1) {
+        JOptionPane.showMessageDialog(this, "Please select an application to delete.");
+        return;
+    }
+
+    String studentId = (String) grantTBL.getValueAt(selectedRow, 0);
+    String studentName = (String) grantTBL.getValueAt(selectedRow, 1);
+
+    String sponsorId = JOptionPane.showInputDialog(this, 
+        "Enter Sponsor ID to delete this application:", 
+        "Sponsor ID Required", 
+        JOptionPane.PLAIN_MESSAGE);
+
+    if (sponsorId == null || sponsorId.trim().isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Deletion requires a valid Sponsor ID.");
+        return;
+    }
+
+    // Check if sponsor ID exists in the sponsors.txt file
+    boolean sponsorExists = false;
+    try (BufferedReader reader = new BufferedReader(new FileReader("sponsors.txt"))) {
+        String line;
+        while ((line = reader.readLine()) != null) {
+            String[] sponsorData = line.split(",");
+            if (sponsorData[0].equals(sponsorId)) {
+                sponsorExists = true;
+                break;
+            }
+        }
+    } catch (IOException e) {
+        JOptionPane.showMessageDialog(this, "Error checking sponsor ID: " + e.getMessage());
+        return;
+    }
+
+    if (!sponsorExists) {
+        JOptionPane.showMessageDialog(this, "No sponsor found with the provided ID. Please enter a correct Sponsor ID.");
+        return;
+    }
+
+    int confirm = JOptionPane.showConfirmDialog(this, 
+        "Are you sure you want to delete the application for " + studentName + " (ID: " + studentId + ")?", 
+        "Delete Confirmation", 
+        JOptionPane.YES_NO_OPTION);
+
+    if (confirm == JOptionPane.YES_OPTION) {
+        try (BufferedReader reader = new BufferedReader(new FileReader("applications.txt"));
+             BufferedWriter writer = new BufferedWriter(new FileWriter("applications_temp.txt"))) {
+            
+            String line;
+            while ((line = reader.readLine()) != null) {
+                String[] data = line.split(",");
+                if (!data[0].equals(studentId)) {
+                    writer.write(line);  // Write the line if it doesn't match the student ID
+                    writer.newLine();
+                }
+            }
+        } catch (IOException e) {
+            JOptionPane.showMessageDialog(this, "Error deleting application: " + e.getMessage());
+            return;
+        }
+
+        File originalFile = new File("applications.txt");
+        File tempFile = new File("applications_temp.txt");
+        if (originalFile.delete()) {
+            tempFile.renameTo(originalFile);  // Replace the original file with the updated one
+        }
+
+        Grant.loadApplicationsToTable(grantTBL);  // Refresh the table
+        JOptionPane.showMessageDialog(this, "Application for " + studentName + " has been deleted.");
+    }
+        
+    }//GEN-LAST:event_deleteBTNActionPerformed
 
     /**
      * @param args the command line arguments
@@ -732,24 +912,24 @@ private void viewMyApplicationsBTNActionPerformed(java.awt.event.ActionEvent evt
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel BTNpanel;
     private javax.swing.JPanel QuotePNL;
+    private javax.swing.JLabel SnameLBL;
     private javax.swing.JPanel adminPNL;
     private javax.swing.JButton allGrantBTN;
     private javax.swing.JButton approveBTN1;
     private javax.swing.JTextField courseTF5;
+    private javax.swing.JButton deleteBTN;
     private javax.swing.JLabel emailLBL5;
     private javax.swing.JTextField emailTF5;
     private javax.swing.JButton exitBTN2;
     private javax.swing.JButton exitBTn;
     private javax.swing.JButton exitsponsorBTN;
     private javax.swing.JPanel financialPNL5;
+    private javax.swing.JLabel fundsLBL;
     private javax.swing.JTextField fundsTF;
     private javax.swing.JScrollPane grant;
     private javax.swing.JTable grantTBL;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane7;
@@ -765,13 +945,14 @@ private void viewMyApplicationsBTNActionPerformed(java.awt.event.ActionEvent evt
     private javax.swing.JTextField requestAmountTF5;
     private javax.swing.JPanel scholarshipPNL;
     private javax.swing.JLabel schoolPNG;
+    private javax.swing.JLabel sidLBL;
     private javax.swing.JLabel sidLBL5;
-    private javax.swing.JTextField sidTF;
     private javax.swing.JTextField sidTF5;
     private javax.swing.JLabel snameLBL5;
     private javax.swing.JTextField snameTF5;
     private javax.swing.JLayeredPane sponsorLP;
     private javax.swing.JTable sponsorTBL;
+    private javax.swing.JTextField sponsoridTF;
     private javax.swing.JTextField sponsornameTF;
     private javax.swing.JButton submitBTN;
     private javax.swing.JButton viewAllBTN;

@@ -21,17 +21,17 @@ public class Sponsorship {
     }
 }
 
-     // Save sponsor information to a file
-    public static void saveSponsor(String sponsorId, String sponsorName, String funds) {
-        // Format the sponsor details as a CSV string
-        String sponsorDetails = sponsorId + "," + sponsorName + "," + funds;
+   // Save sponsor information to a file
+public static void saveSponsor(String sponsorId, String sponsorName, String funds) {
+    // Format the sponsor details as a CSV string
+    String sponsorDetails = sponsorId + "," + sponsorName + "," + funds;
 
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter("sponsors.txt", true))) {
-            writer.write(sponsorDetails);  // Write sponsor details to the file
-            writer.newLine();  // Move to the next line
-            JOptionPane.showMessageDialog(null, "Sponsor registered successfully.");
-        } catch (IOException e) {
-            JOptionPane.showMessageDialog(null, "Error registering sponsor: " + e.getMessage());
-        }
+    try (BufferedWriter writer = new BufferedWriter(new FileWriter("sponsors.txt", true))) {
+        writer.write(sponsorDetails);  // Write sponsor details to the file
+        writer.newLine();  // Move to the next line
+        JOptionPane.showMessageDialog(null, "Sponsor registered successfully.");
+    } catch (IOException e) {
+        JOptionPane.showMessageDialog(null, "Error registering sponsor: " + e.getMessage());
     }
+}
 }

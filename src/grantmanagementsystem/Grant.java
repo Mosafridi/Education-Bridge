@@ -45,5 +45,11 @@ public class Grant {
         } catch (IOException e) {
             System.err.println("Error loading grants: " + e.getMessage());
         }
-    }
-}
+    }// end of loadGrant method
+    
+    
+    // Method to delete an application from the file
+    
+
+    
+}// end of class
