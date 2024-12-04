@@ -667,7 +667,7 @@ String email = (String) grantTBL.getValueAt(selectedRow, 3);
 String amount = (String) grantTBL.getValueAt(selectedRow, 4);
 
 String sponsorId = JOptionPane.showInputDialog(this, 
-    "Enter Sponsor ID for this grant:", 
+    "Enter Sponsor ID(S101)for this grant:", 
     "Sponsor ID Required", 
     JOptionPane.PLAIN_MESSAGE);
 
@@ -745,7 +745,7 @@ if (confirm == JOptionPane.YES_OPTION) {
     String studentName = (String) grantTBL.getValueAt(selectedRow, 1);
 
     String sponsorId = JOptionPane.showInputDialog(this, 
-        "Enter Sponsor ID for this grant:", 
+        "Enter Sponsor ID(S101)for this grant:", 
         "Sponsor ID Required", 
         JOptionPane.PLAIN_MESSAGE);
 
