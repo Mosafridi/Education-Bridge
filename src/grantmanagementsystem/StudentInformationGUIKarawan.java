@@ -12,6 +12,12 @@ import java.io.FileWriter;
 import java.io.IOException;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+import java.util.ArrayList; // For ArrayList
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+import java.io.*;
+import java.util.ArrayList;
+
 
 /**
  *
@@ -79,8 +85,6 @@ public class StudentInformationGUIKarawan extends javax.swing.JFrame {
         LowestField = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         AverageField = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        StudentIDField = new javax.swing.JTextField();
         HighestLabel = new javax.swing.JLabel();
         HighestField = new javax.swing.JTextField();
 
@@ -399,8 +403,6 @@ public class StudentInformationGUIKarawan extends javax.swing.JFrame {
 
         jLabel1.setText("Average");
 
-        jLabel2.setText("StudentID");
-
         HighestLabel.setText("Highest");
 
         javax.swing.GroupLayout StudentGrowthPanelLayout = new javax.swing.GroupLayout(StudentGrowthPanel);
@@ -408,45 +410,42 @@ public class StudentInformationGUIKarawan extends javax.swing.JFrame {
         StudentGrowthPanelLayout.setHorizontalGroup(
             StudentGrowthPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(StudentGrowthPanelLayout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addGroup(StudentGrowthPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 106, Short.MAX_VALUE)
-                    .addComponent(LowestLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(33, 33, 33)
-                .addGroup(StudentGrowthPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(StudentIDField, javax.swing.GroupLayout.DEFAULT_SIZE, 154, Short.MAX_VALUE)
-                    .addComponent(LowestField))
-                .addGap(126, 126, 126)
-                .addGroup(StudentGrowthPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(HighestLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(StudentGrowthPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(AverageField, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(HighestField, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18))
-            .addGroup(StudentGrowthPanelLayout.createSequentialGroup()
-                .addGap(63, 63, 63)
-                .addComponent(TotalButton, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(StudentGrowthPanelLayout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addGroup(StudentGrowthPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(StudentGrowthPanelLayout.createSequentialGroup()
+                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(AverageField, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(StudentGrowthPanelLayout.createSequentialGroup()
+                                .addComponent(LowestLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(LowestField)))
+                        .addGap(75, 75, 75)
+                        .addComponent(HighestLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(HighestField, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(StudentGrowthPanelLayout.createSequentialGroup()
+                        .addGap(63, 63, 63)
+                        .addComponent(TotalButton, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(65, 65, 65))
         );
         StudentGrowthPanelLayout.setVerticalGroup(
             StudentGrowthPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(StudentGrowthPanelLayout.createSequentialGroup()
-                .addGap(58, 58, 58)
+                .addGap(50, 50, 50)
                 .addGroup(StudentGrowthPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(HighestLabel)
-                    .addComponent(HighestField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2)
-                    .addComponent(StudentIDField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(AverageField, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(HighestLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(HighestField, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(112, 112, 112)
                 .addGroup(StudentGrowthPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(LowestLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(LowestField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(AverageField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 162, Short.MAX_VALUE)
-                .addComponent(TotalButton)
+                    .addComponent(LowestLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(LowestField, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 123, Short.MAX_VALUE)
+                .addComponent(TotalButton, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(79, 79, 79))
         );
 
@@ -454,9 +453,7 @@ public class StudentInformationGUIKarawan extends javax.swing.JFrame {
         StudentGrowth.setLayout(StudentGrowthLayout);
         StudentGrowthLayout.setHorizontalGroup(
             StudentGrowthLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(StudentGrowthLayout.createSequentialGroup()
-                .addComponent(StudentGrowthPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(StudentGrowthPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 758, Short.MAX_VALUE)
         );
         StudentGrowthLayout.setVerticalGroup(
             StudentGrowthLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -493,29 +490,37 @@ public class StudentInformationGUIKarawan extends javax.swing.JFrame {
     private void enrollBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enrollBTNActionPerformed
         // TODO add your handling code here:
 
-        File outFile;
-        FileWriter fw;
-        BufferedWriter bw;
+        File inFile = new File("studentData.txt");
 
-        String id = studentTF1.getText();
-        String name = Name.getText();
-        String courseName = coursenameTF1.getText();
-        String level = levelTF1.getText();
-        String contact = contactTF1.getText();
+        try (BufferedReader br = new BufferedReader(new FileReader(inFile))) {
+            // Get the table model from the studentTBL
+            DefaultTableModel tableModel = (DefaultTableModel) studentTBL.getModel();
 
-        try{
-            outFile = new File("studentData.txt");
-            fw = new FileWriter(outFile, true);// true appends new data to the end , false will add to the begining
-            bw = new BufferedWriter(fw);
+            // Clear existing rows in case of reload
+            tableModel.setRowCount(0);
 
-            bw.write(id+","+name+"," +courseName+","+level+","+contact);
-            bw.newLine();
-            bw.close();// Important to close File
+            String line;
+            while ((line = br.readLine()) != null) {
+                // Split the line into columns using the comma delimiter
+                String[] rowData = line.split(",");
 
-            JOptionPane.showMessageDialog(null, "Written to File");
-
-        }catch(IOException e){
-            System.out.println("Exception e: "+e.getMessage());
+                // Ensure the number of columns in the file matches the table's structure
+                if (rowData.length == tableModel.getColumnCount()) {
+                    tableModel.addRow(rowData);
+                } else {
+                    JOptionPane.showMessageDialog(null,
+                        "Mismatch between file columns and table columns.\nCheck the file format.",
+                        "Data Error",
+                        JOptionPane.WARNING_MESSAGE);
+                    break;
+                }
+            }
+        } catch (IOException ex) {
+            // Show an error dialog if there's an issue reading the file
+            JOptionPane.showMessageDialog(null,
+                "Error reading file: " + ex.getMessage(),
+                "File Error",
+                JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_enrollBTNActionPerformed
 
@@ -565,6 +570,69 @@ public class StudentInformationGUIKarawan extends javax.swing.JFrame {
 
     private void deleteBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteBTNActionPerformed
         // TODO add your handling code here:
+   // Assuming you have a JTable called studentTBL and a Delete button (deleteBTN)
+
+deleteBTN.addActionListener(e -> {
+    // Get the selected row from the table
+    int selectedRow = studentTBL.getSelectedRow();
+
+    if (selectedRow != -1) {  // Check if a row is selected
+        // Confirm the delete action
+        int confirmation = JOptionPane.showConfirmDialog(null,
+            "Are you sure you want to delete this record?",
+            "Delete Confirmation",
+            JOptionPane.YES_NO_OPTION);
+
+        if (confirmation == JOptionPane.YES_OPTION) {
+            // Remove the selected row from the table
+            DefaultTableModel tableModel = (DefaultTableModel) studentTBL.getModel();
+            tableModel.removeRow(selectedRow);
+
+            // Now update the file (studentData.txt)
+            File inFile = new File("studentData.txt");
+            File tempFile = new File("studentData_temp.txt");
+
+            try (BufferedReader br = new BufferedReader(new FileReader(inFile));
+                 BufferedWriter bw = new BufferedWriter(new FileWriter(tempFile))) {
+
+                String line;
+                int lineIndex = 0;
+
+                // Loop through the file and write all data except the deleted row
+                while ((line = br.readLine()) != null) {
+                    // Split the line into columns
+                    String[] rowData = line.split(",");
+
+                    // If the current row is not the deleted one, write it back to the file
+                    if (lineIndex != selectedRow) {
+                        bw.write(line);
+                        bw.newLine();
+                    }
+                    lineIndex++;
+                }
+
+                // Rename the temp file to the original file
+                if (inFile.delete()) {
+                    tempFile.renameTo(inFile);
+                }
+
+            } catch (IOException ex) {
+                // Show an error dialog if there's an issue reading or writing the file
+                JOptionPane.showMessageDialog(null,
+                    "Error updating file: " + ex.getMessage(),
+                    "File Error",
+                    JOptionPane.ERROR_MESSAGE);
+            }
+        }
+    } else {
+        // No row selected, show a message
+        JOptionPane.showMessageDialog(null,
+            "Please select a student to delete.",
+            "No Selection",
+            JOptionPane.WARNING_MESSAGE);
+    }
+});
+
     }//GEN-LAST:event_deleteBTNActionPerformed
 
     private void applyBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_applyBTNActionPerformed
@@ -618,10 +686,103 @@ public class StudentInformationGUIKarawan extends javax.swing.JFrame {
 
     private void AddButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddButton1ActionPerformed
         // TODO add your handling code here:
+         File inFile = new File("coursedata.txt");
+
+        try (BufferedReader br = new BufferedReader(new FileReader(inFile))) {
+            // Get the table model from the studentTBL
+            DefaultTableModel tableModel = (DefaultTableModel) CourseTable.getModel();
+
+            // Clear existing rows in case of reload
+            tableModel.setRowCount(0);
+
+            String line;
+            while ((line = br.readLine()) != null) {
+                // Split the line into columns using the comma delimiter
+                String[] rowData = line.split(",");
+
+                // Ensure the number of columns in the file matches the table's structure
+                if (rowData.length == tableModel.getColumnCount()) {
+                    tableModel.addRow(rowData);
+                } else {
+                    JOptionPane.showMessageDialog(null,
+                        "Mismatch between file columns and table columns.\nCheck the file format.",
+                        "Data Error",
+                        JOptionPane.WARNING_MESSAGE);
+                    break;
+                }
+            }
+        } catch (IOException ex) {
+            // Show an error dialog if there's an issue reading the file
+            JOptionPane.showMessageDialog(null,
+                "Error reading file: " + ex.getMessage(),
+                "File Error",
+                JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_AddButton1ActionPerformed
 
     private void DeleteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteButtonActionPerformed
         // TODO add your handling code here:
+        DeleteButton.addActionListener(e -> {
+    // Get the selected row from the course table
+    int selectedRow = CourseTable.getSelectedRow();
+
+    if (selectedRow != -1) {  // Check if a row is selected
+        // Confirm the delete action
+        int confirmation = JOptionPane.showConfirmDialog(null,
+            "Are you sure you want to delete this course record?",
+            "Delete Confirmation",
+            JOptionPane.YES_NO_OPTION);
+
+        if (confirmation == JOptionPane.YES_OPTION) {
+            // Remove the selected row from the table
+            DefaultTableModel tableModel = (DefaultTableModel) CourseTable.getModel();
+            tableModel.removeRow(selectedRow);
+
+            // Now update the file (courseData.txt)
+            File inFile = new File("coursedata.txt");
+            File tempFile = new File("courseData_temp.txt");
+
+            try (BufferedReader br = new BufferedReader(new FileReader(inFile));
+                 BufferedWriter bw = new BufferedWriter(new FileWriter(tempFile))) {
+
+                String line;
+                int lineIndex = 0;
+
+                // Loop through the file and write all data except the deleted row
+                while ((line = br.readLine()) != null) {
+                    // Split the line into columns
+                    String[] rowData = line.split(",");
+
+                    // If the current row is not the deleted one, write it back to the file
+                    if (lineIndex != selectedRow) {
+                        bw.write(line);
+                        bw.newLine();
+                    }
+                    lineIndex++;
+                }
+
+                // Rename the temp file to the original file
+                if (inFile.delete()) {
+                    tempFile.renameTo(inFile);
+                }
+
+            } catch (IOException ex) {
+                // Show an error dialog if there's an issue reading or writing the file
+                JOptionPane.showMessageDialog(null,
+                    "Error updating file: " + ex.getMessage(),
+                    "File Error",
+                    JOptionPane.ERROR_MESSAGE);
+            }
+        }
+    } else {
+        // No row selected, show a message
+        JOptionPane.showMessageDialog(null,
+            "Please select a course to delete.",
+            "No Selection",
+            JOptionPane.WARNING_MESSAGE);
+    }
+});
+
     }//GEN-LAST:event_DeleteButtonActionPerformed
 
     /**
@@ -682,7 +843,6 @@ public class StudentInformationGUIKarawan extends javax.swing.JFrame {
     private javax.swing.JTextField Name;
     private javax.swing.JPanel StudentGrowth;
     private javax.swing.JPanel StudentGrowthPanel;
-    private javax.swing.JTextField StudentIDField;
     private javax.swing.JPanel StudentPanel;
     private javax.swing.JButton TotalButton;
     private javax.swing.JButton ViewButton;
@@ -695,7 +855,6 @@ public class StudentInformationGUIKarawan extends javax.swing.JFrame {
     private javax.swing.JButton enrollBTN;
     private javax.swing.JButton exitBTN;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;

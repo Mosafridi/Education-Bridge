@@ -1,0 +1,15 @@
+1, Computing Basics, 30, Level 3
+2, Advanced Programming, 25, Level 5
+3, Nursing Essentials, 40, Level 5
+4, Business Management, 35, Level 4
+5, Engineering Principles, 30, Level 3
+6, Introduction to Law, 20, Level 5
+7, Medicine Overview, 25, Level 4
+8, Psychology 101, 30, Level 3
+9, Fine Arts, 20, Level 5
+10, Architectural Design, 25, Level 4
+11, History of Civilization, 30, Level 3
+12, Advanced Mathematics, 25, Level 5
+13, Education Theory, 35, Level 4
+14, Financial Accounting, 40, Level 3
+15, Biology Fundamentals, 25, Level 5
