@@ -116,9 +116,9 @@ public class StudentInformationGUIKarawan extends javax.swing.JFrame {
                 .addGroup(StudentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(studentLBL1, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(nameLBL1, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(StudentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(studentTF1, javax.swing.GroupLayout.DEFAULT_SIZE, 127, Short.MAX_VALUE)
+                    .addComponent(studentTF1, javax.swing.GroupLayout.DEFAULT_SIZE, 139, Short.MAX_VALUE)
                     .addComponent(Name))
                 .addGap(87, 87, 87)
                 .addGroup(StudentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -199,6 +199,12 @@ public class StudentInformationGUIKarawan extends javax.swing.JFrame {
 
         coursenameLBL1.setText("Course Name");
 
+        coursenameTF1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                coursenameTF1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout studentPNL1Layout = new javax.swing.GroupLayout(studentPNL1);
         studentPNL1.setLayout(studentPNL1Layout);
         studentPNL1Layout.setHorizontalGroup(
@@ -220,8 +226,8 @@ public class StudentInformationGUIKarawan extends javax.swing.JFrame {
                         .addGap(9, 9, 9))
                     .addGroup(studentPNL1Layout.createSequentialGroup()
                         .addComponent(coursenameLBL1, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(coursenameTF1, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(coursenameTF1, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(studentPNL1Layout.createSequentialGroup()
@@ -490,74 +496,120 @@ public class StudentInformationGUIKarawan extends javax.swing.JFrame {
     private void enrollBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enrollBTNActionPerformed
         // TODO add your handling code here:
 
-        File inFile = new File("studentData.txt");
+    // Get the table model from the studentTBL
+    DefaultTableModel tableModel = (DefaultTableModel) studentTBL.getModel();
 
-        try (BufferedReader br = new BufferedReader(new FileReader(inFile))) {
-            // Get the table model from the studentTBL
-            DefaultTableModel tableModel = (DefaultTableModel) studentTBL.getModel();
+    // Get user input from the GUI input fields (replace these with actual field names)
+    String id = studentTF1.getText().trim();
+    String name = Name.getText().trim();
+    String course = coursenameTF1.getText().trim();
+    String level = levelTF1.getText().trim();
+    String contact = contactTF1.getText().trim();
 
-            // Clear existing rows in case of reload
-            tableModel.setRowCount(0);
+    // Combine the inputs into a new row
+    String[] newRow = {id, name, course, level, contact};
 
-            String line;
-            while ((line = br.readLine()) != null) {
-                // Split the line into columns using the comma delimiter
-                String[] rowData = line.split(",");
-
-                // Ensure the number of columns in the file matches the table's structure
-                if (rowData.length == tableModel.getColumnCount()) {
-                    tableModel.addRow(rowData);
-                } else {
-                    JOptionPane.showMessageDialog(null,
-                        "Mismatch between file columns and table columns.\nCheck the file format.",
-                        "Data Error",
-                        JOptionPane.WARNING_MESSAGE);
-                    break;
-                }
-            }
-        } catch (IOException ex) {
-            // Show an error dialog if there's an issue reading the file
+    // Validate the new row data
+    if (newRow.length == tableModel.getColumnCount()) {
+        if (id.isEmpty() || name.isEmpty() || course.isEmpty() || level.isEmpty() || contact.isEmpty()) {
             JOptionPane.showMessageDialog(null,
-                "Error reading file: " + ex.getMessage(),
+                "All fields are required. Please fill in all the details.",
+                "Input Error",
+                JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+
+        // Add the new row to the table
+        tableModel.addRow(newRow);
+
+        // Append the new row to the file
+        File outFile = new File("studentData.txt");
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(outFile, true))) {
+            // Write the new row to the file
+            bw.write(String.join(",", newRow));
+            bw.newLine();  // Ensure the next row starts on a new line
+            JOptionPane.showMessageDialog(null,
+                "Row added successfully!",
+                "Success",
+                JOptionPane.INFORMATION_MESSAGE);
+
+            // Clear the input fields after successful addition
+            studentTF1.setText("");
+            Name.setText("");
+            coursenameTF1.setText("");
+            levelTF1.setText("");
+            contactTF1.setText("");
+        } catch (IOException ex) {
+            JOptionPane.showMessageDialog(null,
+                "Error updating file: " + ex.getMessage(),
                 "File Error",
                 JOptionPane.ERROR_MESSAGE);
         }
+    } else {
+        // Show an error if the new row doesn't match the expected columns
+        JOptionPane.showMessageDialog(null,
+            "New row data doesn't match the expected column count.\nPlease check your input.",
+            "Data Error",
+            JOptionPane.WARNING_MESSAGE);
+    }
     }//GEN-LAST:event_enrollBTNActionPerformed
 
     private void viewBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewBTNActionPerformed
 
         File inFile = new File("studentData.txt");
 
-        try (BufferedReader br = new BufferedReader(new FileReader(inFile))) {
-            // Get the table model from the studentTBL
-            DefaultTableModel tableModel = (DefaultTableModel) studentTBL.getModel();
+    try (BufferedReader br = new BufferedReader(new FileReader(inFile))) {
+        // Get the table model from the studentTBL
+        DefaultTableModel tableModel = (DefaultTableModel) studentTBL.getModel();
 
-            // Clear existing rows in case of reload
-            tableModel.setRowCount(0);
+        // Clear existing rows in case of reload
+        tableModel.setRowCount(0);
 
-            String line;
-            while ((line = br.readLine()) != null) {
-                // Split the line into columns using the comma delimiter
-                String[] rowData = line.split(",");
+        String line;
+        int rowCount = 0;        // Counter for valid rows
+        int skippedRows = 0;    // Counter for invalid rows
 
-                // Ensure the number of columns in the file matches the table's structure
-                if (rowData.length == tableModel.getColumnCount()) {
-                    tableModel.addRow(rowData);
-                } else {
-                    JOptionPane.showMessageDialog(null,
-                        "Mismatch between file columns and table columns.\nCheck the file format.",
-                        "Data Error",
-                        JOptionPane.WARNING_MESSAGE);
-                    break;
-                }
+        while ((line = br.readLine()) != null) {
+            // Trim the line and skip if it's empty
+            line = line.trim();
+            if (line.isEmpty()) {
+                skippedRows++;
+                continue;
             }
-        } catch (IOException ex) {
-            // Show an error dialog if there's an issue reading the file
-            JOptionPane.showMessageDialog(null,
-                "Error reading file: " + ex.getMessage(),
-                "File Error",
-                JOptionPane.ERROR_MESSAGE);
+
+            // Split the line into columns using the comma delimiter
+            String[] rowData = line.split(",");
+
+            // Check if the row matches the expected column count
+            if (rowData.length == tableModel.getColumnCount()) {
+                // Trim all data fields for clean entries
+                for (int i = 0; i < rowData.length; i++) {
+                    rowData[i] = rowData[i].trim();
+                }
+                tableModel.addRow(rowData);
+                rowCount++;
+            } else {
+                // Log invalid rows and continue processing
+                skippedRows++;
+            }
         }
+
+        // Show summary message after processing
+        JOptionPane.showMessageDialog(null,
+            "Data loaded successfully!\n"
+            + rowCount + " rows added to the table.\n"
+            + (skippedRows > 0 ? skippedRows + " invalid rows were skipped." : ""),
+            "Load Summary",
+            JOptionPane.INFORMATION_MESSAGE);
+
+    } catch (IOException ex) {
+        // Show an error dialog if there's an issue reading the file
+        JOptionPane.showMessageDialog(null,
+            "Error reading file: " + ex.getMessage(),
+            "File Error",
+            JOptionPane.ERROR_MESSAGE);
+    }
+        
     }//GEN-LAST:event_viewBTNActionPerformed
 
     private void exitBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBTNActionPerformed
@@ -642,39 +694,59 @@ deleteBTN.addActionListener(e -> {
     }//GEN-LAST:event_applyBTNActionPerformed
 
     private void ViewButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ViewButtonActionPerformed
-               File inFile = new File("CourseData.txt");
+             File inFile = new File("coursedata.txt");
 
-        try (BufferedReader br = new BufferedReader(new FileReader(inFile))) {
-            // Get the table model from the studentTBL
-            DefaultTableModel tableModel = (DefaultTableModel) CourseTable.getModel();
+    try (BufferedReader br = new BufferedReader(new FileReader(inFile))) {
+        // Get the table model from the studentTBL
+        DefaultTableModel tableModel = (DefaultTableModel) CourseTable.getModel();
 
-            // Clear existing rows in case of reload
-            tableModel.setRowCount(0);
+        // Clear existing rows in case of reload
+        tableModel.setRowCount(0);
 
-            String line;
-            while ((line = br.readLine()) != null) {
-                // Split the line into columns using the comma delimiter
-                String[] rowData = line.split(",");
-                
-                 //Ensure the number of columns in the file matches the table's structure
-                if (rowData.length == tableModel.getColumnCount()) {
-                    tableModel.addRow(rowData);//problem 
-                } else {
-                    JOptionPane.showMessageDialog(null,
-                        "Mismatch between file columns and table columns.\nCheck the file format.",
-                        "Data Error",
-                        JOptionPane.WARNING_MESSAGE);
-                    break;
-                }
+        String line;
+        int rowCount = 0;        // Counter for valid rows
+        int skippedRows = 0;    // Counter for invalid rows
+
+        while ((line = br.readLine()) != null) {
+            // Trim the line and skip if it's empty
+            line = line.trim();
+            if (line.isEmpty()) {
+                skippedRows++;
+                continue;
             }
-            
-        } catch (IOException ex) {
-            // Show an error dialog if there's an issue reading the file
-            JOptionPane.showMessageDialog(null,
-                "Error reading file: " + ex.getMessage(),
-                "File Error",
-                JOptionPane.ERROR_MESSAGE);
+
+            // Split the line into columns using the comma delimiter
+            String[] rowData = line.split(",");
+
+            // Check if the row matches the expected column count
+            if (rowData.length == tableModel.getColumnCount()) {
+                // Trim all data fields for clean entries
+                for (int i = 0; i < rowData.length; i++) {
+                    rowData[i] = rowData[i].trim();
+                }
+                tableModel.addRow(rowData);
+                rowCount++;
+            } else {
+                // Log invalid rows and continue processing
+                skippedRows++;
+            }
         }
+
+        // Show summary message after processing
+        JOptionPane.showMessageDialog(null,
+            "Data loaded successfully!\n"
+            + rowCount + " rows added to the table.\n"
+            + (skippedRows > 0 ? skippedRows + " invalid rows were skipped." : ""),
+            "Load Summary",
+            JOptionPane.INFORMATION_MESSAGE);
+
+    } catch (IOException ex) {
+        // Show an error dialog if there's an issue reading the file
+        JOptionPane.showMessageDialog(null,
+            "Error reading file: " + ex.getMessage(),
+            "File Error",
+            JOptionPane.ERROR_MESSAGE);
+    }
 
     }//GEN-LAST:event_ViewButtonActionPerformed
 
@@ -686,50 +758,74 @@ deleteBTN.addActionListener(e -> {
 
     private void AddButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddButton1ActionPerformed
         // TODO add your handling code here:
-         File inFile = new File("coursedata.txt");
+          // Get the table model from the studentTBL
+    DefaultTableModel tableModel = (DefaultTableModel) CourseTable.getModel();
 
-        try (BufferedReader br = new BufferedReader(new FileReader(inFile))) {
-            // Get the table model from the studentTBL
-            DefaultTableModel tableModel = (DefaultTableModel) CourseTable.getModel();
+    // Get user input from the GUI input fields (replace these with actual field names)
+    String CourseID = IDField.getText().trim();
+    String CourseName = CourseNameField.getText().trim();
+    String MaxCapicity = MaxField.getText().trim();
+    String Courselevel = CourseLevelField.getText().trim();
+   
 
-            // Clear existing rows in case of reload
-            tableModel.setRowCount(0);
+    // Combine the inputs into a new row
+    String[] newRow = {CourseID, CourseName, MaxCapicity, Courselevel};
 
-            String line;
-            while ((line = br.readLine()) != null) {
-                // Split the line into columns using the comma delimiter
-                String[] rowData = line.split(",");
-
-                // Ensure the number of columns in the file matches the table's structure
-                if (rowData.length == tableModel.getColumnCount()) {
-                    tableModel.addRow(rowData);
-                } else {
-                    JOptionPane.showMessageDialog(null,
-                        "Mismatch between file columns and table columns.\nCheck the file format.",
-                        "Data Error",
-                        JOptionPane.WARNING_MESSAGE);
-                    break;
-                }
-            }
-        } catch (IOException ex) {
-            // Show an error dialog if there's an issue reading the file
+    // Validate the new row data
+    if (newRow.length == tableModel.getColumnCount()) {
+        if (CourseID.isEmpty() || CourseName.isEmpty() || MaxCapicity.isEmpty() || Courselevel.isEmpty()) {
             JOptionPane.showMessageDialog(null,
-                "Error reading file: " + ex.getMessage(),
+                "All fields are required. Please fill in all the details.",
+                "Input Error",
+                JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+
+        // Add the new row to the table
+        tableModel.addRow(newRow);
+
+        // Append the new row to the file
+        File outFile = new File("coursedata.txt");
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(outFile, true))) {
+            // Write the new row to the file
+            bw.write(String.join(",", newRow));
+            bw.newLine();  // Ensure the next row starts on a new line
+            JOptionPane.showMessageDialog(null,
+                "Row added successfully!",
+                "Success",
+                JOptionPane.INFORMATION_MESSAGE);
+
+            // Clear the input fields after successful addition
+            studentTF1.setText("");
+            Name.setText("");
+            coursenameTF1.setText("");
+            levelTF1.setText("");
+            contactTF1.setText("");
+        } catch (IOException ex) {
+            JOptionPane.showMessageDialog(null,
+                "Error updating file: " + ex.getMessage(),
                 "File Error",
                 JOptionPane.ERROR_MESSAGE);
         }
+    } else {
+        // Show an error if the new row doesn't match the expected columns
+        JOptionPane.showMessageDialog(null,
+            "New row data doesn't match the expected column count.\nPlease check your input.",
+            "Data Error",
+            JOptionPane.WARNING_MESSAGE);
+    }
     }//GEN-LAST:event_AddButton1ActionPerformed
 
     private void DeleteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteButtonActionPerformed
         // TODO add your handling code here:
-        DeleteButton.addActionListener(e -> {
-    // Get the selected row from the course table
+      DeleteButton.addActionListener(e -> {
+    // Get the selected row from the table
     int selectedRow = CourseTable.getSelectedRow();
 
     if (selectedRow != -1) {  // Check if a row is selected
         // Confirm the delete action
         int confirmation = JOptionPane.showConfirmDialog(null,
-            "Are you sure you want to delete this course record?",
+            "Are you sure you want to delete this record?",
             "Delete Confirmation",
             JOptionPane.YES_NO_OPTION);
 
@@ -738,9 +834,9 @@ deleteBTN.addActionListener(e -> {
             DefaultTableModel tableModel = (DefaultTableModel) CourseTable.getModel();
             tableModel.removeRow(selectedRow);
 
-            // Now update the file (courseData.txt)
+            // Now update the file (studentData.txt)
             File inFile = new File("coursedata.txt");
-            File tempFile = new File("courseData_temp.txt");
+            File tempFile = new File("coursedata_temp.txt");
 
             try (BufferedReader br = new BufferedReader(new FileReader(inFile));
                  BufferedWriter bw = new BufferedWriter(new FileWriter(tempFile))) {
@@ -777,13 +873,16 @@ deleteBTN.addActionListener(e -> {
     } else {
         // No row selected, show a message
         JOptionPane.showMessageDialog(null,
-            "Please select a course to delete.",
+            "Please select a student to delete.",
             "No Selection",
             JOptionPane.WARNING_MESSAGE);
     }
 });
-
     }//GEN-LAST:event_DeleteButtonActionPerformed
+
+    private void coursenameTF1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_coursenameTF1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_coursenameTF1ActionPerformed
 
     /**
      * @param args the command line arguments

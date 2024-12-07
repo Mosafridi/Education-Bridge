@@ -6,6 +6,7 @@
 6,Liam,law,level 5,7041203984
 7,Emma,medicine,level 4,8034938203
 8,Noah,psychology,level 3,8095043201
+9,Ava,arts,level 5,9045039210
 10,James,architecture,level 4,7542039483
 11,Sophia,history,level 3,7093482034
 12,Benjamin,mathematics,level 5,8034023457
@@ -15,5 +16,6 @@
 ,,sadads,sadad,Website,sada
 16,Greg ,computing,level 6,936732909
 ,,,,
-323,kfnks,kdjcbjs,level 7,398489349
 ,,,,
+16,Mark,Physics,Level 4,123456789
+45,kasjhasa,maths,level 9,98972283
