@@ -22,29 +22,29 @@ public class ResourceHub extends Administrator {//start ResourceHub class//showi
 
     }
 
-    private final String txtfile = "Resources.txt";//declaring string for resources.txt
+    private final String resourcetxt = "ResourcesFile.txt";//declaring string for resources.txt
 
-    public void saveResourceToFile(String firstname, String surname, String Course, String Date, String resourceType, String URL) {//save resources method, stuff will be sent from the fields when the button is pressed as arguments, as you can see im adding in 
-        try (BufferedWriter bw = new BufferedWriter(new FileWriter(txtfile, true))) {// buffered writer obj called bw,this will be used to add to a file named txtfile, wrapped in a try catch
-            bw.write(firstname + "," + surname + "," + Course + "," + Date + "," + resourceType + "," + URL);//writing this data to a file using bw
-            bw.newLine();//adds line after break
-            bw.flush();//ending and signing finsishing 
-            System.out.println("That was a success! Added to the file nicely!");//notify the end user that is was succesfully added to the file
-        } catch (IOException ex) {//if something went wrong along the way it will be caught here
-            System.out.println("We encountered an error! Exception: " + ex.getMessage());//notify the end user something went wrong
+    public void addResources(String firstname, String surname, String Course, String Date, String resourceType, String URL) {// this will allow the end user to store their own personal resources, like links or other resourceTypes , this will write it to a txt file
+        try (BufferedWriter bufferedwriter = new BufferedWriter(new FileWriter(resourcetxt, true))) {// bufferedwriter is the buffered writer obj, i will use this to write data to a txt file called resoruces, it is in a try catch to avoid the system from crashing
+            bufferedwriter.write(firstname + "," + surname + "," + Course + "," + Date + "," + resourceType + "," + URL);//writing the variables passed in as arguments to this method
+            bufferedwriter.newLine();//using the new line to add a line after so they are not cancatanated.
+            bufferedwriter.flush();//flush is like wrapping things up succesfully
+            System.out.println("Resources succesfully added to a txt file!");//notify the end user formally
+        } catch (IOException ex) {//catch with io exception to notiify the user were it went wrong along the road
+            System.out.println("Error: We ran into this error trying to save resources: " + ex.getMessage());//sout to notify the end user there was an error along the way , so they can see what is is
         }//end catch
-    }//end save resoruces methods
+    }//end add resoruces methods
 
-    public void PopulateRescourecTBL(JTable ResourceTBL) {//reverted back to my old way of loading the txtfile file into the table, i was going to try to load the txtfile file (resouces) to a array list but i just couldnt get it to work
-        File txtfile = new File("Resources.txt");//file obj for new file named txtfile 
+    public void listAllResources(JTable ResourceTBL) {//method to display all resources into the table in the GUI, within the warm educational enviorment i created, display into the table that was passed in as an argument resourceTBL
+        File resourcetxt = new File("ResourcesFile.txt");//file resourcetxt to asssign file of where resources are stored
 
-        DefaultTableModel table = (DefaultTableModel) ResourceTBL.getModel();//getting the 
-        table.setRowCount(0); // remove existing rows
+        DefaultTableModel table = (DefaultTableModel) ResourceTBL.getModel();
+        table.setRowCount(0); //set existing rows to 0, removing existing rows
 
-        try (BufferedReader br = new BufferedReader(new FileReader(txtfile))) {//creating buffered reader to reade the txtfile file
-            String line;//each line for buffered reader, to readfrom the file
-            while ((line = br.readLine()) != null) {//while until the end is reached
-                String[] row = line.split(",");//breaking line into sections using comma , to seperate them
+        try (BufferedReader bufferedReader = new BufferedReader(new FileReader(resourcetxt))) {//using the bufferedReader obj to read the resourcetxt text file , so i can then list them all into the table
+            String line;//a line String for the reader to read from the file
+            while ((line = bufferedReader.readLine()) != null) {//using a while loop to keep it looping until the very end 
+                String[] row = line.split(",");//breaking the lines using commas, to keep everything nice neat and seperated
 
                 if (row.length == table.getColumnCount()) {//ensure it matches the epected count of columns in the table
                     table.addRow(row);//add a row if not
@@ -62,11 +62,11 @@ public class ResourceHub extends Administrator {//start ResourceHub class//showi
     }//end load resurces method
 
     public void SaveEndUserFeedback(String firstname, String surname, String gmail, String dateReview, String content) {//method to save the feedback entered into the contact us form.
-        try (BufferedWriter bw = new BufferedWriter(new FileWriter("contact.txt", true))) {//creat bufffered writer to write to a file, linked contact.txt
+        try (BufferedWriter bufferedwriter = new BufferedWriter(new FileWriter("contactFile.txt", true))) {//creat bufffered writer to write to a file, linked contact.txt
             // Write user input to file with comma separation
-            bw.write(firstname + "," + surname + "," + gmail + "," + dateReview + "," + content);//writing this data to a file using bw
-            bw.newLine();//adds line after break
-            bw.flush();//ending and signing finsishing
+            bufferedwriter.write(firstname + "," + surname + "," + gmail + "," + dateReview + "," + content);//writing this data to a file using bufferedwriter
+            bufferedwriter.newLine();//adds line after break
+            bufferedwriter.flush();//ending and signing finsishing
             System.out.println("Sucessfully written to the file and stored for review! Please give our team 1-3 business days!");//notify the end user that is was succesfully added to the file
         } catch (IOException ex) {//catch with IOException e
             System.out.println("We encounters an error writing the user feedback to the file. Exception: " + ex.getMessage());//notify the user it went astray along the way

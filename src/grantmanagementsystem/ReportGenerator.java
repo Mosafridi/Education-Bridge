@@ -19,13 +19,13 @@ public class ReportGenerator extends Administrator {//start report generator cla
         // Constructor
     }//end constructor
 
-    public void WriteReport(String enteredName, String enteredEmail, String enteredDate, String AverageEnteredGrade) {//method to write the report to a file
-        String txtfile = "Report.txt";//assinging the path to a string
+    public void saveReport(String enteredName, String enteredEmail, String enteredDate, String AverageEnteredGrade) {//method to write the report to a file
+        String reporttxt = "ReportFile.txt";//assinging the path to a string
 
-        try (BufferedWriter bw = new BufferedWriter(new FileWriter(txtfile, true))) {// buffered writer obj called bw,this will be used to add to a file named txt, wrapped in a try catch
-            bw.write(enteredName + "," + enteredEmail + "," + enteredDate + "," + AverageEnteredGrade);//writing this data to a file using bw
-            bw.newLine();//adds line after break
-            bw.flush();//ending and signing finsishing 
+        try (BufferedWriter bufferedWrirter = new BufferedWriter(new FileWriter(reporttxt, true))) {// buffered writer obj called bw,this will be used to add to a file named txt, wrapped in a try catch
+            bufferedWrirter.write(enteredName + "," + enteredEmail + "," + enteredDate + "," + AverageEnteredGrade);//writing this data to a file using bw
+            bufferedWrirter.newLine();//adds line after break
+            bufferedWrirter.flush();//ending and signing finsishing 
             System.out.println("Succesfully saved to a file, click the view button to populate the button and check!");//sout to notify the end user
         } catch (IOException ex) {//catch exception and notify the end user
             System.out.println("We ran into a fault (error) someewere in the process " + ex.getMessage());//sout to notify the end user
@@ -33,14 +33,14 @@ public class ReportGenerator extends Administrator {//start report generator cla
     }//end write report method
 
     public void PopulateReportTBL(JTable ReportTBL) { //method to populate the table with the reports
-        File txtfile = new File("Report.txt");//assign the file path to file to txtfile, routing to the reports.txt were the reports are saved
+        File reporttxt = new File("ReportFile.txt");//assign the file path to file to reporttxt, routing to the reports were the reports are saved
 
         DefaultTableModel table = (DefaultTableModel) ReportTBL.getModel();//getting the report model
         table.setRowCount(0);// remove existing rows
 
-   try (BufferedReader br = new BufferedReader(new FileReader(txtfile))) {//creating buffered reader to reade the txt file
+   try (BufferedReader bufferedReader = new BufferedReader(new FileReader(reporttxt))) {//creating buffered reader to reade the txt file
             String line;//each line for buffered reader, to readfrom the file
-            while ((line = br.readLine()) != null) {//while until the end is reached
+            while ((line = bufferedReader.readLine()) != null) {//while until the end is reached
                 String[] row = line.split(",");//breaking line into sections using comma , to seperate them
 
                 if (row.length == table.getColumnCount()) {//ensure it matches the epected count of columns in the table

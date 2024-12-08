@@ -1364,7 +1364,7 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
         String dateReview = ContactUsReviewDateFormattedField.getText();//getting the date from the field in the gui and assinging it to a string
         String content = FeedbackTextArea.getText();//getting the feedback from the field in the gui and assinging it to a string
 
-        if (ContactUsFirstNameField.getText().isEmpty() || ContactUsEmailField.getText().isEmpty() || dateReview.isEmpty() || FeedbackTextArea.getText().isEmpty() || ContactUsFirstNameField.getText().isEmpty() || ContactUsTermsAndConditionsCheckBox.isSelected()) {//if statement to ensure the fields are filled out to ensure the program does not crash
+        if (ContactUsFirstNameField.getText().isEmpty() || ContactUsEmailField.getText().isEmpty() || dateReview.isEmpty() || FeedbackTextArea.getText().isEmpty() || ContactUsFirstNameField.getText().isEmpty() || !ContactUsTermsAndConditionsCheckBox.isSelected()) {//if statement to ensure the fields are filled out to ensure the program does not crash
             JOptionPane.showMessageDialog(null, "Cannot leave any fields empty, please fill all!", "please ensure you accept the terms and condtions", JOptionPane.ERROR_MESSAGE);//joption pane popup to notify the end user the fields need to be filled out
             return;
         }//end if condition
@@ -1448,7 +1448,7 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
         } else {//end else 
 
             ResourceHub hub = new ResourceHub();//create an instance of the rescourceHub so i can access the methods
-            hub.saveResourceToFile(enteredFirstname, enteredSurname, enteredCourse, enteredDate, enteredResourceType, enteredURL);//call upon the save resource method and pass the variable in as args
+            hub.addResources(enteredFirstname, enteredSurname, enteredCourse, enteredDate, enteredResourceType, enteredURL);//call upon the save resource method and pass the variable in as args
 
             JOptionPane.showMessageDialog(null, "This was a great success!! added to the file");//joptionPane popup to notify the user it was succesful
 
@@ -1457,7 +1457,7 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
 
     private void ViewResourceBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ViewResourceBTNActionPerformed
         ResourceHub hub = new ResourceHub();//create an instance of the rescourceHub so i can call upon the method for populating the table
-        hub.PopulateRescourecTBL(ResourceTBL);//call upon method to load resources and senign the tbl as a arg so it has access, i didnt know how to do with without making the table static , and i wanted to try my best to encapsulate as much as possible so this seemed to be the best way to do it
+        hub.listAllResources(ResourceTBL);//call upon method to load resources and senign the tbl as a arg so it has access, i didnt know how to do with without making the table static , and i wanted to try my best to encapsulate as much as possible so this seemed to be the best way to do it
     }//GEN-LAST:event_ViewResourceBTNActionPerformed
 
     private void exitBTn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBTn1ActionPerformed
@@ -1668,7 +1668,7 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
         } else {//end else 
         // Save resource using ResourceHub
         ReportGenerator rg = new ReportGenerator();//create an instance of the rescourceHub so i can access the methods
-        rg.WriteReport(EnteredName, AverageEnteredGrade, enteredEmail, enteredDate);//call upon the save resource method and pass the variable in as args
+        rg.saveReport(EnteredName, AverageEnteredGrade, enteredEmail, enteredDate);//call upon the save resource method and pass the variable in as args
 
         JOptionPane.showMessageDialog(null, "This was a great success!! added to the file");//joptionPane popup to notify the user it was succesful
 
