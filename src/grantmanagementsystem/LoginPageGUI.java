@@ -3,14 +3,16 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package grantmanagementsystem;
+
 import java.awt.event.KeyEvent;
 import javax.swing.JOptionPane;
+
 /**
  *
  * @author gregm// Gregory coded functionality of this jframe
  */
 public class LoginPageGUI extends javax.swing.JFrame {
-   
+
     public LoginPageGUI() {//start constructor
         initComponents();
         Administrator.createAdminsAccount();//when a instance of this class is called upon it will create admins
@@ -31,7 +33,6 @@ public class LoginPageGUI extends javax.swing.JFrame {
         EmailLabel = new javax.swing.JLabel();
         PasswordLabel = new javax.swing.JLabel();
         emailField = new javax.swing.JTextField();
-        TermsAndConditionsCheckBox = new javax.swing.JCheckBox();
         ContinueAsGuestBTN = new javax.swing.JButton();
         LoginHeadingLabel = new javax.swing.JLabel();
         LoginBTN = new javax.swing.JButton();
@@ -42,6 +43,7 @@ public class LoginPageGUI extends javax.swing.JFrame {
 
         LoginPNL.setBackground(new java.awt.Color(255, 255, 255));
 
+        passwordField.setToolTipText("for example please enter , \"password1234\".");
         passwordField.setPreferredSize(new java.awt.Dimension(64, 35));
         passwordField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -58,6 +60,7 @@ public class LoginPageGUI extends javax.swing.JFrame {
 
         PasswordLabel.setText("Password");
 
+        emailField.setToolTipText("Please enter in the email you want to sign in with. E.g. AW@gmail.com (case sensetive), password: password1234");
         emailField.setPreferredSize(new java.awt.Dimension(64, 35));
         emailField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -70,10 +73,8 @@ public class LoginPageGUI extends javax.swing.JFrame {
             }
         });
 
-        TermsAndConditionsCheckBox.setText("Accept terms and conditions");
-        TermsAndConditionsCheckBox.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-
         ContinueAsGuestBTN.setText("Continue as guest");
+        ContinueAsGuestBTN.setToolTipText("if you wish to bypass the login please hit the continue as guest btn");
         ContinueAsGuestBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         ContinueAsGuestBTN.setPreferredSize(new java.awt.Dimension(250, 30));
         ContinueAsGuestBTN.addActionListener(new java.awt.event.ActionListener() {
@@ -86,6 +87,7 @@ public class LoginPageGUI extends javax.swing.JFrame {
         LoginHeadingLabel.setText("       LOGIN");
 
         LoginBTN.setText("Login");
+        LoginBTN.setToolTipText("after youve entered in your credentials in the fields above please hit this login button");
         LoginBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         LoginBTN.setPreferredSize(new java.awt.Dimension(250, 30));
         LoginBTN.addActionListener(new java.awt.event.ActionListener() {
@@ -110,9 +112,7 @@ public class LoginPageGUI extends javax.swing.JFrame {
                     .addComponent(emailField, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(PasswordLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(passwordField, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(LoginPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(TermsAndConditionsCheckBox, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(ContinueAsGuestBTN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(ContinueAsGuestBTN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(21, 21, 21))
         );
         LoginPNLLayout.setVerticalGroup(
@@ -128,9 +128,7 @@ public class LoginPageGUI extends javax.swing.JFrame {
                 .addComponent(PasswordLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 11, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(passwordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
-                .addComponent(TermsAndConditionsCheckBox)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
                 .addComponent(LoginBTN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(ContinueAsGuestBTN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -185,34 +183,34 @@ public class LoginPageGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_emailFieldActionPerformed
 
     private void ContinueAsGuestBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ContinueAsGuestBTNActionPerformed
-                                                 
+
         setVisible(false);//set the login page to false visibilit
         HomePage homePage = new HomePage();//create instance of home page
         homePage.setVisible(true);//set the home page visibility to true
-                                                
+
 
     }//GEN-LAST:event_ContinueAsGuestBTNActionPerformed
 
     private void LoginBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginBTNActionPerformed
-        String email = emailField.getText();//get the entered email from the email field in the gui and assign it to a string
-        String enteredPassword = passwordField.getText().trim();//get the entered password from a field in the gui and assing to a string
+        String entemail = emailField.getText();//entemail for entered email
+        String entpassword = passwordField.getText().trim();//entpassword for entered password
 
-        if (Administrator.AdminLogin(email, enteredPassword)) {//if condition send the entered emaul and password into the method as args and see if it matches an admins login credentials
-            JOptionPane.showMessageDialog(null, "Admin has logged in succesfully, Welcome!");//notify the end user with a joption pane popup
-            setVisible(false);//set the page to false visibility
-            HomePage homePage = new HomePage();//creat a instance of the home page
-            homePage.setVisible(true);//set the homepage to true visibility
+        if (Administrator.AdministratorLoginCheck(entemail, entpassword)) {//if to check the entered credentials against the array list of credentials
+            setVisible(false);//set the panel to invisible
+            HomePage homePage = new HomePage();//create an nistance of the home page
+            homePage.setVisible(true);//set it to be visible
+            Administrator.showLoginMessage(entemail);  //show the login message that display info about the login
+        } 
+        else if (Student.StudentLoginCheck(entemail, entpassword)) {//if to check the entered credentials against the array of credentials
+            setVisible(false);//set the login panel to invisible
+            HomePage homePage = new HomePage();//create an nistance of the home page
+            homePage.setVisible(true);//set it to be visible
+            Student.showLoginMessage(entemail);//show the login message that display info about the login
+        }else {//else condition
+            JOptionPane.showMessageDialog(null, "The entered credentials to not match any existing accounts!");//joptionpane to notift the end user the entered credentials are incorretc
 
-        } else if (Student.StudentLogin(email, enteredPassword)) {//if condition and send the entered emaul and password into the method as args and see if it matches an admins login credentials
-            JOptionPane.showMessageDialog(null, "Student has sucessfully logged in, Welcome!");//notify the end user with a joption pane popup
-            setVisible(false);//set the login page to false visibility
-            HomePage homePage = new HomePage();//creat a instance of the home page
-            homePage.setVisible(true);//set the home page to true visibility
-        } else {//else if condition
-
-            JOptionPane.showMessageDialog(null, "Entered Credentials do not match!");//notify the end user with a joption pane popup that the entered credentials didnt match
-
-        }//end else if
+            Administrator.showLoginMessage(false);//another method overloaded to notify the end user if they have logged in ior not
+        }//end else condition
 
 
     }//GEN-LAST:event_LoginBTNActionPerformed
@@ -276,7 +274,6 @@ public class LoginPageGUI extends javax.swing.JFrame {
     private javax.swing.JLabel LogoLabel;
     private javax.swing.JPanel LogoPNL;
     private javax.swing.JLabel PasswordLabel;
-    private javax.swing.JCheckBox TermsAndConditionsCheckBox;
     private javax.swing.JTextField emailField;
     private javax.swing.JTextField passwordField;
     // End of variables declaration//GEN-END:variables

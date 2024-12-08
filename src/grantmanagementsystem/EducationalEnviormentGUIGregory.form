@@ -553,6 +553,7 @@
                     <Component class="javax.swing.JButton" name="SaveResourseBTN">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Save"/>
+                        <Property name="toolTipText" type="java.lang.String" value="Please fill in the fields above to ensure and hit this button to save your resources!"/>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                           <Dimension value="[72, 22]"/>
                         </Property>
@@ -575,6 +576,7 @@
                     <Component class="javax.swing.JButton" name="ViewResourceBTN">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="View"/>
+                        <Property name="toolTipText" type="java.lang.String" value="Please hit this view button to populate table above!"/>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                           <Dimension value="[72, 22]"/>
                         </Property>
@@ -590,7 +592,7 @@
                       </Events>
                       <Constraints>
                         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                          <AbsoluteConstraints x="320" y="350" width="80" height="20"/>
+                          <AbsoluteConstraints x="310" y="350" width="80" height="20"/>
                         </Constraint>
                       </Constraints>
                     </Component>
@@ -621,6 +623,7 @@
                           <Color blue="33" green="33" red="ff" type="rgb"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="EXIT"/>
+                        <Property name="toolTipText" type="java.lang.String" value="Hit this button to return to the home screen!"/>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                           <Dimension value="[72, 22]"/>
                         </Property>
@@ -743,6 +746,7 @@
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                           <Image iconType="3" name="/img/video-lesson.png"/>
                         </Property>
+                        <Property name="toolTipText" type="java.lang.String" value="Please press on the labels to open tutorials!"/>
                         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                           <Color id="Hand Cursor"/>
                         </Property>
@@ -757,6 +761,7 @@
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                           <Image iconType="3" name="/img/video-lesson.png"/>
                         </Property>
+                        <Property name="toolTipText" type="java.lang.String" value="Please press on the labels to open tutorials!"/>
                         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                           <Color id="Hand Cursor"/>
                         </Property>
@@ -771,6 +776,7 @@
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                           <Image iconType="3" name="/img/video-lesson.png"/>
                         </Property>
+                        <Property name="toolTipText" type="java.lang.String" value="Please press on the labels to open tutorials!"/>
                         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                           <Color id="Hand Cursor"/>
                         </Property>
@@ -785,6 +791,7 @@
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                           <Image iconType="3" name="/img/video-lesson.png"/>
                         </Property>
+                        <Property name="toolTipText" type="java.lang.String" value="Please press on the labels to open tutorials!"/>
                         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                           <Color id="Hand Cursor"/>
                         </Property>
@@ -799,6 +806,7 @@
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                           <Image iconType="3" name="/img/video-lesson.png"/>
                         </Property>
+                        <Property name="toolTipText" type="java.lang.String" value="Please press on the labels to open tutorials!"/>
                         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                           <Color id="Hand Cursor"/>
                         </Property>
@@ -858,6 +866,7 @@
                           <Color blue="33" green="33" red="ff" type="rgb"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="EXIT"/>
+                        <Property name="toolTipText" type="java.lang.String" value="Please hit the exit button to return to the homescreen"/>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                           <Dimension value="[72, 22]"/>
                         </Property>
@@ -931,117 +940,59 @@
                             </Constraint>
                           </Constraints>
 
-                          <Layout>
-                            <DimensionLayout dim="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                          <Group type="102" alignment="1" attributes="0">
-                                              <Component id="ComputersQuestionLabel1" min="-2" pref="275" max="-2" attributes="0"/>
-                                              <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="ComputerQuizComboBox" min="-2" pref="228" max="-2" attributes="0"/>
-                                              <EmptySpace min="-2" pref="403" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Group type="102" attributes="0">
-                                                      <Group type="103" groupAlignment="1" attributes="0">
-                                                          <Component id="ComputersQuestionLabel5" min="-2" pref="275" max="-2" attributes="0"/>
-                                                          <Component id="ComputersQuestionLabel3" min="-2" pref="275" max="-2" attributes="0"/>
-                                                          <Component id="ComputersQuestionLabel4" min="-2" pref="275" max="-2" attributes="0"/>
-                                                          <Component id="ComputersQuestionLabel2" min="-2" pref="275" max="-2" attributes="0"/>
-                                                      </Group>
-                                                      <EmptySpace max="-2" attributes="0"/>
-                                                  </Group>
-                                                  <Group type="102" alignment="1" attributes="0">
-                                                      <Component id="ComputersClearBTN" min="-2" max="-2" attributes="0"/>
-                                                      <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
-                                                  </Group>
-                                              </Group>
-                                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                                  <Group type="102" alignment="0" attributes="0">
-                                                      <Component id="ComputersQuizCheckBTN" min="-2" max="-2" attributes="0"/>
-                                                      <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                                                      <Component id="exitBTn2" min="-2" max="-2" attributes="0"/>
-                                                  </Group>
-                                                  <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Component id="ComputerQuizComboBox3" min="-2" pref="228" max="-2" attributes="0"/>
-                                                      <Component id="ComputerQuizComboBox2" alignment="0" min="-2" pref="228" max="-2" attributes="0"/>
-                                                      <Component id="ComputerQuizComboBox4" min="-2" pref="228" max="-2" attributes="0"/>
-                                                      <Component id="ComputerQuizComboBox5" min="-2" pref="228" max="-2" attributes="0"/>
-                                                  </Group>
-                                              </Group>
-                                              <EmptySpace max="32767" attributes="0"/>
-                                          </Group>
-                                      </Group>
-                                  </Group>
-                              </Group>
-                            </DimensionLayout>
-                            <DimensionLayout dim="1">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace pref="65" max="32767" attributes="0"/>
-                                      <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="ComputersQuestionLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="ComputerQuizComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="ComputersQuestionLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="ComputerQuizComboBox2" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="ComputersQuestionLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="ComputerQuizComboBox3" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="ComputersQuestionLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="ComputerQuizComboBox4" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="ComputersQuestionLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="ComputerQuizComboBox5" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="ComputersClearBTN" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="ComputersQuizCheckBTN" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="exitBTn2" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                            </DimensionLayout>
+                          <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+                            <Property name="useNullLayout" type="boolean" value="true"/>
                           </Layout>
                           <SubComponents>
                             <Component class="javax.swing.JLabel" name="ComputersQuestionLabel2">
                               <Properties>
                                 <Property name="text" type="java.lang.String" value="What does &quot;PSU&quot; stand for?"/>
                               </Properties>
+                              <Constraints>
+                                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                                  <AbsoluteConstraints x="21" y="108" width="275" height="-1"/>
+                                </Constraint>
+                              </Constraints>
                             </Component>
                             <Component class="javax.swing.JLabel" name="ComputersQuestionLabel1">
                               <Properties>
                                 <Property name="text" type="java.lang.String" value="What is a CPU doing?"/>
                               </Properties>
+                              <Constraints>
+                                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                                  <AbsoluteConstraints x="21" y="68" width="275" height="-1"/>
+                                </Constraint>
+                              </Constraints>
                             </Component>
                             <Component class="javax.swing.JLabel" name="ComputersQuestionLabel3">
                               <Properties>
                                 <Property name="text" type="java.lang.String" value="What is a M.2 used for?"/>
                               </Properties>
+                              <Constraints>
+                                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                                  <AbsoluteConstraints x="21" y="148" width="275" height="-1"/>
+                                </Constraint>
+                              </Constraints>
                             </Component>
                             <Component class="javax.swing.JLabel" name="ComputersQuestionLabel4">
                               <Properties>
                                 <Property name="text" type="java.lang.String" value="What does &quot;SSD&quot; stand for?"/>
                               </Properties>
+                              <Constraints>
+                                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                                  <AbsoluteConstraints x="21" y="182" width="275" height="-1"/>
+                                </Constraint>
+                              </Constraints>
                             </Component>
                             <Component class="javax.swing.JLabel" name="ComputersQuestionLabel5">
                               <Properties>
                                 <Property name="text" type="java.lang.String" value="What does &quot;GPU&quot; stand for?"/>
                               </Properties>
+                              <Constraints>
+                                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                                  <AbsoluteConstraints x="21" y="222" width="275" height="-1"/>
+                                </Constraint>
+                              </Constraints>
                             </Component>
                             <Component class="javax.swing.JComboBox" name="ComputerQuizComboBox">
                               <Properties>
@@ -1059,12 +1010,17 @@
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                               </AuxValues>
+                              <Constraints>
+                                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                                  <AbsoluteConstraints x="302" y="65" width="228" height="-1"/>
+                                </Constraint>
+                              </Constraints>
                             </Component>
                             <Component class="javax.swing.JComboBox" name="ComputerQuizComboBox3">
                               <Properties>
                                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                                   <StringArray count="5">
-                                    <StringItem index="0" value="Storing data"/>
+                                    <StringItem index="0" value="Storing"/>
                                     <StringItem index="1" value="Loading graphics"/>
                                     <StringItem index="2" value="Executing instructions"/>
                                     <StringItem index="3" value="Supply power"/>
@@ -1075,6 +1031,11 @@
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                               </AuxValues>
+                              <Constraints>
+                                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                                  <AbsoluteConstraints x="302" y="145" width="228" height="-1"/>
+                                </Constraint>
+                              </Constraints>
                             </Component>
                             <Component class="javax.swing.JComboBox" name="ComputerQuizComboBox2">
                               <Properties>
@@ -1090,6 +1051,11 @@
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                               </AuxValues>
+                              <Constraints>
+                                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                                  <AbsoluteConstraints x="302" y="105" width="228" height="-1"/>
+                                </Constraint>
+                              </Constraints>
                             </Component>
                             <Component class="javax.swing.JComboBox" name="ComputerQuizComboBox4">
                               <Properties>
@@ -1106,6 +1072,11 @@
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                               </AuxValues>
+                              <Constraints>
+                                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                                  <AbsoluteConstraints x="302" y="179" width="228" height="-1"/>
+                                </Constraint>
+                              </Constraints>
                             </Component>
                             <Component class="javax.swing.JComboBox" name="ComputerQuizComboBox5">
                               <Properties>
@@ -1122,10 +1093,16 @@
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                               </AuxValues>
+                              <Constraints>
+                                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                                  <AbsoluteConstraints x="302" y="219" width="228" height="-1"/>
+                                </Constraint>
+                              </Constraints>
                             </Component>
                             <Component class="javax.swing.JButton" name="ComputersClearBTN">
                               <Properties>
                                 <Property name="text" type="java.lang.String" value="Clear "/>
+                                <Property name="toolTipText" type="java.lang.String" value="please press this button to make the fields white again."/>
                                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                                   <Color id="Hand Cursor"/>
                                 </Property>
@@ -1139,10 +1116,16 @@
                                   <Dimension value="[72, 22]"/>
                                 </Property>
                               </Properties>
+                              <Constraints>
+                                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                                  <AbsoluteConstraints x="191" y="293" width="-1" height="-1"/>
+                                </Constraint>
+                              </Constraints>
                             </Component>
                             <Component class="javax.swing.JButton" name="ComputersQuizCheckBTN">
                               <Properties>
                                 <Property name="text" type="java.lang.String" value="Check"/>
+                                <Property name="toolTipText" type="java.lang.String" value="Please choose the answers in the combo boxes above for the respective question on a label to the left, after youve answered all questions please press the check button to see if you got them right or wrong. RED = wrong, GREEN = correct."/>
                                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                                   <Color id="Hand Cursor"/>
                                 </Property>
@@ -1159,6 +1142,11 @@
                               <Events>
                                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ComputersQuizCheckBTNActionPerformed"/>
                               </Events>
+                              <Constraints>
+                                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                                  <AbsoluteConstraints x="302" y="293" width="-1" height="-1"/>
+                                </Constraint>
+                              </Constraints>
                             </Component>
                             <Component class="javax.swing.JButton" name="exitBTn2">
                               <Properties>
@@ -1166,6 +1154,7 @@
                                   <Color blue="33" green="33" red="ff" type="rgb"/>
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="EXIT"/>
+                                <Property name="toolTipText" type="java.lang.String" value="press the button to return to homePage!"/>
                                 <Property name="borderPainted" type="boolean" value="false"/>
                                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                                   <Color id="Hand Cursor"/>
@@ -1183,6 +1172,11 @@
                               <Events>
                                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="exitBTn2ActionPerformed"/>
                               </Events>
+                              <Constraints>
+                                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                                  <AbsoluteConstraints x="414" y="293" width="-1" height="-1"/>
+                                </Constraint>
+                              </Constraints>
                             </Component>
                           </SubComponents>
                         </Container>
@@ -1286,6 +1280,7 @@
                             <Component class="javax.swing.JButton" name="GeographyQuizCheckBTN">
                               <Properties>
                                 <Property name="text" type="java.lang.String" value="Check"/>
+                                <Property name="toolTipText" type="java.lang.String" value="Please choose the answers in the combo boxes above for the respective question on a label to the left, after youve answered all questions please press the check button to see if you got them right or wrong. RED = wrong, GREEN = correct."/>
                                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                                   <Color id="Hand Cursor"/>
                                 </Property>
@@ -1331,6 +1326,7 @@
                             <Component class="javax.swing.JButton" name="GeographyClearBTN1">
                               <Properties>
                                 <Property name="text" type="java.lang.String" value="Clear"/>
+                                <Property name="toolTipText" type="java.lang.String" value="please press this button to make the fields white again."/>
                                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                                   <Color id="Hand Cursor"/>
                                 </Property>
@@ -1427,6 +1423,7 @@
                                   <Color blue="33" green="33" red="ff" type="rgb"/>
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="EXIT"/>
+                                <Property name="toolTipText" type="java.lang.String" value="press the button to return to homePage!"/>
                                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                                   <Color id="Hand Cursor"/>
                                 </Property>
@@ -1470,6 +1467,7 @@
                             <Component class="javax.swing.JButton" name="ProgrammingQuizCheckBTN">
                               <Properties>
                                 <Property name="text" type="java.lang.String" value="Check"/>
+                                <Property name="toolTipText" type="java.lang.String" value="Please choose the answers in the combo boxes above for the respective question on a label to the left, after youve answered all questions please press the check button to see if you got them right or wrong. RED = wrong, GREEN = correct."/>
                                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                                   <Color id="Hand Cursor"/>
                                 </Property>
@@ -1495,6 +1493,7 @@
                             <Component class="javax.swing.JButton" name="ProgrammingClearBTN">
                               <Properties>
                                 <Property name="text" type="java.lang.String" value="Clear "/>
+                                <Property name="toolTipText" type="java.lang.String" value="please press this button to make the fields white again."/>
                                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                                   <Color id="Hand Cursor"/>
                                 </Property>
@@ -1672,6 +1671,7 @@
                                   <Color blue="33" green="33" red="ff" type="rgb"/>
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="EXIT"/>
+                                <Property name="toolTipText" type="java.lang.String" value="press the button to return to homePage!"/>
                                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                                   <Color id="Hand Cursor"/>
                                 </Property>
@@ -1822,6 +1822,7 @@
             <Component class="javax.swing.JButton" name="SaveBTN">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Save/Generate"/>
+                <Property name="toolTipText" type="java.lang.String" value="Please fill in the fields listed above to save your report, when you hit the save button, feedback will be generated to notify you how your doing in your course based on your average grade!"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SaveBTNActionPerformed"/>
@@ -1835,6 +1836,7 @@
             <Component class="javax.swing.JButton" name="ViewBTN">
               <Properties>
                 <Property name="text" type="java.lang.String" value="view"/>
+                <Property name="toolTipText" type="java.lang.String" value="Please press this view button to populate the table"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ViewBTNActionPerformed"/>
@@ -1868,6 +1870,7 @@
                   <Color blue="33" green="33" red="ff" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="EXIT"/>
+                <Property name="toolTipText" type="java.lang.String" value="Press this button to return to home"/>
                 <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[72, 22]"/>
                 </Property>
@@ -1902,12 +1905,11 @@
                 <Component class="javax.swing.JTable" name="ReportTBL">
                   <Properties>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                      <Table columnCount="5" rowCount="4">
-                        <Column editable="true" title="Name" type="java.lang.String"/>
-                        <Column editable="true" title="AVG Grade" type="java.lang.Double"/>
-                        <Column editable="true" title="Date" type="java.lang.String"/>
-                        <Column editable="true" title="Email" type="java.lang.String"/>
-                        <Column editable="true" title="Feedback" type="java.lang.String"/>
+                      <Table columnCount="4" rowCount="4">
+                        <Column editable="false" title="Name" type="java.lang.String"/>
+                        <Column editable="true" title="AVG Grade" type="java.lang.String"/>
+                        <Column editable="false" title="Date" type="java.lang.String"/>
+                        <Column editable="false" title="Email" type="java.lang.String"/>
                       </Table>
                     </Property>
                   </Properties>
@@ -2249,6 +2251,7 @@
                   <Color blue="33" green="33" red="ff" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="EXIT"/>
+                <Property name="toolTipText" type="java.lang.String" value="Please press this button to return home!"/>
                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                   <Color id="Hand Cursor"/>
                 </Property>

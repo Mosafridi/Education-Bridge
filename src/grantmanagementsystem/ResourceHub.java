@@ -16,15 +16,16 @@ import javax.swing.JOptionPane;//import for the gui popups
 import javax.swing.table.DefaultTableModel;
 import java.net.URI;//import for the url
 
-public class ResourceHub extends Administrator{//start ResourceHub class//showing inheritance could now add functionality for admin tools!
-     public ResourceHub(){
-    
-     }
+public class ResourceHub extends Administrator {//start ResourceHub class//showing inheritance could now add functionality for admin tools!
 
-    private final String txt = "Resources.txt";//declaring string for resources.txt
-    
+    public ResourceHub() {
+
+    }
+
+    private final String txtfile = "Resources.txt";//declaring string for resources.txt
+
     public void saveResourceToFile(String firstname, String surname, String Course, String Date, String resourceType, String URL) {//save resources method, stuff will be sent from the fields when the button is pressed as arguments, as you can see im adding in 
-        try (BufferedWriter bw = new BufferedWriter(new FileWriter(txt, true))) {// buffered writer obj called bw,this will be used to add to a file named txt, wrapped in a try catch
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(txtfile, true))) {// buffered writer obj called bw,this will be used to add to a file named txtfile, wrapped in a try catch
             bw.write(firstname + "," + surname + "," + Course + "," + Date + "," + resourceType + "," + URL);//writing this data to a file using bw
             bw.newLine();//adds line after break
             bw.flush();//ending and signing finsishing 
@@ -34,25 +35,13 @@ public class ResourceHub extends Administrator{//start ResourceHub class//showin
         }//end catch
     }//end save resoruces methods
 
-    public void PopulateRescourecTBL(JTable ResourceTBL) {//reverted back to my old way of loading the txt file into the table, i was going to try to load the txt file (resouces) to a array list but i just couldnt get it to work
-        File txt = new File("Resources.txt");//file obj for new file named txt 
-
-        if (txt.exists()) {//if the txt exists
-            try {//try 
-                if (txt.createNewFile()) {// create a new file
-                    System.out.println("Sucessfully created the txt file to store data!");//notifying the end user it was made succesfully
-                } else {//else if
-                    System.out.println("Encountered an error creating the file.");//notify the end user it failed
-                }
-            } catch (IOException ex) {//catch with IOException e
-                System.out.println("Error encountered when making the file, or file was already made!: " + ex.getMessage());//notify the end user
-            }//end catch
-        }//end original if condition
+    public void PopulateRescourecTBL(JTable ResourceTBL) {//reverted back to my old way of loading the txtfile file into the table, i was going to try to load the txtfile file (resouces) to a array list but i just couldnt get it to work
+        File txtfile = new File("Resources.txt");//file obj for new file named txtfile 
 
         DefaultTableModel table = (DefaultTableModel) ResourceTBL.getModel();//getting the 
         table.setRowCount(0); // remove existing rows
 
-        try (BufferedReader br = new BufferedReader(new FileReader(txt))) {//creating buffered reader to reade the txt file
+        try (BufferedReader br = new BufferedReader(new FileReader(txtfile))) {//creating buffered reader to reade the txtfile file
             String line;//each line for buffered reader, to readfrom the file
             while ((line = br.readLine()) != null) {//while until the end is reached
                 String[] row = line.split(",");//breaking line into sections using comma , to seperate them

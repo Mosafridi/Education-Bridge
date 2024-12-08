@@ -16,10 +16,10 @@ public class Administrator {//start class
     private int id;//private integer for encapuslation
 
     private static ArrayList<Administrator> adminList = new ArrayList<>();//create array list for administrators
-    
-    public Administrator(){
+
+    public Administrator() {
     }
-    
+
     public Administrator(String name, String email, String password, int id) {//start constructor for admins obj
         this.name = name;
         this.email = email;
@@ -57,17 +57,28 @@ public class Administrator {//start class
     }
 
     //----------------------------------------------------------------------------------------------
-public static boolean AdminLogin(String email, String password) {
-    for (int x = 0; x < adminList.size(); x++) {  // Loop through the adminList
-        Administrator admin = adminList.get(x);  // Get the admin object at index x
+    public static boolean AdministratorLoginCheck(String email, String password) {//method containing logic for the admin class// we were limited as karawan stores his student in a ststic array, so i couldnt have one login method overriden, so i thought it would be clean to keep the retrospective login method in their own classwa
+        for (int x = 0; x < adminList.size(); x++) {  // Loop through the adminList
+            Administrator admin = adminList.get(x);  // Get the admin object at index x
 
-        if (email.equals(admin.getEmail()) && password.equals(admin.getPassword())) { 
-            // Compare input email and password with the admin's stored email and password
-            return true;  // Return true if a match is found
+            if (email.equals(admin.getEmail()) && password.equals(admin.getPassword())) {
+                // Compare input email and password with the admin's stored email and password
+                return true;  // Return true if a match is found
+            }
         }
+        return false;  // Return false if no match is found after looping through all admins
     }
-    return false;  // Return false if no match is found after looping through all admins
-}
 
+    public static void showLoginMessage(String email) {//a method to show the login method and demonstrate method overloading using polymorphism
+        System.out.println("Welcome admin: " + email + ". You have all access.");//sout to notify the end user what privelledges they may have
+    }//end show login message method
+
+    public static void showLoginMessage(boolean loginSuccess) {//another show login message but with different argument passed in
+        if (loginSuccess) {//if the login was a success
+            System.out.println("You have been logged in!");//sout to notify the end user that they have succesfully been logged in
+        } else {//else condition
+            System.out.println("The entered credentials didnt match an existing account please try again.");//sout to notify the end user their login failed
+        }//end else condition
+    }//end method
     //----------------------------------------------------------------------------------------------
 }

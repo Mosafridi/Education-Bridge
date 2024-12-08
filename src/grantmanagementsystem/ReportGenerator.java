@@ -13,62 +13,48 @@ import javax.swing.*;//needed for jtable population
 import java.util.ArrayList;//neccasary for the array list of reports
 import java.io.*;//neccesary for reading and writing from a file
 
-public class ReportGenerator extends Administrator {//start class//showing inheritance could now add functionality for admin tools!
+public class ReportGenerator extends Administrator {//start report generator class here, i generate feedback in the jframe itself and colour the entered grade depending on the entered grade//extending to show inheritance, could be used in the future to add extra functionality for admins not accesible by students
 
-    private ArrayList<String[]> report;//private array list for reports
-
-    public ReportGenerator() {//constrcutore for the report generator obj
-        report = new ArrayList<>();//create the report arraylist
+    public ReportGenerator() {//create empty constructor for user input and extending to admin class
+        // Constructor
     }//end constructor
 
-    private String chooseFeedbackReport(String avgGrade) {//method in order to generate Feedback in the report based on the end users avg grade
-        try {//try catch for error handling
-            int average = Integer.parseInt(avgGrade);//parse the avg grade to average 
+    public void WriteReport(String enteredName, String enteredEmail, String enteredDate, String AverageEnteredGrade) {//method to write the report to a file
+        String txtfile = "Report.txt";//assinging the path to a string
 
-            if (average >= 80) {//if the users average grade was equal to or above 80
-                return "Wow, Doing Great!";//set the feedbackk to :
-            } else if (average >= 70) {//if the users average grade was equal to or above 70
-                return "You can do better!.";//return this feedback:
-            } else if (average >= 50) {//if the users average grade was equal to or above 50
-                return "Barely passed, need to try more!";//return this feedback:
-            } else {//else if anything lower
-                return "You may need to try harder.";//return this feedback:
-            }
-        } catch (NumberFormatException e) {//catch an errors with the user input
-            return "Grade input is incorrect please only enter a number!";//notify the end user of their mistake
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(txtfile, true))) {// buffered writer obj called bw,this will be used to add to a file named txt, wrapped in a try catch
+            bw.write(enteredName + "," + enteredEmail + "," + enteredDate + "," + AverageEnteredGrade);//writing this data to a file using bw
+            bw.newLine();//adds line after break
+            bw.flush();//ending and signing finsishing 
+            System.out.println("Succesfully saved to a file, click the view button to populate the button and check!");//sout to notify the end user
+        } catch (IOException ex) {//catch exception and notify the end user
+            System.out.println("We ran into a fault (error) someewere in the process " + ex.getMessage());//sout to notify the end user
         }//end catch
-    }//end method
+    }//end write report method
 
-    public void addReport(String name, String email, String date, String avgGrade) {//method for saving the report and adding it to the array list, taking in the entered user input via the gui
-        String feedback = chooseFeedbackReport(avgGrade);//getting the feedback based on their avg grade
-        report.add(new String[]{name, email, date, avgGrade, feedback});//adding user input to the array list
-    }//end method
+    public void PopulateReportTBL(JTable ReportTBL) { //method to populate the table with the reports
+        File txtfile = new File("Report.txt");//assign the file path to file to txtfile, routing to the reports.txt were the reports are saved
 
-    public void PopulateReportsTBL(JTable reportTBL) {//method to populate the reportTBL with reports
-        DefaultTableModel table = new DefaultTableModel();//using the defaulttablemodel to populate the table in the GUI
-        table.addColumn("Name");//adding the name as column
-        table.addColumn("Email");//adding the email as column
-        table.addColumn("Date");//adding the date as column
-        table.addColumn("Average Grade");//adding the avg grade as column
-        table.addColumn("Feedback");//adding the chosen feedbacl as column
+        DefaultTableModel table = (DefaultTableModel) ReportTBL.getModel();//getting the report model
+        table.setRowCount(0);// remove existing rows
 
-        for (int x = 0; x < report.size(); x++) {//int x loops through the length/size of the array list
-            table.addRow(report.get(x));//add row, getting the index from reports arraylist
-        }//end for loop
+   try (BufferedReader br = new BufferedReader(new FileReader(txtfile))) {//creating buffered reader to reade the txt file
+            String line;//each line for buffered reader, to readfrom the file
+            while ((line = br.readLine()) != null) {//while until the end is reached
+                String[] row = line.split(",");//breaking line into sections using comma , to seperate them
 
-        reportTBL.setModel(table);//sending the table to the reportTBL in the GUI
-    }
-
-    public void WriteReport() {
-        try (BufferedWriter bw = new BufferedWriter(new FileWriter("reportsFile.txt", false))) { // using buffered bw object to write to a file callde ReportsFIle.txt
-            for (int x = 0; x < report.size(); x++) {//for loop for the length of the reports array list
-                bw.write(String.join(",", report.get(x)));//write the index of the array list to a file
-                bw.newLine();//adds line after break
-                bw.flush();//ending and signing finsishing
-            }
-            System.out.println("Reports saved to file successfully.");//notify the end user the reports have been saved sucesfully
-        } catch (IOException e) {//catch for error handling
-            System.out.println("Error saving reports to file: " + e.getMessage());//aout to notify the end uaer there was errors saving reports to the file
+                if (row.length == table.getColumnCount()) {//ensure it matches the epected count of columns in the table
+                    table.addRow(row);//add a row if not
+                } else {//else if
+                    JOptionPane.showMessageDialog(null,
+                            "Encountered an Error! The number of resources and rows within the table must not match up.",
+                            "Error related to data",
+                            JOptionPane.ERROR_MESSAGE);//display as an error message
+                    break;//break
+                }//end else if
+            }//end while loop
+        } catch (IOException ex) {//ccatch here if something went wrong
+            System.out.println("Unfortuneatly we encountered an error loading the requested file: " + ex.getMessage());//ntify the end user
         }//end catch
-    }//end save Report To a File Method
-}//end class
+    }//end load resurces method
+}

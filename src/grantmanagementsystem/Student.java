@@ -3,16 +3,17 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package grantmanagementsystem;
+
 import java.util.ArrayList;
 /**
  *
  * @author karawan
  */
 public class Student {
-private static ArrayList<Student> studentList = new ArrayList<>();
+
+    private static ArrayList<Student> studentList = new ArrayList<>();
 
     // Constructor and other methods...
-
     public static ArrayList<Student> getStudentList() {
         return studentList;
     }
@@ -67,7 +68,7 @@ private static ArrayList<Student> studentList = new ArrayList<>();
 //    public static ArrayList<Student> getStudentsList() {
 //        return studentsList;
 //    }
-
+    
     public String getName() {
         return name;
     }
@@ -99,17 +100,30 @@ private static ArrayList<Student> studentList = new ArrayList<>();
     public void setId(int id) {
         this.id = id;
     }
-    
+
     //--------Gregory added this for the login functionality----------------------------------------------------------------
-public static boolean StudentLogin(String email, String password) {
-    for (int x = 0; x < student.length; x++) {
-        if (student[x] != null) {  // Ensure the student object is not null
-            if (email.equals(student[x].getEmail()) && password.equals(student[x].getPassword())) {
-                return true;  // Return true if credentials match
-            }
-        }
+    public static boolean StudentLoginCheck(String entemail, String entpassword) {//check the student login
+        for (int x = 0; x < student.length; x++) {//for loop the length of the array
+            if (student[x] != null) {  // if the array index is not null
+                if (entemail.equals(student[x].getEmail()) && entpassword.equals(student[x].getPassword())) {//and nested if to see and also if the entered credentials match any of those in the array
+                    return true;  // Return true if they do indeed match
+                }//end if condition
+            }//end if condition
+        }//end for loop
+        return false;  // Return false if nothign was found in the check
     }
-    return false;  // Return false if no match is found
-}
+
+    public static void showLoginMessage(String email) {//a method to show the login method and demonstrate method overloading using polymorphism
+        System.out.println("Welcome Student: " + email + ". You have student access.");//sout to notify the end user what privelledges they may have
+    }//end show login message method
+
+    public static void showLoginMessage(boolean loginSuccess) {//another show login message but with different argument passed in
+        if (loginSuccess) {//if the login was a success
+            System.out.println("You have been logged in!");//sout to notify the end user that they have succesfully been logged in
+        } else {//else condition
+            System.out.println("The entered credentials didnt match an existing account please try again.");//sout to notify the end user their login failed
+        }//end else condition
+    }//end method
+
     //--------------------------------------------------------------------------------------
 }//end class

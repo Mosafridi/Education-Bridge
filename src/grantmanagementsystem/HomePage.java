@@ -52,6 +52,7 @@ public class HomePage extends javax.swing.JFrame {//start class
 
         ShoaibLogoLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ShoaibLogoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/salary.png"))); // NOI18N
+        ShoaibLogoLabel.setToolTipText("Please click this icon to open Shoaib's section");
         ShoaibLogoLabel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         ShoaibLogoLabel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -61,6 +62,7 @@ public class HomePage extends javax.swing.JFrame {//start class
 
         KarawanLogoLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         KarawanLogoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/graduate.png"))); // NOI18N
+        KarawanLogoLabel.setToolTipText("Please click this icon to open Karawans section");
         KarawanLogoLabel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         KarawanLogoLabel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -70,6 +72,7 @@ public class HomePage extends javax.swing.JFrame {//start class
 
         GregLogoLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         GregLogoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/school-bag.png"))); // NOI18N
+        GregLogoLabel.setToolTipText("Please click this icon to open Gregory's section");
         GregLogoLabel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         GregLogoLabel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {

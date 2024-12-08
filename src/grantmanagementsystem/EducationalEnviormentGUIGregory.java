@@ -424,6 +424,7 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
         ResourseCourseField.setBounds(445, 86, 101, 22);
 
         SaveResourseBTN.setText("Save");
+        SaveResourseBTN.setToolTipText("Please fill in the fields above to ensure and hit this button to save your resources!");
         SaveResourseBTN.setMaximumSize(new java.awt.Dimension(72, 22));
         SaveResourseBTN.setMinimumSize(new java.awt.Dimension(72, 22));
         SaveResourseBTN.setPreferredSize(new java.awt.Dimension(72, 22));
@@ -436,6 +437,7 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
         SaveResourseBTN.setBounds(130, 350, 75, 20);
 
         ViewResourceBTN.setText("View");
+        ViewResourceBTN.setToolTipText("Please hit this view button to populate table above!");
         ViewResourceBTN.setMaximumSize(new java.awt.Dimension(72, 22));
         ViewResourceBTN.setMinimumSize(new java.awt.Dimension(72, 22));
         ViewResourceBTN.setPreferredSize(new java.awt.Dimension(72, 22));
@@ -445,7 +447,7 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
             }
         });
         ManageResourcesPNL.add(ViewResourceBTN);
-        ViewResourceBTN.setBounds(320, 350, 80, 20);
+        ViewResourceBTN.setBounds(310, 350, 80, 20);
 
         ResourceTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Website", "Video", "Tutorial", "Book", " " }));
         ManageResourcesPNL.add(ResourceTypeComboBox);
@@ -453,6 +455,7 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
 
         exitBTn8.setBackground(new java.awt.Color(255, 51, 51));
         exitBTn8.setText("EXIT");
+        exitBTn8.setToolTipText("Hit this button to return to the home screen!");
         exitBTn8.setMaximumSize(new java.awt.Dimension(72, 22));
         exitBTn8.setMinimumSize(new java.awt.Dimension(72, 22));
         exitBTn8.setPreferredSize(new java.awt.Dimension(72, 22));
@@ -470,6 +473,7 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
 
         TutorialLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TutorialLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/video-lesson.png"))); // NOI18N
+        TutorialLabel2.setToolTipText("Please press on the labels to open tutorials!");
         TutorialLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         TutorialLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -479,6 +483,7 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
 
         TutorialLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TutorialLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/video-lesson.png"))); // NOI18N
+        TutorialLabel3.setToolTipText("Please press on the labels to open tutorials!");
         TutorialLabel3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         TutorialLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -488,6 +493,7 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
 
         TutorialLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TutorialLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/video-lesson.png"))); // NOI18N
+        TutorialLabel5.setToolTipText("Please press on the labels to open tutorials!");
         TutorialLabel5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         TutorialLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -497,6 +503,7 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
 
         TutorialLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TutorialLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/video-lesson.png"))); // NOI18N
+        TutorialLabel4.setToolTipText("Please press on the labels to open tutorials!");
         TutorialLabel4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         TutorialLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -506,6 +513,7 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
 
         Tutorial1Label.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Tutorial1Label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/video-lesson.png"))); // NOI18N
+        Tutorial1Label.setToolTipText("Please press on the labels to open tutorials!");
         Tutorial1Label.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Tutorial1Label.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -535,6 +543,7 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
 
         exitBTn1.setBackground(new java.awt.Color(255, 51, 51));
         exitBTn1.setText("EXIT");
+        exitBTn1.setToolTipText("Please hit the exit button to return to the homescreen");
         exitBTn1.setMaximumSize(new java.awt.Dimension(72, 22));
         exitBTn1.setMinimumSize(new java.awt.Dimension(72, 22));
         exitBTn1.setPreferredSize(new java.awt.Dimension(72, 22));
@@ -617,34 +626,59 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
 
         ComputersQuizPNL.setBackground(new java.awt.Color(51, 204, 255));
         ComputersQuizPNL.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        ComputersQuizPNL.setLayout(null);
 
         ComputersQuestionLabel2.setText("What does \"PSU\" stand for?");
+        ComputersQuizPNL.add(ComputersQuestionLabel2);
+        ComputersQuestionLabel2.setBounds(21, 108, 275, 16);
 
         ComputersQuestionLabel1.setText("What is a CPU doing?");
+        ComputersQuizPNL.add(ComputersQuestionLabel1);
+        ComputersQuestionLabel1.setBounds(21, 68, 275, 16);
 
         ComputersQuestionLabel3.setText("What is a M.2 used for?");
+        ComputersQuizPNL.add(ComputersQuestionLabel3);
+        ComputersQuestionLabel3.setBounds(21, 148, 275, 16);
 
         ComputersQuestionLabel4.setText("What does \"SSD\" stand for?");
+        ComputersQuizPNL.add(ComputersQuestionLabel4);
+        ComputersQuestionLabel4.setBounds(21, 182, 275, 16);
 
         ComputersQuestionLabel5.setText("What does \"GPU\" stand for?");
+        ComputersQuizPNL.add(ComputersQuestionLabel5);
+        ComputersQuestionLabel5.setBounds(21, 222, 275, 16);
 
         ComputerQuizComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Central Processing Unit", "Cornered processing union", "Centrelised Power unit", "Cell processing unit", " ", " " }));
+        ComputersQuizPNL.add(ComputerQuizComboBox);
+        ComputerQuizComboBox.setBounds(302, 65, 228, 22);
 
-        ComputerQuizComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Storing data", "Loading graphics", "Executing instructions", "Supply power", " " }));
+        ComputerQuizComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Storing", "Loading graphics", "Executing instructions", "Supply power", " " }));
+        ComputersQuizPNL.add(ComputerQuizComboBox3);
+        ComputerQuizComboBox3.setBounds(302, 145, 228, 22);
 
         ComputerQuizComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Power Shell Unit", "Power Supply Unit", "Primary suppy unit", "Perfect supply unit" }));
+        ComputersQuizPNL.add(ComputerQuizComboBox2);
+        ComputerQuizComboBox2.setBounds(302, 105, 228, 22);
 
         ComputerQuizComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Store Some Data", "Save Some Data", "Solid State Drive", "Store State Drive", " " }));
+        ComputersQuizPNL.add(ComputerQuizComboBox4);
+        ComputerQuizComboBox4.setBounds(302, 179, 228, 22);
 
         ComputerQuizComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Graphical Processing Unit", "Graphic Prone Unit", "Graphics Processing Under", "Game Processing Unit", " " }));
+        ComputersQuizPNL.add(ComputerQuizComboBox5);
+        ComputerQuizComboBox5.setBounds(302, 219, 228, 22);
 
         ComputersClearBTN.setText("Clear ");
+        ComputersClearBTN.setToolTipText("please press this button to make the fields white again.");
         ComputersClearBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         ComputersClearBTN.setMaximumSize(new java.awt.Dimension(72, 22));
         ComputersClearBTN.setMinimumSize(new java.awt.Dimension(72, 22));
         ComputersClearBTN.setPreferredSize(new java.awt.Dimension(72, 22));
+        ComputersQuizPNL.add(ComputersClearBTN);
+        ComputersClearBTN.setBounds(191, 293, 72, 22);
 
         ComputersQuizCheckBTN.setText("Check");
+        ComputersQuizCheckBTN.setToolTipText("Please choose the answers in the combo boxes above for the respective question on a label to the left, after youve answered all questions please press the check button to see if you got them right or wrong. RED = wrong, GREEN = correct.");
         ComputersQuizCheckBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         ComputersQuizCheckBTN.setMaximumSize(new java.awt.Dimension(72, 22));
         ComputersQuizCheckBTN.setMinimumSize(new java.awt.Dimension(72, 22));
@@ -654,9 +688,12 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
                 ComputersQuizCheckBTNActionPerformed(evt);
             }
         });
+        ComputersQuizPNL.add(ComputersQuizCheckBTN);
+        ComputersQuizCheckBTN.setBounds(302, 293, 72, 22);
 
         exitBTn2.setBackground(new java.awt.Color(255, 51, 51));
         exitBTn2.setText("EXIT");
+        exitBTn2.setToolTipText("press the button to return to homePage!");
         exitBTn2.setBorderPainted(false);
         exitBTn2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         exitBTn2.setMaximumSize(new java.awt.Dimension(72, 22));
@@ -667,73 +704,8 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
                 exitBTn2ActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout ComputersQuizPNLLayout = new javax.swing.GroupLayout(ComputersQuizPNL);
-        ComputersQuizPNL.setLayout(ComputersQuizPNLLayout);
-        ComputersQuizPNLLayout.setHorizontalGroup(
-            ComputersQuizPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ComputersQuizPNLLayout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addGroup(ComputersQuizPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addGroup(ComputersQuizPNLLayout.createSequentialGroup()
-                        .addComponent(ComputersQuestionLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(ComputerQuizComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(403, 403, 403))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, ComputersQuizPNLLayout.createSequentialGroup()
-                        .addGroup(ComputersQuizPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(ComputersQuizPNLLayout.createSequentialGroup()
-                                .addGroup(ComputersQuizPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(ComputersQuestionLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(ComputersQuestionLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(ComputersQuestionLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(ComputersQuestionLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ComputersQuizPNLLayout.createSequentialGroup()
-                                .addComponent(ComputersClearBTN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(39, 39, 39)))
-                        .addGroup(ComputersQuizPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, ComputersQuizPNLLayout.createSequentialGroup()
-                                .addComponent(ComputersQuizCheckBTN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(40, 40, 40)
-                                .addComponent(exitBTn2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(ComputersQuizPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(ComputerQuizComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(ComputerQuizComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(ComputerQuizComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(ComputerQuizComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-        );
-        ComputersQuizPNLLayout.setVerticalGroup(
-            ComputersQuizPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ComputersQuizPNLLayout.createSequentialGroup()
-                .addContainerGap(65, Short.MAX_VALUE)
-                .addGroup(ComputersQuizPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ComputersQuestionLabel1)
-                    .addComponent(ComputerQuizComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(ComputersQuizPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ComputersQuestionLabel2)
-                    .addComponent(ComputerQuizComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(ComputersQuizPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ComputersQuestionLabel3)
-                    .addComponent(ComputerQuizComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(12, 12, 12)
-                .addGroup(ComputersQuizPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ComputersQuestionLabel4)
-                    .addComponent(ComputerQuizComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(ComputersQuizPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ComputersQuestionLabel5)
-                    .addComponent(ComputerQuizComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(52, 52, 52)
-                .addGroup(ComputersQuizPNLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ComputersClearBTN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ComputersQuizCheckBTN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(exitBTn2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30))
-        );
+        ComputersQuizPNL.add(exitBTn2);
+        exitBTn2.setBounds(414, 293, 72, 22);
 
         jTabbedPane3.addTab("Computers quiz", ComputersQuizPNL);
 
@@ -741,6 +713,7 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
         GeographyQuizPNL.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         GeographyQuizCheckBTN.setText("Check");
+        GeographyQuizCheckBTN.setToolTipText("Please choose the answers in the combo boxes above for the respective question on a label to the left, after youve answered all questions please press the check button to see if you got them right or wrong. RED = wrong, GREEN = correct.");
         GeographyQuizCheckBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         GeographyQuizCheckBTN.setMaximumSize(new java.awt.Dimension(72, 22));
         GeographyQuizCheckBTN.setMinimumSize(new java.awt.Dimension(72, 22));
@@ -762,6 +735,7 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
         GeographyQuestionLabel5.setText("Which continent is the smallest?");
 
         GeographyClearBTN1.setText("Clear");
+        GeographyClearBTN1.setToolTipText("please press this button to make the fields white again.");
         GeographyClearBTN1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         GeographyClearBTN1.setMaximumSize(new java.awt.Dimension(72, 22));
         GeographyClearBTN1.setMinimumSize(new java.awt.Dimension(72, 22));
@@ -779,6 +753,7 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
 
         exitBTn3.setBackground(new java.awt.Color(255, 51, 51));
         exitBTn3.setText("EXIT");
+        exitBTn3.setToolTipText("press the button to return to homePage!");
         exitBTn3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         exitBTn3.setMaximumSize(new java.awt.Dimension(72, 22));
         exitBTn3.setMinimumSize(new java.awt.Dimension(72, 22));
@@ -860,6 +835,7 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
         ProgrammingQuizPNL.setLayout(null);
 
         ProgrammingQuizCheckBTN.setText("Check");
+        ProgrammingQuizCheckBTN.setToolTipText("Please choose the answers in the combo boxes above for the respective question on a label to the left, after youve answered all questions please press the check button to see if you got them right or wrong. RED = wrong, GREEN = correct.");
         ProgrammingQuizCheckBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         ProgrammingQuizCheckBTN.setMaximumSize(new java.awt.Dimension(72, 22));
         ProgrammingQuizCheckBTN.setMinimumSize(new java.awt.Dimension(72, 22));
@@ -873,6 +849,7 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
         ProgrammingQuizCheckBTN.setBounds(260, 310, 72, 22);
 
         ProgrammingClearBTN.setText("Clear ");
+        ProgrammingClearBTN.setToolTipText("please press this button to make the fields white again.");
         ProgrammingClearBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         ProgrammingClearBTN.setMaximumSize(new java.awt.Dimension(72, 22));
         ProgrammingClearBTN.setMinimumSize(new java.awt.Dimension(72, 22));
@@ -922,6 +899,7 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
 
         exitBTn4.setBackground(new java.awt.Color(255, 51, 51));
         exitBTn4.setText("EXIT");
+        exitBTn4.setToolTipText("press the button to return to homePage!");
         exitBTn4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         exitBTn4.setMaximumSize(new java.awt.Dimension(72, 22));
         exitBTn4.setMinimumSize(new java.awt.Dimension(72, 22));
@@ -1023,6 +1001,7 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
         ReportGeneratorContentLabel.setBounds(310, 260, 62, 16);
 
         SaveBTN.setText("Save/Generate");
+        SaveBTN.setToolTipText("Please fill in the fields listed above to save your report, when you hit the save button, feedback will be generated to notify you how your doing in your course based on your average grade!");
         SaveBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SaveBTNActionPerformed(evt);
@@ -1032,6 +1011,7 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
         SaveBTN.setBounds(100, 470, 130, 23);
 
         ViewBTN.setText("view");
+        ViewBTN.setToolTipText("Please press this view button to populate the table");
         ViewBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ViewBTNActionPerformed(evt);
@@ -1049,6 +1029,7 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
 
         exitBTn6.setBackground(new java.awt.Color(255, 51, 51));
         exitBTn6.setText("EXIT");
+        exitBTn6.setToolTipText("Press this button to return to home");
         exitBTn6.setMaximumSize(new java.awt.Dimension(72, 22));
         exitBTn6.setMinimumSize(new java.awt.Dimension(72, 22));
         exitBTn6.setPreferredSize(new java.awt.Dimension(72, 22));
@@ -1062,21 +1043,28 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
 
         ReportTBL.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
             },
             new String [] {
-                "Name", "AVG Grade", "Date", "Email", "Feedback"
+                "Name", "AVG Grade", "Date", "Email"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.Double.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, true, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
             }
         });
         TBLScrollPane.setViewportView(ReportTBL);
@@ -1200,6 +1188,7 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
 
         exitBTn5.setBackground(new java.awt.Color(255, 51, 51));
         exitBTn5.setText("EXIT");
+        exitBTn5.setToolTipText("Please press this button to return home!");
         exitBTn5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         exitBTn5.setMaximumSize(new java.awt.Dimension(72, 22));
         exitBTn5.setMinimumSize(new java.awt.Dimension(72, 22));
@@ -1365,7 +1354,7 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
     }//GEN-LAST:event_ContactUsSurnameFieldKeyPressed
 
     private void ContactUsEmailFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ContactUsEmailFieldKeyPressed
- 
+
     }//GEN-LAST:event_ContactUsEmailFieldKeyPressed
 
     private void SendFeedbackBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SendFeedbackBTNActionPerformed
@@ -1375,8 +1364,8 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
         String dateReview = ContactUsReviewDateFormattedField.getText();//getting the date from the field in the gui and assinging it to a string
         String content = FeedbackTextArea.getText();//getting the feedback from the field in the gui and assinging it to a string
 
-        if (ContactUsFirstNameField.getText().isEmpty() || ContactUsEmailField.getText().isEmpty() || dateReview.isEmpty() || FeedbackTextArea.getText().isEmpty() || ContactUsFirstNameField.getText().isEmpty()) {//if statement to ensure the fields are filled out to ensure the program does not crash
-            JOptionPane.showMessageDialog(null, "Cannot leave any fields empty, please fill all!", "Error Encountered", JOptionPane.ERROR_MESSAGE);//joption pane popup to notify the end user the fields need to be filled out
+        if (ContactUsFirstNameField.getText().isEmpty() || ContactUsEmailField.getText().isEmpty() || dateReview.isEmpty() || FeedbackTextArea.getText().isEmpty() || ContactUsFirstNameField.getText().isEmpty() || ContactUsTermsAndConditionsCheckBox.isSelected()) {//if statement to ensure the fields are filled out to ensure the program does not crash
+            JOptionPane.showMessageDialog(null, "Cannot leave any fields empty, please fill all!", "please ensure you accept the terms and condtions", JOptionPane.ERROR_MESSAGE);//joption pane popup to notify the end user the fields need to be filled out
             return;
         }//end if condition
 
@@ -1447,23 +1436,28 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
     }//GEN-LAST:event_ResourseSurnameFieldActionPerformed
 
     private void SaveResourseBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaveResourseBTNActionPerformed
-        String firstname = ResourseFirstNameField.getText();//getting the text from the ResourseFirstNameField GUI using the get text method and assigning it to a string
-        String surname = ResourseSurnameField.getText();//getting the text from the ResourseSurnameField GUI using the get text method and assigning it to a string
-        String Course = ResourseCourseField.getText();//getting the text from the GUI ResourseCourseField using the get text method and assigning it to a string
-        String Date = ResourseDateField.getText();//getting the text from the GUI ResourseDateField using the get text method and assigning it to a string
-        String resourceType = (String) ResourceTypeComboBox.getSelectedItem();//getting the text from the GUI ResourceTypeComboBox using the get text method and assigning it to a string
-        String URL = ResourseURLField.getText();//getting the text from the GUI ResourseURLField using the get text method and assigning it to a string
+        String enteredFirstname = ResourseFirstNameField.getText();//getting the text from the ResourseFirstNameField GUI using the get text method and assigning it to a string
+        String enteredSurname = ResourseSurnameField.getText();//getting the text from the ResourseSurnameField GUI using the get text method and assigning it to a string
+        String enteredCourse = ResourseCourseField.getText();//getting the text from the GUI ResourseCourseField using the get text method and assigning it to a string
+        String enteredDate = ResourseDateField.getText();//getting the text from the GUI ResourseDateField using the get text method and assigning it to a string
+        String enteredResourceType = (String) ResourceTypeComboBox.getSelectedItem();//getting the text from the GUI ResourceTypeComboBox using the get text method and assigning it to a string
+        String enteredURL = ResourseURLField.getText();//getting the text from the GUI ResourseURLField using the get text method and assigning it to a string
 
-        // Save resource using ResourceHub
-        ResourceHub rh = new ResourceHub();//create an instance of the rescourceHub so i can access the methods
-        rh.saveResourceToFile(firstname, surname, Course, Date, resourceType, URL);//call upon the save resource method and pass the variable in as args
+        if (enteredFirstname.isEmpty() || enteredSurname.isEmpty() || enteredCourse.isEmpty() || enteredDate.isEmpty() || enteredResourceType.isEmpty() || !enteredURL.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Please ensure all required fields are filled out and accept the Terms and Conditions!");//
+        } else {//end else 
 
-        JOptionPane.showMessageDialog(null, "This was a great success!! added to the file");//joptionPane popup to notify the user it was succesful
+            ResourceHub hub = new ResourceHub();//create an instance of the rescourceHub so i can access the methods
+            hub.saveResourceToFile(enteredFirstname, enteredSurname, enteredCourse, enteredDate, enteredResourceType, enteredURL);//call upon the save resource method and pass the variable in as args
+
+            JOptionPane.showMessageDialog(null, "This was a great success!! added to the file");//joptionPane popup to notify the user it was succesful
+
+        }
     }//GEN-LAST:event_SaveResourseBTNActionPerformed
 
     private void ViewResourceBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ViewResourceBTNActionPerformed
-        ResourceHub rh = new ResourceHub();//create an instance of the rescourceHub so i can call upon the method for populating the table
-        rh.PopulateRescourecTBL(ResourceTBL);//call upon method to load resources and senign the tbl as a arg so it has access, i didnt know how to do with without making the table static , and i wanted to try my best to encapsulate as much as possible so this seemed to be the best way to do it
+        ResourceHub hub = new ResourceHub();//create an instance of the rescourceHub so i can call upon the method for populating the table
+        hub.PopulateRescourecTBL(ResourceTBL);//call upon method to load resources and senign the tbl as a arg so it has access, i didnt know how to do with without making the table static , and i wanted to try my best to encapsulate as much as possible so this seemed to be the best way to do it
     }//GEN-LAST:event_ViewResourceBTNActionPerformed
 
     private void exitBTn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBTn1ActionPerformed
@@ -1503,11 +1497,11 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
     }//GEN-LAST:event_exitBTn6ActionPerformed
 
     private void ComputersQuizCheckBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComputersQuizCheckBTNActionPerformed
-        String RightAnswer1 = "Central-Processing-Unit";//setting the correct answers to strings to compare against the selected answer
-        String RightAnswer2 = "Power-Supply-Unit";//setting the correct answers to strings to compare against the selected answer
-        String RightAnswer3 = "Storing-data";//setting the correct answers to strings to compare against the selected answer
-        String RightAnswer4 = "Solid-State-Drive";//setting the correct answers to strings to compare against the selected answer
-        String RightAnswer5 = "Graphical-Processing-Unit";//setting the correct answers to strings to compare against the selected answer
+        String RightAnswer1 = "Central Processing Unit";//setting the correct answers to strings to compare against the selected answer
+        String RightAnswer2 = "Power Supply unit ";//setting the correct answers to strings to compare against the selected answer
+        String RightAnswer3 = "Storing";//setting the correct answers to strings to compare against the selected answer
+        String RightAnswer4 = "Solid State Drive";//setting the correct answers to strings to compare against the selected answer
+        String RightAnswer5 = "Graphical Processing Unit";//setting the correct answers to strings to compare against the selected answer
 
         String ChosenAnswer1 = (String) ComputerQuizComboBox.getSelectedItem();//assigning the selected items from the combo boxes to string to compare against the correct answers
         String ChosenAnswer2 = (String) ComputerQuizComboBox2.getSelectedItem();//assigning the selected items from the combo boxes to string to compare against the correct answers
@@ -1658,19 +1652,42 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
     }//GEN-LAST:event_ProgrammingQuizCheckBTNActionPerformed
 
     private void ViewBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ViewBTNActionPerformed
-        reportGenerator.PopulateReportsTBL(ReportTBL);
+        ReportGenerator rg = new ReportGenerator();//create an instance of the rescourceHub so i can call upon the method for populating the table
+        rg.PopulateReportTBL(ReportTBL);//call upon method to load resources and senign the tbl as a arg so it has access, i didnt know how to do with without making the table static , and i wanted to try my best to encapsulate as much as possible so this seemed to be the best way to do it
     }//GEN-LAST:event_ViewBTNActionPerformed
 
     private void SaveBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaveBTNActionPerformed
-        String name = ReportGeneratorFirstNameField.getText();//getting the text from the fields and assigning it to a var string
-        String avgGrade = AVGGradeField.getText();//getting the text from the fields and assigning it to a var string
-        String email = ReportGeneratorEmailField.getText();//getting the text from the fields and assigning it to a var string
-        String date = ReportGeneratorDateField.getText();//getting the text from the fields and assigning it to a var string
+        String EnteredName = ReportGeneratorFirstNameField.getText();//getting the text from the fields and assigning it to a var string
+        String AverageEnteredGrade = AVGGradeField.getText();//getting the text from the fields and assigning it to a var string
 
-        reportGenerator.addReport(name, email, date, avgGrade);//call upon the add report method and send in varibales as args
+        String enteredEmail = ReportGeneratorEmailField.getText();//getting the text from the fields and assigning it to a var string
+        String enteredDate = ReportGeneratorDateField.getText();//getting the text from the fields and assigning it to a var string
+        
+                if (enteredEmail.isEmpty() || enteredDate.isEmpty() || EnteredName.isEmpty() || AverageEnteredGrade.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Please ensure all required fields are filled ouT!");//
+        } else {//end else 
+        // Save resource using ResourceHub
+        ReportGenerator rg = new ReportGenerator();//create an instance of the rescourceHub so i can access the methods
+        rg.WriteReport(EnteredName, AverageEnteredGrade, enteredEmail, enteredDate);//call upon the save resource method and pass the variable in as args
 
-        reportGenerator.WriteReport();//write stuff tot the txt
+        JOptionPane.showMessageDialog(null, "This was a great success!! added to the file");//joptionPane popup to notify the user it was succesful
 
+        int grade = Integer.parseInt(AverageEnteredGrade.trim());  // Trim to remove extra spaces, then parse
+
+        if (grade >= 80) {
+            AVGGradeField.setBackground(Color.GREEN);
+            JOptionPane.showMessageDialog(null, "Feedback: Over 80% average, you are doing exceptionally well Keep it Up!. Score: 10/10");//joptionPane popup to notify the user it was succesful
+        } else if (grade >= 70) {
+            AVGGradeField.setBackground(Color.GREEN);
+            JOptionPane.showMessageDialog(null, "Feedback: Over 70% average, you are doing well, gaining merits in all modules, keep it up and strive for distinctions, you got this!. Score: 10/10");
+        } else if (grade >= 50) {
+            AVGGradeField.setBackground(Color.GREEN);
+            JOptionPane.showMessageDialog(null, "Feedback: Above 50% you have comfortably passed, however there is much room to grow and improve, please continue to revise and stay on top of your resources. Score: 10/10");
+        } else {//else if anything lower
+            AVGGradeField.setBackground(Color.RED);
+            JOptionPane.showMessageDialog(null, "Feedback: If you want to pass, you will have to put more effort in on revising and staying on top of any assignments handed out! Dont feel unmotivated, rather you can use our tools to make a difference in your study!");
+        }
+                }
     }//GEN-LAST:event_SaveBTNActionPerformed
 
     private void exitBTn8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBTn8ActionPerformed
