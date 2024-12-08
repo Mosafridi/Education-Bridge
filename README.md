@@ -1,6 +1,8 @@
 # Education-Bridge
 A Java-based application promoting quality education by connecting underprivileged students with global sponsors. Features include student registration, academic performance tracking, sponsorship management, and a warm educational enviorment, ensuring transparency and effective resource allocation.
 
+IN MASTER BRANCH!
+
 Gregory Created:
 LoginPageGUI.java,
 HomePage.java,
