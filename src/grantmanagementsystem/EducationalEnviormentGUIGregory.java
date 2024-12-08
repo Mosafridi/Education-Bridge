@@ -674,6 +674,11 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
         ComputersClearBTN.setMaximumSize(new java.awt.Dimension(72, 22));
         ComputersClearBTN.setMinimumSize(new java.awt.Dimension(72, 22));
         ComputersClearBTN.setPreferredSize(new java.awt.Dimension(72, 22));
+        ComputersClearBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ComputersClearBTNActionPerformed(evt);
+            }
+        });
         ComputersQuizPNL.add(ComputersClearBTN);
         ComputersClearBTN.setBounds(191, 293, 72, 22);
 
@@ -740,6 +745,11 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
         GeographyClearBTN1.setMaximumSize(new java.awt.Dimension(72, 22));
         GeographyClearBTN1.setMinimumSize(new java.awt.Dimension(72, 22));
         GeographyClearBTN1.setPreferredSize(new java.awt.Dimension(72, 22));
+        GeographyClearBTN1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                GeographyClearBTN1ActionPerformed(evt);
+            }
+        });
 
         GeographyQuizComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Oceania", "Africa", "Europe", "South America" }));
 
@@ -854,6 +864,11 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
         ProgrammingClearBTN.setMaximumSize(new java.awt.Dimension(72, 22));
         ProgrammingClearBTN.setMinimumSize(new java.awt.Dimension(72, 22));
         ProgrammingClearBTN.setPreferredSize(new java.awt.Dimension(72, 22));
+        ProgrammingClearBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ProgrammingClearBTNActionPerformed(evt);
+            }
+        });
         ProgrammingQuizPNL.add(ProgrammingClearBTN);
         ProgrammingClearBTN.setBounds(170, 310, 72, 22);
 
@@ -1806,6 +1821,45 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
     private void ReportGeneratorDateFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ReportGeneratorDateFieldKeyPressed
 
     }//GEN-LAST:event_ReportGeneratorDateFieldKeyPressed
+
+    private void ComputersClearBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComputersClearBTNActionPerformed
+
+            ComputerQuizComboBox.setBackground(Color.WHITE);//set the combo box to WHITE
+    
+            ComputerQuizComboBox2.setBackground(Color.WHITE);//set the combo box to WHITE
+   
+            ComputerQuizComboBox3.setBackground(Color.WHITE);//set the combo box to WHITE
+
+            ComputerQuizComboBox4.setBackground(Color.WHITE);//set the combo box to WHITE
+
+            ComputerQuizComboBox5.setBackground(Color.WHITE);//set the combo box to WHITE
+      
+    }//GEN-LAST:event_ComputersClearBTNActionPerformed
+
+    private void GeographyClearBTN1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GeographyClearBTN1ActionPerformed
+                    GeographyQuizComboBox.setBackground(Color.WHITE);//set the combo box to WHITE
+    
+            GeographyQuizComboBox2.setBackground(Color.WHITE);//set the combo box to WHITE
+   
+            GeographyQuizComboBox3.setBackground(Color.WHITE);//set the combo box to WHITE
+
+            GeographyQuizComboBox4.setBackground(Color.WHITE);//set the combo box to WHITE
+
+            GeographyQuizComboBox5.setBackground(Color.WHITE);//set the combo box to WHITE
+      
+    }//GEN-LAST:event_GeographyClearBTN1ActionPerformed
+
+    private void ProgrammingClearBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProgrammingClearBTNActionPerformed
+                           ProgrammingComboBox.setBackground(Color.WHITE);//set the combo box to WHITE
+    
+            ProgrammingComboBox2.setBackground(Color.WHITE);//set the combo box to WHITE
+   
+            ProgrammingComboBox3.setBackground(Color.WHITE);//set the combo box to WHITE
+
+            ProgrammingComboBox4.setBackground(Color.WHITE);//set the combo box to WHITE
+
+            ProgrammingComboBox5.setBackground(Color.WHITE);//set the combo box to WHITE
+    }//GEN-LAST:event_ProgrammingClearBTNActionPerformed
 
     /**
      * @param args the command line arguments
