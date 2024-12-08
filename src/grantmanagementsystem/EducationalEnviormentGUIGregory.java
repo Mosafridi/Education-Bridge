@@ -381,7 +381,7 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
                 {null, null, null, null, null, null}
             },
             new String [] {
-                "FirstName", "Surname", "Date", "Type", "URL", "Course"
+                "FirstName", "Surname", "Course", "Date", "Type", "URL"
             }
         ) {
             Class[] types = new Class [] {
@@ -1443,8 +1443,8 @@ public class EducationalEnviormentGUIGregory extends javax.swing.JFrame {//creat
         String enteredResourceType = (String) ResourceTypeComboBox.getSelectedItem();//getting the text from the GUI ResourceTypeComboBox using the get text method and assigning it to a string
         String enteredURL = ResourseURLField.getText();//getting the text from the GUI ResourseURLField using the get text method and assigning it to a string
 
-        if (enteredFirstname.isEmpty() || enteredSurname.isEmpty() || enteredCourse.isEmpty() || enteredDate.isEmpty() || enteredResourceType.isEmpty() || !enteredURL.isEmpty()) {
-            JOptionPane.showMessageDialog(null, "Please ensure all required fields are filled out and accept the Terms and Conditions!");//
+        if (enteredFirstname.isEmpty() || enteredSurname.isEmpty() || enteredCourse.isEmpty() || enteredDate.isEmpty() || enteredResourceType.isEmpty() || enteredURL.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Please ensure all required fields are filled out!");//
         } else {//end else 
 
             ResourceHub hub = new ResourceHub();//create an instance of the rescourceHub so i can access the methods
